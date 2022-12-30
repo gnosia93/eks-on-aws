@@ -6,5 +6,6 @@
   - [2. How to build your Amazon EKS cluster using eksctl](https://www.youtube.com/watch?v=jGrdVSlIkNQ)
 
 
-
-- https://www.youtube.com/@ContainersfromtheCouch/videos
+* Containers from the Couch
+  
+  https://www.youtube.com/@ContainersfromtheCouch/videos
