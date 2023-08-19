@@ -9,3 +9,6 @@
 * Containers from the Couch
   
   https://www.youtube.com/@ContainersfromtheCouch/videos
+
+
+* https://awskocaptain.gitbook.io/aws-builders-eks/4.-eksctl 
