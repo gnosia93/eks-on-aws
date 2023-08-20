@@ -15,7 +15,9 @@ clusterEndpoints:
 
 ### 2. Cloud9 생성 ###
 
-public 서브넷 한곳에 cloud9 을 생성한다.
+public 서브넷 한곳에 cloud9 을 설치한다. 
+
+![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
 
 
 ### 3. EKS 클러스터 설치 ###
