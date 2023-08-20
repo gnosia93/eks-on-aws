@@ -153,6 +153,12 @@ users:
 
 * 노드 리스트를 확인한다. 
 ```
+$ echo exit | telnet 60E6BA36AA5E9836286C5BC3F735E9C3.gr7.ap-northeast-2.eks.amazonaws.com 443                                                                                                                  
+Trying 172.31.44.26...
+Connected to 60E6BA36AA5E9836286C5BC3F735E9C3.gr7.ap-northeast-2.eks.amazonaws.com.
+Escape character is '^]'.
+Connection closed by foreign host.
+hopigaga:~/.kube $ 
 $ kubectl get nodes
 Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
 
