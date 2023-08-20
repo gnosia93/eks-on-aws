@@ -110,6 +110,8 @@ $ eksctl create cluster -f eks-cluster-1.yaml
 2023-08-20 04:59:22 [✔]  all EKS cluster resources for "eks-cluster-7" have been created
 ```
 
+## 4. 쿠버네티스 리소스 보기 ##
+* https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/view-kubernetes-resources.html
 
 ## 트러블 슈팅 ##
 
