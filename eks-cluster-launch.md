@@ -13,7 +13,7 @@ metadata:
 vpc:
   id: "vpc-11111"
   subnets:
-    public:
+    private:
       us-west-2d:
           id: "subnet-0153e560b3129a696"
       us-west-2c:
