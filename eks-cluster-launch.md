@@ -43,8 +43,8 @@ managedNodeGroups:
   volumeSize: 80
   ssh: # use existing EC2 key, check from AWS EC2 console's keypair sub menu.
       publicKeyName: aws-kp-2
-
 ```
+
 
 
 
