@@ -10,5 +10,5 @@
   
   * [2-3. 엔터티 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-entity.md)
 
-
+  * [2-4. 서비스 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-service.md)
 
