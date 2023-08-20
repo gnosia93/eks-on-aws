@@ -153,18 +153,15 @@ users:
 
 * 노드 리스트를 확인한다. 
 ```
-$ echo exit | telnet 60E6BA36AA5E9836286C5BC3F735E9C3.gr7.ap-northeast-2.eks.amazonaws.com 443                                                                                                                  
-Trying 172.31.44.26...
-Connected to 60E6BA36AA5E9836286C5BC3F735E9C3.gr7.ap-northeast-2.eks.amazonaws.com.
-Escape character is '^]'.
-Connection closed by foreign host.
-hopigaga:~/.kube $ 
 $ kubectl get nodes
 Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
 
 $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
+위와 같이 timeout 이 발생하는 경우 EKS 클러스터 control plane 의 Securi
+
+
 
 
 
@@ -176,7 +173,25 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 ## 트러블 슈팅 ##
 
+* 노드 및 컨피그맵 확인시 timeout 이 발생하는 경우 
+```
+kubectl get nodes
+Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
+
+$ kubectl describe -n kube-system configmap/aws-auth
+Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
+```
+EKS 클러스터 컨트롤플레인 시큐리티 그룹에 Cloud9 인스턴스로 보터 전달되는 트래픽에 대해 TCP 443 포트를 오픈해 준다.  
+
+
+
+
+
+
 * [How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
+
+
+
 
 
 
