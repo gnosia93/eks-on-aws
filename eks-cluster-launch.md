@@ -20,21 +20,17 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: my-eks-cluster
+  name: eks-cluster-1
   region: ap-northeast-2
 
 vpc:
-  id: "vpc-11111"
+  id: "vpc-0f154186c927b11bf"
   subnets:
     private:
-      us-west-2d:
-          id: "subnet-0153e560b3129a696"
-      us-west-2c:
-          id: "subnet-0cc9c5aebe75083fd"
-      us-west-2a:
-          id: "subnet-009fa0199ec203c37"
       us-west-2b:
-          id: "subnet-018fa0176ba320e45"
+          id: "subnet-0e00aad3d9ebdf2b2"
+      us-west-2c:
+          id: "subnet-03941214c7e716f91"
 ```
 
 
