@@ -110,9 +110,10 @@ $ eksctl create cluster -f eks-cluster-1.yaml
 2023-08-20 04:59:22 [✔]  all EKS cluster resources for "eks-cluster-7" have been created
 ```
 
-## 4. 설치된 클러스터 확인하기 ##
+## 4. 클러스터 확인하기 ##
 
 ```
+* kube config 
 $ cat ~/.kube/config
 apiVersion: v1
 clusters:
@@ -151,7 +152,7 @@ users:
       provideClusterInfo: false
 ```
 
-* 노드 리스트를 확인한다. 
+* 노드 리스트 및 aws-auth 확인 
 ```
 $ kubectl get nodes
 NAME                                               STATUS   ROLES    AGE   VERSION
