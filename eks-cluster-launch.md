@@ -1,6 +1,8 @@
 ### 1. VPC 생성 ###
 
 2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성한다.
+NAT GW 를 public 서브넷에 설치한다. EKS 클러스터 설치시 private subnet 에 노드그룹을 위치 시키는 경우, 노드그룹의 EC2 인스턴스가 생성된 후,
+public 을 통해서 K8S apiend point 와의 통신이 필요하기 떄문이다 (필수) 
 
 
 ### 2. Cloud9 생성 ###
