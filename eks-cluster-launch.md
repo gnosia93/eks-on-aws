@@ -48,6 +48,32 @@ EOF
 
 ```
 $ eksctl create cluster -f eks-cluster-1.yaml
+2023-08-20 02:46:09 [ℹ]  eksctl version 0.153.0
+2023-08-20 02:46:09 [ℹ]  using region ap-northeast-2
+2023-08-20 02:46:09 [✔]  using existing VPC (vpc-0f154186c927b11bf) and subnets (private:map[ap-northeast-2b-private1:{subnet-0e00aad3d9ebdf2b2 ap-northeast-2b 172.31.16.0/20 0 } ap-northeast-2c-private2:{subnet-03941214c7e716f91 ap-northeast-2c 172.31.32.0/20 0 }] public:map[])
+2023-08-20 02:46:09 [!]  custom VPC/subnets will be used; if resulting cluster doesn't function as expected, make sure to review the configuration of VPC/subnets
+2023-08-20 02:46:09 [ℹ]  nodegroup "nodegroup-1" will use "" [AmazonLinux2/1.25]
+2023-08-20 02:46:09 [ℹ]  using EC2 key pair "aws-kp-2"
+2023-08-20 02:46:09 [ℹ]  using Kubernetes version 1.25
+2023-08-20 02:46:09 [ℹ]  creating EKS cluster "eks-cluster-1" in "ap-northeast-2" region with managed nodes
+2023-08-20 02:46:09 [ℹ]  1 nodegroup (nodegroup-1) was included (based on the include/exclude rules)
+2023-08-20 02:46:09 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
+2023-08-20 02:46:09 [ℹ]  will create a CloudFormation stack for cluster itself and 1 managed nodegroup stack(s)
+2023-08-20 02:46:09 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-northeast-2 --cluster=eks-cluster-1'
+2023-08-20 02:46:09 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "eks-cluster-1" in "ap-northeast-2"
+2023-08-20 02:46:09 [ℹ]  CloudWatch logging will not be enabled for cluster "eks-cluster-1" in "ap-northeast-2"
+2023-08-20 02:46:09 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-northeast-2 --cluster=eks-cluster-1'
+2023-08-20 02:46:09 [ℹ]  
+2 sequential tasks: { create cluster control plane "eks-cluster-1", 
+    2 sequential sub-tasks: { 
+        wait for control plane to become ready,
+        create managed nodegroup "nodegroup-1",
+    } 
+}
+2023-08-20 02:46:09 [ℹ]  building cluster stack "eksctl-eks-cluster-1-cluster"
+2023-08-20 02:46:10 [ℹ]  deploying stack "eksctl-eks-cluster-1-cluster"
+2023-08-20 02:46:40 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-cluster"
+2023-08-20 02:47:10 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-cluster"
 ```
 
 
