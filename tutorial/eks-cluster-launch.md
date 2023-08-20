@@ -252,7 +252,9 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 
 ### 2. 콘솔 메시지 (Your current IAM principal doesn't have access to Kubernetes objects on this cluster.) ###
-https://stackoverflow.com/questions/70787520/your-current-user-or-role-does-not-have-access-to-kubernetes-objects-on-this-eks
+
+- https://stackoverflow.com/questions/70787520/your-current-user-or-role-does-not-have-access-to-kubernetes-objects-on-this-eks
+- https://varlogdiego.com/eks-your-current-user-or-role-does-not-have-access-to-kubernetes
 
 ## 레퍼런스 ##
 
