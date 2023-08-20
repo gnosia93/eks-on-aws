@@ -8,8 +8,7 @@
 
   * [2-2. 컨트롤러 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-controller.md)
   
-  * [2-3. 엔터티 작성]()
+  * [2-3. 엔터티 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-entity.md)
 
 
-https://velog.io/@yu-jin-song/SpringBoot-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EA%B5%AC%ED%98%84-1-Entity-%EB%B0%8F-Repository-%EA%B5%AC%ED%98%84
 
