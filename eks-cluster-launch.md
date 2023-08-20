@@ -19,6 +19,9 @@ public 서브넷 한곳에 cloud9 을 설치한다.
 
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
 
+* https://awskocaptain.gitbook.io/aws-builders-eks/1.-cloud9-ide
+* https://awskocaptain.gitbook.io/aws-builders-eks/2.
+
 
 ### 3. EKS 클러스터 설치 ###
 
