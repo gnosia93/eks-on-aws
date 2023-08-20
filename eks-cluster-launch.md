@@ -31,6 +31,19 @@ vpc:
           id: "subnet-0e00aad3d9ebdf2b2"
       us-west-2c:
           id: "subnet-03941214c7e716f91"
+
+managedNodeGroups:
+- name: nodegroup-1
+  desiredCapacity: 3
+  instanceType: t3.small
+  privateNetworking: true
+  subnets:
+    - subnet-0e00aad3d9ebdf2b2
+    - subnet-03941214c7e716f91
+  ssh:
+    enableSsm: true
+
+
 ```
 
 
