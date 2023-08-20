@@ -2,8 +2,14 @@
 
 2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성한다.
 NAT GW 를 public 서브넷에 설치한다. EKS 클러스터 설치시 private subnet 에 노드그룹을 위치 시키는 경우, 노드그룹의 EC2 인스턴스가 생성된 후,
-public 을 통해서 K8S apiend point 와의 통신이 필요하기 떄문이다 (필수) 
-
+public 을 통해서 K8S apiend point 와의 통신해서 클러스터에 조인하기 때문이다. 클러스터 생성시 
+```
+clusterEndpoints:
+    publicAccess: true
+    privateAccess: true         
+```
+를 이용하여 privateAcess 를 enable 하더라도, 생성 시점에서는 통신이 불가능하며, 클러스터 생성 완료 후 control plane 의 security group 
+을 변경해 줘야 한다. 
 
 ### 2. Cloud9 생성 ###
 
