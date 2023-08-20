@@ -183,17 +183,9 @@ Events:  <none>
 $ 
 ```
 
-
-
-
-
-## 4. 쿠버네티스 리소스 보기 ##
-* https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/view-kubernetes-resources.html
-* https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
-
 ## 트러블 슈팅 ##
 
-* kubectl timeout
+### 1. kubectl timeout ###
 
 [How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
 ```
