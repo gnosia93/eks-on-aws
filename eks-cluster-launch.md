@@ -11,7 +11,7 @@ public 서브넷 한곳에 cloud9 을 생성한다.
 ### 3. EKS 클러스터 설치 ###
 
 위에서 생성된 VPC 의 private 서브넷에 EKS 클러스터를 설치할 것이다.
-eksctl 로 아래의 cluster config 파일을 실행한다. 
+eks-cluster-1.yaml 을 콘솔에서 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
 
 * eks-cluster-1.yaml   
   
