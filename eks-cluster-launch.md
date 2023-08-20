@@ -27,9 +27,9 @@ vpc:
   id: "vpc-0f154186c927b11bf"
   subnets:
     private:
-      us-west-2b:
+      ap-northeast-2b-privat1:
           id: "subnet-0e00aad3d9ebdf2b2"
-      us-west-2c:
+      ap-northeast-2c-private2:
           id: "subnet-03941214c7e716f91"
 
 managedNodeGroups:
@@ -38,8 +38,8 @@ managedNodeGroups:
   instanceType: t3.small
   privateNetworking: true
   subnets:
-    - subnet-0e00aad3d9ebdf2b2
-    - subnet-03941214c7e716f91
+    - ap-northeast-2b-privat1
+    - ap-northeast-2c-private2
   ssh:
     enableSsm: true
 
