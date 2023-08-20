@@ -12,4 +12,4 @@
 
 * [ValueObject](https://tecoble.techcourse.co.kr/post/2020-06-11-value-object/)
 
-* https://sanghye.tistory.com/36
+* [[Spring Boot] @NotNull, @NotEmpty, @NotBlank 의 차이점 및 사용법](https://sanghye.tistory.com/36)
