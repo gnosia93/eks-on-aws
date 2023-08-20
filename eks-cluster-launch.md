@@ -43,7 +43,7 @@ vpc:
           id: "subnet-03941214c7e716f91"
   clusterEndpoints:
     publicAccess: true
-    privateAccess: true                   
+    privateAccess: true                   # API 엔드포인트 접근을 VPC 내부에서 가능하도록 한다.       
 
 managedNodeGroups:
 - name: nodegroup-1
