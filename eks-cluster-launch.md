@@ -110,7 +110,7 @@ $ eksctl create cluster -f eks-cluster-1.yaml
 2023-08-20 04:59:22 [✔]  all EKS cluster resources for "eks-cluster-7" have been created
 ```
 
-## 4. ... ##
+## 4. 설치된 클러스터 확인하기 ##
 
 ```
 $ cat ~/.kube/config
@@ -151,8 +151,11 @@ users:
       provideClusterInfo: false
 ```
 
-
+* 노드 리스트를 확인한다. 
 ```
+$ kubectl get nodes
+Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
+
 $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
