@@ -33,7 +33,9 @@ vpc:
           id: "subnet-03941214c7e716f91"
   clusterEndpoints:
     publicAccess: true
-    privateAccess: true                   # private subnet 에 설치되는 노드 그룹의 ec2 인스턴스들이 클러스터에 접근하기 위해서 설정 / NATGW 에 있는 경우에는 false 로 설정가능.
+    privateAccess: true                   # private subnet 에 설치되는 노드 그룹의 ec2 인스턴스들이 클러스터에 접근하기 위해서 설정
+                                          # NATGW 에 있는 경우에는 false 로 설정가능.
+                                          # NATGW 가 없고 privateAcess 가 false 인 상태에서 private subnet 에 워커노드를 생성하는 경우 클러스터에 조인 불가함.
 
 managedNodeGroups:
 - name: nodegroup-1
