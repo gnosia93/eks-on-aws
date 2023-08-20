@@ -12,3 +12,5 @@
 
   * [2-4. 서비스 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-service.md)
 
+
+* [3. CI 구성하기]
