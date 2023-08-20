@@ -6,7 +6,7 @@
 
   * [2-1. 프로젝트 생성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-shop.md)
 
-  * [2-2. 컨트롤러 작성]()
+  * [2-2. 컨트롤러 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-controller.md)
   
   
 
