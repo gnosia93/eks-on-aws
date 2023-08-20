@@ -1,8 +1,9 @@
 ### 1. VPC 생성 ###
 
-2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성한다.
-NAT GW 를 public 서브넷에 설치한다. EKS 클러스터 설치시 private subnet 에 노드그룹을 위치 시키는 경우, 노드그룹의 EC2 인스턴스가 생성된 후,
-public 을 통해서 K8S apiend point 와의 통신해서 클러스터에 조인하기 때문이다. 클러스터 생성시 
+2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성하고, NAT GW 를 public 서브넷에 설치한다. 
+프라이빗 서브넷용 라우팅 테이블을 생성하고, 0.0.0.0/0 라우팅에 대해서는 NAT GW 를 가리키도록 설정한다. 
+EKS 클러스터 설치시 프라이빗 서브넷에에 노드그룹을 생성하는 경우, 워커노드가 생성되면 EKS 클러스터에 조인하게 되는데,
+이떄 public 을 통해서 K8S api 엔드포인트와 통신하게 된다.(즉 NAT GW를 통해서 public 으로 나가게 된다)  
 ```
 clusterEndpoints:
     publicAccess: true
