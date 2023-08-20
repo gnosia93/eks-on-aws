@@ -170,7 +170,9 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 ## 트러블 슈팅 ##
 
-* 노드 및 컨피그맵 확인시 timeout 이 발생하는 경우 
+* 노드 및 컨피그맵 확인시 timeout 이 발생하는 경우
+
+[How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
 ```
 $ kubectl get nodes
 Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
@@ -181,20 +183,11 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 위와 같이 timeout 이 발생하는 경우, EKS 클러스터(컨트롤 플레인) 시큐리티 그룹 엔트리에 cloud9 설정이 없는 것으로,
 아래와 같이 cloud9의 시큐리티 그룹에 대한 443 을 오픈해 준다.
 
-[EKS 클러스터 시큐리티 그룹]
+[EKS 클러스터 시큐리티 그룹 확인]
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-1.png)
 
 [Inbound 규칙 추가]
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-2.png)
-
-
-
-
-
-[How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
-
-
-
 
 
 
