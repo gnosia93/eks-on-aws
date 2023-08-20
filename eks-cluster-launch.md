@@ -35,7 +35,7 @@ vpc:
 managedNodeGroups:
 - name: nodegroup-1
   desiredCapacity: 3
-  instanceType: t3.small
+  instanceType: m6i.xlarge
   privateNetworking: true
   subnets:
     - ap-northeast-2b-private1
