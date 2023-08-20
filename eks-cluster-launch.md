@@ -175,7 +175,7 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 * 노드 및 컨피그맵 확인시 timeout 이 발생하는 경우 
 ```
-kubectl get nodes
+$ kubectl get nodes
 Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
 
 $ kubectl describe -n kube-system configmap/aws-auth
