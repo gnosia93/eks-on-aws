@@ -4,13 +4,14 @@
 프라이빗 서브넷용 라우팅 테이블을 생성하고, 0.0.0.0/0 라우팅에 대해서는 NAT GW 를 가리키도록 설정한다. 
 EKS 클러스터 설치시 프라이빗 서브넷에에 노드그룹을 생성하는 경우, 워커노드가 생성되면 EKS 클러스터에 조인하게 되는데,
 이떄 public 을 통해서 K8S api 엔드포인트와 통신하게 된다.(즉 NAT GW를 통해서 public 으로 나가게 된다)  
+
+아래와 같이 eksctl 설정파일에 privateAcesss 를 true 로 설정하더라도 
 ```
 clusterEndpoints:
     publicAccess: true
     privateAccess: true         
 ```
-를 이용하여 privateAcess 를 enable 하더라도, 생성 시점에서는 통신이 불가능하며, 클러스터 생성 완료 후 control plane 의 security group 
-을 변경해 줘야 한다. 
+클러스터 생성 시점에서는 통신이 불가능하며 클러스터 생성 완료 후 control plane 의 security group 을 변경해 줘야 한다. 
 
 ### 2. Cloud9 생성 ###
 
