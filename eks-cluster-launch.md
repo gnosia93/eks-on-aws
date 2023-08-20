@@ -154,10 +154,32 @@ users:
 * 노드 리스트를 확인한다. 
 ```
 $ kubectl get nodes
-Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
+NAME                                               STATUS   ROLES    AGE   VERSION
+ip-172-31-25-232.ap-northeast-2.compute.internal   Ready    <none>   99m   v1.25.11-eks-a5565ad
+ip-172-31-36-93.ap-northeast-2.compute.internal    Ready    <none>   99m   v1.25.11-eks-a5565ad
 
 $ kubectl describe -n kube-system configmap/aws-auth
-Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
+Name:         aws-auth
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  <none>
+
+Data
+====
+mapRoles:
+----
+- groups:
+  - system:bootstrappers
+  - system:nodes
+  rolearn: arn:aws:iam::xxxxxxxxxxxx:role/eksctl-eks-cluster-7-nodegroup-no-NodeInstanceRole-1L3CNTPC95JPB
+  username: system:node:{{EC2PrivateDNSName}}
+
+
+BinaryData
+====
+
+Events:  <none>
+$ 
 ```
 
 
