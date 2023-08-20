@@ -14,8 +14,8 @@ public 서브넷 한곳에 cloud9 을 생성한다.
 eks-cluster-1.yaml 을 콘솔에서 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
 
 * eks-cluster-1.yaml   
-  
 ```
+$ cat << EOF > eks-cluster-1.yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -43,6 +43,11 @@ managedNodeGroups:
   volumeSize: 80
   ssh: # use existing EC2 key, check from AWS EC2 console's keypair sub menu.
       publicKeyName: aws-kp-2
+EOF
+```
+
+```
+$ eksctl create cluster -f eks-cluster-1.yaml
 ```
 
 
