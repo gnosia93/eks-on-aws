@@ -11,3 +11,5 @@
 * [스프핑 부트 JPA](https://goddaehee.tistory.com/209)
 
 * [ValueObject](https://tecoble.techcourse.co.kr/post/2020-06-11-value-object/)
+
+* https://sanghye.tistory.com/36
