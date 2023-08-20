@@ -82,6 +82,10 @@ $ eksctl create cluster -f eks-cluster-1.yaml
 ```
 
 
+## 트러블 슈팅 ##
+
+* [How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
+
 
 
 
