@@ -113,6 +113,46 @@ $ eksctl create cluster -f eks-cluster-1.yaml
 ## 4. ... ##
 
 ```
+$ cat ~/.kube/config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJS29WUnZyTnUwRkV3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNE1qQXdORFV4TURGYUZ3MHpNekE0TVRjd05EVXhNREZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURZSldJNlZHL1licUNhb1BsZTQxYXd5RW9MVExHbWtkV1gwWWZSamNwS2ZRL05HMnRIaUtlcHROeGcKZ3JHRG1NVm5mWEpoU3JlVUlUQWdtYjBaUGpIcEJtNlRNcTlxNW1vUzVIUjNoWmQ2SDB1T2ZrQVRTanY5VEdQdwpEeU05MDExWkFzNlVkbzhUK2FpVmdWbkNqSVBoa1pEUDdmdnBiSlBrKytmMlJYU0l5eUx2MW9pNHh2dGpQTTNTCmpuTTVkejZBVUVYT2NNSTJHMDREZFNvdFhHOG  ....
+    server: https://60E6BA36AA5E9836286C5BC3F735E9C3.gr7.ap-northeast-2.eks.amazonaws.com
+  name: eks-cluster-7.ap-northeast-2.eksctl.io
+contexts:
+- context:
+    cluster: eks-cluster-7.ap-northeast-2.eksctl.io
+    user: i-0b33b3127e4d57036@eks-cluster-7.ap-northeast-2.eksctl.io
+  name: i-0b33b3127e4d57036@eks-cluster-7.ap-northeast-2.eksctl.io
+
+current-context: i-0b33b3127e4d57036@eks-cluster-7.ap-northeast-2.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: i-0b33b3127e4d57036@my-cluster.ap-northeast-2.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - my-cluster
+      - --region
+      - ap-northeast-2
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      interactiveMode: IfAvailable
+      provideClusterInfo: false
+```
+
+
+```
 $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
