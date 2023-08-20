@@ -159,9 +159,7 @@ Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
 $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
-위와 같이 timeout 이 발생하는 경우 EKS 클러스터 Security 그룹에 cloud9 으로 부터 연결이 될 수 있도록 443 포트에 대한 Inbound 엔트리를 추가한다. 
-![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-1.png)
-![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-2.png)
+
 
 
 
@@ -180,8 +178,11 @@ Unable to connect to the server: dial tcp 172.31.44.26:443: i/o timeout
 $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
-EKS 클러스터 컨트롤플레인 시큐리티 그룹에 Cloud9 인스턴스로 보터 전달되는 트래픽에 대해 TCP 443 포트를 오픈해 준다.  
-
+위와 같이 timeout 이 발생하는 경우, EKS 클러스터(컨트롤 플레인) 시큐리티 그룹 엔트리에 cloud9 설정이 없는 것으로,
+아래와 같이 cloud9의 시큐리티 그룹에 대한 443 을 오픈해 준다.
+[EKS 클러스터 시큐리티 그룹]
+![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-1.png)
+![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-2.png)
 
 
 
