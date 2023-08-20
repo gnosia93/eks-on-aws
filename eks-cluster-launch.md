@@ -181,7 +181,7 @@ $ kubectl describe -n kube-system configmap/aws-auth
 Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ```
 위와 같이 timeout 이 발생하는 경우, EKS 클러스터(컨트롤 플레인) 시큐리티 그룹 엔트리에 cloud9 설정이 없는 것으로,
-아래와 같이 cloud9의 시큐리티 그룹에 대한 443 을 오픈해 준다.
+아래와 같이 cloud9의 시큐리티 그룹에 대한 443 포트를 오픈해 준다.
 
 [EKS 클러스터 시큐리티 그룹 확인]
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-1.png)
