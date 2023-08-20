@@ -7,8 +7,8 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: my-test
-  region: us-west-2
+  name: my-eks-cluster
+  region: ap-northeast-2
 
 vpc:
   id: "vpc-11111"
