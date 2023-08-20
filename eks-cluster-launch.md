@@ -193,7 +193,7 @@ $
 
 ## 트러블 슈팅 ##
 
-* 노드 및 컨피그맵 확인시 timeout 이 발생하는 경우
+* kubectl timeout
 
 [How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
 ```
