@@ -188,7 +188,7 @@ EKS 클러스터 컨트롤플레인 시큐리티 그룹에 Cloud9 인스턴스�
 
 
 
-* [How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
+[How do I troubleshoot issues with the API server endpoint of my Amazon EKS cluster?](https://repost.aws/knowledge-center/eks-api-server-endpoint-failed)
 
 
 
