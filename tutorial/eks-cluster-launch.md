@@ -251,7 +251,8 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/kubctl-timeout-2.png)
 
 
-
+### 2. 콘솔 메시지 (Your current IAM principal doesn't have access to Kubernetes objects on this cluster.) ###
+https://stackoverflow.com/questions/70787520/your-current-user-or-role-does-not-have-access-to-kubernetes-objects-on-this-eks
 
 ## 레퍼런스 ##
 
