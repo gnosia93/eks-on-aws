@@ -61,32 +61,53 @@ EOF
 
 ```
 $ eksctl create cluster -f eks-cluster-1.yaml
-2023-08-20 02:46:09 [ℹ]  eksctl version 0.153.0
-2023-08-20 02:46:09 [ℹ]  using region ap-northeast-2
-2023-08-20 02:46:09 [✔]  using existing VPC (vpc-0f154186c927b11bf) and subnets (private:map[ap-northeast-2b-private1:{subnet-0e00aad3d9ebdf2b2 ap-northeast-2b 172.31.16.0/20 0 } ap-northeast-2c-private2:{subnet-03941214c7e716f91 ap-northeast-2c 172.31.32.0/20 0 }] public:map[])
-2023-08-20 02:46:09 [!]  custom VPC/subnets will be used; if resulting cluster doesn't function as expected, make sure to review the configuration of VPC/subnets
-2023-08-20 02:46:09 [ℹ]  nodegroup "nodegroup-1" will use "" [AmazonLinux2/1.25]
-2023-08-20 02:46:09 [ℹ]  using EC2 key pair "aws-kp-2"
-2023-08-20 02:46:09 [ℹ]  using Kubernetes version 1.25
-2023-08-20 02:46:09 [ℹ]  creating EKS cluster "eks-cluster-1" in "ap-northeast-2" region with managed nodes
-2023-08-20 02:46:09 [ℹ]  1 nodegroup (nodegroup-1) was included (based on the include/exclude rules)
-2023-08-20 02:46:09 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
-2023-08-20 02:46:09 [ℹ]  will create a CloudFormation stack for cluster itself and 1 managed nodegroup stack(s)
-2023-08-20 02:46:09 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-northeast-2 --cluster=eks-cluster-1'
-2023-08-20 02:46:09 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "eks-cluster-1" in "ap-northeast-2"
-2023-08-20 02:46:09 [ℹ]  CloudWatch logging will not be enabled for cluster "eks-cluster-1" in "ap-northeast-2"
-2023-08-20 02:46:09 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-northeast-2 --cluster=eks-cluster-1'
-2023-08-20 02:46:09 [ℹ]  
-2 sequential tasks: { create cluster control plane "eks-cluster-1", 
+2023-08-20 04:46:14 [ℹ]  eksctl version 0.153.0
+2023-08-20 04:46:14 [ℹ]  using region ap-northeast-2
+2023-08-20 04:46:14 [✔]  using existing VPC (vpc-0f154186c927b11bf) and subnets (private:map[ap-northeast-2b-private1:{subnet-0e00aad3d9ebdf2b2 ap-northeast-2b 172.31.16.0/20 0 } ap-northeast-2c-private2:{subnet-03941214c7e716f91 ap-northeast-2c 172.31.32.0/20 0 }] public:map[])
+2023-08-20 04:46:14 [!]  custom VPC/subnets will be used; if resulting cluster doesn't function as expected, make sure to review the configuration of VPC/subnets
+2023-08-20 04:46:14 [ℹ]  nodegroup "nodegroup-1" will use "" [AmazonLinux2/1.25]
+2023-08-20 04:46:14 [ℹ]  using EC2 key pair "aws-kp-2"
+2023-08-20 04:46:14 [ℹ]  using Kubernetes version 1.25
+2023-08-20 04:46:14 [ℹ]  creating EKS cluster "eks-cluster-7" in "ap-northeast-2" region with managed nodes
+2023-08-20 04:46:14 [ℹ]  1 nodegroup (nodegroup-1) was included (based on the include/exclude rules)
+2023-08-20 04:46:14 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
+2023-08-20 04:46:14 [ℹ]  will create a CloudFormation stack for cluster itself and 1 managed nodegroup stack(s)
+2023-08-20 04:46:14 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-northeast-2 --cluster=eks-cluster-7'
+2023-08-20 04:46:14 [ℹ]  Kubernetes API endpoint access will use provided values {publicAccess=true, privateAccess=true} for cluster "eks-cluster-7" in "ap-northeast-2"
+2023-08-20 04:46:14 [ℹ]  CloudWatch logging will not be enabled for cluster "eks-cluster-7" in "ap-northeast-2"
+2023-08-20 04:46:14 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-northeast-2 --cluster=eks-cluster-7'
+2023-08-20 04:46:14 [ℹ]  
+2 sequential tasks: { create cluster control plane "eks-cluster-7", 
     2 sequential sub-tasks: { 
         wait for control plane to become ready,
         create managed nodegroup "nodegroup-1",
     } 
 }
-2023-08-20 02:46:09 [ℹ]  building cluster stack "eksctl-eks-cluster-1-cluster"
-2023-08-20 02:46:10 [ℹ]  deploying stack "eksctl-eks-cluster-1-cluster"
-2023-08-20 02:46:40 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-cluster"
-2023-08-20 02:47:10 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-cluster"
+2023-08-20 04:46:14 [ℹ]  building cluster stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:46:15 [ℹ]  deploying stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:46:45 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:47:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:48:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:49:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:50:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:51:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:52:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:53:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:54:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:55:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:56:15 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-cluster"
+2023-08-20 04:56:45 [!]  API server is unreachable
+2023-08-20 04:56:45 [ℹ]  building managed nodegroup stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:56:46 [ℹ]  deploying stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:56:46 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:57:16 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:58:14 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:59:21 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-7-nodegroup-nodegroup-1"
+2023-08-20 04:59:21 [ℹ]  waiting for the control plane to become ready
+2023-08-20 04:59:22 [!]  failed to determine authenticator version, leaving API version as default v1alpha1: failed to parse versions: unable to parse first version "": strconv.ParseUint: parsing "": invalid syntax
+2023-08-20 04:59:22 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
+2023-08-20 04:59:22 [ℹ]  no tasks
+2023-08-20 04:59:22 [✔]  all EKS cluster resources for "eks-cluster-7" have been created
 ```
 
 
