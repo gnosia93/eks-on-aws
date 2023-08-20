@@ -27,7 +27,7 @@ vpc:
   id: "vpc-0f154186c927b11bf"
   subnets:
     private:
-      ap-northeast-2b-privat1:
+      ap-northeast-2b-private1:           # subnet alias
           id: "subnet-0e00aad3d9ebdf2b2"
       ap-northeast-2c-private2:
           id: "subnet-03941214c7e716f91"
@@ -38,11 +38,11 @@ managedNodeGroups:
   instanceType: t3.small
   privateNetworking: true
   subnets:
-    - ap-northeast-2b-privat1
+    - ap-northeast-2b-private1
     - ap-northeast-2c-private2
   volumeSize: 80
-  ssh: # use existing EC2 key
-      publicKeyName: aws-kp
+  ssh: # use existing EC2 key, check from AWS EC2 console's keypair sub menu.
+      publicKeyName: aws-kp-2
 
 ```
 
