@@ -2,7 +2,7 @@
 
 ### 1. [spring.io](https://start.spring.io/) 사이트에서 아래 그림과 같은 설정으로 프로젝트 하나를 생성한다. ###
   
-![](https://github.com/gnosia93/eks-on-aws-springboot/blob/main/project-create.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-create.png)
 
 ### 2. shop.zip 파일을 로컬PC 로 다운로드 받은 후, 압축을 해제한다. ###
 ```
@@ -21,7 +21,7 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 ```
 
 ### 3. InteliJ 로 springboot-shop 프로젝트를 오픈한다. ###
-![](https://github.com/gnosia93/eks-on-aws-springboot/blob/main/project-shop.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-shop.png)
 
 ### 4. 로컬 PC에 MySQL 설치 ###  
 ```
@@ -126,10 +126,10 @@ mysql> show tables;
 
 ### 5. springboot DB 연결 설정 ###
 [build.gradle]
-![](https://github.com/gnosia93/eks-on-aws-springboot/blob/main/project-build.gradle-mysql.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-build.gradle-mysql.png)
 
 [application.yml]
-![](https://github.com/gnosia93/eks-on-aws-springboot/blob/main/project-application-yml.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml.png)
 
 ## 트러블 슈팅 ##
 
@@ -137,7 +137,7 @@ mysql> show tables;
 
   InteliJ의 Gradle JVM 버전을 17 버전을 설정한다. 맥의 경우 상단 InteliJ IDEA 메뉴 하단의 Preferences 를 클릭하면 아래와 같은 팝업창이 뜬다.
     
-  ![](https://github.com/gnosia93/eks-on-aws-springboot/blob/main/project-gradle-jvm17.png)
+  ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-gradle-jvm17.png)
   
 * [Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured](https://yanacoding.tistory.com/entry/Spring-Boot-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%EC%97%90%EB%9F%AC-Failed-to-configure-a-DataSource-url-attribute-is-not-specified-and-no-embedded-datasource-could-be-configured-DB%EC%97%B0%EA%B2%B0-%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)
   - https://7942yongdae.tistory.com/128
