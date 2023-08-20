@@ -182,6 +182,38 @@ BinaryData
 Events:  <none>
 $ 
 ```
+* 전체 네임스페이스 및 kube-system 네임스페이스 리소스 조회
+```
+$ kubectl get namespace
+NAME              STATUS   AGE
+default           Active   120m
+kube-node-lease   Active   120m
+kube-public       Active   120m
+kube-system       Active   120m
+
+$ kubectl get all -n kube-system                                                                                                                 
+NAME                           READY   STATUS    RESTARTS   AGE
+pod/aws-node-9dq6t             1/1     Running   0          115m
+pod/aws-node-d5hlv             1/1     Running   0          115m
+pod/coredns-76b4dcc5cc-s8c2n   1/1     Running   0          122m
+pod/coredns-76b4dcc5cc-z55c7   1/1     Running   0          122m
+pod/kube-proxy-v55qw           1/1     Running   0          115m
+pod/kube-proxy-wf487           1/1     Running   0          115m
+
+NAME               TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)         AGE
+service/kube-dns   ClusterIP   10.100.0.10   <none>        53/UDP,53/TCP   122m
+
+NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/aws-node     2         2         2       2            2           <none>          122m
+daemonset.apps/kube-proxy   2         2         2       2            2           <none>          122m
+
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/coredns   2/2     2            2           122m
+
+NAME                                 DESIRED   CURRENT   READY   AGE
+replicaset.apps/coredns-76b4dcc5cc   2         2         2       122m
+hopigaga:~/.kube $ 
+```
 
 ## 트러블 슈팅 ##
 
