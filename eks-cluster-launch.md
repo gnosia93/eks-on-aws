@@ -27,7 +27,7 @@ vpc:
   id: "vpc-0f154186c927b11bf"
   subnets:
     private:
-      ap-northeast-2b-private1:           # subnet alias
+      ap-northeast-2b-private1:           # subnet alias for ClusterConfig file, not VPC console subnet alias.
           id: "subnet-0e00aad3d9ebdf2b2"
       ap-northeast-2c-private2:
           id: "subnet-03941214c7e716f91"
