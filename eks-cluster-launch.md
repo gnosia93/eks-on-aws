@@ -40,9 +40,9 @@ managedNodeGroups:
   subnets:
     - ap-northeast-2b-privat1
     - ap-northeast-2c-private2
-  ssh:
-    enableSsm: true
-
+  volumeSize: 80
+  ssh: # use existing EC2 key
+      publicKeyName: aws-kp
 
 ```
 
