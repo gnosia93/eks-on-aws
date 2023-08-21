@@ -10,5 +10,4 @@
  
   * [2-3. 어플리케이션 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
   
-
-* [3. CI 구성하기]
+* [3. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
