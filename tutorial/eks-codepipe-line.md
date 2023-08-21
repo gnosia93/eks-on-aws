@@ -69,3 +69,5 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 * [깃허브 토큰 발급](https://velog.io/@shin6949/Github-Token-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EA%B8%B0-ch3ra7vc)
 
 * [Gradle 기본사용법](https://velog.io/@franc/Gradle-%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95)
+
+* [Gradle 설치](https://kotlinworld.com/312)
