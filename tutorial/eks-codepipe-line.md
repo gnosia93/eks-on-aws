@@ -100,6 +100,9 @@ $ aws ecr create-repository \
         "createdAt": 1692627316.0
     }
 }
+
+$ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name my-role
+
 ```
 
 
