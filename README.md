@@ -8,7 +8,7 @@
 
   * [2-2. 스프링 부트 어플리케이션 작성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-controller.md)
  
-  * [2-3. 어플리케이션 테스트]()
+  * [2-3. 어플리케이션 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
   
 
 * [3. CI 구성하기]
