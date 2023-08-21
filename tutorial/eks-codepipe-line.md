@@ -20,6 +20,9 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
   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
   ```
 
+### 2. CodeBuild 설정 ###
+
+
 
 ## 레퍼런스 ##
 
