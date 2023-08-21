@@ -59,7 +59,19 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 
 ### 4. buildspec.yaml 파일 생성 ###
-깃허브 레포지토리의 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuil가 빌드할 때 이 파일을 참조하게 된다. 
+깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuil가 빌드할 때 이 파일을 참조하게 된다. 
+
+
+### 5. ECR Private 레포지토리 생성 ###
+
+cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
+```
+$ aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+$ aws ecr create-repository \
+    --repository-name eks-on-aws-springboot \
+    --image-scanning-configuration scanOnPush=true \
+    --region ap-northeast-2
+```
 
 
 ## 레퍼런스 ##
