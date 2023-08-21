@@ -66,7 +66,8 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
 ```
-$ aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+$ ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`
+$ aws ecr get-login-password --region region | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.region.amazonaws.com
 $ aws ecr create-repository \
     --repository-name eks-on-aws-springboot \
     --image-scanning-configuration scanOnPush=true \
