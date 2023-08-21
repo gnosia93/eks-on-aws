@@ -43,6 +43,8 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-3.png)
 
+
+Code 시리스 Auto 를 선택하고 Confirm 버튼을 클릭한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-4.png)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-5.png)
