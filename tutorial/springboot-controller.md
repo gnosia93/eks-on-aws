@@ -1,6 +1,6 @@
 ## springboot 컨트롤러 작성 ##
 
-
+https://github.com/gnosia93/eks-on-aws-springboot 를 참고 하세요.
 
 ## 참고자료 ##
 
