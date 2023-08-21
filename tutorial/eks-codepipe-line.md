@@ -74,3 +74,5 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 * [Amazon Linux 2 서버에 스프링 부트 + gradle 프로젝트 jar 배포하기](https://tlatmsrud.tistory.com/66)
 
+* https://docs.aws.amazon.com/ko_kr/codebuild/latest/userguide/sample-runtime-versions.html 
+
