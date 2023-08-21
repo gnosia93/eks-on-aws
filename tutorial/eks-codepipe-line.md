@@ -37,6 +37,22 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 ### 3. Code Pipeline 설정 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-3.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-4.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-5.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-6.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-7.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-8.png)
+
 
 
 ## 레퍼런스 ##
