@@ -1,4 +1,4 @@
-## springboot 컨트롤러 작성 ##
+## springboot 어플리케이션 개발 ##
 
 https://github.com/gnosia93/eks-on-aws-springboot 를 참고 하세요.
 
