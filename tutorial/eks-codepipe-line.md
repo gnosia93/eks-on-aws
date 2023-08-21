@@ -117,6 +117,8 @@ $ aws ecr create-repository \
 
 * [spring boot 프로젝트 도커 이미지로 빌드](https://velog.io/@dhk22/Docker-spring-boot-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%84%EC%BB%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A1%9C-%EB%B9%8C%EB%93%9C)
 
+* https://stackoverflow.com/questions/38587325/aws-ecr-getauthorizationtoken
+  
 * https://docs.aws.amazon.com/ko_kr/AmazonECR/latest/userguide/getting-started-cli.html
 
 * https://docs.aws.amazon.com/ko_kr/codebuild/latest/userguide/sample-runtime-versions.html 
