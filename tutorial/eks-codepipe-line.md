@@ -22,6 +22,18 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 ### 2. CodeBuild 설정 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-3.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-4.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-5.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-6.png)
+
 
 
 ## 레퍼런스 ##
