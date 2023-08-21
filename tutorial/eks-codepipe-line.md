@@ -58,6 +58,9 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-8.png)
 
 
+### 4. buildspec.yaml 파일 생성 ###
+깃허브 레포지토리의 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuil가 빌드할 때 이 파일을 참조하게 된다. 
+
 
 ## 레퍼런스 ##
 
