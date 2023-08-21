@@ -67,11 +67,34 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
 ```
 $ ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`; REGION=ap-northeast-2
+
 $ aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
+WARNING! Your password will be stored unencrypted in /home/ec2-user/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
 $ aws ecr create-repository \
     --repository-name eks-on-aws-springboot \
     --image-scanning-configuration scanOnPush=true \
-    --region ap-northeast-2
+    --region $REGION
+{
+    "repository": {
+        "repositoryUri": "000000000000.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot", 
+        "imageScanningConfiguration": {
+            "scanOnPush": true
+        }, 
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }, 
+        "registryId": "000000000000", 
+        "imageTagMutability": "MUTABLE", 
+        "repositoryArn": "arn:aws:ecr:ap-northeast-2:000000000000:repository/eks-on-aws-springboot", 
+        "repositoryName": "eks-on-aws-springboot", 
+        "createdAt": 1692627316.0
+    }
+}
 ```
 
 
