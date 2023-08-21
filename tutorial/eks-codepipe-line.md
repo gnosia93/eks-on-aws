@@ -59,7 +59,12 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 
 ### 4. buildspec.yaml 파일 생성 ###
-깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuil가 빌드할 때 이 파일을 참조하게 된다. 
+깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuild가 빌드할 때 이 파일을 참조하게 된다. 
+
+
+아래 그림과 같이 codebuild 의 environment 를 수정한 준다. IMAGE_REPO_NAME, IMAGE_TAG 등은 buildspec.yaml 에서 사용되는 환경 변수이다.  
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
+
 
 
 ### 5. ECR Private 레포지토리 생성 ###
