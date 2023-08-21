@@ -15,6 +15,11 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 * Overview 에 나오는 것처럼 Commit, Metadata, Webhooks 권한(Read-only)을 선택한 후 [Generate token] 버튼을 눌려서 토큰을 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/github-token-3.png)
 
+* 생성된 토큰
+  ```
+  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
+  ```
+
 
 ## 레퍼런스 ##
 
