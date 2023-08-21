@@ -24,3 +24,5 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 ## 레퍼런스 ##
 
 * [CodePineLine 구축](https://potato-yong.tistory.com/130)
+
+* [깃허브 토큰 발급](https://velog.io/@shin6949/Github-Token-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EA%B8%B0-ch3ra7vc)
