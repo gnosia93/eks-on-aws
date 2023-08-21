@@ -100,9 +100,11 @@ $ aws ecr create-repository \
         "createdAt": 1692627316.0
     }
 }
+```
 
+buildspec.yaml 파일에서 codebuild 가 ECR에 로그인 하기위해서 아래의 정책을 codebuild 서비스 롤인 codebuild-service-role에 바인딩한다. 
+```
 $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name codebuild-service-role
-
 ```
 
 
