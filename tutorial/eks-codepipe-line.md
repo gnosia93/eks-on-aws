@@ -35,6 +35,9 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-6.png)
 
 
+### 3. Code Pipeline 설정 ###
+
+
 
 ## 레퍼런스 ##
 
