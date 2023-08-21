@@ -74,5 +74,7 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 * [Amazon Linux 2 서버에 스프링 부트 + gradle 프로젝트 jar 배포하기](https://tlatmsrud.tistory.com/66)
 
+* [spring boot 프로젝트 도커 이미지로 빌드](https://velog.io/@dhk22/Docker-spring-boot-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%84%EC%BB%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%A1%9C-%EB%B9%8C%EB%93%9C)
+
 * https://docs.aws.amazon.com/ko_kr/codebuild/latest/userguide/sample-runtime-versions.html 
 
