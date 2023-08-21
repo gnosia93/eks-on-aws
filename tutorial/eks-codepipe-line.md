@@ -73,3 +73,5 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 * [Gradle 설치](https://kotlinworld.com/312)
 
 * [EC2에 스프링부트 배포하기](https://velog.io/@dsunni/AWS-EC2%EC%97%90-Spring-Boot-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0)
+
+* https://thalals.tistory.com/408
