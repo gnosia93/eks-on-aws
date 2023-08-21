@@ -12,4 +12,8 @@
   
 * [3. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
 
-* [4. EKS 로깅]()_
+* [4. 수동 배포하기]()
+  - https://waspro.tistory.com/681
+ 
+   
+* [5. EKS 로깅]()_
