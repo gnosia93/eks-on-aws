@@ -59,8 +59,8 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 
 ### 4. buildspec.yaml 파일 생성 ###
-깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuild가 빌드할 때 이 파일을 참조하게 된다.   
-codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있다. 방안-2 를 사용하도록 한다. 
+Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 이 파일의 내용을 참조하여 빌드작업이 수행된다.   
+codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있는데, 방안-2 를 사용하도록 한다. 
 
 #### 방안-1 ####
 이 방식을 사용하는 경우 도커 이미지를 빌들하기 위해서 Dockerfile 이 필요하다. 아래는 도커 파일의 예시이다.
