@@ -3,16 +3,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: knote
+  name: shop-deployment
+  labels:
+    app: shop
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: knote
+      app: shop
   template:
     metadata:
       labels:
-        app: knote
+        app: shop
     spec:
       containers:
         - name: shop
