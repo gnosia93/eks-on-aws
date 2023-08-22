@@ -190,6 +190,10 @@ targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
 
 ### 5. helm 차트 배포 ###
 ```
+$ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+$ helm version --short
+
 $ helm repo add eks https://aws.github.io/eks-charts
 
 $ helm upgrade -i aws-load-balancer-controller \
