@@ -176,3 +176,4 @@ $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2Conta
 * https://binux.tistory.com/62
 * https://binux.tistory.com/121
 * [Spring Boot로 효율적인 Docker Image 만들기](https://jaime-note.tistory.com/44)
+* [Springboot Profile 설정방법 및 가져오기](https://oingdaddy.tistory.com/393)
