@@ -63,6 +63,8 @@ NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/shop-deployment-547d69d74b   3         3         3       11m
 hopigaga:~ $ 
 ```
+외부로 서비스를 노출하기 위해서 Ingress 를 생성한다.
+
 
 ## 레퍼런스 ##
 
