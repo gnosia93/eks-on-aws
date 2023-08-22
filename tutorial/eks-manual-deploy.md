@@ -217,6 +217,32 @@ AWS Load Balancer controller installed!
 $ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 deployment "aws-load-balancer-controller" successfully rolled out
 
+$ kubectl -n kube-system get all
+NAME                                               READY   STATUS    RESTARTS   AGE
+pod/aws-load-balancer-controller-9b5577c7f-k9jsq   1/1     Running   0          4m59s
+pod/aws-load-balancer-controller-9b5577c7f-xsnrp   1/1     Running   0          4m59s
+pod/aws-node-9dq6t                                 1/1     Running   0          2d7h
+pod/aws-node-d5hlv                                 1/1     Running   0          2d7h
+pod/coredns-76b4dcc5cc-s8c2n                       1/1     Running   0          2d7h
+pod/coredns-76b4dcc5cc-z55c7                       1/1     Running   0          2d7h
+pod/kube-proxy-v55qw                               1/1     Running   0          2d7h
+pod/kube-proxy-wf487                               1/1     Running   0          2d7h
+
+NAME                                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)         AGE
+service/aws-load-balancer-webhook-service   ClusterIP   10.100.254.171   <none>        443/TCP         5m
+service/kube-dns                            ClusterIP   10.100.0.10      <none>        53/UDP,53/TCP   2d7h
+
+NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/aws-node     2         2         2       2            2           <none>          2d7h
+daemonset.apps/kube-proxy   2         2         2       2            2           <none>          2d7h
+
+NAME                                           READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/aws-load-balancer-controller   2/2     2            2           5m
+deployment.apps/coredns                        2/2     2            2           2d7h
+
+NAME                                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/aws-load-balancer-controller-9b5577c7f   2         2         2       5m
+replicaset.apps/coredns-76b4dcc5cc                       2         2         2       2d7h
 ```
 
 
