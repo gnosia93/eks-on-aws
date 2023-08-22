@@ -106,6 +106,7 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 ```
 외부로 서비스를 노출하기 위해서 Ingress 를 생성한다. [Ingress 설치하기](https://three-beans.tistory.com/entry/AWSEKS-%EC%BD%98%EC%86%94%EB%A1%9C-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-EKS-%E2%91%A3-ingress-AWS-LoadBalancer-Controller-%EA%B5%AC%EC%84%B1)
 
+- https://archive.eksworkshop.com/beginner/130_exposing-service/ingress_controller_alb/
 
 ## 레퍼런스 ##
 
