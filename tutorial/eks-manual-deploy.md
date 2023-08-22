@@ -215,6 +215,8 @@ NOTES:
 AWS Load Balancer controller installed!
 
 $ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
+deployment "aws-load-balancer-controller" successfully rolled out
+
 ```
 
 
