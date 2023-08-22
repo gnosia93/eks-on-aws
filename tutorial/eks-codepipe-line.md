@@ -131,3 +131,4 @@ $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2Conta
 ----
 
 * https://binux.tistory.com/62
+* https://binux.tistory.com/121
