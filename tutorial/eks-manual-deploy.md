@@ -171,7 +171,22 @@ $ eksctl create iamserviceaccount \
 2023-08-22 11:14:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
 ```
 
-### 4. ###
+### 4. TargetGroupBinding CRDs ###
+
+```
+$ kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds?ref=master"
+customresourcedefinition.apiextensions.k8s.io/ingressclassparams.elbv2.k8s.aws created
+customresourcedefinition.apiextensions.k8s.io/targetgroupbindings.elbv2.k8s.aws created
+
+$ kubectl get crd
+NAME                                         CREATED AT
+cninodes.vpcresources.k8s.aws                2023-08-20T04:51:53Z
+eniconfigs.crd.k8s.amazonaws.com             2023-08-20T04:51:50Z
+ingressclassparams.elbv2.k8s.aws             2023-08-22T11:18:03Z
+policyendpoints.networking.k8s.aws           2023-08-20T04:51:54Z
+securitygrouppolicies.vpcresources.k8s.aws   2023-08-20T04:51:53Z
+targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
+```
 
 ## 레퍼런스 ##
 
