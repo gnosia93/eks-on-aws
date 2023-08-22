@@ -36,7 +36,7 @@ metadata:
   name: knote
 spec:
   selector:
-    app: knote
+    app: shop
   ports:
     - port: 80
       targetPort: 8080
