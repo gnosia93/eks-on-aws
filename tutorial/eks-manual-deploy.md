@@ -211,6 +211,8 @@ $ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 
 ## 레퍼런스 ##
 
+* https://stackoverflow.com/questions/72126048/circleci-message-error-exec-plugin-invalid-apiversion-client-authentication
+  
 * https://github.com/hashicorp/terraform-provider-helm/issues/893
 
 * [Ingress 로 서비스 외부로 노출 시키기](https://three-beans.tistory.com/entry/AWSEKS-%EC%BD%98%EC%86%94%EB%A1%9C-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-EKS-%E2%91%A3-ingress-AWS-LoadBalancer-Controller-%EA%B5%AC%EC%84%B1)
