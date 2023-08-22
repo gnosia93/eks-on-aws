@@ -3,7 +3,8 @@
 https://github.com/gnosia93/eks-on-aws-springboot 를 참고 하세요.
 
 ## 참고자료 ##
-
+* [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
+  
 * https://goddaehee.tistory.com/203
 
 * [스프링 부트 로그 설정](https://goddaehee.tistory.com/206)
