@@ -204,12 +204,23 @@ $ helm upgrade -i aws-load-balancer-controller \
     --set serviceAccount.name=aws-load-balancer-controller \
     --set image.tag="${LBC_VERSION}" \
     --version="${LBC_CHART_VERSION}"
+Release "aws-load-balancer-controller" does not exist. Installing it now.
+NAME: aws-load-balancer-controller
+LAST DEPLOYED: Tue Aug 22 12:00:25 2023
+NAMESPACE: kube-system
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+AWS Load Balancer controller installed!
 
 $ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 ```
 
 
 ## 레퍼런스 ##
+
+* https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_api-versions/
 
 * https://stackoverflow.com/questions/72126048/circleci-message-error-exec-plugin-invalid-apiversion-client-authentication
   
