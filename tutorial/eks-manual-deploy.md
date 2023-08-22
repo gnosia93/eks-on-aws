@@ -247,6 +247,32 @@ replicaset.apps/aws-load-balancer-controller-9b5577c7f   2         2         2  
 replicaset.apps/coredns-76b4dcc5cc                       2         2         2       2d7h
 ```
 
+### 6. Ingress 생성 ###
+```
+$ cat <<EOF > shop-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shop-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/load-balancer-name: shop-alb
+spec:
+  rules:
+   - http:
+      paths:
+        - path: /*
+          backend:
+            service:
+              name: shop
+              port:
+                number:80
+EOF
+
+$ kubectl apply -f shop-ingress.yaml
+```
 
 ## 레퍼런스 ##
 
