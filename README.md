@@ -12,7 +12,7 @@
   
 * [3. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
 
-* [4. EKS 에 어플리케이션 배포하기]()
+* [4. EKS 에 어플리케이션 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
   - https://waspro.tistory.com/681
  
    
