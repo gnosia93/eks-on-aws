@@ -135,6 +135,20 @@ $ curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-
 $ aws iam create-policy \
     --policy-name AWSLoadBalancerControllerIAMPolicy \
     --policy-document file://iam_policy.json
+{
+    "Policy": {
+        "PolicyName": "AWSLoadBalancerControllerIAMPolicy", 
+        "PermissionsBoundaryUsageCount": 0, 
+        "CreateDate": "2023-08-22T11:12:05Z", 
+        "AttachmentCount": 0, 
+        "IsAttachable": true, 
+        "PolicyId": "ANPAXITLFFBWUJLM6A2BI", 
+        "DefaultVersionId": "v1", 
+        "Path": "/", 
+        "Arn": "arn:aws:iam::499514681453:policy/AWSLoadBalancerControllerIAMPolicy", 
+        "UpdateDate": "2023-08-22T11:12:05Z"
+    }
+}
 ```
 
 
