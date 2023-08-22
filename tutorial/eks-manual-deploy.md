@@ -105,11 +105,14 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 2023-08-22T08:32:59.350Z  INFO 1 --- [           main] com.example.shop.ShopApplication         : Started ShopApplication in 3.761 seconds (process running for 4.083)
 ```
 
-## Ingress ##
+## Ingress 생성 ##
 
 외부로 서비스를 노출하기 위해서 Ingress 를 생성한다. [Ingress 설치하기](https://three-beans.tistory.com/entry/AWSEKS-%EC%BD%98%EC%86%94%EB%A1%9C-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-EKS-%E2%91%A3-ingress-AWS-LoadBalancer-Controller-%EA%B5%AC%EC%84%B1)
 
 - https://archive.eksworkshop.com/beginner/130_exposing-service/ingress_controller_alb/
+
+### 1. IAM OICD 프로바이더 생성 ###
+쿠버네티스 서비스 어카운트가 AWS IAM 리소스에 억세스하고 다룰 수 있도록 OIDC 값으로 IAM Identity 프러바이더를 생성해 줘야 한다.
 
 ```
 $ eksctl utils associate-iam-oidc-provider \
@@ -119,7 +122,7 @@ $ eksctl utils associate-iam-oidc-provider \
 2023-08-22 11:00:52 [ℹ]  will create IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
 2023-08-22 11:00:52 [✔]  created IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
 ```
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/iam-oicd-provider.png)
 
 ## 레퍼런스 ##
 
