@@ -128,3 +128,6 @@ $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2Conta
 
 * https://docs.aws.amazon.com/ko_kr/codebuild/latest/userguide/sample-runtime-versions.html 
 
+----
+
+* https://binux.tistory.com/62
