@@ -222,6 +222,7 @@ deployment "aws-load-balancer-controller" successfully rolled out
 
 ## 레퍼런스 ##
 
+* [eks에서 exec plugin is configured to use API version 이슈](https://shblue21.github.io/aws/eks%EC%97%90%EC%84%9C-exec-plugin-is-configured-to-use-API-version-%EC%9D%B4%EC%8A%88/)
 * https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_api-versions/
 
 * https://stackoverflow.com/questions/72126048/circleci-message-error-exec-plugin-invalid-apiversion-client-authentication
