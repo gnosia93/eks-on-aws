@@ -273,6 +273,7 @@ spec:
 EOF
 
 $ kubectl apply -f shop-ingress.yaml
+ingress.networking.k8s.io/shop-ingress created
 ```
 
 ## 레퍼런스 ##
