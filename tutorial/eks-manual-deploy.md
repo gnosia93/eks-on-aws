@@ -191,13 +191,15 @@ targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
 ```
 
 ### 5. Load Balancer 컨트롤러 생성 ###
+
+* https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases 
+
 ```
 $ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-
 $ helm version --short
-
 $ helm repo add eks https://aws.github.io/eks-charts
 
+$ LBC_VERSION=v2.6.0
 $ helm upgrade -i aws-load-balancer-controller \
     eks/aws-load-balancer-controller \
     -n kube-system \
