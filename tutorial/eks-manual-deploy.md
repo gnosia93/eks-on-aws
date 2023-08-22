@@ -308,7 +308,7 @@ Events:
 ```
 
 ## 레퍼런스 ##
-
+* [AWS EKS에서 ALB Ingress Controller 활용기](https://medium.com/coinone/aws-eks%EC%97%90%EC%84%9C-alb-ingress-controller-%ED%99%9C%EC%9A%A9%EA%B8%B0-6a29aa2a1144)
 * [eks에서 exec plugin is configured to use API version 이슈](https://shblue21.github.io/aws/eks%EC%97%90%EC%84%9C-exec-plugin-is-configured-to-use-API-version-%EC%9D%B4%EC%8A%88/)
 * https://jamesdefabia.github.io/docs/user-guide/kubectl/kubectl_api-versions/
 
