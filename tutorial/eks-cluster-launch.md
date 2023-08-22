@@ -31,6 +31,16 @@ $ aws sts get-caller-identity --region ap-northeast-2
     "Arn": "arn:aws:sts::49951....:assumed-role/eksworkshop-admin/i-0b33b3127e4d57036"
 }
 ```
+* RDS stage / production 생성
+* stage 스키마 생성
+cloud9 콘솔에서 아래 명령어를 샐행한다. 
+```
+$ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+```
+  
+
+
+
 
 ### 3. EKS 클러스터 설치 ###
 
