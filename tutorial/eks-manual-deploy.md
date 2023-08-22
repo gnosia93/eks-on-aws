@@ -1,5 +1,6 @@
 
 ```
+$ cat <<EOF > springboot-shop.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -36,6 +37,9 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
+EOF
+
+$ kubectl apply -f springboot-shop.yaml
 ```
 
 ## 레퍼런스 ##
