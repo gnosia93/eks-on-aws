@@ -130,7 +130,11 @@ $ echo 'export LBC_VERSION="v2.4.1"' >>  ~/.bash_profile
 $ echo 'export LBC_CHART_VERSION="1.4.1"' >>  ~/.bash_profile
 $ . ~/.bash_profile
 
+$ curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/${LBC_VERSION}/docs/install/iam_policy.json
 
+$ aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam_policy.json
 ```
 
 
