@@ -45,6 +45,23 @@ spec:
 EOF
 
 $ kubectl apply -f springboot-shop.yaml
+
+$ kubectl get all
+NAME                                   READY   STATUS    RESTARTS   AGE
+pod/shop-deployment-547d69d74b-glzbt   1/1     Running   0          11m
+pod/shop-deployment-547d69d74b-nn8pm   1/1     Running   0          11m
+pod/shop-deployment-547d69d74b-xc445   1/1     Running   0          11m
+
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP   2d3h
+service/shop         ClusterIP   10.100.26.238   <none>        80/TCP    11m
+
+NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/shop-deployment   3/3     3            3           11m
+
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.apps/shop-deployment-547d69d74b   3         3         3       11m
+hopigaga:~ $ 
 ```
 
 ## 레퍼런스 ##
