@@ -263,10 +263,13 @@ spec:
   rules:
    - http:
       paths:
-        - path: /*
+        - path: /
+          pathType: Prefix
           backend:
-            serviceName: shop
-            servicePort: 80
+            service:
+              name: shop
+              port:
+                number: 80
 EOF
 
 $ kubectl apply -f shop-ingress.yaml
