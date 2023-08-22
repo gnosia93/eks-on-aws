@@ -1,3 +1,6 @@
+## 어플리케이션 배포 ##
+
+cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
 ```
 $ cat <<EOF > springboot-shop.yaml
