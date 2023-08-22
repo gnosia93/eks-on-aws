@@ -17,7 +17,7 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 * 생성된 토큰
   ```
-  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
+  github_pat_...
   ```
 
 ### 2. CodeBuild 설정 ###
@@ -59,11 +59,24 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 
 ### 4. buildspec.yaml 파일 생성 ###
-깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuild가 빌드할 때 이 파일을 참조하게 된다. 
-
+깃허브 레포지토리의 root 디렉토리 또는 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 codebuild가 빌드할 때 이 파일을 참조하게 된다.   
 codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있다. 방안-2 를 사용하도록 한다. 
 
 #### 방안-1 ####
+이 방식을 사용하는 경우 도커 이미지를 빌들하기 위해서 Dockerfile 이 필요하다. 아래는 도커 파일의 예시이다.
+gradlew bootjar 를 실행하면 단독으로 실행가능한 fat jar 파일에 만들어 지게 된다.
+```
+# base image
+FROM amazoncorretto:17
+
+# 변수설정 (빌드파일의 경로)
+ARG BOOT_JAR=build/libs/*.jar
+# 빌드파일을 컨테이너로 복사
+COPY ${BOOT_JAR} boot.jar
+# jar 파일 실행
+ENTRYPOINT ["java", "-jar", "/boot.jar"]
+```
+
 [buildspec.yaml]
 ```
 version: 0.2
@@ -74,12 +87,6 @@ phases:
     commands:
        - java -version
        - docker -v
-#      - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
-#      - chmod +x ./kubectl
-#      - mv ./kubectl /usr/local/bin/kubectl
-#      - mkdir ~/.kube
-#      - aws eks --region ap-northeast-2 update-kubeconfig --name eks
-#      - kubectl get po -n kube-system
 
   pre_build:
     commands:
@@ -97,13 +104,8 @@ phases:
 
   post_build:
     commands:
-#      - AWS_ECR_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - DATE='date'
       - echo Build completed on $DATE
-#      - sed -i.bak 's#AWS_ECR_URI#'"$AWS_ECR_URI"'#' ./EKS/deploy.yaml
-#      - sed -i.bak 's#DATE_STRING#'"$DATE"'#' ./EKS/deploy.yaml
-#      - kubectl apply -f ./EKS/deploy.yaml
-#      - kubectl apply -f ./EKS/svc.yaml
 ```
 
 
