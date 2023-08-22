@@ -126,6 +126,10 @@ $ eksctl utils associate-iam-oidc-provider \
 
 ### 2. AWSLoadBalancerControllerIAMPolicy 정책 생성 ###
 ```
+$ echo 'export LBC_VERSION="v2.4.1"' >>  ~/.bash_profile
+$ echo 'export LBC_CHART_VERSION="1.4.1"' >>  ~/.bash_profile
+$ . ~/.bash_profile
+
 
 ```
 
