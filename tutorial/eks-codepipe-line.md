@@ -111,7 +111,9 @@ phases:
 
 #### 방안-2 ####
 
-gradlew bootBuildImage 이용하여 layerd docker image 를 생성한다. layered 도커 이미지를 생성하는 경우 타켓 이미지 사이즈를 줄일 수 있고, 별도로 Dockerfile 파일 또한 없어도 된다. 
+gradlew bootBuildImage 이용하여 layerd docker image 를 생성한다. layered 도커 이미지를 생성하는 경우 타켓 이미지 사이즈를 줄일 수 있고, 별도의 Dockerfile 파일 또한 없어도 된다.
+[Gradle, Layered Jar 그리고 Dockerbuild 최적화](https://velog.io/@ssol_916/Gradle-Layered-Jar-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Dockerbuild-%EC%B5%9C%EC%A0%81%ED%99%94)
+
 단 build.gradle 파일의 dependencies 섹션에 gradle-plugin 을 추가해야 한다.
 ```
 dependencies {
@@ -218,8 +220,6 @@ $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2Conta
 
 ## 스프링 부트 도커 이미지 빌드하기 ##
 
-
-* [Gradle, Layered Jar 그리고 Dockerbuild 최적화](https://velog.io/@ssol_916/Gradle-Layered-Jar-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Dockerbuild-%EC%B5%9C%EC%A0%81%ED%99%94)
 * https://binux.tistory.com/62
 * https://binux.tistory.com/121
 * [Spring Boot로 효율적인 Docker Image 만들기](https://jaime-note.tistory.com/44)
