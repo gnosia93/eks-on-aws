@@ -103,6 +103,54 @@ phases:
 #      - kubectl apply -f ./EKS/svc.yaml
 ```
 
+[buildspec.yml]
+```
+# ./buildspec.yaml
+
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+       - java -version
+       - docker -v
+#      - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+#      - chmod +x ./kubectl
+#      - mv ./kubectl /usr/local/bin/kubectl
+#      - mkdir ~/.kube
+#      - aws eks --region ap-northeast-2 update-kubeconfig --name eks
+#      - kubectl get po -n kube-system
+
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/
+  build:
+    commands:
+#      - ./gradlew bootjar
+#      - BOOT_JAR=`ls build/libs/*.jar`
+#      - echo $BOOT_JAR
+      - echo Building the Layered Docker Image with Gradlew
+      - ./gradlew clean bootBuildImage
+#      - docker images
+      - docker tag docker.io/library/shop:0.0.1-SNAPSHOT $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+#      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+#      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+#      - docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+
+  post_build:
+    commands:
+#      - AWS_ECR_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - DATE='date'
+      - echo Build completed on $DATE
+#      - sed -i.bak 's#AWS_ECR_URI#'"$AWS_ECR_URI"'#' ./EKS/deploy.yaml
+#      - sed -i.bak 's#DATE_STRING#'"$DATE"'#' ./EKS/deploy.yaml
+#      - kubectl apply -f ./EKS/deploy.yaml
+#      - kubectl apply -f ./EKS/svc.yaml
+```
+
 아래 그림과 같이 codebuild 의 environment 를 수정해 준다. IMAGE_REPO_NAME, IMAGE_TAG 등은 buildspec.yaml 에서 사용되는 환경 변수이다.  
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
 
