@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: knote
+  name: shop
 spec:
   selector:
     app: shop
