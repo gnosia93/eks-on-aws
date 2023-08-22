@@ -25,6 +25,17 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: stage
           imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: knote
+spec:
+  selector:
+    app: knote
+  ports:
+    - port: 80
+      targetPort: 8080
 ```
 
 ## 레퍼런스 ##
