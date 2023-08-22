@@ -114,8 +114,10 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 ```
 $ eksctl utils associate-iam-oidc-provider \
     --region ap-northeast-2 \
-    --cluster eksworkshop-eksctl \
+    --cluster eks-cluster-1 \
     --approve
+2023-08-22 11:00:52 [ℹ]  will create IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
+2023-08-22 11:00:52 [✔]  created IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
 ```
 
 
