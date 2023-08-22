@@ -190,7 +190,7 @@ securitygrouppolicies.vpcresources.k8s.aws   2023-08-20T04:51:53Z
 targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
 ```
 
-### 5. helm 차트 배포 ###
+### 5. Load Balancer 컨트롤러 생성 ###
 ```
 $ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
@@ -248,6 +248,8 @@ replicaset.apps/coredns-76b4dcc5cc                       2         2         2  
 ```
 
 ### 6. Ingress 생성 ###
+https://kubernetes.io/ko/docs/concepts/services-networking/ingress/
+
 ```
 $ cat <<EOF > shop-ingress.yaml
 apiVersion: networking.k8s.io/v1
