@@ -34,6 +34,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: shop
+  labels:
+    app: shop
 spec:
   selector:
     app: shop
