@@ -37,6 +37,7 @@ metadata:
   labels:
     app: shop
 spec:
+  type: NodePort
   selector:
     app: shop
   ports:
