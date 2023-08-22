@@ -198,6 +198,7 @@ targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
 $ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 $ helm version --short
 $ helm repo add eks https://aws.github.io/eks-charts
+$ helm repo update eks
 
 $ LBC_VERSION=v2.6.0
 $ helm upgrade -i aws-load-balancer-controller \
