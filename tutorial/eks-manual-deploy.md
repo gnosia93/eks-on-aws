@@ -207,8 +207,8 @@ $ helm upgrade -i aws-load-balancer-controller \
     --set clusterName=eks-cluster-7 \
     --set serviceAccount.create=false \
     --set serviceAccount.name=aws-load-balancer-controller \
-    --set image.tag="${LBC_VERSION}" \
-    --version="${LBC_CHART_VERSION}"
+    --set image.tag="${LBC_VERSION}" 
+#    --version="${LBC_CHART_VERSION}"
 Release "aws-load-balancer-controller" does not exist. Installing it now.
 NAME: aws-load-balancer-controller
 LAST DEPLOYED: Tue Aug 22 12:00:25 2023
