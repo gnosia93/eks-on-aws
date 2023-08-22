@@ -104,6 +104,9 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 2023-08-22T08:32:59.334Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-08-22T08:32:59.350Z  INFO 1 --- [           main] com.example.shop.ShopApplication         : Started ShopApplication in 3.761 seconds (process running for 4.083)
 ```
+
+## Ingress ##
+
 외부로 서비스를 노출하기 위해서 Ingress 를 생성한다. [Ingress 설치하기](https://three-beans.tistory.com/entry/AWSEKS-%EC%BD%98%EC%86%94%EB%A1%9C-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-EKS-%E2%91%A3-ingress-AWS-LoadBalancer-Controller-%EA%B5%AC%EC%84%B1)
 
 - https://archive.eksworkshop.com/beginner/130_exposing-service/ingress_controller_alb/
