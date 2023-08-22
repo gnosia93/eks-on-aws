@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
   name: knote
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: knote
@@ -15,13 +15,13 @@ spec:
         app: knote
     spec:
       containers:
-        - name: app
-          image: learnk8s/knote-java:1.0.0
+        - name: shop
+          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
           ports:
             - containerPort: 8080
           env:
-            - name: MONGO_URL
-              value: mongodb://mongo:27017/dev
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
           imagePullPolicy: Always
 ```
 
