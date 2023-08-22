@@ -250,6 +250,12 @@ replicaset.apps/coredns-76b4dcc5cc                       2         2         2  
 ### 6. Ingress 생성 ###
 https://kubernetes.io/ko/docs/concepts/services-networking/ingress/
 
+2군데 이상의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다.
+```
+aws ec2 create-tags --resources $subnet-id --tags "Key=kubernetes.io/role/elb,Value=1"
+```
+
+
 ```
 $ cat <<EOF > shop-ingress.yaml
 apiVersion: networking.k8s.io/v1
@@ -276,6 +282,26 @@ EOF
 
 $ kubectl apply -f shop-ingress.yaml
 ingress.networking.k8s.io/shop-ingress created
+
+$ kubectl describe ingress shop-ingress
+Name:             shop-ingress
+Labels:           <none>
+Namespace:        default
+Address:          shop-alb-1405949135.ap-northeast-2.elb.amazonaws.com
+Default backend:  default-http-backend:80 (<error: endpoints "default-http-backend" not found>)
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /   shop:80 (172.31.21.245:8080,172.31.33.139:8080,172.31.34.38:8080)
+Annotations:  alb.ingress.kubernetes.io/load-balancer-name: shop-alb
+              alb.ingress.kubernetes.io/scheme: internet-facing
+              alb.ingress.kubernetes.io/target-type: ip
+              kubernetes.io/ingress.class: alb
+Events:
+  Type    Reason                  Age   From     Message
+  ----    ------                  ----  ----     -------
+  Normal  SuccessfullyReconciled  7s    ingress  Successfully reconciled
 ```
 
 ## 레퍼런스 ##
