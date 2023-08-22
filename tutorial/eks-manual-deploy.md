@@ -188,6 +188,23 @@ securitygrouppolicies.vpcresources.k8s.aws   2023-08-20T04:51:53Z
 targetgroupbindings.elbv2.k8s.aws            2023-08-22T11:18:03Z
 ```
 
+### 5. helm 차트 배포 ###
+```
+$ helm repo add eks https://aws.github.io/eks-charts
+
+$ helm upgrade -i aws-load-balancer-controller \
+    eks/aws-load-balancer-controller \
+    -n kube-system \
+    --set clusterName=eks-cluster-7 \
+    --set serviceAccount.create=false \
+    --set serviceAccount.name=aws-load-balancer-controller \
+    --set image.tag="${LBC_VERSION}" \
+    --version="${LBC_CHART_VERSION}"
+
+$ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
+```
+
+
 ## 레퍼런스 ##
 
 * [Ingress 로 서비스 외부로 노출 시키기](https://three-beans.tistory.com/entry/AWSEKS-%EC%BD%98%EC%86%94%EB%A1%9C-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-EKS-%E2%91%A3-ingress-AWS-LoadBalancer-Controller-%EA%B5%AC%EC%84%B1)
