@@ -149,7 +149,10 @@ $ aws iam create-policy \
         "UpdateDate": "2023-08-22T11:12:05Z"
     }
 }
+```
 
+### 3. aws-load-balancer-controller 서비스 어카운트 생성 ###
+```
 $ eksctl create iamserviceaccount \
   --cluster eks-cluster-1 \
   --namespace kube-system \
@@ -168,6 +171,7 @@ $ eksctl create iamserviceaccount \
 2023-08-22 11:14:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
 ```
 
+### 4. ###
 
 ## 레퍼런스 ##
 
