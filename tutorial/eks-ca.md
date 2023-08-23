@@ -103,6 +103,9 @@ Server Version: v1.25.12-eks-2d98532
 WARNING: version difference between client (1.23) and server (1.25) exceeds the supported minor version skew of +/-1
 ```
 
+* https://github.com/kubernetes/autoscaler/releases 에서 EKS 버전에 맞는 autoscaler 최신 버전 확인
+
+* cluster-autoscaler-autodiscover.yaml 수정
 ```
 curl -o cluster-autoscaler-autodiscover.yaml \
 https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
