@@ -22,7 +22,7 @@
  
 * [5. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
 
-* [6. 클러스터 오토 스케이링]()
+* [6. 클러스터 오토 스케일링]()
   
   - [6-1. Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
