@@ -196,6 +196,12 @@ affinity:
           - ${NODEGROUP}
 ```
 
+[수정전]
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-node-affinity-1.png)
+
+[수정후]
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-node-affinity-2.png)
+
 
 ## 레퍼런스 ##
 
