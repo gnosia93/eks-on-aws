@@ -140,6 +140,12 @@ rolebinding.rbac.authorization.k8s.io/cluster-autoscaler created
 deployment.apps/cluster-autoscaler created
 ```
 
+[Optional] To prevent CA from removing nodes where its own pod is running, we will add the cluster-autoscaler.kubernetes.io/safe-to-evict annotation to its deployment with the following command
+```
+kubectl -n kube-system \
+    annotate deployment.apps/cluster-autoscaler \
+    cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+```
 
 ## 레퍼런스 ##
 
