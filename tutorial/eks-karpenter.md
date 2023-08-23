@@ -241,6 +241,24 @@ spec:
 EOF
 ```
 
+### 8. 스케일링 테스트 ###
+
+```
+aws eks update-nodegroup-config --cluster-name ${CLUSTER_NAME} \
+    --nodegroup-name ${NODEGROUP} \
+    --scaling-config "minSize=2,maxSize=2,desiredSize=2"
+```
+
+```
+kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
+```
+Note: If you notice any webhook.DefaultingWebhook Reconcile error in the controller logs, restart your Karpenter pods to fix it.
+
+```
+kubectl get nodes
+```
+
+
 ## 트러블 슈팅 ##
 ```
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
