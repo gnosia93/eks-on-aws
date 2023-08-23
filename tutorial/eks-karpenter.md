@@ -262,6 +262,8 @@ kubectl get nodes
 
 ```
 kubectl delete all --all -n karpenter
+
+kubectl delete ns karpenter
 ```
 
 
