@@ -163,6 +163,39 @@ kubectl edit configmap aws-auth -n kube-system
   username: system:node:{{EC2PrivateDNSName}}
 ```
 
+### 7. KARPENTER 설치 ### 
+
+* helm 차트 설치
+```
+echo $KARPENTER_VERSION
+
+# make sure that the Helm client version is v3.11.0 or later.
+helm version --short
+
+helm template karpenter oci://public.ecr.aws/karpenter/karpenter --version ${KARPENTER_VERSION} --namespace karpenter \
+    --set settings.aws.defaultInstanceProfile=KarpenterInstanceProfile \
+    --set settings.aws.clusterEndpoint="${CLUSTER_ENDPOINT}" \
+    --set settings.aws.clusterName=${CLUSTER_NAME} \
+    --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"="arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterControllerRole-${CLUSTER_NAME}" \
+> karpenter.yaml
+```
+
+* karpenter.yaml 수정 - nodegroup 부분 추가 
+```
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: karpenter.sh/provisioner-name
+          operator: DoesNotExist
+      - matchExpressions:
+        - key: eks.amazonaws.com/nodegroup
+          operator: In
+          values:
+          - ${NODEGROUP}
+```
+
 
 ## 레퍼런스 ##
 
