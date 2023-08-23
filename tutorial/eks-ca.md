@@ -124,6 +124,23 @@ https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscale
 2. 컨테이너 이미지 cluster-autoscaler:v1.26.2 를 cluster-autoscaler:v1.25.3 으로 수정
 ```
 
+* 오브젝트 생성
+```
+kubectl apply -f cluster-autoscaler-autodiscover.yaml
+```
+
+[결과]
+```
+Warning: resource serviceaccounts/cluster-autoscaler is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+serviceaccount/cluster-autoscaler configured
+clusterrole.rbac.authorization.k8s.io/cluster-autoscaler created
+role.rbac.authorization.k8s.io/cluster-autoscaler created
+clusterrolebinding.rbac.authorization.k8s.io/cluster-autoscaler created
+rolebinding.rbac.authorization.k8s.io/cluster-autoscaler created
+deployment.apps/cluster-autoscaler created
+```
+
+
 ## 레퍼런스 ##
 
 * [EKS Cluster Autoscaler(CA scales)](https://blog.luxrobo.com/eks-cluster-autoscaler-ca-scales-2bbf2a3147ae)
