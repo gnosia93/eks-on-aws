@@ -1,6 +1,12 @@
 
 
 
+### 1. EKS 노드그룹의 Role 에 CloudWatchAgentServerPolicy 추가 ###
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nodegroup-node-iam.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nodegroup-node-iam-role.png)
+
+
+
 
 ## 레퍼런스 ##
 
