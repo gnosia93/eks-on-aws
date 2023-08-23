@@ -43,6 +43,8 @@ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch
 /fluent-bit/fluent-bit.yaml
 ```
 
+cloudwatch 에서 로그 그룹을 확인한다. 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudwatch-eks-log.png)
 
 
 ## 레퍼런스 ##
