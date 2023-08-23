@@ -105,7 +105,7 @@ WARNING: version difference between client (1.23) and server (1.25) exceeds the 
 
 ```
 curl -o cluster-autoscaler-autodiscover.yaml \
-https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
 ```
 
 ## 레퍼런스 ##
