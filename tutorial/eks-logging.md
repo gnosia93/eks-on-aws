@@ -265,6 +265,10 @@ BinaryData
 Events:  <none>
 ```
 
+### 4. cloudwatch 로그 확인 ###
+
+
+
 
 
 ## 레퍼런스 ##
