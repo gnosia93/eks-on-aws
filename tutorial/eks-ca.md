@@ -83,6 +83,17 @@ eksctl create iamserviceaccount \
 
 kubectl -n kube-system describe sa cluster-autoscaler
 ```
+[결과]
+```
+Name:                cluster-autoscaler
+Namespace:           kube-system
+Labels:              app.kubernetes.io/managed-by=eksctl
+Annotations:         eks.amazonaws.com/role-arn: arn:aws:iam::499514681453:role/eksctl-eks-workshop-addon-iamserviceaccount-Role1-MXUNUFQKEXRB
+Image pull secrets:  <none>
+Mountable secrets:   <none>
+Tokens:              <none>
+Events:              <none>
+```
 
 
 
