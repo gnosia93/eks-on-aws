@@ -86,7 +86,7 @@ EOF
 ```
 
 ```
-$ eksctl create cluster -f eks-cluster-1.yaml
+$ eksctl create cluster -f $CLUSTER_NAME.yaml
 2023-08-20 04:46:14 [ℹ]  eksctl version 0.153.0
 2023-08-20 04:46:14 [ℹ]  using region ap-northeast-2
 2023-08-20 04:46:14 [✔]  using existing VPC (vpc-0f154186c927b11bf) and subnets (private:map[ap-northeast-2b-private1:{subnet-0e00aad3d9ebdf2b2 ap-northeast-2b 172.31.16.0/20 0 } ap-northeast-2c-private2:{subnet-03941214c7e716f91 ap-northeast-2c 172.31.32.0/20 0 }] public:map[])
