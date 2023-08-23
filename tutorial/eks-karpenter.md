@@ -163,7 +163,7 @@ eksctl create iamidentitymapping \
   --group system:nodes
 ```
 
-**** 파일직접을 수정하는 방식으로도 가능하나, 테스트해 보지 않음 / 일단 위의 명령어를 수행한다. **** 
+**** 파일직접을 수정하는 방식으로도 가능하나, 테스트해 보지 않음 / 위의 명령어만 수행하는 것을 권장. **** 
 ```
 $ kubectl edit configmap aws-auth -n kube-system
 
