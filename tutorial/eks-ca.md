@@ -173,11 +173,11 @@ spec:
         name: nginx-to-scaleout
         resources:
           limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 1000m
+            memory: 2048Mi
           requests:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 1000m
+            memory: 2048Mi
 EOF
 
 kubectl apply -f nginx.yaml
