@@ -1,3 +1,4 @@
+## CA 설치 ##
 
 ### 1. 오토 스케일링 그룹 설정 확인 ###
 ```
@@ -146,6 +147,9 @@ kubectl -n kube-system \
     annotate deployment.apps/cluster-autoscaler \
     cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 ```
+
+## CA 테스트 ##
+
 
 ## 레퍼런스 ##
 
