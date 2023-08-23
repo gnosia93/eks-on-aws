@@ -20,9 +20,9 @@
 
 * [6. 클러스터 오토 스케이링]()
   
-  - [Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
+  - [6-1. Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
-  - [Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
+  - [6-2. Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
  
 
 
