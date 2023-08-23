@@ -1,6 +1,6 @@
 # eks-on-aws
 
-* [0. 기본 인프라 구성]
+* [0. 기본 인프라 구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/basic-infra.md)
 
 * [1. EKS 클러스터 설치](https://github.com/gnosia93/container-on-aws/blob/main/tutorial/eks-cluster-launch.md)
 
