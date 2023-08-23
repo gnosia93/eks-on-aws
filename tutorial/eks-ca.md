@@ -204,10 +204,6 @@ kubectl get nodes
 ```
 
 ```
-kubectl -n kube-system logs -f deployment/cluster-autoscaler
-```
-
-```
 k9s
 ```
 
