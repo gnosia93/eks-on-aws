@@ -7,7 +7,7 @@ aws autoscaling \
     Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
     --output table
 ```
-
+[결과]
 ```
 -------------------------------------------------------------------------
 |                       DescribeAutoScalingGroups                       |
