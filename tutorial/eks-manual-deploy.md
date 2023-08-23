@@ -237,7 +237,7 @@ metadata:
   name: shop-ingress
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/load-balancer-name: shop-alb
 spec:
