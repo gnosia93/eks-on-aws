@@ -8,11 +8,11 @@ The following steps show you how to deploy Karpenter in an Amazon EKS cluster.
 ### 1. 환경변수 설정 ###
 
 ```
-export CLUSTER_NAME=eks-workshop
 export KARPENTER_VERSION=v0.29.2
 export CLUSTER_ENDPOINT="$(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.endpoint" --output text)"
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
 
+echo "CLUSTER_NAME is ... ${CLUSTER_NAME}"
 kubectl config current-context
 eksctl utils associate-iam-oidc-provider --cluster ${CLUSTER_NAME} --approve
 ```
