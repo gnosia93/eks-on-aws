@@ -103,6 +103,10 @@ Server Version: v1.25.12-eks-2d98532
 WARNING: version difference between client (1.23) and server (1.25) exceeds the supported minor version skew of +/-1
 ```
 
+```
+curl -o cluster-autoscaler-autodiscover.yaml \
+https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+```
 
 ## 레퍼런스 ##
 
