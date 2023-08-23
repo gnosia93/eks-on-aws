@@ -258,6 +258,13 @@ Note: If you notice any webhook.DefaultingWebhook Reconcile error in the control
 kubectl get nodes
 ```
 
+## 카펜터 삭제 ##
+
+```
+kubectl delete all -n kerpenter
+```
+
+
 
 ## 트러블 슈팅 ##
 ```
