@@ -1,5 +1,10 @@
 ## 카펜터 설치 ##
 
+Karpenter is an open-source node provisioning project built for Kubernetes. Adding Karpenter to a Kubernetes cluster can dramatically improve the efficiency and cost of running workloads on that cluster. For more information, see [Karpenter](https://karpenter.sh/
+) documentation.
+
+The following steps show you how to deploy Karpenter in an Amazon EKS cluster.
+
 ### 1. 환경변수 설정 ###
 
 ```
@@ -300,7 +305,5 @@ karpenter-585bdd986b-z9wkq   0/1     CrashLoopBackOff   6 (46s ago)   7m2s
 * https://github.com/aws/karpenter/releases
 
 * https://tech.scatterlab.co.kr/spot-karpenter/
-
-* https://karpenter.sh/
 
 * https://repost.aws/knowledge-center/eks-install-karpenter
