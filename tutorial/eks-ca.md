@@ -80,6 +80,8 @@ eksctl create iamserviceaccount \
     --attach-policy-arn "arn:aws:iam::${ACCOUNT_ID}:policy/k8s-asg-policy" \
     --approve \
     --override-existing-serviceaccounts
+
+kubectl -n kube-system describe sa cluster-autoscaler
 ```
 
 
