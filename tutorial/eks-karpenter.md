@@ -129,6 +129,10 @@ LAUNCH_TEMPLATE=$(aws eks describe-nodegroup --cluster-name ${CLUSTER_NAME} \
  
 SECURITY_GROUPS=$(aws eks describe-cluster \
     --name ${CLUSTER_NAME} --query cluster.resourcesVpcConfig.clusterSecurityGroupId | tr -d '"')
+
+aws ec2 create-tags \
+    --tags "Key=karpenter.sh/discovery,Value=${CLUSTER_NAME}" \
+    --resources ${SECURITY_GROUPS}
  
 # If your setup uses the security groups in the Launch template of a managed node group, then :
  
