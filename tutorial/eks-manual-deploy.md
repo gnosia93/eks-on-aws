@@ -204,24 +204,20 @@ $ helm repo add eks https://aws.github.io/eks-charts
 $ helm repo update eks
 
 $ LBC_VERSION=v2.6.0
-$ helm upgrade -i aws-load-balancer-controller \
+```
+
+```
+helm upgrade -i aws-load-balancer-controller \
     eks/aws-load-balancer-controller \
     -n kube-system \
-    --set clusterName=eks-cluster-1 \
+    --set clusterName=$CLUSTER_NAME \
     --set serviceAccount.create=false \
     --set serviceAccount.name=aws-load-balancer-controller \
     --set image.tag="${LBC_VERSION}" 
 #    --version="${LBC_CHART_VERSION}"
-Release "aws-load-balancer-controller" does not exist. Installing it now.
-NAME: aws-load-balancer-controller
-LAST DEPLOYED: Tue Aug 22 12:00:25 2023
-NAMESPACE: kube-system
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-NOTES:
-AWS Load Balancer controller installed!
+```
 
+```
 $ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 deployment "aws-load-balancer-controller" successfully rolled out
 
