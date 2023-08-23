@@ -1,4 +1,4 @@
-
+## 카펜터 설치 ##
 
 ### 1. 환경변수 설정 ###
 
@@ -261,7 +261,7 @@ kubectl get nodes
 ## 카펜터 삭제 ##
 
 ```
-kubectl delete all -n kerpenter
+kubectl delete all --all -n karpenter
 ```
 
 
