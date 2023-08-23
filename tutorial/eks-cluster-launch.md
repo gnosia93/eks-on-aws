@@ -48,11 +48,10 @@ aws cli 를 최신버전으로 업데이트 한다.
 위에서 생성된 VPC 의 private 서브넷에 EKS 클러스터를 설치할 것이다.
 cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
 
-* eks-cluster-1.yaml   
 ```
 $ export CLUSTER_NAME=eks-workshop-1
 
-$ cat << EOF > eks-cluster-1.yaml
+$ cat << EOF > $CLUSTER_NAME.yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
