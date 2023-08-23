@@ -45,7 +45,7 @@ spec:
       targetPort: 8080
 EOF
 
-$ kubectl apply -f springboot-shop.yaml
+$ kubectl apply -f shop-service.yaml
 
 $ kubectl get all
 NAME                                   READY   STATUS    RESTARTS   AGE
