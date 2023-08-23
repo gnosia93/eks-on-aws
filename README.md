@@ -24,7 +24,10 @@
   - [6-1. Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
   - [6-2. Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
- 
+
+* [7. 모니터링 ₩]
+  - cloudwatch, 프로메티우스 관련 시연, Logging, Metrics 등을 설명함
+
 
 
 ## 레퍼런스 ##
