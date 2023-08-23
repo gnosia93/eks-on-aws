@@ -18,7 +18,7 @@
   - [ArgoCD]
   - https://waspro.tistory.com/681
  
-* [5. CloudWatch 로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
+* [5. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
 
 * [6. 클러스터 오토 스케이링]()
   
@@ -26,8 +26,12 @@
 
   - [6-2. Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
 
-* [7. 모니터링 ₩]
-  - cloudwatch, 프로메티우스 관련 시연, Logging, Metrics 등을 설명함
+* [7. 성능 메트릭 모니터링]
+  
+  - [7.1 CloudWatch 컨테이너 인사이트]
+  - [7.2 SpringActuater / JMX ?]  
+  - [7.3 프로메티우스 ..]
+    
 
 * [8. Liveness / Drain ...]
 
