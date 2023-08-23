@@ -241,6 +241,18 @@ spec:
 EOF
 ```
 
+## 트러블 슈팅 ##
+```
+Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
+Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
+hopigaga:~/environment $ kubectl -n karpenter get po -w
+NAME                         READY   STATUS             RESTARTS      AGE
+karpenter-585bdd986b-mlm8n   0/1     CrashLoopBackOff   6 (57s ago)   7m3s
+karpenter-585bdd986b-z9wkq   0/1     CrashLoopBackOff   6 (46s ago)   7m2s
+```
+
+
+
 ## 레퍼런스 ##
 
 * https://github.com/aws/karpenter/releases
