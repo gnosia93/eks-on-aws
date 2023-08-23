@@ -3,7 +3,10 @@
 
 2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성하고, NAT GW 를 public 서브넷에 설치한다.  
 (주의) 예를들어 EKS 클러스터의 노드그룹이 a, c AZ 의 프라이빗 서브넷에 생성되는 경우하게 되는 경우, a, c AZ 에는 퍼브릿 서브넷이 꼭 존재해야 한다.
-그렇지 않으면 ELB 가 생성되더라도 파드로 라우팅이 되지 않는다.      
+그렇지 않으면 ELB 가 생성되더라도 파드로 라우팅이 되지 않는다.  
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/elb-subnet-mapping.png)
+
+
 프라이빗 서브넷용 라우팅 테이블을 생성하고, 0.0.0.0/0 라우팅에 대해서는 NAT GW 를 가리키도록 설정한다. 
 EKS 클러스터 설치시 프라이빗 서브넷에에 노드그룹을 생성하는 경우, 워커노드가 생성되면 EKS 클러스터에 조인하게 되는데,
 이때 public 을 통해서 K8S api 엔드포인트와 통신하게 된다.(즉 NAT GW를 통해서 public 으로 나가게 된다)  
