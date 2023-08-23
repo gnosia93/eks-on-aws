@@ -50,12 +50,14 @@ cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이�
 
 * eks-cluster-1.yaml   
 ```
+$ export CLUSTER_NAME=eks-workshop-1
+
 $ cat << EOF > eks-cluster-1.yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-cluster-1
+  name: $CLUSTER_NAME
   region: ap-northeast-2
 
 vpc:
