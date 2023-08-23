@@ -49,6 +49,13 @@ aws iam attach-role-policy \
   --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore \
   --role-name KarpenterInstanceNodeRole
 ```
+```
+aws iam create-instance-profile --instance-profile-name KarpenterInstanceProfile
+
+aws iam add-role-to-instance-profile --instance-profile-name KarpenterInstanceProfile --role-name KarpenterInstanceNodeRole
+
+aws iam get-instance-profile --instance-profile-name KarpenterInstanceProfile
+```
 
 ### 3. karpenter 서비스 어카운트 생성 ###
 ```
@@ -171,8 +178,7 @@ echo $KARPENTER_VERSION
 helm version --short
 
 helm template karpenter oci://public.ecr.aws/karpenter/karpenter --version ${KARPENTER_VERSION} --namespace karpenter \
-#    --set settings.aws.defaultInstanceProfile=KarpenterInstanceProfile \
-    --set settings.aws.defaultInstanceProfile=KarpenterInstanceNodeRole \
+    --set settings.aws.defaultInstanceProfile=KarpenterInstanceProfile \
     --set settings.aws.clusterEndpoint="${CLUSTER_ENDPOINT}" \
     --set settings.aws.clusterName=${CLUSTER_NAME} \
     --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"="arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterControllerRole-${CLUSTER_NAME}" \
