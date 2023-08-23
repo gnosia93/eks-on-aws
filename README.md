@@ -16,7 +16,7 @@
   - [수동 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
   - https://waspro.tistory.com/681
  
-* [5. EKS 로깅](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)_
+* [5. fluent bit를 이용한 EKS 로깅 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)_
 
 
 ## 레퍼런스 ##
