@@ -111,7 +111,7 @@ Cluster Autoscaler 1.25.3
 ```
   
 
-* cluster-autoscaler-autodiscover.yaml 수정
+* cluster-autoscaler-autodiscover.yaml 다운로드 및 수정
 ```
 curl -o cluster-autoscaler-autodiscover.yaml \
 https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
