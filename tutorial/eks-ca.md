@@ -152,7 +152,7 @@ kubectl -n kube-system \
 
 ### 1. nginx 설치 ###
 ```
-cat <<EOR > nginx.yaml
+cat <<EOF > nginx.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
