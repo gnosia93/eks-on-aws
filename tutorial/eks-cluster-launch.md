@@ -6,6 +6,7 @@
 그렇지 않으면 ELB 가 생성되더라도 파드로 라우팅이 되지 않는다.  
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/elb-subnet-mapping.png)
 
+또는 ELB 생성후 Cross Zone Load Balancing 기능을 enable 한다. K8S 서비스 또는 Ingress 설치시 Cross Zone Load Balancing 은 기본값이 diable 이다. 
 
 프라이빗 서브넷용 라우팅 테이블을 생성하고, 0.0.0.0/0 라우팅에 대해서는 NAT GW 를 가리키도록 설정한다. 
 EKS 클러스터 설치시 프라이빗 서브넷에에 노드그룹을 생성하는 경우, 워커노드가 생성되면 EKS 클러스터에 조인하게 되는데,
