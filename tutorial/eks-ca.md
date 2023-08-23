@@ -203,6 +203,15 @@ kubectl -n kube-system logs -f deployment/cluster-autoscaler
 kubectl get nodes
 ```
 
+```
+kubectl -n kube-system logs -f deployment/cluster-autoscaler
+```
+
+```
+k9s
+```
+
+
 ## 레퍼런스 ##
 
 * [EKS Cluster Autoscaler(CA scales)](https://blog.luxrobo.com/eks-cluster-autoscaler-ca-scales-2bbf2a3147ae)
