@@ -20,7 +20,7 @@ kubectl create ns amazon-cloudwatch
 ```
 
 ```
-ClusterName=$CLUST_NAME
+ClusterName=${CLUSTER_NAME}
 RegionName=ap-northeast-2
 FluentBitHttpPort='2020'
 FluentBitReadFromHead='Off'
