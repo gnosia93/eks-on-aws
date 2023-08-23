@@ -36,18 +36,13 @@ kubectl create configmap fluent-bit-cluster-info \
 --from-literal=logs.region=${RegionName} -n amazon-cloudwatch
 ```
 
-
 ```
 curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights\
 /latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring\
-/quickstart/cwagent-fluent-bit-quickstart.yaml | sed 's/{{cluster_name}}/'${ClusterName}'/;s/{{region_name}}/'${RegionName}'/;s/{{http_server_toggle}}/"'${FluentBitHttpServer}'"/;s/{{http_server_port}}/"'${FluentBitHttpPort}'"/;s/{{read_from_head}}/"'${FluentBitReadFromHead}'"/;s/{{read_from_tail}}/"'${FluentBitReadFromTail}'"/' | kubectl apply -f - 
-````
-$ % kubectl get namespace amazon-cloudwatch
-NAME                STATUS   AGE
-amazon-cloudwatch   Active   6h52m
-
-$ kubectl get pods -n amazon-cloudwatch
+/fluent-bit/fluent-bit.yaml
 ```
+
+
 
 ## 레퍼런스 ##
 
