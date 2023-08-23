@@ -1,5 +1,4 @@
-
-
+DeamonSet 으로 fluent bit 를 EKS 워커노드에 설치해서 컨테이너 어플리케이션의 로그를 cloudwath logs 로 보내는 방법을 설명합니다.
 
 ### 1. EKS 노드그룹의 Role 에 CloudWatchAgentServerPolicy 추가 ###
 
