@@ -47,22 +47,41 @@ EOF
 
 $ kubectl apply -f shop-service.yaml
 
-$ kubectl get all
-NAME                                   READY   STATUS    RESTARTS   AGE
-pod/shop-deployment-547d69d74b-glzbt   1/1     Running   0          11m
-pod/shop-deployment-547d69d74b-nn8pm   1/1     Running   0          11m
-pod/shop-deployment-547d69d74b-xc445   1/1     Running   0          11m
+$ $ kubectl get all
+NAME                                   READY   STATUS              RESTARTS   AGE
+pod/shop-deployment-547d69d74b-k5lhr   1/1     Running             0          5s
+pod/shop-deployment-547d69d74b-lrtsk   0/1     ContainerCreating   0          5s
+pod/shop-deployment-547d69d74b-rd9bj   0/1     ContainerCreating   0          5s
 
 NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-service/kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP        2d3h
-service/shop         NodePort    10.100.26.238   <none>        80:32301/TCP   3h37m
-
+service/kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP        34m
+service/shop         NodePort    10.100.96.117   <none>        80:31889/TCP   6s
 
 NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/shop-deployment   3/3     3            3           11m
+deployment.apps/shop-deployment   2/3     3            2           6s
 
 NAME                                         DESIRED   CURRENT   READY   AGE
-replicaset.apps/shop-deployment-547d69d74b   3         3         3       11m
+replicaset.apps/shop-deployment-547d69d74b   3         3         2       6s
+hopigaga:~ $ kubectl get all
+NAME                                   READY   STATUS    RESTARTS   AGE
+pod/shop-deployment-547d69d74b-k5lhr   1/1     Running   0          29s
+pod/shop-deployment-547d69d74b-lrtsk   1/1     Running   0          29s
+pod/shop-deployment-547d69d74b-rd9bj   1/1     Running   0          29s
+
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes   ClusterIP   10.100.0.1      <none>        443/TCP        35m
+service/shop         NodePort    10.100.96.117   <none>        80:31889/TCP   29s
+
+NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/shop-deployment   3/3     3            3           29s
+
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.apps/shop-deployment-547d69d74b   3         3         3       29s
+hopigaga:~ $ kubectl get pod -o wide
+NAME                               READY   STATUS    RESTARTS   AGE   IP              NODE                                               NOMINATED NODE   READINESS GATES
+shop-deployment-547d69d74b-k5lhr   1/1     Running   0          50s   172.31.43.245   ip-172-31-34-243.ap-northeast-2.compute.internal   <none>           <none>
+shop-deployment-547d69d74b-lrtsk   1/1     Running   0          50s   172.31.22.254   ip-172-31-16-120.ap-northeast-2.compute.internal   <none>           <none>
+shop-deployment-547d69d74b-rd9bj   1/1     Running   0          50s   172.31.21.219   ip-172-31-26-197.ap-northeast-2.compute.internal   <none>           <none>
 
 $ kubectl logs shop-deployment-547d69d74b-glzbt 
 Setting Active Processor Count to 4
