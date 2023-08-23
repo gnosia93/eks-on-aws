@@ -74,7 +74,7 @@ managedNodeGroups:
 - name: nodegroup-1
   desiredCapacity: 3
   instanceType: m6i.xlarge
-  privateNetworking: true
+#  privateNetworking: true
   subnets:
     - ap-northeast-2b-private1
     - ap-northeast-2c-private2
