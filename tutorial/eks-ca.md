@@ -213,6 +213,9 @@ k9s
 
 ## CA 삭제 ##
 
+```
+kubectl delete deployment.apps/nginx-to-scaleout
+```
 
 ## 레퍼런스 ##
 
