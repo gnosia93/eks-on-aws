@@ -8,3 +8,5 @@
 * https://tech.scatterlab.co.kr/spot-karpenter/
 
 * https://karpenter.sh/
+
+* https://repost.aws/knowledge-center/eks-install-karpenter
