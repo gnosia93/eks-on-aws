@@ -150,6 +150,7 @@ kubectl -n kube-system \
 
 ## CA 테스트 ##
 
+### 1. nginx 설치 ###
 ```
 cat <<EOR > nginx.yaml
 apiVersion: apps/v1
@@ -182,10 +183,25 @@ EOF
 kubectl apply -f nginx.yaml
 
 kubectl get deployment/nginx-to-scaleout
-
 ```
 
+### 2. 테스트 ###
 
+```
+kubectl scale --replicas=10 deployment/nginx-to-scaleout
+```
+
+```
+kubectl get pods -l app=nginx -o wide --watch
+```
+
+```
+kubectl -n kube-system logs -f deployment/cluster-autoscaler
+```
+
+```
+kubectl get nodes
+```
 
 ## 레퍼런스 ##
 
