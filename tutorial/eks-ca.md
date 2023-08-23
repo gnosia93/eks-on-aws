@@ -117,6 +117,10 @@ curl -o cluster-autoscaler-autodiscover.yaml \
 https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
 ```
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/autodiscover.png)
+
+
+
 ## 레퍼런스 ##
 
 * [EKS Cluster Autoscaler(CA scales)](https://blog.luxrobo.com/eks-cluster-autoscaler-ca-scales-2bbf2a3147ae)
