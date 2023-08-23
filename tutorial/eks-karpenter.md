@@ -165,7 +165,7 @@ kubectl edit configmap aws-auth -n kube-system
 
 ### 7. KARPENTER 설치 ### 
 
-* helm 차트 설치
+#### 7.1 helm 차트 설치 ####
 ```
 echo $KARPENTER_VERSION
 
@@ -180,7 +180,7 @@ helm template karpenter oci://public.ecr.aws/karpenter/karpenter --version ${KAR
 > karpenter.yaml
 ```
 
-* karpenter.yaml 수정 - nodegroup 부분 추가 
+#### 7.2 karpenter.yaml 수정 - nodegroup 부분 추가 ####
 ```
 affinity:
   nodeAffinity:
@@ -201,6 +201,16 @@ affinity:
 
 [수정후]
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-node-affinity-2.png)
+
+
+#### 7.3 리소스 설치 ####
+
+```
+kubectl create namespace karpenter
+kubectl create -f https://raw.githubusercontent.com/aws/karpenter/${KARPENTER_VERSION}/pkg/apis/crds/karpenter.sh_provisioners.yaml
+kubectl create -f https://raw.githubusercontent.com/aws/karpenter/${KARPENTER_VERSION}/pkg/apis/crds/karpenter.k8s.aws_awsnodetemplates.yaml
+kubectl apply -f karpenter.yaml
+```
 
 
 ## 레퍼런스 ##
