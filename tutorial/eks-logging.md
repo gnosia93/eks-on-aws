@@ -14,6 +14,7 @@ eks 노드그룹의 role 을 확인한다.
 
 ### 2. 설치 ###
 
+cloud9 터미널에서 아래 명령어를 실행한다. 
 ```
 kubectl create ns amazon-cloudwatch
 ```
