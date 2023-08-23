@@ -211,6 +211,8 @@ kubectl -n kube-system logs -f deployment/cluster-autoscaler
 k9s
 ```
 
+## CA 삭제 ##
+
 
 ## 레퍼런스 ##
 
