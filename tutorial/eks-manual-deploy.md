@@ -258,7 +258,9 @@ kubectl apply -f shop-ingress.yaml
 ```
 
 ```
-$ kubectl describe ingress shop-ingress
+kubectl describe ingress shop-ingress
+```
+```
 Name:             shop-ingress
 Labels:           <none>
 Namespace:        default
