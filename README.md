@@ -29,6 +29,7 @@
 * [7. 모니터링 ₩]
   - cloudwatch, 프로메티우스 관련 시연, Logging, Metrics 등을 설명함
 
+* [8. Liveness / Drain ...]
 
 
 ## 레퍼런스 ##
