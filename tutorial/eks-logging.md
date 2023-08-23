@@ -12,6 +12,42 @@ eks 노드그룹의 role 을 확인한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nodegroup-node-iam-role-cloudwatch.png)
 
 
+### 2. 설치 ###
+
+```
+kubectl create ns amazon-cloudwatch
+```
+
+```
+ClusterName=$CLUST_NAME
+RegionName=ap-northeast-2
+FluentBitHttpPort='2020'
+FluentBitReadFromHead='Off'
+
+[[ ${FluentBitReadFromHead} = 'On' ]] && FluentBitReadFromTail='Off'|| FluentBitReadFromTail='On'
+[[ -z ${FluentBitHttpPort} ]] && FluentBitHttpServer='Off' || FluentBitHttpServer='On'
+
+kubectl create configmap fluent-bit-cluster-info \
+--from-literal=cluster.name=${ClusterName} \
+--from-literal=http.server=${FluentBitHttpServer} \
+--from-literal=http.port=${FluentBitHttpPort} \
+--from-literal=read.head=${FluentBitReadFromHead} \
+--from-literal=read.tail=${FluentBitReadFromTail} \
+--from-literal=logs.region=${RegionName} -n amazon-cloudwatch
+```
+
+
+```
+curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights\
+/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring\
+/quickstart/cwagent-fluent-bit-quickstart.yaml | sed 's/{{cluster_name}}/'${ClusterName}'/;s/{{region_name}}/'${RegionName}'/;s/{{http_server_toggle}}/"'${FluentBitHttpServer}'"/;s/{{http_server_port}}/"'${FluentBitHttpPort}'"/;s/{{read_from_head}}/"'${FluentBitReadFromHead}'"/;s/{{read_from_tail}}/"'${FluentBitReadFromTail}'"/' | kubectl apply -f - 
+````
+$ % kubectl get namespace amazon-cloudwatch
+NAME                STATUS   AGE
+amazon-cloudwatch   Active   6h52m
+
+$ kubectl get pods -n amazon-cloudwatch
+```
 
 ## 레퍼런스 ##
 
