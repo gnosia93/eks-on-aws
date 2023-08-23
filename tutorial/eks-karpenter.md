@@ -146,6 +146,24 @@ aws ec2 create-tags \
     --resources ${SECURITY_GROUPS}
 ```
 
+### 6. Update aws-auth ConfigMap ###
+
+KarpenterInstanceNodeRole 로 클러스터 리소스에 접근할 수 있도록 한다. 
+
+```
+kubectl edit configmap aws-auth -n kube-system
+```
+
+${AWS_ACCOUNT_ID} 값을 바꿔준다 
+```
+- groups:
+  - system:bootstrappers
+  - system:nodes
+  rolearn: arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterInstanceNodeRole
+  username: system:node:{{EC2PrivateDNSName}}
+```
+
+
 ## 레퍼런스 ##
 
 * https://github.com/aws/karpenter/releases
