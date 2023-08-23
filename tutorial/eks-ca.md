@@ -96,6 +96,8 @@ Events:              <none>
 ```
 
 ### 4. CA 설치 ###
+
+* 클러스터 버전 확인
 ```
 $ kubectl version --short=true
 Client Version: v1.23.6
