@@ -210,7 +210,7 @@ k9s
 ## CA 삭제 ##
 
 ```
-kubectl delete deployment.apps/cluster-autoscaler 
+kubectl delete deployment.apps/cluster-autoscaler -n kube-system
 
 kubectl delete deployment.apps/nginx-to-scaleout
 ```
