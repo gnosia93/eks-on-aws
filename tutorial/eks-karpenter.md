@@ -95,6 +95,8 @@ echo '{
 
 aws iam create-policy --policy-name KarpenterControllerPolicy-${CLUSTER_NAME} --policy-document file://controller-policy.json
 
+kubectl create ns karpenter
+
 eksctl create iamserviceaccount \
   --cluster "${CLUSTER_NAME}" --name karpenter --namespace karpenter \
   --role-name "$KarpenterControllerRole-${CLUSTER_NAME}" \
