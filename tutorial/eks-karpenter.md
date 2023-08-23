@@ -154,7 +154,7 @@ KarpenterInstanceNodeRole 로 클러스터 리소스에 접근할 수 있도록 
 kubectl edit configmap aws-auth -n kube-system
 ```
 
-${AWS_ACCOUNT_ID} 값을 바꿔준다 
+아래 mapRoles 추가한다. 이때 ${AWS_ACCOUNT_ID} 부분은 어카운트ID 로 바꿔줘야 한다. 
 ```
 - groups:
   - system:bootstrappers
