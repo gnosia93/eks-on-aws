@@ -31,9 +31,8 @@
 * [7. 성능 메트릭 모니터링]
   
   - [7.1 CloudWatch 컨테이너 인사이트]
-  - [7.2 SpringActuater / JMX ?]  
-  - [7.3 프로메티우스 ..]
-    
+  - [7.2 Amazon Managed Service for Prometheus]
+  - [7.3 SpringActuater / JMX ?]      
 
 * [8. Liveness / Drain ...]
 
