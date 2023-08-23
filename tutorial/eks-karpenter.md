@@ -1,4 +1,8 @@
 
+```
+KARPENTER_VERSION=v0.29.2
+CLUSTER_ENDPOINT="$(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.endpoint" --output text)"
+```
 
 
 ## 레퍼런스 ##
