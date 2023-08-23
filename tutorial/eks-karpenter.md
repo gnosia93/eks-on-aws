@@ -154,13 +154,21 @@ aws ec2 create-tags \
 ### 6. Update aws-auth ConfigMap ###
 
 KarpenterInstanceNodeRole 로 클러스터 리소스에 접근할 수 있도록 한다. 
+```
+eksctl create iamidentitymapping \
+  --username system:node:{{EC2PrivateDNSName}} \
+  --cluster "${CLUSTER_NAME}" \
+  --arn "arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterInstanceNodeRole" \
+  --group system:bootstrappers \
+  --group system:nodes
+```
 
+**** 파일직접을 수정하는 방식으로도 가능하나, 테스트해 보지 않음 / 일단 위의 명령어를 수행한다. **** 
 ```
-kubectl edit configmap aws-auth -n kube-system
-```
+$ kubectl edit configmap aws-auth -n kube-system
 
 아래 mapRoles 추가한다. 이때 ${AWS_ACCOUNT_ID} 부분은 어카운트ID 로 바꾸고, {{EC2PrivateDNSName}} 는 그대로 유지한다.  
-```
+
 - groups:
   - system:bootstrappers
   - system:nodes
