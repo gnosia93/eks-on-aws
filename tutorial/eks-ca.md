@@ -46,6 +46,36 @@ aws autoscaling \
 +--------------------------------------------------------+----+----+----+
 ```
 
+### 3. 서비스 어카운트 생성 ###
+```
+cat <<EOF > k8s-asg-policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "autoscaling:DescribeAutoScalingGroups",
+                "autoscaling:DescribeAutoScalingInstances",
+                "autoscaling:DescribeLaunchConfigurations",
+                "autoscaling:DescribeTags",
+                "autoscaling:SetDesiredCapacity",
+                "autoscaling:TerminateInstanceInAutoScalingGroup",
+                "ec2:DescribeLaunchTemplateVersions"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+EOF
+
+aws iam create-policy   \
+  --policy-name k8s-asg-policy \
+  --policy-document file://k8s-asg-policy.json
+```
+
+
+
 ## 레퍼런스 ##
 
 * [EKS Cluster Autoscaler(CA scales)](https://blog.luxrobo.com/eks-cluster-autoscaler-ca-scales-2bbf2a3147ae)
