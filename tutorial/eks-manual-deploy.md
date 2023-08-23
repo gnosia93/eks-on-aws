@@ -186,11 +186,12 @@ eksctl create iamserviceaccount \
 ### 4. TargetGroupBinding CRDs ###
 
 ```
-$ kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds?ref=master"
-customresourcedefinition.apiextensions.k8s.io/ingressclassparams.elbv2.k8s.aws created
-customresourcedefinition.apiextensions.k8s.io/targetgroupbindings.elbv2.k8s.aws created
+kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/crds?ref=master"
+```
 
-$ kubectl get crd
+```
+kubectl get crd
+```
 NAME                                         CREATED AT
 cninodes.vpcresources.k8s.aws                2023-08-20T04:51:53Z
 eniconfigs.crd.k8s.amazonaws.com             2023-08-20T04:51:50Z
