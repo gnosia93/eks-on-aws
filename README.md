@@ -16,7 +16,7 @@
   - [수동 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
   - https://waspro.tistory.com/681
  
-* [5.CloudWatch 로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)_
+* [5. CloudWatch 로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)_
 
 
 ## 레퍼런스 ##
