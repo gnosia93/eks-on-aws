@@ -7,6 +7,7 @@
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nodegroup-node-iam-role.png)
 
+이제 eks 노드가 cloudwatch 에 접근할 수 있게 되었다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nodegroup-node-iam-role-cloudwatch.png)
 
 
