@@ -43,7 +43,7 @@ aws cli 를 최신버전으로 업데이트 한다.
 
 
 
-### 3. EKS 클러스터 설치 ###
+### 3. EKS 클러스터 생성 ###
 
 위에서 생성된 VPC 의 private 서브넷에 EKS 클러스터를 설치할 것이다.
 cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
@@ -133,6 +133,11 @@ $ eksctl create cluster -f $CLUSTER_NAME.yaml
 2023-08-20 04:59:22 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
 2023-08-20 04:59:22 [ℹ]  no tasks
 2023-08-20 04:59:22 [✔]  all EKS cluster resources for "eks-cluster-7" have been created
+```
+
+* [참고 - 클러스터 삭제]
+```
+eksctl delete cluster $CLUSTER_NAME
 ```
 
 ## 4. 클러스터 확인하기 ##
