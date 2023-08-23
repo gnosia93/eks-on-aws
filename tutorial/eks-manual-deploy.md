@@ -318,7 +318,7 @@ Rules:
               /   shop:80 (172.31.21.245:8080,172.31.33.139:8080,172.31.34.38:8080)
 Annotations:  alb.ingress.kubernetes.io/load-balancer-name: shop-alb
               alb.ingress.kubernetes.io/scheme: internet-facing
-              alb.ingress.kubernetes.io/target-type: ip
+              alb.ingress.kubernetes.io/target-type: instance
               kubernetes.io/ingress.class: alb
 Events:
   Type    Reason                  Age   From     Message
