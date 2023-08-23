@@ -119,7 +119,10 @@ https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscale
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/autodiscover.png)
 
-
+```
+1. <YOUR CLUSTER NAME> 을 ${CLUSTER_NAME} 으로 수정
+2. 컨테이너 이미지 cluster-autoscaler:v1.26.2 를 cluster-autoscaler:v1.25.3 으로 수정
+```
 
 ## 레퍼런스 ##
 
