@@ -50,7 +50,7 @@ cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이�
 
 ```
 $ export CLUSTER_NAME=eks-workshop
-$ echo 'export CLUSTER_NAME=$CLUSTER_NAME' >>  ~/.bash_profile
+$ echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile
 
 $ cat << EOF > $CLUSTER_NAME.yaml
 apiVersion: eksctl.io/v1alpha5
