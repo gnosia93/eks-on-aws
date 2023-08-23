@@ -18,8 +18,8 @@
  
 * [5. CloudWatch 로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)_
 
-* [6. 클러스터 오토 스케이링]
-  - [Cluster AutoScaler]((https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
+* 6. 클러스터 오토 스케이링
+  - [Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
   - [Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-%20karpenter.md)
  
 
