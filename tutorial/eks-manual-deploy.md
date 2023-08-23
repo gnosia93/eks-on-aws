@@ -174,22 +174,13 @@ $ aws iam create-policy \
 
 ### 3. aws-load-balancer-controller 서비스 어카운트 생성 ###
 ```
-$ eksctl create iamserviceaccount \
-  --cluster eks-cluster-1 \
+eksctl create iamserviceaccount \
+  --cluster $CLUSTER_NAME \
   --namespace kube-system \
   --name aws-load-balancer-controller \
   --attach-policy-arn arn:aws:iam::${ACCOUNT_ID}:policy/AWSLoadBalancerControllerIAMPolicy \
   --override-existing-serviceaccounts \
   --approve
-2023-08-22 11:14:47 [ℹ]  1 iamserviceaccount (kube-system/aws-load-balancer-controller) was included (based on the include/exclude rules)
-2023-08-22 11:14:47 [!]  metadata of serviceaccounts that exist in Kubernetes will be updated, as --override-existing-serviceaccounts was set
-2023-08-22 11:14:47 [ℹ]  1 task: { 
-    2 sequential sub-tasks: { 
-        create IAM role for serviceaccount "kube-system/aws-load-balancer-controller",
-        create serviceaccount "kube-system/aws-load-balancer-controller",
-    } }2023-08-22 11:14:47 [ℹ]  building iamserviceaccount stack "eksctl-eks-cluster-1-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
-2023-08-22 11:14:47 [ℹ]  deploying stack "eksctl-eks-cluster-1-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
-2023-08-22 11:14:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-cluster-1-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
 ```
 
 ### 4. TargetGroupBinding CRDs ###
