@@ -188,7 +188,7 @@ kubectl get deployment/nginx-to-scaleout
 ### 2. 테스트 ###
 
 ```
-kubectl scale --replicas=10 deployment/nginx-to-scaleout
+kubectl scale --replicas=30 deployment/nginx-to-scaleout
 ```
 
 ```
