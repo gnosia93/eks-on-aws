@@ -210,6 +210,36 @@ kubectl create -f https://raw.githubusercontent.com/aws/karpenter/${KARPENTER_VE
 kubectl apply -f karpenter.yaml
 ```
 
+#### 7.4 디폴트 프로비저너 생성 ####
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: default
+spec:
+  requirements:
+    - key: karpenter.k8s.aws/instance-category
+      operator: In
+      values: [c, m, r]
+    - key: karpenter.k8s.aws/instance-generation
+      operator: Gt
+      values: ["2"]
+  providerRef:
+    name: default
+  ttlSecondsAfterEmpty: 30
+---
+apiVersion: karpenter.k8s.aws/v1alpha1
+kind: AWSNodeTemplate
+metadata:
+  name: default
+spec:
+  subnetSelector:
+    karpenter.sh/discovery: "${CLUSTER_NAME}"
+  securityGroupSelector:
+    karpenter.sh/discovery: "${CLUSTER_NAME}"
+EOF
+```
 
 ## 레퍼런스 ##
 
