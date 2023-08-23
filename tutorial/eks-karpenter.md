@@ -99,7 +99,6 @@ eksctl create iamserviceaccount \
   --cluster "${CLUSTER_NAME}" --name karpenter --namespace karpenter \
   --role-name "$KarpenterControllerRole-${CLUSTER_NAME}" \
   --attach-policy-arn "arn:aws:iam::${AWS_ACCOUNT_ID}:policy/KarpenterControllerPolicy-${CLUSTER_NAME}" \
-  --role-only \
   --approve
 ```
 
