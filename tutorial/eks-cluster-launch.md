@@ -1,3 +1,4 @@
+
 ### 1. VPC 생성 ###
 
 2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성하고, NAT GW 를 public 서브넷에 설치한다. 
@@ -38,7 +39,7 @@ cloud9 콘솔에서 아래 명령어를 샐행한다.
 $ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
 ```
   
-
+aws cli 를 최신버전으로 업데이트 한다. 
 
 
 
