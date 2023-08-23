@@ -229,9 +229,8 @@ https://kubernetes.io/ko/docs/concepts/services-networking/ingress/
 aws ec2 create-tags --resources $subnet-id --tags "Key=kubernetes.io/role/elb,Value=1"
 ```
 
-
 ```
-$ cat <<EOF > shop-ingress.yaml
+cat <<EOF > shop-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -253,10 +252,12 @@ spec:
               port:
                 number: 80
 EOF
+```
+```
+kubectl apply -f shop-ingress.yaml
+```
 
-$ kubectl apply -f shop-ingress.yaml
-ingress.networking.k8s.io/shop-ingress created
-
+```
 $ kubectl describe ingress shop-ingress
 Name:             shop-ingress
 Labels:           <none>
