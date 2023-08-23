@@ -267,6 +267,9 @@ Events:  <none>
 
 ### 4. cloudwatch 로그 확인 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudwatch-fluentbit-log1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudwatch-fluentbit-log2.png)
 
 
 
