@@ -223,7 +223,7 @@ $ LBC_VERSION=v2.6.0
 $ helm upgrade -i aws-load-balancer-controller \
     eks/aws-load-balancer-controller \
     -n kube-system \
-    --set clusterName=eks-cluster-7 \
+    --set clusterName=eks-cluster-1 \
     --set serviceAccount.create=false \
     --set serviceAccount.name=aws-load-balancer-controller \
     --set image.tag="${LBC_VERSION}" 
