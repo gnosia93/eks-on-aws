@@ -95,6 +95,13 @@ Tokens:              <none>
 Events:              <none>
 ```
 
+### 4. CA 설치 ###
+```
+$ kubectl version --short=true
+Client Version: v1.23.6
+Server Version: v1.25.12-eks-2d98532
+WARNING: version difference between client (1.23) and server (1.25) exceeds the supported minor version skew of +/-1
+```
 
 
 ## 레퍼런스 ##
