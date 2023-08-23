@@ -38,7 +38,7 @@ kubectl create configmap fluent-bit-cluster-info \
 ```
 
 ```
-curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights\
+kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights\
 /latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring\
 /fluent-bit/fluent-bit.yaml
 ```
