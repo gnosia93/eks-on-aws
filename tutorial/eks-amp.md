@@ -35,6 +35,11 @@ ADOT Operator에서 해당 작업(예: pods에 사이드카를 삽입하기 위�
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.2/cert-manager.yaml
 ```
 
+```
+kubectl apply -f https://amazon-eks.s3.amazonaws.com/docs/addons-otel-permissions.yaml
+```
+
+
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
 * https://malwareanalysis.tistory.com/602
