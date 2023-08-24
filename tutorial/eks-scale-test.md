@@ -1,8 +1,14 @@
-## 카펜터 스케일링 테스트 ##
+## 카펜터 스케일링 ##
 
-#### cloud9 ####
+### 1. 오토스케일링 그룹 설정 확인 ###
 
-cloud9 에서 탭을 열어서 아래 명령어 들을 실행한다.
+```
+aws autoscaling \
+    describe-auto-scaling-groups \
+    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
+    Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
+    --output table
+```
 
 #### nginx ####
 ```
