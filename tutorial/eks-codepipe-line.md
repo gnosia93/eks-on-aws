@@ -7,7 +7,7 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 * [깃허브 토큰 발급](https://velog.io/@shin6949/Github-Token-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EA%B8%B0-ch3ra7vc)
 
-을 참고하여 PAT 토큰을 발생한다. 
+을 참고하여 PAT 토큰을 만든다. 이 토큰은 CodeBuild 에서 github 레포지토리에 접근할 때 사용된다.  
 
 ### 2. CodeBuild 설정 ###
 
