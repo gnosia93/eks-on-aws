@@ -289,18 +289,26 @@ kubectl delete ns karpenter
 
 
 ## 트러블 슈팅 ##
+
+### Karpenter CrashLoopBackOff ###
 ```
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
-hopigaga:~/environment $ kubectl -n karpenter get po -w
+hopigaga:~/environment $ kubectl -n karpenter get po
 NAME                         READY   STATUS             RESTARTS      AGE
 karpenter-585bdd986b-mlm8n   0/1     CrashLoopBackOff   6 (57s ago)   7m3s
 karpenter-585bdd986b-z9wkq   0/1     CrashLoopBackOff   6 (46s ago)   7m2s
 ```
 
-* v0.29.2 CRD 업데이트
-https://karpenter.sh/docs/upgrade-guide/#custom-resource-definition-crd-upgrades
+#### [해결방법] v0.29.2 CRD 업데이트 ####
+* https://karpenter.sh/docs/upgrade-guide/#custom-resource-definition-crd-upgrades
 
+아래 스크립를 수행한다. 
+```
+kubectl apply -f https://raw.githubusercontent.com/aws/karpenter/v0.29.2/pkg/apis/crds/karpenter.sh_provisioners.yaml
+kubectl apply -f https://raw.githubusercontent.com/aws/karpenter/v0.29.2/pkg/apis/crds/karpenter.sh_machines.yaml
+kubectl apply -f https://raw.githubusercontent.com/aws/karpenter/v0.29.2/pkg/apis/crds/karpenter.k8s.aws_awsnodetemplates.yaml
+```
 
 ## 레퍼런스 ##
 
