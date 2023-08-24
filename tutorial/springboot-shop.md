@@ -31,7 +31,7 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml.png)
 
 [application-dev.yml]
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml-dev.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yaml-dev.png)
 
 
 ## 트러블 슈팅 ##
