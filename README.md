@@ -4,7 +4,7 @@
 
 * [2. EKS 클러스터 설치](https://github.com/gnosia93/container-on-aws/blob/main/tutorial/eks-cluster-launch.md)
 
-* [3. 데이터베이스 스키마 빌드]()
+* [3. 데이터베이스 스키마 빌드](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/database-schema.md)
 
 * [3. 스프링 부트 어플리케이션 만들기]()
 
