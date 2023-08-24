@@ -1,9 +1,10 @@
 ## 1. EKS 클러스터 생성 ##
 
-이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 3곳에 EKS 클러스터를 설치할 것이다. AWS VPC 콘솔에서 VPC_ID 와 프라이빗 서브넷 ID 를 확인한 후
-아래 export 스크립트를 수정한다. 
+이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 3곳에 EKS 클러스터를 설치할 것이다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/aws-vpc.png)
+
+AWS VPC 콘솔에서 VPC_ID 와 프라이빗 서브넷 ID 를 확인한 후 아래 export 스크립트를 수정한다. 
 ```
 export VPC_ID=vpc-00e1fdf5c2c9272d1
 export PRIVATE_SUBNET_1=subnet-0c10211bf63884f93
