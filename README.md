@@ -12,7 +12,7 @@
 
   * [스프링 부트 어플리케이션 개발](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-devel.md)
  
-  * [스프링 부트 - Properties 환경변수로 분리](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
+  * [스프링 부트 - Properties 정보 분리](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
   * [어플리케이션 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
   
@@ -26,8 +26,6 @@
 
   - [ArgoCD]
 
-  - https://waspro.tistory.com/681
-  - https://aws-diary.tistory.com/131
  
 * [7. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
 
