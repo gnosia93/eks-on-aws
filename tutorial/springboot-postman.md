@@ -29,6 +29,10 @@ Postman 을 설치해서 어플리케이션(CRUD)를 테스트한다.
 #### 회원 수정 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-put.png)
 
+{
+    "name": "member-111-modified",
+    "emailAddress": "member-111-modified@example.com"
+}
 
 ## 레퍼런스 ##
 
