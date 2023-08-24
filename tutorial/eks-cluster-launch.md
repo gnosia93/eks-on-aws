@@ -278,24 +278,7 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 * https://kingofbackend.tistory.com/235
 
-* eks workshop - https://www.eksworkshop.com/010_introduction/
-
-* Containers from the Couch  
-  https://www.youtube.com/@ContainersfromtheCouch/videos
-
-* https://awskocaptain.gitbook.io/aws-builders-eks/4.-eksctl 
-
-* https://eksctl.io/usage/vpc-configuration/
-
-
----
-
-
-
-
-
-* DB 스키마 생성
-cloud9 콘솔에서 아래 명령어를 샐행한다. 
+* DB 스키마 생성 
 ```
-$ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
 ```
