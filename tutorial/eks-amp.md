@@ -42,6 +42,8 @@ aws eks create-addon \
 --addon-name adot \
 --addon-version v0.74.0-eksbuild.1 \
 --cluster-name $EKS_CLUSTER_NAME
+
+aws eks describe-addon --addon-name adot --cluster-name $EKS_CLUSTER_NAME | jq .addon.status
 ```
 
 
