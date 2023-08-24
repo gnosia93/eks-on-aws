@@ -65,6 +65,25 @@ sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 kubectl apply -f ./otel-collector-config.yaml
 ```
 
+```
+kubectl get all -n prometheus
+```
+
+[결과]
+```
+NAME                                           READY   STATUS    RESTARTS   AGE
+pod/observability-collector-6cf8bb5996-gzx8f   1/1     Running   0          109s
+
+NAME                                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+service/observability-collector-monitoring   ClusterIP   172.20.159.141   <none>        8888/TCP   109s
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/observability-collector   1/1     1            1           109s
+
+NAME                                                 DESIRED   CURRENT   READY   AGE
+replicaset.apps/observability-collector-6cf8bb5996   1         1         1       109s 
+```
+
 
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
