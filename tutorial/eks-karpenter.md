@@ -310,6 +310,24 @@ kubectl apply -f https://raw.githubusercontent.com/aws/karpenter/v0.29.2/pkg/api
 kubectl apply -f https://raw.githubusercontent.com/aws/karpenter/v0.29.2/pkg/apis/crds/karpenter.k8s.aws_awsnodetemplates.yaml
 ```
 
+```
+$ kubectl get all -n karpenter                                                                                                                                                                                  
+NAME                             READY   STATUS    RESTARTS        AGE
+pod/karpenter-7d4d4b4878-6grfb   1/1     Running   8 (6m54s ago)   17m
+pod/karpenter-7d4d4b4878-zj6lw   1/1     Running   7 (11m ago)     17m
+
+NAME                TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)             AGE
+service/karpenter   ClusterIP   172.20.74.3   <none>        8000/TCP,8443/TCP   17m
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/karpenter   2/2     2            2           17m
+
+NAME                                   DESIRED   CURRENT   READY   AGE
+replicaset.apps/karpenter-7d4d4b4878   2         2         2       17m
+hopigaga:~/environment $ 
+```
+
+
 ## 레퍼런스 ##
 
 * https://github.com/aws/karpenter/releases
