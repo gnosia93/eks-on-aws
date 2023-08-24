@@ -29,6 +29,12 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: stage
+            - name: DB_ENDPOINT
+              value: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+            - name: DB_USER
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
           imagePullPolicy: Always
 ---
 apiVersion: v1
