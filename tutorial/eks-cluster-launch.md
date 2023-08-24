@@ -1,18 +1,4 @@
-
-
-
-* RDS stage / production 생성
-* stage 스키마 생성
-cloud9 콘솔에서 아래 명령어를 샐행한다. 
-```
-$ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
-```
-  
-aws cli 를 최신버전으로 업데이트 한다. 
-
-
-
-### 3. EKS 클러스터 생성 ###
+## 1. EKS 클러스터 생성 ##
 
 위에서 생성된 VPC 의 private 서브넷에 EKS 클러스터를 설치할 것이다.
 cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
@@ -109,7 +95,7 @@ $ eksctl create cluster -f $CLUSTER_NAME.yaml
 eksctl delete cluster $CLUSTER_NAME
 ```
 
-## 4. 클러스터 확인하기 ##
+## 2. 클러스터 확인하기 ##
 
 ```
 $ cat ~/.kube/config
@@ -277,3 +263,10 @@ clusterEndpoints:
 ```
 클러스터 생성 시점에서는 통신이 불가능하며 클러스터 생성 완료 후 control plane 의 security group 을 변경해 줘야 한다. 
 
+
+
+* DB 스키마 생성
+cloud9 콘솔에서 아래 명령어를 샐행한다. 
+```
+$ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+```
