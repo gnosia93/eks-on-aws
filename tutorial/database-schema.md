@@ -3,7 +3,7 @@
 devel, stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
 devel 데이터베이스는 로컬 PC 에, stage, production 데이터베이스는 AWS 클라우드에 있다.
 
-stage, production 용 데이터베이스에 스키마를 생성하는 경우 cloud9 터미널을 이용한다. 
+stage, production 용 데이터베이스에 스키마를 생성하는 경우 cloud9 터미널을 이용한다. root 패스워드는 admin22admin 이다. 
 ```
 export DB_ADDR=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
 ```
