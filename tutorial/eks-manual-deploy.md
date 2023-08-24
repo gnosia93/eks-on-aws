@@ -168,14 +168,18 @@ eksctl utils associate-iam-oidc-provider \
 
 ### 2. AWSLoadBalancerControllerIAMPolicy 정책 생성 ###
 ```
-$ echo 'export LBC_VERSION="v2.6.0"' >>  ~/.bash_profile
-$ . ~/.bash_profile
+echo 'export LBC_VERSION="v2.6.0"' >>  ~/.bash_profile
+. ~/.bash_profile
 
-$ curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/${LBC_VERSION}/docs/install/iam_policy.json
+curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/${LBC_VERSION}/docs/install/iam_policy.json
 
-$ aws iam create-policy \
+aws iam create-policy \
     --policy-name AWSLoadBalancerControllerIAMPolicy \
     --policy-document file://iam_policy.json
+```
+
+[결과]
+```
 {
     "Policy": {
         "PolicyName": "AWSLoadBalancerControllerIAMPolicy", 
