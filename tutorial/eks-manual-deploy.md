@@ -3,7 +3,7 @@
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
 ```
-$ cat <<EOF > shop-service.yaml
+cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -44,10 +44,16 @@ spec:
     - port: 80
       targetPort: 8080
 EOF
+```
 
-$ kubectl apply -f shop-service.yaml
+```
+kubectl apply -f shop-service.yaml
 
-$ $ kubectl get all
+kubectl get all
+```
+
+[결과]
+```
 NAME                                   READY   STATUS              RESTARTS   AGE
 pod/shop-deployment-547d69d74b-k5lhr   1/1     Running             0          5s
 pod/shop-deployment-547d69d74b-lrtsk   0/1     ContainerCreating   0          5s
@@ -77,13 +83,25 @@ deployment.apps/shop-deployment   3/3     3            3           29s
 
 NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/shop-deployment-547d69d74b   3         3         3       29s
-hopigaga:~ $ kubectl get pod -o wide
+```
+```
+kubectl get pod -o wide
+```
+
+[결과]
+```
 NAME                               READY   STATUS    RESTARTS   AGE   IP              NODE                                               NOMINATED NODE   READINESS GATES
 shop-deployment-547d69d74b-k5lhr   1/1     Running   0          50s   172.31.43.245   ip-172-31-34-243.ap-northeast-2.compute.internal   <none>           <none>
 shop-deployment-547d69d74b-lrtsk   1/1     Running   0          50s   172.31.22.254   ip-172-31-16-120.ap-northeast-2.compute.internal   <none>           <none>
 shop-deployment-547d69d74b-rd9bj   1/1     Running   0          50s   172.31.21.219   ip-172-31-26-197.ap-northeast-2.compute.internal   <none>           <none>
+```
 
-$ kubectl logs shop-deployment-547d69d74b-glzbt 
+```
+kubectl logs shop-deployment-547d69d74b-glzbt
+```
+
+[결과]
+``` 
 Setting Active Processor Count to 4
 Calculating JVM memory based on 15478272K available memory
 For more information on this calculation, see https://paketo.io/docs/reference/java-reference/#memory-calculator
