@@ -133,6 +133,7 @@ eksctl delete cluster $CLUSTER_NAME
 ## 2. 클러스터 확인하기 ##
 
 ```
+# context 확인
 cat ~/.kube/config
 ```
 [결과]
@@ -174,8 +175,8 @@ users:
       provideClusterInfo: false
 ```
 
-* 노드 리스트 및 aws-auth 확인 
 ```
+# 노드 리스트 
 kubectl get nodes
 ```
 [결과]
@@ -187,6 +188,7 @@ ip-10-1-103-239.ap-northeast-2.compute.internal   Ready    <none>   18m   v1.25.
 ```
 
 ```
+# aws-auth 확인 
 kubectl describe -n kube-system configmap/aws-auth
 ```
 [결과]
@@ -215,6 +217,7 @@ $
 ```
 
 ```
+# kube-system 네임스페이스 오브젝트
 kubectl get all -n kube-system
 ```
 [결과]
