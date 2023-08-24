@@ -15,6 +15,9 @@ which aws_completer
 export PATH=/usr/local/bin:$PATH
 source ~/.bash_profile
 complete -C '/usr/local/bin/aws_completer' aws
+
+aws --version
+
 ```
 
 
