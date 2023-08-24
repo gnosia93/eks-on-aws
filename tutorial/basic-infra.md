@@ -29,7 +29,7 @@ cd
 
 git clone https://github.com/gnosia93/eks-on-aws.git
 
-cd eks-on-aws
+cd eks-on-aws/tf
 
 terraform init
 
