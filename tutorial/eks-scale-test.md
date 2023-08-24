@@ -8,6 +8,8 @@ cloud9 터미널 탭을 하나 열어서 카펜터의 로그를 모니터링 한
 ```
 kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
 ```
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-log.png)
+
 
 ### 2. 오토스케일링 그룹 설정 ###
 
@@ -32,6 +34,9 @@ aws autoscaling \
     --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
     --output table
 ```
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-aws.png)
+
 
 ### 3. nginx 디플로이먼트 생성 ###
 
