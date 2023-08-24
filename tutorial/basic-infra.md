@@ -88,7 +88,7 @@ curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Li
 #### 3.2 IAM 역할 설정 ####
 
 ```
-cat <<EOF > role-trust.json 
+cat <<EOF > ec2-role-trust.json 
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -104,12 +104,12 @@ cat <<EOF > role-trust.json
 EOF
 
 aws iam create-role \
-  --role-name KarpenterInstanceNodeRole \
-  --assume-role-policy-document file://role-trust.json
+  --role-name eksworkshop-admin \
+  --assume-role-policy-document file://ec2-role-trust.json
 
 aws iam attach-role-policy \
-  --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy \
-  --role-name KarpenterInstanceNodeRole
+  --policy-arn arn:aws:iam::aws:policy/AdministratorAccess \
+  --role-name eksworkshop-admin 
 ```
 
 
