@@ -2,6 +2,7 @@
 
 ### 1. Cloud9 설정 ###
 
+#### 1.1 유틸리티 설치 ####
 ```
 # AWS CLI Upgrade
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -39,6 +40,8 @@ K9S_VERSION=v0.26.7
 curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz | sudo tar xfz - -C /usr/local/bin 
   
 ```
+
+#### 1.2 IAM 역할 설정 ####
 
 
 
