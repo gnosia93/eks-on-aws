@@ -23,15 +23,18 @@ on darwin_arm64
 VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이빗 2개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 를 설치합니다.
 퍼블릭 서브넷에 Cloud9을 설치하고, RDS 를 프라이빗 서브넷에 설치합니다. 
 
+[인프라 생성]
 ```
+cd
 
+https://github.com/gnosia93/eks-on-aws.git
 
 terraform init
 
 terraform apply --auto-approve
 ```
 
-
+[인프라 삭제]
 ```
 terraform destroy
 ```
