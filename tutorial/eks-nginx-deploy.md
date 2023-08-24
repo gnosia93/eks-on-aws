@@ -30,9 +30,11 @@ replicaset.apps/nginx-76d6c9b8c   1         1         1       23s
 #### ELB 인스턴스 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-2.png)
 
+EKS 클러스터에 할당된 프라이빗 서브넷의 AZ 가 a, b, c 이므로, 그림에서 보는 것처럼 퍼브릭 서브넷 역시 a, b, c 에 존재해야 한다.
+단 CrossRegion 로드밸런싱에 대해서는 체크가 필요함. 
+
 #### 웹 화면 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-3.png)
 
-EKS 클러스터에 할당된 프라이빗 서브넷의 AZ 가 a, b, c 이므로, 그림에서 보는 것처럼 퍼브릭 서브넷 역시 a, b, c 에 존재해야 한다.
-단 CrossRegion 로드밸런싱에 대해서는 체크가 필요함. 
+
 
