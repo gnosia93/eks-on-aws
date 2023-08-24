@@ -37,6 +37,11 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 
 ```
 kubectl apply -f https://amazon-eks.s3.amazonaws.com/docs/addons-otel-permissions.yaml
+
+aws eks create-addon \
+--addon-name adot \
+--addon-version v0.74.0-eksbuild.1 \
+--cluster-name $EKS_CLUSTER_NAME
 ```
 
 
