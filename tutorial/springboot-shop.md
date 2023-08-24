@@ -20,7 +20,7 @@ drwxr-xr-x@  3 soonbeom  staff    96  8 20 18:54 gradle
 drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 ```
 
-### 3. InteliJ 로 springboot-shop 프로젝트를 오픈한다. ###
+### 3. InteliJ 로 shop 프로젝트를 오픈한다. ###
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-shop.png)
 
 ### 4. springboot DB 연결 설정 ###
