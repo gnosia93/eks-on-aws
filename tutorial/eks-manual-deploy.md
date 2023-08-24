@@ -64,11 +64,7 @@ spec:
             - name: DB_ENDPOINT
               value: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
             - name: DB_USERNAME
-              value: null
-              valueFrom:
-                secretKeyRef:
-                  name: db-user-pass
-                  key: db_username
+              value: shop
             - name: DB_PASSWORD
               value: shop
           imagePullPolicy: Always
