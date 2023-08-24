@@ -3,7 +3,7 @@
 이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 3곳에 EKS 클러스터를 설치할 것이다.
 
 ```
-export VPC_ID=
+export VPC_ID=vpc-00e1fdf5c2c9272d1
 export PRIVATE_SUBNET_1=subnet-0c10211bf63884f93
 export PRIVATE_SUBNET_2=subnet-0bd2186738362fe57
 export PRIVATE_SUBNET_3=subnet-049345252a9d75d3d
