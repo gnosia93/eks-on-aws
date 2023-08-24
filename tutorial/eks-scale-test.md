@@ -1,5 +1,13 @@
 ## 카펜터 스케일링 ##
 
+
+### 1. 카펜트 로그 모니터링 ###
+
+cloud9 터미널 탭을 하나 열어서 카펜터의 로그를 모니터링 한다. 
+```
+kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
+```
+
 ### 1. 오토스케일링 그룹 설정 확인 ###
 
 ```
@@ -21,17 +29,12 @@ aws autoscaling \
     --max-size 9
 ```
 
-
-
-#### nginx ####
+### 2. nginx ###
 ```
 
 ```
 
-#### 카펜트 로그 확인 ####
-```
-kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
-```
+
 #### 노드 갯수 확인 ####
 ```
 kubectl get node
