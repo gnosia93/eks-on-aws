@@ -11,7 +11,7 @@ variable "your_ip_addr" {
 
 variable "key_pair" {
     type = string
-    default = "tf_key_bigdata"                ## 콘솔에서 생성한 키페어 명칭으로 변경.
+    default = "aws-kp-2"                ## 콘솔에서 생성한 키페어 명칭으로 변경.
 }
 
 
@@ -50,4 +50,19 @@ variable "vpc_subnet_priv2" {
 variable "vpc_subnet_priv3" { 
     type = string
     default = "10.1.103.0/24"       
+}
+
+variable "vpc_subnet_priv1_db" { 
+    type = string
+    default = "10.1.201.0/24"       
+}
+
+variable "vpc_subnet_priv2_db" { 
+    type = string
+    default = "10.1.202.0/24"       
+}
+
+variable "vpc_subnet_priv3_db" { 
+    type = string
+    default = "10.1.203.0/24"       
 }
