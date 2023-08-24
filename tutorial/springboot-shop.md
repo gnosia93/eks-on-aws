@@ -28,7 +28,7 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-build.gradle-mysql.png)
 
 [application.yml]
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yaml.png)
 
 [application-dev.yml]
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yaml-dev.png)
