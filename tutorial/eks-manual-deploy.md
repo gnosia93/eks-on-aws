@@ -4,11 +4,18 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 
 #### Secret 생성 ####
 ```
+$ echo "eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com" | base64
+ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
+
+$ echo "shop" | base64
+c2hvcAo=
+```
+```
 apiVersion: v1
 data:
-  db_endpoint: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
-  db_password: shop
-  db_username: shop
+  db_endpoint: ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
+  db_password: c2hvcAo=
+  db_username: c2hvcAo=
 kind: Secret
 metadata:
   name: db-user-pass
