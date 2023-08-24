@@ -1,5 +1,6 @@
 ## 카펜터 스케일링 ##
 
+카펜터 스케일링 테스트는 아래 순서대로 실행하고, 실행 속도를 관찰한다. 
 
 ### 1. 카펜트 로그 모니터링 ###
 
@@ -82,6 +83,11 @@ kubectl scale --replicas=30 deployment/nginx-to-scaleout
 kubectl get node
 ```
 
+### 5. nginx 삭제 ###
+
+```
+kubectl delete deployment/nginx-to-scaleout
+```
 
 
 
