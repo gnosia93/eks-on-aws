@@ -31,8 +31,39 @@ aws autoscaling \
 ```
 
 ### 3. nginx 디플로이먼트 생성 ###
-```
 
+cloud9 의 터미널에서 nginx-to-scaleout 오브젝트를 생성한다.  
+```
+cat <<EOF > nginx.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-to-scaleout
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        service: nginx
+        app: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-to-scaleout
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2048Mi
+          requests:
+            cpu: 1000m
+            memory: 2048Mi
+EOF
+
+kubectl apply -f nginx.yaml
+kubectl get deployment/nginx-to-scaleout
 ```
 
 
