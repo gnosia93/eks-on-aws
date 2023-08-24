@@ -10,6 +10,7 @@ ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNv
 $ echo "shop" | base64
 c2hvcAo=
 ```
+시크릿을 생성합니다.
 ```
 cat <<EOF > db-secret.yaml
 apiVersion: v1
