@@ -92,12 +92,11 @@ k9s
 # 스케일아웃
 kubectl scale --replicas=30 deployment/nginx-to-scaleout
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-scaleout.png)
-
-
 # 노드수 조회
 kubectl get node
 ```
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-scaleout.png)
+
 
 ### 5. nginx 삭제 ###
 
