@@ -222,12 +222,10 @@ kubectl get crd
 * https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases 
 * [https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/)
 ```
-$ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-$ helm version --short
-$ helm repo add eks https://aws.github.io/eks-charts
-$ helm repo update eks
-
-$ LBC_VERSION=v2.6.0
+curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+helm version --short
+helm repo add eks https://aws.github.io/eks-charts
+helm repo update eks
 ```
 
 ```
