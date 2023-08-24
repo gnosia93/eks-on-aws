@@ -21,8 +21,7 @@ on darwin_arm64
 
 ### 2. 기본 인프라 구성 ###
 
-VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이빗 2개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 를 설치합니다.
-퍼블릭 서브넷에 Cloud9을 설치하고, RDS 를 프라이빗 서브넷에 설치합니다. 
+로컬 PC의 테라폼을 이용하여 VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이빗 2개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 를 생성합니다. 또한 퍼블릭 서브넷에 Cloud9, RDS 를 프라이빗 서브넷에 설치됩니다.  
 
 [인프라 생성]
 ```
@@ -44,6 +43,8 @@ terraform destroy
 
 
 ### 3. Cloud9 설정 ###
+
+AWS Cloud9 서비스 콘솔로 로그인하여, cloud9 터미널에서 아래 명령어를 실행합니다. 이 시점 부터는 Cloud9 터미널에서 모든 작업을 수행합니다.
 
 #### 3.1 유틸리티 설치 ####
 ```
