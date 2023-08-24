@@ -22,7 +22,7 @@ data:
   db_username: c2hvcAo=
 kind: Secret
 metadata:
-  name: db-user-pass
+  name: db-secret
 type: Opaque
 EOF
 
@@ -35,6 +35,8 @@ shop
 ```
 
 #### 배포용 YAML 파일 생성 ####
+
+이 설정에는 Secret 를 적용하지 않습니다.
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
