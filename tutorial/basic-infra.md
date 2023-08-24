@@ -100,7 +100,9 @@ AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다.
 
 
 
-#### 3.3 cloud9 용 IAM 역할 수정 ####
+#### 3.3 cloud9 IAM 역할 수정 ####
+
+EC2 콘솔에서 cloud9 인스턴스의 IAM 역할을 eksworkshop-admin 으로 수정한다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-1.png)
 
@@ -108,21 +110,16 @@ AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-3.png)
 
+Cloud9의 기존 자격증명과 임시 자격 증명등을 비활성화 합니다.
+
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
 
-
-아래 두개의 링크를 참고하여 Cloud9 생성한다. 
-* https://awskocaptain.gitbook.io/aws-builders-eks/1.-cloud9-ide
-* https://awskocaptain.gitbook.io/aws-builders-eks/2.
-
+Cloud9 터미널에서 기존 자격 증명 파일을 제거하고 변경된 Role 을 확인합니다. 
 ```
-$ aws sts get-caller-identity --region ap-northeast-2
-{
-    "Account": "49951....", 
-    "UserId": "AROAXITLFFBWVSJ46PQAB:i-0b33b3127e4d57036", 
-    "Arn": "arn:aws:sts::49951....:assumed-role/eksworkshop-admin/i-0b33b3127e4d57036"
-}
-```
+rm -vf ${HOME}/.aws/credentials
 
+aws sts get-caller-identity --region ap-northeast-2 --query Arn | grep eksworkshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
+aws sts get-caller-identity --region ap-northeast-2
+```
 
 ## 레퍼런스 ##
