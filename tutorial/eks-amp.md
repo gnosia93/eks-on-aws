@@ -1,5 +1,7 @@
 cloud9 터미널에서 아래 단계를 실행한다. 
 
+## 프로메테우스(AMP) 설치 ##
+
 ### 1. 환경변수 설정 ###
 ```
 export EKS_CLUSTER_NAME=`eksctl get cluster|awk '{print $1}'|tail -1`
@@ -105,6 +107,10 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 {"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"scrape_samples_scraped","app_kubernetes_io_instance":"aws-load-balancer-controller","app_kubernetes_io_name":"aws-load-balancer-controller","instance":"10.1.102.228:8080","job":"kubernetes-pods","kubernetes_namespace":"kube-system","kubernetes_pod_name":"aws-load-balancer-controller-7556b645df-k49gw","pod_template_hash":"7556b645df"},"value":[1692887220.496,"790"]},{"metric":{"__name__":"scrape_samples_scraped","app":"cert-manager","app_kubernetes_io_component":"controller","app_kubernetes_io_instance":"cert-manager","app_kubernetes_io_name":"cert-
 ...
 ```
+
+## 그라파나(AMG) 설치 ##
+
+
 
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
