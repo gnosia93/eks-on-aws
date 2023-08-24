@@ -6,8 +6,10 @@ export AWS_REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
 export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ```
 
-```
+### 2. AMP 워크스페이스 생성 ### 
 
+```
+aws amp create-workspace --alias adot-eks-workshop --tags env=eks-workshop
 ```
 
 ## 레퍼런스 ##
