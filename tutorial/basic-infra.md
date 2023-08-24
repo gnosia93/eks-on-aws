@@ -20,7 +20,7 @@ on darwin_arm64
 
 ### 2. 기본 인프라 구성 ###
 
-VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이빗 2개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 그리고 프라이빗 서브넷에 Cloud9을 설치합니다. 
-
+VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이빗 2개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 를 설치합니다.
+퍼블릭 서브넷에 Cloud9을 설치하고, RDS 를 프라이빗 서브넷에 설치합니다. 
 
 ## 레퍼런스 ##
