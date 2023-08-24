@@ -25,6 +25,10 @@ EOF
 
 kubectl apply -f db-secret.yaml
 ```
+```
+$kubectl get secret db-user-pass -o jsonpath='{.data.db_password}' | base64 --decode                                 
+shop
+```
 
 #### 배포용 YAML 파일 생성 ####
 ```
