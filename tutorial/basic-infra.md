@@ -136,9 +136,22 @@ echo "export ACCOUNT_ID=${ACCOUNT_ID}" | tee -a ~/.bash_profile
 echo "export AWS_REGION=${AWS_REGION}" | tee -a ~/.bash_profile
 aws configure set default.region ${AWS_REGION}
 aws configure --profile default list
-
-aws configure --profile default list
 ```
+
+#### 3.5 SSH Key 생성 ####
+
+key 이름을 eksworkshop 으로 생성합니다.
+```
+cd ~/environment/
+ssh-keygen
+
+mv ./eksworkshop ./eksworkshop.pem
+chmod 400 ./eksworkshop.pem
+
+# ap-northeast-2 로 전송합니다.
+aws ec2 import-key-pair --key-name "eksworkshop" --public-key-material fileb://./eksworkshop.pub --region ap-northeast-2
+```
+
 
 
 
