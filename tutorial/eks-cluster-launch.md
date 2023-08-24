@@ -3,6 +3,7 @@
 이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 3곳에 EKS 클러스터를 설치할 것이다.
 
 ```
+export VPC_ID=
 export PRIVATE_SUBNET_1=subnet-0c10211bf63884f93
 export PRIVATE_SUBNET_2=subnet-0bd2186738362fe57
 export PRIVATE_SUBNET_3=subnet-049345252a9d75d3d
@@ -22,7 +23,7 @@ metadata:
   region: ap-northeast-2
 
 vpc:
-  id: "vpc-0f154186c927b11bf"
+  id: "${VPC_ID}"
   subnets:
     private:
       private-sub-1:           # subnet alias for ClusterConfig file, not VPC console subnet alias.
