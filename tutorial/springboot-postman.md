@@ -7,11 +7,21 @@
 
 Postman 을 설치해서 어플리케이션(CRUD)를 테스트한다.
 
+#### 회원 등록 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-post.png)
+
+```
+{
+    "password": "111",
+    "name": "member-111",
+    "phoneNumber": "1111-111-11",
+    "emailAddress": "member-111@example.com"
+}
+```
+
 #### 회원 조회 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-get.png)
 
-#### 회원 추가 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-post.png)
 
 #### 회원 리스트 조회 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-get-list.png)
