@@ -159,19 +159,16 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 쿠버네티스 서비스 어카운트가 AWS IAM 리소스에 억세스하고 다룰 수 있도록 OIDC 값으로 IAM Identity 프러바이더를 생성해 줘야 한다.
 
 ```
-$ eksctl utils associate-iam-oidc-provider \
+eksctl utils associate-iam-oidc-provider \
     --region ap-northeast-2 \
     --cluster $CLUSTER_NAME \
     --approve
-2023-08-22 11:00:52 [ℹ]  will create IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
-2023-08-22 11:00:52 [✔]  created IAM Open ID Connect provider for cluster "eks-cluster-1" in "ap-northeast-2"
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/iam-oicd-provider.png)
 
 ### 2. AWSLoadBalancerControllerIAMPolicy 정책 생성 ###
 ```
 $ echo 'export LBC_VERSION="v2.6.0"' >>  ~/.bash_profile
-# $ echo 'export LBC_CHART_VERSION="1.4.1"' >>  ~/.bash_profile
 $ . ~/.bash_profile
 
 $ curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/${LBC_VERSION}/docs/install/iam_policy.json
