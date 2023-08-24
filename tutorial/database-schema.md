@@ -1,7 +1,11 @@
 ### DB 스키마 생성 ###
 
 ```
-$ mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+export DB_ADDR=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+```
+
+```
+$ mysql -u root -p -h ${DB_ADDR}
 
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
