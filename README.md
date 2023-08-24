@@ -14,6 +14,9 @@
  
   * [스프링 부트 - Properties 환경변수로 분리](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
+  * [스프링 부트 액츄에이터 사용하기]() - [Spring boot] Spring actuator 사용하기 - health check, healthIndicator custom
+
+ 
   * [어플리케이션 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
   
 * [5. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
