@@ -2,7 +2,7 @@
 
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
-#### 디플로이먼트 / 서비스 YAML 생성 ####
+#### 배포용 YAML 파일 생성 ####
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
