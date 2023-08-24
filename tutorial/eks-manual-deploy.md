@@ -2,6 +2,7 @@
 
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
+#### 디플로이먼트 / 서비스 YAML 생성 ####
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
@@ -46,6 +47,7 @@ spec:
 EOF
 ```
 
+#### 생성 오브젝트 확인 ####
 ```
 kubectl apply -f shop-service.yaml
 
@@ -84,6 +86,8 @@ deployment.apps/shop-deployment   3/3     3            3           29s
 NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/shop-deployment-547d69d74b   3         3         3       29s
 ```
+
+#### 파드 확인 ####
 ```
 kubectl get pod -o wide
 ```
@@ -96,6 +100,7 @@ shop-deployment-547d69d74b-lrtsk   1/1     Running   0          50s   172.31.22.
 shop-deployment-547d69d74b-rd9bj   1/1     Running   0          50s   172.31.21.219   ip-172-31-26-197.ap-northeast-2.compute.internal   <none>           <none>
 ```
 
+#### 스프링 부트 로그 확인 ####
 ```
 kubectl logs shop-deployment-547d69d74b-glzbt
 ```
