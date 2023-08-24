@@ -16,7 +16,7 @@ if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUS
 
 cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
 ```
-$ cat << EOF > $CLUSTER_NAME.yaml
+cat <<EOF > $CLUSTER_NAME.yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
