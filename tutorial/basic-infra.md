@@ -10,7 +10,12 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 brew update
 brew upgrade hashicorp/tap/terraform
-terraform -help
+terraform -version
+```
+[결과]
+```
+Terraform v1.5.6
+on darwin_arm64
 ```
 
 ### 2. 기본 인프라 구성 ###
