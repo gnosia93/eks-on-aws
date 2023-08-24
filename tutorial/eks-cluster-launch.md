@@ -175,8 +175,8 @@ users:
       provideClusterInfo: false
 ```
 
+#### 노드 리스트 ####
 ```
-# 노드 리스트 
 kubectl get nodes
 ```
 [결과]
@@ -187,8 +187,8 @@ ip-10-1-102-4.ap-northeast-2.compute.internal     Ready    <none>   18m   v1.25.
 ip-10-1-103-239.ap-northeast-2.compute.internal   Ready    <none>   18m   v1.25.11-eks-a5565ad
 ```
 
+#### aws-auth 확인 ####
 ```
-# aws-auth 확인 
 kubectl describe -n kube-system configmap/aws-auth
 ```
 [결과]
@@ -216,8 +216,8 @@ Events:  <none>
 $ 
 ```
 
+#### kube-system 네임스페이스 오브젝트 ####
 ```
-# kube-system 네임스페이스 오브젝트
 kubectl get all -n kube-system
 ```
 [결과]
