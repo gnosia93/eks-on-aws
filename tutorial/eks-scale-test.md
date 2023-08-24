@@ -98,7 +98,9 @@ kubectl get node
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-scaleout.png)
 
+* EC2 인스턴스
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-ec2-instance.png)
+동일 타입의 인스턴스를 증설하는 CA 와 달리 카펜터의 경우 서로 다른 타입의 인스턴스가 증설되는 것을 확인할 수 있다.
 
 ### 5. nginx 삭제 ###
 
