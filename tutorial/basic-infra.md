@@ -98,11 +98,17 @@ AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-4.png)
 
 
-![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
 
 
 #### 3.3 cloud9 용 IAM 역할 수정 ####
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-3.png)
+
+![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
 
 
 아래 두개의 링크를 참고하여 Cloud9 생성한다. 
