@@ -12,7 +12,7 @@
 
   * [스프링 부트 어플리케이션 개발](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-devel.md)
  
-  * [스프링 부트 - Properties 환경변수로 분리](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
+  * [스프링 부트 - Properties 값을 환경변수를 이용하여 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
   * [스프링 부트 - 액츄에이터로 health check](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
  
