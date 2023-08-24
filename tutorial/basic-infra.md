@@ -27,7 +27,9 @@ VPC, Subnet(퍼블릭 2개, 프라이빗 2개 - EKS 클러스터용, 프라이�
 ```
 cd
 
-https://github.com/gnosia93/eks-on-aws.git
+git clone https://github.com/gnosia93/eks-on-aws.git
+
+cd eks-on-aws
 
 terraform init
 
