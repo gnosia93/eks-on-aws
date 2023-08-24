@@ -66,20 +66,14 @@ kubectl apply -f nginx.yaml
 kubectl get deployment/nginx-to-scaleout
 ```
 
+### 4. nginx 스케일링 / 노드 갯수 확인 ###
 
-#### 노드 갯수 확인 ####
+리플리카 갯수를 1개에서 30개로 증가시키고 노드수를 관찰한다. 이때 EC2 콘솔에서 Instance 정보도 같이 모니터링 한다.  
 ```
+kubectl scale --replicas=30 deployment/nginx-to-scaleout
+
 kubectl get node
 ```
 
 
 
-
-
-#### 스케일링 ####
-```
-kubectl scale --replicas=30 deployment/nginx-to-scaleout
-```
-
-
-## 레퍼런스 ##
