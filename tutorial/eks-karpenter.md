@@ -221,7 +221,7 @@ affinity:
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-node-affinity-2.png)
 
 
-#### 7.3 리소스 설치 ####
+#### 7.3 리소스 설치 (CRD) ####
 
 ```
 kubectl create namespace karpenter
@@ -261,22 +261,13 @@ spec:
 EOF
 ```
 
-### 8. 스케일링 테스트 ###
-
-```
-aws eks update-nodegroup-config --cluster-name ${CLUSTER_NAME} \
-    --nodegroup-name ${NODEGROUP} \
-    --scaling-config "minSize=2,maxSize=2,desiredSize=2"
-```
+### 8. 카펜터 로그 확인 ###
 
 ```
 kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
 ```
 Note: If you notice any webhook.DefaultingWebhook Reconcile error in the controller logs, restart your Karpenter pods to fix it.
 
-```
-kubectl get nodes
-```
 
 ## 카펜터 삭제 ##
 
