@@ -2,6 +2,7 @@
 
 ### 1. 테라폼 설치 ###
 
+로컬 PC(mac) 에 테라폼을 설치합니다. 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
