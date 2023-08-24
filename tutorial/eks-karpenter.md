@@ -298,6 +298,8 @@ karpenter-585bdd986b-mlm8n   0/1     CrashLoopBackOff   6 (57s ago)   7m3s
 karpenter-585bdd986b-z9wkq   0/1     CrashLoopBackOff   6 (46s ago)   7m2s
 ```
 
+* v0.29.2 CRD 업데이트
+https://karpenter.sh/docs/upgrade-guide/#custom-resource-definition-crd-upgrades
 
 
 ## 레퍼런스 ##
