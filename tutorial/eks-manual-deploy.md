@@ -28,6 +28,7 @@ EOF
 
 kubectl apply -f db-secret.yaml
 ```
+데이터를 읽어온후 디코딩 합니다. 
 ```
 $kubectl get secret db-user-pass -o jsonpath='{.data.db_password}' | base64 --decode                                 
 shop
