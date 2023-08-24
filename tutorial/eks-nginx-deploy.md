@@ -24,9 +24,12 @@ NAME                              DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-76d6c9b8c   1         1         1       23s
 ```
 
+* ELB
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-1.png)
 
+* ELB 인스턴스
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-2.png)
 
+* 웹 화면
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-3.png)
 
