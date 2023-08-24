@@ -16,12 +16,7 @@ cloud9 에서 새로운 탭을 하나 열어 eks-workshop 클러스터의 노드
 export ASG_NAME=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
  Value=='${CLUSTER_NAME}']].AutoScalingGroupName" --output text)
 ```
-```
-aws autoscaling \
-    describe-auto-scaling-groups \
-    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
-    --output table
-```
+
 ```
 aws autoscaling \
     update-auto-scaling-group \
@@ -29,6 +24,13 @@ aws autoscaling \
     --min-size 3 \
     --desired-capacity 3 \
     --max-size 9
+```
+
+```
+aws autoscaling \
+    describe-auto-scaling-groups \
+    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
+    --output table
 ```
 
 ### 3. nginx 디플로이먼트 생성 ###
