@@ -24,4 +24,9 @@ NAME                              DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-76d6c9b8c   1         1         1       23s
 ```
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-3.png)
 
