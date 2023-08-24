@@ -268,6 +268,20 @@ kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
 ```
 Note: If you notice any webhook.DefaultingWebhook Reconcile error in the controller logs, restart your Karpenter pods to fix it.
 
+[결과]
+```
+2023-08-24T08:04:11.195Z        DEBUG   controller      discovered version      {"commit": "34d50bf-dirty", "version": "v0.29.2"}
+2023-08-24T08:04:11.195Z        DEBUG   controller      Registering 2 clients   {"commit": "34d50bf-dirty"}
+2023-08-24T08:04:11.195Z        DEBUG   controller      Registering 2 informer factories        {"commit": "34d50bf-dirty"}
+2023-08-24T08:04:11.195Z        DEBUG   controller      Registering 3 informers {"commit": "34d50bf-dirty"}
+2023-08-24T08:04:11.195Z        DEBUG   controller      Registering 5 controllers       {"commit": "34d50bf-dirty"}
+2023-08-24T08:04:11.195Z        INFO    controller      Starting server {"commit": "34d50bf-dirty", "path": "/metrics", "kind": "metrics", "addr": "[::]:8000"}
+2023-08-24T08:04:11.195Z        INFO    controller      Starting server {"commit": "34d50bf-dirty", "kind": "health probe", "addr": "[::]:8081"}
+2023-08-24T08:04:11.296Z        INFO    controller      attempting to acquire leader lease karpenter/karpenter-leader-election...
+        {"commit": "34d50bf-dirty"}
+2023-08-24T08:04:11.343Z        INFO    controller      Starting informers...   {"commit": "34d50bf-dirty"}
+
+```
 
 ## 카펜터 삭제 ##
 
