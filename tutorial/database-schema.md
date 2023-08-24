@@ -9,7 +9,7 @@ mysql  Ver 8.1.0 for macos12.6 on arm64 (Homebrew)
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
 ```
 
-* 스키마 생성
+#### 스키마 생성 ####
 ```
 % mysql -u root -p
 Enter password:
@@ -64,7 +64,7 @@ mysql> quit
 Bye
 ```
 
-### stage / production DB 스키마 생성 ###
+### Stage / Production DB 스키마 생성 ###
 
 stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
 cloud9 터미널을 이용하여 설치하고, root 패스워드는 admin22admin 이다. 
