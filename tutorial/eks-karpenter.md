@@ -290,7 +290,7 @@ kubectl delete ns karpenter
 
 ## 트러블 슈팅 ##
 
-### Karpenter CrashLoopBackOff ###
+### 1. Karpenter CrashLoopBackOff ###
 ```
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "defaulting.webhook.karpenter.k8s.aws": failed to call webhook: Post "https://karpenter.karpenter.svc:8443/?timeout=10s": no endpoints available for service "karpenter"
