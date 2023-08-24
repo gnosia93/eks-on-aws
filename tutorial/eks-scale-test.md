@@ -98,6 +98,7 @@ kubectl get node
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-scaleout.png)
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-ec2-instance.png)
 
 ### 5. nginx 삭제 ###
 
