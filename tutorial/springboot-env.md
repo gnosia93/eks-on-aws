@@ -45,3 +45,5 @@ env 부분에서 환경변수로 값들을 컨테이너 어플리케이션에 �
 * https://waspro.tistory.com/681
 
 * https://aws-diary.tistory.com/131
+
+* [[Spring Boot] AWS Secret Manager를 이용하여 프로퍼티를 관리하자](https://velog.io/@korea3611/Spring-Boot-AWS-Secret-Manager%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EB%A5%BC-%EA%B4%80%EB%A6%AC%ED%95%98%EC%9E%90)
