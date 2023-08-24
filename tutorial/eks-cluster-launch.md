@@ -176,12 +176,21 @@ users:
 
 * 노드 리스트 및 aws-auth 확인 
 ```
-$ kubectl get nodes
-NAME                                               STATUS   ROLES    AGE   VERSION
-ip-172-31-25-232.ap-northeast-2.compute.internal   Ready    <none>   99m   v1.25.11-eks-a5565ad
-ip-172-31-36-93.ap-northeast-2.compute.internal    Ready    <none>   99m   v1.25.11-eks-a5565ad
+kubectl get nodes
+```
+[결과]
+```
+NAME                                              STATUS   ROLES    AGE   VERSION
+ip-10-1-101-109.ap-northeast-2.compute.internal   Ready    <none>   18m   v1.25.11-eks-a5565ad
+ip-10-1-102-4.ap-northeast-2.compute.internal     Ready    <none>   18m   v1.25.11-eks-a5565ad
+ip-10-1-103-239.ap-northeast-2.compute.internal   Ready    <none>   18m   v1.25.11-eks-a5565ad
+```
 
-$ kubectl describe -n kube-system configmap/aws-auth
+```
+kubectl describe -n kube-system configmap/aws-auth
+```
+[결과]
+```
 Name:         aws-auth
 Namespace:    kube-system
 Labels:       <none>
@@ -204,16 +213,12 @@ BinaryData
 Events:  <none>
 $ 
 ```
-* 전체 네임스페이스 및 kube-system 네임스페이스 리소스 조회
-```
-$ kubectl get namespace
-NAME              STATUS   AGE
-default           Active   120m
-kube-node-lease   Active   120m
-kube-public       Active   120m
-kube-system       Active   120m
 
-$ kubectl get all -n kube-system                                                                                                                 
+```
+kubectl get all -n kube-system
+```
+[결과]
+```           
 NAME                           READY   STATUS    RESTARTS   AGE
 pod/aws-node-9dq6t             1/1     Running   0          115m
 pod/aws-node-d5hlv             1/1     Running   0          115m
