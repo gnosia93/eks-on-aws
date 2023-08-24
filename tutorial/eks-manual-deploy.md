@@ -4,6 +4,15 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 
 #### Secret 생성 ####
 ```
+apiVersion: v1
+data:
+  db_endpoint: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+  db_password: shop
+  db_username: shop
+kind: Secret
+metadata:
+  name: db-user-pass
+type: Opaque
 ```
 
 #### 배포용 YAML 파일 생성 ####
