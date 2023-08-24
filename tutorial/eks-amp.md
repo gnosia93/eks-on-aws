@@ -89,7 +89,9 @@ awscurl을 이용해서 수집된 메트릭이 AMP 에 저장되었는지 확인
 ```
 sudo pip install --upgrade pip
 
-/usr/local/bin/pip install awscurl==0.26
+sudo ln -s -f /usr/local/bin/pip /usr/bin/pip
+
+pip install awscurl==0.26
 ```
 
 ## 레퍼런스 ##
