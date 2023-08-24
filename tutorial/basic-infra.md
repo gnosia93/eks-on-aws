@@ -141,6 +141,8 @@ aws configure --profile default list
 #### 3.5 SSH Key 생성 ####
 
 key 이름을 eksworkshop 으로 생성합니다.
+Enter file in which to save the key (/home/ec2-user/.ssh/id_rsa): eksworkshop
+
 ```
 cd ~/environment/
 ssh-keygen
