@@ -87,30 +87,6 @@ curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Li
 
 #### 3.2 IAM 역할 설정 ####
 
-```
-cat <<EOF > ec2-role-trust.json 
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-EOF
-
-aws iam create-role \
-  --role-name eksworkshop-admin \
-  --assume-role-policy-document file://ec2-role-trust.json
-
-aws iam attach-role-policy \
-  --policy-arn arn:aws:iam::aws:policy/AdministratorAccess \
-  --role-name eksworkshop-admin 
-```
 
 
 ![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
