@@ -11,6 +11,7 @@ $ echo "shop" | base64
 c2hvcAo=
 ```
 ```
+cat <<EOF > db-secret.yaml
 apiVersion: v1
 data:
   db_endpoint: ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
@@ -20,6 +21,9 @@ kind: Secret
 metadata:
   name: db-user-pass
 type: Opaque
+EOF
+
+kubectl apply -f db-secret.yaml
 ```
 
 #### 배포용 YAML 파일 생성 ####
