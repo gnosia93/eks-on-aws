@@ -14,7 +14,7 @@
  
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
-  * [스프링 부트 - 액츄에이터로 health check](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
+  * [스프링 부트 - 액츄에이터로 health check 설정하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
  
   * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
     
