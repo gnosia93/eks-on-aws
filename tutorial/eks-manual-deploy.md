@@ -69,10 +69,7 @@ spec:
                   name: db-user-pass
                   key: db_username
             - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-user-pass
-                  key: db_password
+              value: shop
           imagePullPolicy: Always
 ---
 apiVersion: v1
