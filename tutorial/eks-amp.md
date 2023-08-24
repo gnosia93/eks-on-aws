@@ -25,7 +25,7 @@ eksctl create iamserviceaccount \
 --approve \
 --override-existing-serviceaccounts
 ```
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/prometheus-entity.png)
 
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
