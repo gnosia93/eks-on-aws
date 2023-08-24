@@ -37,11 +37,11 @@
 
   - [Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
 
-* [9. 성능 메트릭 모니터링]
+* [9. 성능 메트릭 모니터링]()
   
   - [CloudWatch 컨테이너 인사이트]
-  - [Amazon Managed Service for Prometheus]
-  - [SpringActuater / JMX ?]      
+  - [Amazon Managed Service for Prometheus 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+  - [JMX ?]      
 
 * [10. Liveness / Drain ...]
 
