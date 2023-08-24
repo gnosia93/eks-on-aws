@@ -35,9 +35,11 @@
 
 * #8. 클러스터 오토 스케일링
   
-  - [Cluster AutoScaler](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
+  - [Cluster AutoScaler 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
-  - [Karpenter](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
+  - [Karpenter 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
+
+  - [노드 스케일링 테스트]()
 
 * #9. 성능 메트릭 모니터링
   
