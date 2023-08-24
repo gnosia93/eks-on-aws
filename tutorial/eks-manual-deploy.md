@@ -240,7 +240,7 @@ helm upgrade -i aws-load-balancer-controller \
 ```
 
 ```
-$ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
+kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 ```
 
 ### 6. Ingress 생성 ###
