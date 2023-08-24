@@ -121,7 +121,10 @@ eksctl delete cluster $CLUSTER_NAME
 ## 2. 클러스터 확인하기 ##
 
 ```
-$ cat ~/.kube/config
+cat ~/.kube/config
+```
+[결과]
+```
 apiVersion: v1
 clusters:
 - cluster:
