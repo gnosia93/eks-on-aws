@@ -10,8 +10,8 @@ export PRIVATE_SUBNET_1=subnet-0c10211bf63884f93
 export PRIVATE_SUBNET_2=subnet-0bd2186738362fe57
 export PRIVATE_SUBNET_3=subnet-049345252a9d75d3d
 
-$ export CLUSTER_NAME=eks-workshop
-$ if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile; fi   
+export CLUSTER_NAME=eks-workshop
+if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile; fi   
 ```
 
 cloud9 콘솔에서 eks-cluster-1.yaml 파일을 생성한 후, eksctl 를 이용하여 클러스터를 생성한다. 
