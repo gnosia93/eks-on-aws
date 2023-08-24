@@ -1,5 +1,7 @@
 ### DB 스키마 생성 ###
 
+devel, stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
+
 ```
 export DB_ADDR=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
 ```
