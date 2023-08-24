@@ -154,7 +154,6 @@ chmod 400 ./eksworkshop.pem
 aws ec2 import-key-pair --key-name "eksworkshop" --public-key-material fileb://./eksworkshop.pub --region ap-northeast-2
 ```
 
-
-
-
 ## 레퍼런스 ##
+
+* https://awskocaptain.gitbook.io/aws-builders-eks/2.
