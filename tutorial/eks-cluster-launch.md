@@ -66,52 +66,64 @@ eksctl create cluster -f $CLUSTER_NAME.yaml
 
 [결과]
 ```
-2023-08-23 03:39:47 [ℹ]  eksctl version 0.153.0
-2023-08-23 03:39:47 [ℹ]  using region ap-northeast-2
-2023-08-23 03:39:47 [✔]  using existing VPC (vpc-0f154186c927b11bf) and subnets (private:map[private-sub-1:{subnet-0e00aad3d9ebdf2b2 ap-northeast-2b 172.31.16.0/20 0 } private-sub-2:{subnet-03941214c7e716f91 ap-northeast-2c 172.31.32.0/20 0 }] public:map[])
-2023-08-23 03:39:47 [!]  custom VPC/subnets will be used; if resulting cluster doesn't function as expected, make sure to review the configuration of VPC/subnets
-2023-08-23 03:39:47 [ℹ]  nodegroup "nodegroup-1" will use "" [AmazonLinux2/1.25]
-2023-08-23 03:39:47 [ℹ]  using EC2 key pair "aws-kp-2"
-2023-08-23 03:39:47 [ℹ]  using Kubernetes version 1.25
-2023-08-23 03:39:47 [ℹ]  creating EKS cluster "eks-workshop" in "ap-northeast-2" region with managed nodes
-2023-08-23 03:39:47 [ℹ]  1 nodegroup (nodegroup-1) was included (based on the include/exclude rules)
-2023-08-23 03:39:47 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
-2023-08-23 03:39:47 [ℹ]  will create a CloudFormation stack for cluster itself and 1 managed nodegroup stack(s)
-2023-08-23 03:39:47 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-northeast-2 --cluster=eks-workshop'
-2023-08-23 03:39:47 [ℹ]  Kubernetes API endpoint access will use provided values {publicAccess=true, privateAccess=true} for cluster "eks-workshop" in "ap-northeast-2"
-2023-08-23 03:39:47 [ℹ]  CloudWatch logging will not be enabled for cluster "eks-workshop" in "ap-northeast-2"
-2023-08-23 03:39:47 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-northeast-2 --cluster=eks-workshop'
-2023-08-23 03:39:47 [ℹ]  
+2023-08-24 04:39:34 [ℹ]  eksctl version 0.153.0
+2023-08-24 04:39:34 [ℹ]  using region ap-northeast-2
+2023-08-24 04:39:34 [✔]  using existing VPC (vpc-00e1fdf5c2c9272d1) and subnets (private:map[private-sub-1:{subnet-0c10211bf63884f93 ap-northeast-2a 10.1.101.0/24 0 } private-sub-2:{subnet-0bd2186738362fe57 ap-northeast-2b 10.1.102.0/24 0 } private-sub-3:{subnet-049345252a9d75d3d ap-northeast-2c 10.1.103.0/24 0 }] public:map[])
+2023-08-24 04:39:34 [!]  custom VPC/subnets will be used; if resulting cluster doesn't function as expected, make sure to review the configuration of VPC/subnets
+2023-08-24 04:39:34 [ℹ]  nodegroup "eks-ng-1" will use "" [AmazonLinux2/1.25]
+2023-08-24 04:39:34 [ℹ]  using EC2 key pair "aws-kp-2"
+2023-08-24 04:39:34 [ℹ]  using Kubernetes version 1.25
+2023-08-24 04:39:34 [ℹ]  creating EKS cluster "eks-workshop" in "ap-northeast-2" region with managed nodes
+2023-08-24 04:39:34 [ℹ]  1 nodegroup (eks-ng-1) was included (based on the include/exclude rules)
+2023-08-24 04:39:34 [ℹ]  will create a CloudFormation stack for cluster itself and 0 nodegroup stack(s)
+2023-08-24 04:39:34 [ℹ]  will create a CloudFormation stack for cluster itself and 1 managed nodegroup stack(s)
+2023-08-24 04:39:34 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-northeast-2 --cluster=eks-workshop'
+2023-08-24 04:39:34 [ℹ]  Kubernetes API endpoint access will use provided values {publicAccess=true, privateAccess=true} for cluster "eks-workshop" in "ap-northeast-2"
+2023-08-24 04:39:34 [ℹ]  CloudWatch logging will not be enabled for cluster "eks-workshop" in "ap-northeast-2"
+2023-08-24 04:39:34 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-northeast-2 --cluster=eks-workshop'
+2023-08-24 04:39:34 [ℹ]  
 2 sequential tasks: { create cluster control plane "eks-workshop", 
     2 sequential sub-tasks: { 
         wait for control plane to become ready,
-        create managed nodegroup "nodegroup-1",
+        create managed nodegroup "eks-ng-1",
     } 
 }
-2023-08-23 03:39:47 [ℹ]  building cluster stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:39:47 [ℹ]  deploying stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:40:17 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:40:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:41:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:42:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:43:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:44:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:45:47 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:46:48 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:47:48 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:48:48 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
-2023-08-23 03:49:18 [!]  API server is unreachable
-2023-08-23 03:49:18 [ℹ]  building managed nodegroup stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:49:18 [ℹ]  deploying stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:49:18 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:49:48 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:50:26 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:52:05 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-nodegroup-1"
-2023-08-23 03:52:05 [ℹ]  waiting for the control plane to become ready
-2023-08-23 03:52:05 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
-2023-08-23 03:52:05 [ℹ]  no tasks
-2023-08-23 03:52:05 [✔]  all EKS cluster resources for "eks-workshop" have been created
+2023-08-24 04:39:34 [ℹ]  building cluster stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:39:34 [ℹ]  deploying stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:40:04 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:40:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:41:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:42:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:43:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:44:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:45:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:46:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:47:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:48:35 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-cluster"
+2023-08-24 04:49:05 [!]  API server is unreachable
+2023-08-24 04:49:06 [ℹ]  building managed nodegroup stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:49:06 [ℹ]  deploying stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:49:06 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:49:36 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:50:10 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:51:09 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:52:04 [ℹ]  waiting for CloudFormation stack "eksctl-eks-workshop-nodegroup-eks-ng-1"
+2023-08-24 04:52:04 [ℹ]  waiting for the control plane to become ready
+2023-08-24 04:52:04 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
+2023-08-24 04:52:04 [ℹ]  no tasks
+2023-08-24 04:52:04 [✔]  all EKS cluster resources for "eks-workshop" have been created
+Error: listing nodes: Get "https://31FEBEAA231F37E94B7CF384D8EC3EDD.gr7.ap-northeast-2.eks.amazonaws.com/api/v1/nodes?labelSelector=alpha.eksctl.io%2Fnodegroup-name%3Deks-ng-1": dial tcp 10.1.103.146:443: i/o timeout
 ```
+
+all EKS cluster resources for "eks-workshop" have been created 메시지 출력 이후, 오랜시간 동안 아무런 출력없이 머물러 있다가 i/o timeout 에러가 발생하는데, 이는 eksctl 설정파일에 clusterEndpoints 의 privateAcesss 를 true 로 설정했기 때문이다. 
+```
+clusterEndpoints:
+    publicAccess: true
+    privateAccess: true         
+```
+클러스터 생성 시점에서는 private 채널을 통한 통신이 불가능하며, 이를 해결하기 위해서는 EKS control plane 의 security group 을 변경해 줘야 한다.
+(아래 트러블 슈팅 참고) 
+
 
 * [참고 - 클러스터 삭제]
 ```
@@ -269,25 +281,8 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 
 ---
-### 참고 .. VPC 생성 ###
 
-2개의 AZ 에 걸쳐서 public 및 private 서브넷을 각각 2개씩 생성하고, NAT GW 를 public 서브넷에 설치한다.  
-(주의) 예를들어 EKS 클러스터의 노드그룹이 a, c AZ 의 프라이빗 서브넷에 생성되는 경우하게 되는 경우, a, c AZ 에는 퍼브릿 서브넷이 꼭 존재해야 한다.
-그렇지 않으면 ELB 가 생성되더라도 파드로 라우팅이 되지 않는다.  
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/elb-subnet-mapping.png)
-또는 ELB 생성후 Cross Zone Load Balancing 기능을 enable 한다. K8S 서비스 또는 Ingress 설치시 Cross Zone Load Balancing 은 기본값이 diable 이다. 
 
-프라이빗 서브넷용 라우팅 테이블을 생성하고, 0.0.0.0/0 라우팅에 대해서는 NAT GW 를 가리키도록 설정한다. 
-EKS 클러스터 설치시 프라이빗 서브넷에에 노드그룹을 생성하는 경우, 워커노드가 생성되면 EKS 클러스터에 조인하게 되는데,
-이때 public 을 통해서 K8S api 엔드포인트와 통신하게 된다.(즉 NAT GW를 통해서 public 으로 나가게 된다)  
-
-아래와 같이 eksctl 설정파일에 privateAcesss 를 true 로 설정하더라도 
-```
-clusterEndpoints:
-    publicAccess: true
-    privateAccess: true         
-```
-클러스터 생성 시점에서는 통신이 불가능하며 클러스터 생성 완료 후 control plane 의 security group 을 변경해 줘야 한다. 
 
 
 
