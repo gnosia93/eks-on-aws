@@ -4,7 +4,7 @@ resource "aws_cloud9_environment_ec2" "cloud9_instance" {
   name                        = "eks_cloud9"
   instance_type               = "t2.medium"
   automatic_stop_time_minutes = 30
-  subnet_id                   = 
+  subnet_id                   = aws_subnet.eks_pub_subnet1.id
 
   tags = {
     Terraform = "true"
