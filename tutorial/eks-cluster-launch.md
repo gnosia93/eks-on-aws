@@ -132,8 +132,8 @@ eksctl delete cluster $CLUSTER_NAME
 
 ## 2. 클러스터 확인하기 ##
 
+#### context 확인 ###
 ```
-# context 확인
 cat ~/.kube/config
 ```
 [결과]
