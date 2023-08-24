@@ -12,6 +12,15 @@ aws autoscaling \
     --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
     --output table
 ```
+```
+aws autoscaling \
+    update-auto-scaling-group \
+    --auto-scaling-group-name ${ASG_NAME} \
+    --min-size 3 \
+    --desired-capacity 3 \
+    --max-size 9
+```
+
 
 
 #### nginx ####
