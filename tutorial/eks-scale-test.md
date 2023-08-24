@@ -74,17 +74,26 @@ kubectl apply -f nginx.yaml
 kubectl get deployment/nginx-to-scaleout
 ```
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-deployment.png)
+
+
+
 ### 4. nginx 스케일링 / 노드 갯수 확인 ###
 
 * 터미널에서 k9s 을 실행해서 파드 상태를 실시간으로 관찰한다.
 ```
 k9s
 ```
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-k9s-2.png)
+
 
 * 리플리카 갯수를 30개로 증가시키고 노드수를 관찰하고, EC2 의 Instance 정보도 동시에 모니터링 한다.  
 ```
 # 스케일아웃
 kubectl scale --replicas=30 deployment/nginx-to-scaleout
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-scale-scaleout.png)
+
 
 # 노드수 조회
 kubectl get node
