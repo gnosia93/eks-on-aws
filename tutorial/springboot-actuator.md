@@ -9,6 +9,7 @@ management:
       exposure:
         include: health, info
 ```
+헬스체크 URL 은 /actuator/health 이다. 
 
 ### build.gradle ###
 ```
