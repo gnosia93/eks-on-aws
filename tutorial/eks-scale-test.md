@@ -6,7 +6,12 @@
 export ASG_NAME=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
  Value=='${CLUSTER_NAME}']].AutoScalingGroupName" --output text)
 ```
-
+```
+aws autoscaling \
+    describe-auto-scaling-groups \
+    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
+    --output table
+```
 
 
 #### nginx ####
