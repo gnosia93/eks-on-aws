@@ -87,6 +87,8 @@ curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Li
 
 #### 3.2 IAM 역할 설정 ####
 
+AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다. 
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-1.png)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-2.png)
