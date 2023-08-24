@@ -332,6 +332,10 @@ replicaset.apps/karpenter-7d4d4b4878   2         2         2       17m
 hopigaga:~/environment $ 
 ```
 
+### 2. 카펜터 로그 메시지 - "namespace": "", "name": "default-9mhvz", "reconcileID": "d7435007-39ce-4f75-9142-b9d2c74d56e1", "error": "creating machine, creating instance, with fleet error(s), InvalidParameter: Security group sg-032b84f35f59e2a75 and subnet subnet-0e00aad3d9ebdf2b2 belong to different networks.; InvalidParameter: Security group sg-09a24152958a29654 and subnet subnet-0c10211bf63884f93 belong to different networks.; InvalidParameter: Security group sg-032b84f35f59e2a75 and subnet subnet-03941214c7e716f91 belong to different networks."} ###
+
+???
+
 
 ## 레퍼런스 ##
 
