@@ -8,7 +8,7 @@ cloud9 터미널 탭을 하나 열어서 카펜터의 로그를 모니터링 한
 kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
 ```
 
-### 2. 오토스케일링 그룹 설정 확인 ###
+### 2. 오토스케일링 그룹 설정 ###
 
 cloud9 에서 새로운 탭을 하나 열어 eks-workshop 클러스터의 노드 최대 사이즈를 3개에서 9개로 증가시킨다. 
 ```
@@ -68,12 +68,22 @@ kubectl get deployment/nginx-to-scaleout
 
 ### 4. nginx 스케일링 / 노드 갯수 확인 ###
 
-리플리카 갯수를 1개에서 30개로 증가시키고 노드수를 관찰한다. 이때 EC2 콘솔에서 Instance 정보도 같이 모니터링 한다.  
+* 터미널에서 k9s 을 실행해서 파드 상태를 실시간으로 관찰한다.
 ```
+k9s
+```
+
+* 리플리카 갯수를 30개로 증가시키고 노드수를 관찰하고, EC2 의 Instance 정보도 동시에 모니터링 한다.  
+```
+# 스케일아웃
 kubectl scale --replicas=30 deployment/nginx-to-scaleout
 
+# 노드수 조회
 kubectl get node
 ```
+
+
+
 
 
 
