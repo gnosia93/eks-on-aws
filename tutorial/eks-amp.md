@@ -27,6 +27,14 @@ eksctl create iamserviceaccount \
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/prometheus-entity.png)
 
+### 4. cert manager 설치 ###
+
+ADOT Operator에서 해당 작업(예: pods에 사이드카를 삽입하기 위해 webhook 호출 등)에 사용되며 제대로 작동하는 데 필요합니다.
+
+```
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.2/cert-manager.yaml
+```
+
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
 * https://malwareanalysis.tistory.com/602
