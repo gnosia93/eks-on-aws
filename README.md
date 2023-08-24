@@ -16,9 +16,11 @@
  
   * [스프링 부트 - 액츄에이터로 health check](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
  
-  * [어플리케이션 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
+  * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
+    
   
 * [#5. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
+
 
 * #6. EKS 에 어플리케이션 배포하기
 
