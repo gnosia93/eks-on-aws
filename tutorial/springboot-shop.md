@@ -30,6 +30,10 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 [application.yml]
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml.png)
 
+[application-dev.yml]
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/project-application-yml-dev.png)
+
+
 ## 트러블 슈팅 ##
 
 * [Could not resolve org.springframework.boot:spring-boot-gradle-plugin:3.1.2 해결 방법](https://effortguy.tistory.com/286)
