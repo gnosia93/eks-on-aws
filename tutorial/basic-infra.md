@@ -110,9 +110,9 @@ EC2 콘솔에서 cloud9 인스턴스의 IAM 역할을 eksworkshop-admin 으로 �
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-3.png)
 
-Cloud9의 기존 자격증명과 임시 자격 증명등을 비활성화 합니다.
+Cloud9의 기존 자격증명과 임시 자격 증명등을 비활성화 합니다. 우측 상단의 톱니바뀌 모양 아이콘을 클릭한 후 좌측 Preferences 에서 AWS Settings 을 선택한 후 AWS managed temporary credentials 을 비활성화 합니다. 
 
-![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-4.png)
 
 Cloud9 터미널에서 기존 자격 증명 파일을 제거하고 변경된 Role 을 확인합니다. 
 ```
