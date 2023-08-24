@@ -30,7 +30,7 @@ aws autoscaling \
     --max-size 9
 ```
 
-### 2. nginx ###
+### 3. nginx 디플로이먼트 생성 ###
 ```
 
 ```
