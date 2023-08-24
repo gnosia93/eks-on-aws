@@ -1,64 +1,6 @@
 
 
-### 1. Cloud9 설정 ###
 
-#### 1.1 유틸리티 설치 ####
-```
-# AWS CLI Upgrade
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-source ~/.bashrc
-aws --version
-
-# AWS CLI 자동완성 설치 
-which aws_completer
-export PATH=/usr/local/bin:$PATH
-source ~/.bash_profile
-complete -C '/usr/local/bin/aws_completer' aws
-
-aws --version
-
-# kubectl 설치
-cd ~
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.22.6/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
-source <(kubectl completion bash)
-echo "source <(kubectl completion bash)" >> ~/.bashrc
-kubectl version --short --client
-
-# 유틸리티 설치
-sudo yum -y install jq gettext bash-completion moreutils
-for command in kubectl jq envsubst aws
-  do
-    which $command &>/dev/null && echo "$command in path" || echo "$command NOT FOUND"
-  done
-
-# k9s
-K9S_VERSION=v0.26.7
-curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz | sudo tar xfz - -C /usr/local/bin 
-  
-```
-
-#### 1.2 IAM 역할 설정 ####
-
-
-
-![](https://github.com/gnosia93/container-on-aws/blob/main/images/cloud9-2.png)
-
-아래 두개의 링크를 참고하여 Cloud9 생성한다. 
-* https://awskocaptain.gitbook.io/aws-builders-eks/1.-cloud9-ide
-* https://awskocaptain.gitbook.io/aws-builders-eks/2.
-
-```
-$ aws sts get-caller-identity --region ap-northeast-2
-{
-    "Account": "49951....", 
-    "UserId": "AROAXITLFFBWVSJ46PQAB:i-0b33b3127e4d57036", 
-    "Arn": "arn:aws:sts::49951....:assumed-role/eksworkshop-admin/i-0b33b3127e4d57036"
-}
-```
 * RDS stage / production 생성
 * stage 스키마 생성
 cloud9 콘솔에서 아래 명령어를 샐행한다. 
