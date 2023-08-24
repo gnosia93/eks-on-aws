@@ -118,14 +118,14 @@ Error: listing nodes: Get "https://31FEBEAA231F37E94B7CF384D8EC3EDD.gr7.ap-north
 all EKS cluster resources for "eks-workshop" have been created 메시지 출력 이후, 오랜시간 동안 아무런 출력없이 머물러 있다가 i/o timeout 에러가 발생하는데, 이는 eksctl 설정파일에 clusterEndpoints 의 privateAcesss 를 true 로 설정했기 때문이다. 
 ```
 clusterEndpoints:
-    publicAccess: true
+    ...
     privateAccess: true         
 ```
 클러스터 생성 시점에서는 private 채널을 통한 통신이 불가능하며, 이를 해결하기 위해서는 EKS control plane 의 security group 을 변경해 줘야 한다.
 (아래 트러블 슈팅 참고) 
 
 
-* [참고 - 클러스터 삭제]
+#### [참고 - 클러스터 삭제] ####
 ```
 eksctl delete cluster $CLUSTER_NAME
 ```
