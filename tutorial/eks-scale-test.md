@@ -8,8 +8,9 @@ cloud9 터미널 탭을 하나 열어서 카펜터의 로그를 모니터링 한
 kubectl logs -f -n karpenter -c controller -l app.kubernetes.io/name=karpenter
 ```
 
-### 1. 오토스케일링 그룹 설정 확인 ###
+### 2. 오토스케일링 그룹 설정 확인 ###
 
+eks-workshop 클러스터의 노드 최대 사이즈를 3개에서 9개로 설정한다. 
 ```
 export ASG_NAME=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
  Value=='${CLUSTER_NAME}']].AutoScalingGroupName" --output text)
