@@ -118,7 +118,8 @@ Cloud9 터미널에서 기존 자격 증명 파일을 제거하고 변경된 Rol
 ```
 rm -vf ${HOME}/.aws/credentials
 
-aws sts get-caller-identity --region ap-northeast-2 --query Arn | grep eksworkshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
+aws sts get-caller-identity --region ap-northeast-2 --query Arn | grep eksworkshop-admin -q && echo "IAM role valid" \
+ || echo "IAM role NOT valid"
 aws sts get-caller-identity --region ap-northeast-2
 ```
 
