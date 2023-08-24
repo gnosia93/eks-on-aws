@@ -1,8 +1,6 @@
 ### application.yaml ###
 ```
-spring:
-  profiles:
-    active: dev
+...
 
 # http://localhost:8080/actuator/health
 management:
@@ -15,7 +13,9 @@ management:
 ### build.gradle ###
 ```
 dependencies {
+	...
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	...
 ```
 
 ## 레퍼런스 ##
