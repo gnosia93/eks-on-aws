@@ -87,6 +87,8 @@ replicaset.apps/observability-collector-6cf8bb5996   1         1         1      
 ### 6. awscurl 설치 ###
 awscurl을 이용해서 수집된 메트릭이 AMP 에 저장되었는지 확인한다. 
 ```
+pip3 install --upgrade pip --user
+
 pip install awscurl==0.26
 ```
 
