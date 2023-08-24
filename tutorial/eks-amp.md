@@ -45,6 +45,8 @@ aws eks create-addon \
 
 aws eks describe-addon --addon-name adot --cluster-name $EKS_CLUSTER_NAME | jq .addon.status
 ```
+상태값이 ACTIVE 가 될때 까지 대기한다.
+
 
 ### 5. OTel Collector CR(사용자 지정 리소스) 설치 ###
 ```
