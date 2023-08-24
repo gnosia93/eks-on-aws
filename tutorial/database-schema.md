@@ -9,6 +9,7 @@ mysql  Ver 8.1.0 for macos12.6 on arm64 (Homebrew)
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
 ```
 
+* 스키마 생성
 ```
 % mysql -u root -p
 Enter password:
@@ -61,51 +62,12 @@ mysql> select host, user, account_locked from user;
 mysql> grant all privileges ON shop.* TO shop@'%';
 mysql> quit
 Bye
+```
 
-% mysql -u shop -p
-Enter password:
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 13
-Server version: 8.0.33 MySQL Community Server - GPL
+### stage / production DB 스키마 생성 ###
 
-Copyright (c) 2000, 2023, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| performance_schema |
-| shop               |
-+--------------------+
-3 rows in set (0.00 sec)
-
-mysql> use shop;
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Database changed
-mysql> show tables;
-+----------------+
-| Tables_in_shop |
-+----------------+
-| member         |
-+----------------+
-1 row in set (0.01 sec)
-```    
-
-### DB 스키마 생성 ###
-
-devel, stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
-devel 데이터베이스는 로컬 PC 에, stage, production 데이터베이스는 AWS 클라우드에 있다.
-
-stage, production 용 데이터베이스에 스키마를 생성하는 경우 cloud9 터미널을 이용한다. root 패스워드는 admin22admin 이다. 
+stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
+cloud9 터미널을 이용하여 설치하고, root 패스워드는 admin22admin 이다. 
 ```
 export DB_ADDR=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
 ```
