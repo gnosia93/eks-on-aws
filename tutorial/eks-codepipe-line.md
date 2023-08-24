@@ -5,20 +5,9 @@ Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다.
 
 ### 1. GitHub 억세스 토큰 생성 ###
 
-* 깃허브의 Settings / Developer Settings 페이지로 이동하여 token(classic) 메뉴에서 [Generate new token] 버튼을 누른다.
+* [깃허브 토큰 발급](https://velog.io/@shin6949/Github-Token-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EA%B8%B0-ch3ra7vc)
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/github-token-1.png)
-
-* 토큰 이름을 token-[repo name] 으로 설정하고, Only select repositories 에서 연결하고자 하는 레포지토리를 설정한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/github-token-2.png)
-
-* Overview 에 나오는 것처럼 Commit, Metadata, Webhooks 권한(Read-only)을 선택한 후 [Generate token] 버튼을 눌려서 토큰을 생성한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/github-token-3.png)
-
-* 생성된 토큰
-  ```
-  github_pat_...
-  ```
+을 참고하여 PAT 토큰을 발생한다. 
 
 ### 2. CodeBuild 설정 ###
 
@@ -199,8 +188,6 @@ $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2Conta
 ## 레퍼런스 ##
 
 * [CodePineLine 구축](https://potato-yong.tistory.com/130)
-
-* [깃허브 토큰 발급](https://velog.io/@shin6949/Github-Token-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EA%B8%B0-ch3ra7vc)
 
 * [Gradle 기본사용법](https://velog.io/@franc/Gradle-%EA%B8%B0%EB%B3%B8%EC%82%AC%EC%9A%A9%EB%B2%95)
 
