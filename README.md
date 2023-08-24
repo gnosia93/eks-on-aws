@@ -15,9 +15,13 @@
 * [4. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
 
 * [5. EKS 에 어플리케이션 배포하기]()
-  
-  - [수동 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
+
+  - [Nginx 배포해 보기](eks-nginx-deploy.md)
+
+  - [스프링 부트 수동 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
+
   - [ArgoCD]
+
   - https://waspro.tistory.com/681
  
 * [6. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
