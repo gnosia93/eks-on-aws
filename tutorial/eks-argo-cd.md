@@ -1,4 +1,5 @@
 
+### 1. eks 클러스터 정보 확인 ###
 ```
 export CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
 export EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
