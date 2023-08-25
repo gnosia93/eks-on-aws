@@ -3,7 +3,7 @@
 스프링 개발 방법론에 의해, 컨트롤러, 엔터티, 레포지토리 등의 오브젝트 들을 구현한다.  
 전체 소스 코드는 https://github.com/gnosia93/eks-on-aws-springboot 를 참고 한다.
 
-단순 테스트 목적이라면, 이 챕터를 건너뛰고 
+단순 테스트 목적이라면, 이 챕터를 건너뛰고 [#5. CI구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md) 으로 이동한다. 
 
 ## 참고자료 ##
 * [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
