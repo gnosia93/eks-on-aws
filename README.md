@@ -28,7 +28,7 @@
 
   - [스프링 부트 수동 배포하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-manual-deploy.md)
 
-  - [ArgoCD](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-argo-cd.md)
+  - [ArgoCD 로 깃옵스 구현하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-argo-cd.md)
 
  
 * [#7. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
