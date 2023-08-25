@@ -4,7 +4,7 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 
 #### Secret 생성 ####
 
-시크릿에 데이터를 저장하기 전에 base64로 인코딩을 먼저 해야 합니다. 
+시크릿에 데이터를 저장하기 전에 base64로 인코딩을 먼저 해야 합니다. (EKS encyption 방식으로 테스트 예정)
 ```
 $ echo "eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com" | base64
 ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
@@ -36,7 +36,8 @@ shop
 
 #### 배포용 YAML 파일 생성 ####
 
-이 설정에는 Secret 를 적용하지 않습니다.
+이 설정에는 Secret 를 적용하지 않습니다. 컨테이너 이미지 주소 및 DB_ENDPOINT 값은 수정이 필요하다. 
+
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
