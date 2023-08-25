@@ -11,11 +11,13 @@
   * [프로젝트 생성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-shop.md)
 
   * [스프링 부트 어플리케이션 개발](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-devel.md)
+
+  * [스프링 부트 - Redis 를 이용한 분산락 구현과 데이터베이스 Offloading]
  
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
   * [스프링 부트 - 액츄에이터로 health check 설정하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
- 
+
   * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
     
   
