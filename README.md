@@ -43,9 +43,12 @@
 
 * #9. 성능 메트릭 모니터링
   
-  - [CloudWatch 컨테이너 인사이트 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/cloudwatch-container-insight.md)
+  - [CloudWatch Container Insight 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/cloudwatch-container-insight.md)
+    
   - [Amazon Managed Service for Prometheus 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+
   - [JMX ?] - 그라파나 또는 프로메테우스와 연동하는 방법 ???
+
   - 자바 컨테이너 힙 메모리 설정 방법 - https://recordsoflife.tistory.com/267
 
 * [#10. Liveness / Drain ...]
