@@ -49,6 +49,19 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 
 
+#### ...####
+
+```
+eksctl create iamidentitymapping \
+  --username system:node:{{EC2PrivateDNSName}} \
+  --cluster "${CLUSTER_NAME}" \
+  --arn "arn:aws:iam::${AWS_ACCOUNT_ID}:role/KarpenterInstanceNodeRole" \
+  --group system:bootstrappers \
+  --group system:nodes
+```
+
+
+
 ### 3. 접속 ###
 ```
 kubectl -n argocd port-forward service/argocd-server 8080:443
