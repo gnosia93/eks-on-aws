@@ -9,7 +9,7 @@
 
 스프링 부트 개발에 대한 좀 더 자세한 설명은 https://goddaehee.tistory.com/238 를 참고한다. 
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-call-flow.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-component.png)
 
 ### 1. Controller ###
 
