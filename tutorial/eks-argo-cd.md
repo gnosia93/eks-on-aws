@@ -2,6 +2,7 @@
 ```
 CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
 EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
+VPC_ID=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.resourcesVpcConfig.vpcId)
 ```
 
 ### 1. ArgoCD 배포 ###
