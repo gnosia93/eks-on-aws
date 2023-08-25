@@ -50,7 +50,8 @@ pod/fluent-bit-t2flc         1/1     Running   0          19h
 NAME                              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
 daemonset.apps/cloudwatch-agent   4         4         2       4            2           kubernetes.io/os=linux   69s
 daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
-``` 
+```
+* pending 이유가 뭘까?. 그냥 quick 방식으로 설치해야 하나??.........!!!
 
 ### [삭제] ###
 ```
@@ -61,5 +62,6 @@ daemonset.apps "cloudwatch-agent" deleted
 ## 레퍼런스 ##
 
 * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
+* https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContainerInsights-troubleshooting.html
 
 
