@@ -54,13 +54,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
 export ARN=$(aws sts get-caller-identity --query 'Arn' --output text)
-
-eksctl create iamidentitymapping \
-  --username system:node:{{EC2PrivateDNSName}} \
-  --cluster "eks-workshop" \
-  --arn "arn:aws:iam::499514681453:user/hopigaga" \
-  --group system:bootstrappers \
-  --group system:nodes
 ```
 
 
