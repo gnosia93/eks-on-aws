@@ -114,7 +114,11 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 * SSO 문제로 진행이 불가함. (SKIP...)
    
+## EC2 에 그라파나 설치 ##
+
+
 
 ## 레퍼런스 ##
+* https://st-ycloud.tistory.com/89
 * https://kschoi728.tistory.com/97
 * https://malwareanalysis.tistory.com/602
