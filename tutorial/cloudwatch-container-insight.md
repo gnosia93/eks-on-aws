@@ -51,16 +51,35 @@ NAME                              DESIRED   CURRENT   READY   UP-TO-DATE   AVAIL
 daemonset.apps/cloudwatch-agent   4         4         2       4            2           kubernetes.io/os=linux   69s
 daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
 ```
-* pending 이유가 뭘까?. 그냥 quick 방식으로 설치해야 하나??.........!!!
-```
-kubectl describe pod cloudwatch-agent-lx8rz -n amazon-cloudwatch
-```
 
 ### [삭제] ###
 ```
 $ kubectl delete daemonset cloudwatch-agent -n amazon-cloudwatch                                                                                        
 daemonset.apps "cloudwatch-agent" deleted
 ```
+
+## 트러블 슈팅 ##
+
+### 1. Pod Status Pending ###
+
+```
+kubectl describe pod cloudwatch-agent-lx8rz -n amazon-cloudwatch
+```
+[결과]
+```
+ode-Selectors:              kubernetes.io/os=linux
+Tolerations:                 node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type     Reason            Age    From               Message
+  ----     ------            ----   ----               -------
+  Warning  FailedScheduling  3m54s  default-scheduler  0/4 nodes are available: 1 Insufficient cpu. preemption: 0/4 nodes are available: 4 No preemption victims found for incoming pod.
+```
+노드 CPU 용량 부족으로 cloudwatch 에이전트가 스케줄 되지 않음 !!!! 노드의 CPU 용량이 작은거면 이런 경우도 있구나....헐~~~
 
 ## 레퍼런스 ##
 
