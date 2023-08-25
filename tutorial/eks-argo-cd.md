@@ -1,10 +1,10 @@
 
 ```
-CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
-EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
-VPC_ID=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.resourcesVpcConfig.vpcId')
-PLATFORM_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.platformVersion')
-
+export CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
+export EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
+export VPC_ID=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.resourcesVpcConfig.vpcId')
+export PLATFORM_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.platformVersion')
+export END_POINT=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.endpoint')
 ```
 
 ### 1. ArgoCD 배포 ###
