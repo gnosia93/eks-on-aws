@@ -1,4 +1,5 @@
 
+### 1. ArgoCD 배포 ###
 ```
 kubectl create namespace argocd
 
