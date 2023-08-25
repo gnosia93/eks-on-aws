@@ -1,4 +1,4 @@
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-1.png)
 
 * [#1. 기본 인프라 구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/basic-infra.md)
 
