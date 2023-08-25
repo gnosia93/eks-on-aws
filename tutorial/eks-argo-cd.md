@@ -58,6 +58,7 @@ kubectl apply -f argocd-ingress.yaml
 kubectl describe ingress argocd-ingress -n argocd
 ```
 
+**** 동작하지 않음 / 디버깅 필요 *****
 
 
 
