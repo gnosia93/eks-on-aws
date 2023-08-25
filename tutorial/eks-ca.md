@@ -1,53 +1,6 @@
 ## CA 설치 ##
 
-### 1. 오토 스케일링 그룹 설정 확인 ###
-```
-aws autoscaling \
-    describe-auto-scaling-groups \
-    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
-    Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
-    --output table
-```
-[결과]
-```
--------------------------------------------------------------------------
-|                       DescribeAutoScalingGroups                       |
-+--------------------------------------------------------+----+----+----+
-|  eks-nodegroup-1-4ec51041-924b-6017-2037-43d446c0c4ff  |  3 |  3 |  3 |
-+--------------------------------------------------------+----+----+----+
-```
-
-### 2. 노드 MaxSize 변경 ###
-```
-# we need the ASG name
-export ASG_NAME=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && \
- Value=='${CLUSTER_NAME}']].AutoScalingGroupName" --output text)
-
-# increase max capacity up to 6
-aws autoscaling \
-    update-auto-scaling-group \
-    --auto-scaling-group-name ${ASG_NAME} \
-    --min-size 3 \
-    --desired-capacity 3 \
-    --max-size 6
-
-# Check new values
-aws autoscaling \
-    describe-auto-scaling-groups \
-    --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='${CLUSTER_NAME}']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
-    --output table
-```
-
-[결과]
-```
--------------------------------------------------------------------------
-|                       DescribeAutoScalingGroups                       |
-+--------------------------------------------------------+----+----+----+
-|  eks-nodegroup-1-4ec51041-924b-6017-2037-43d446c0c4ff  |  3 |  6 |  3 |
-+--------------------------------------------------------+----+----+----+
-```
-
-### 3. 서비스 어카운트 생성 ###
+### 1. 서비스 어카운트 생성 ###
 ```
 cat <<EOF > k8s-asg-policy.json
 {
@@ -96,7 +49,7 @@ Tokens:              <none>
 Events:              <none>
 ```
 
-### 4. CA 설치 ###
+### 2. CA 설치 ###
 
 * 클러스터 버전 확인
 ```
@@ -148,7 +101,7 @@ kubectl -n kube-system \
     cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 ```
 
-## CA 삭제 ##
+### CA 삭제 ###
 
 ```
 kubectl delete deployment.apps/cluster-autoscaler -n kube-system
