@@ -55,7 +55,7 @@ EOF
 ```
 kubectl apply -f argocd-ingress.yaml
 
-kubectl describe ingress argocd-ingress
+kubectl describe ingress argocd-ingress -n argocd
 ```
 
 
