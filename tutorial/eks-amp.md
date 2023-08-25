@@ -112,7 +112,7 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ### 1. 워크스페이스 생성 ###
 
-* SSO 문제로 진행이 발가함.
+* SSO 문제로 진행이 불가함. (SKIP...)
    
 
 ## 레퍼런스 ##
