@@ -52,6 +52,9 @@ daemonset.apps/cloudwatch-agent   4         4         2       4            2    
 daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
 ```
 * pending 이유가 뭘까?. 그냥 quick 방식으로 설치해야 하나??.........!!!
+```
+kubectl describe pod cloudwatch-agent-lx8rz -n amazon-cloudwatch
+```
 
 ### [삭제] ###
 ```
