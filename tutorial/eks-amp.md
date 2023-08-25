@@ -108,19 +108,16 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 ...
 ```
 
+## IAM Identify Center (SSO) ##
+
+AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한다. 
+
+
+
+
 ## 그라파나(AMG) 설치 ##
 
-### 1. 워크스페이스 생성 ###
-
-* SSO 문제로 진행이 불가함. (SKIP...)
    
-## EC2 에 그라파나 설치 ##
-
-* https://st-ycloud.tistory.com/89 를 참조하여 ec2 에 설치한다.
-
-* 이것 역시 sigV4 인증 프로토콜을 지원하지 않아서 데이터소스로 AMP 를 추가할 수 없다.
-
-* 그냥 EKS 클러스터에 설치해야 할듯 ㅜㅜ
 
 
 ## 레퍼런스 ##
