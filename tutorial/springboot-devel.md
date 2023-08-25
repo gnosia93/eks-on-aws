@@ -107,6 +107,8 @@ public class MemberDto {
 ```
 
 ### 3. Service ###
+요청에 대한 비즈니스 로직을 수행하는 Component 로, Controller는 해당 비즈니스 로직을 수행하기 위한 Service를 호출한다.
+Service는 로직 수행 후 결과를 Controller에게 반환한다.
 ```
 package com.example.shop.service;
 
