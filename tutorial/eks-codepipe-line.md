@@ -4,6 +4,10 @@
 
 * 개인 계정을 만들어 깃허브로 로그인 
 * 깃허브 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리를 fork
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork2.png)
+
 * Github 엑세스 토큰을 생성
 * AWS Codepipeline 구성
 
