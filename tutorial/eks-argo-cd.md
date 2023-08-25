@@ -33,6 +33,11 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 3YmHOEYvMl7yE7XQ
 ```
 
+admin / 3YmHOEYvMl7yE7XQ (초기 패스워드) 로 로그인 하여, 패스워드를 admin22admin 으로 변경한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-password.png)
+
+
+
 
 
 ## 레퍼런스 ##
