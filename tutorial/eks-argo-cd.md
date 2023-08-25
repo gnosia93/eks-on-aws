@@ -23,7 +23,7 @@ helm -n argocd template argocd argo/argo-cd
 helm -n argocd install argocd argo/argo-cd
 ```
 
----> 소스 코드 받아서 수정해야 할듯 하다. 
+---> 소스 코드 받아서 수정해야 할듯 하다. / 로컬 PC 는 port-forward 이 되는데, cloud9 이라서 ㅜㅜㅜ 
 
 
 ### 3. 접속 ###
