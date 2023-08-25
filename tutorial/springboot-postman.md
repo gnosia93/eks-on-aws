@@ -10,6 +10,7 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/shop-run.png)
 
 #### 회원 등록 ####
+Postman 으로 http://localhost:8080/member/add 을 테스트 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-post.png)
 
 ```
@@ -22,7 +23,6 @@
 ```
 
 #### 회원 조회 ####
-Postman 을 이용하여 http://localhost:8080/member/add URL을 테스트 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-get.png)
 
 
