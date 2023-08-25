@@ -272,6 +272,11 @@ Events:  <none>
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudwatch-fluentbit-log2.png)
 
 
+### 5. 로그 레코드 조회하기 ###
+
+* https://engineering.ab180.co/stories/athena-cloudwatch-logs-query
+
+
 
 
 ## 레퍼런스 ##
