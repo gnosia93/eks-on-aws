@@ -17,6 +17,10 @@
 
 ### 5. Entity ###
 
+### 6. gradle.build ###
+
+### 7. properties ###
+
 
 
 ## 참고자료 ##
