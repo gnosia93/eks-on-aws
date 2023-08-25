@@ -29,7 +29,7 @@ on darwin_arm64
 
 ### 2. 기본 인프라 구성 ###
 
-로컬 PC의 테라폼을 이용하여 VPC, Subnet(퍼블릭 3개, 프라이빗 3개 - EKS 클러스터용, 프라이빗 3개 - RDS 및 ElastiCache용), 인터넷 GW 및 NAT GW 를 생성합니다. 또한 퍼블릭 서브넷에 Cloud9, RDS 를 프라이빗 서브넷에 설치됩니다.  
+로컬 PC의 테라폼을 이용하여 VPC, Subnet, 인터넷 GW 및 NAT GW 를 생성합니다. 또한 퍼블릭 서브넷에 Cloud9, RDS 를 프라이빗 서브넷에 설치됩니다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-archi-base.png)
 
