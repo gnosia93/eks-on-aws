@@ -4,7 +4,7 @@
 
 * Github 계정을 만들어 로그인 
 * Github 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리 fork
-* Github 엑세스 토큰을 생성
+* Github 엑세스 토큰 생성
 * AWS Codepipeline 구성
 
 과정을 거쳐야 한다.
