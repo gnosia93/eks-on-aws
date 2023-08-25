@@ -101,8 +101,7 @@ kubectl -n kube-system \
     cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 ```
 
-### CA 삭제 ###
-
+#### CA 삭제 ####
 ```
 kubectl delete deployment.apps/cluster-autoscaler -n kube-system
 
