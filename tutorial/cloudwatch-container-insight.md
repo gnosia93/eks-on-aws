@@ -4,4 +4,6 @@
 
 ## 레퍼런스 ##
 
-* https://brunch.co.kr/@topasvga/1653
+* https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
+
+
