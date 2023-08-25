@@ -8,9 +8,20 @@ export PLATFORM_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cl
 export END_POINT=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.endpoint')
 ```
 
+
+
 ### 1. ArgoCD 배포 ###
 ```
+helm repo add argo https://argoproj.github.io/argo-helm
+
 kubectl create namespace argocd
+
+helm -n argocd template argocd argo/argo-cd
+
+helm -n argocd install argocd argo/argo-cd
+```
+
+```
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
