@@ -112,19 +112,8 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ### 1. 워크스페이스 생성 ###
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-1.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-2.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-3.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-4.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-5.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-6.png)
-
-
+* SSO 문제로 진행이 발가함.
+   
 
 ## 레퍼런스 ##
 * https://kschoi728.tistory.com/97
