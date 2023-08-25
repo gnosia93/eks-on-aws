@@ -22,6 +22,7 @@
 ```
 
 #### 회원 조회 ####
+Postman 을 이용하여 http://localhost:8080/member/add URL을 테스트 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/postman-get.png)
 
 
