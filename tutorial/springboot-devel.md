@@ -7,6 +7,17 @@
 
 ## Code Snippet ##
 
+### 1. Controller ###
+
+### 2. Dto (Data to Object) ###
+
+### 3. Service ###
+
+### 4. Repository ###
+
+### 5. Entity ###
+
+
 
 ## 참고자료 ##
 * [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
