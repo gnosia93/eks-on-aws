@@ -7,6 +7,8 @@
 
 ## Code Snippet ##
 
+스프링 부트 개발에 대한 좀 더 자세한 설명은 https://goddaehee.tistory.com/238 를 참고한다. 
+
 ### 1. Controller ###
 ```
 package com.example.shop.controller;
