@@ -53,7 +53,7 @@
 
 * [#10. Liveness / Drain ...]
 
-* [#11. 성능 테스트]
+* [#11. 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
 * #12. 컨테이너 보안 - https://whchoi98.gitbook.io/k8s/eks-security
 
