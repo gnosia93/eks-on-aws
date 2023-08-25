@@ -2,12 +2,8 @@
 
 스프링부트 shop 프로젝트로 CI 파이프라인을 테스트 하기 위해서는 
 
-* 개인 계정을 만들어 깃허브로 로그인 
-* 깃허브 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리를 fork
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork1.png)
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork2.png)
-
+* Github 계정을 만들어 로그인 
+* Github 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리를 fork
 * Github 엑세스 토큰을 생성
 * AWS Codepipeline 구성
 
@@ -15,6 +11,10 @@
 
 코드 파이프라인의 동작 순서는 Github에 새로운 코드가 commit 이 되면 AWS CodeBuild 가 소스코드를 다운로드 받아서 컴파일하고,
 Docker 이미지를 생성한 다음 프라이빗 ECR 레지스트리에 푸시하는 과정으로 구성되어 있다. 
+
+* 레포지토리 fork 예시
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/repo-fork2.png)
 
 ### 1. GitHub 억세스 토큰 생성 ###
 
