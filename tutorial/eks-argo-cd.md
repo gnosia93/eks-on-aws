@@ -1,5 +1,7 @@
 
-
+```
+EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
+```
 
 ### 1. ArgoCD 배포 ###
 ```
