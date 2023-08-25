@@ -1,4 +1,6 @@
 
+
+
 ### 1. ArgoCD 배포 ###
 ```
 kubectl create namespace argocd
@@ -41,6 +43,8 @@ admin / 3YmHOEYvMl7yE7XQ (초기 패스워드) 로 로그인 하여, 패스워�
 
 
 ## 레퍼런스 ##
+
+* https://argo-cd.readthedocs.io/en/stable/operator-manual/installation/ 
 
 * https://velog.io/@bbkyoo/ArgoCD-%EA%B8%B0%EB%B3%B8-%EC%A0%95%EB%A6%AC
 
