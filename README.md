@@ -61,5 +61,5 @@
 
 ## 레퍼런스 ##
 
-* eks workshop - https://www.eksworkshop.com/010_introduction/
+* eks workshop - https://www.eksworkshop.com/
 
