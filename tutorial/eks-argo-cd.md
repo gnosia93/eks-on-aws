@@ -7,6 +7,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
+loadbalancer 타입으로 변경해서 접속한다. 기본설정이 SSL 경우라서 ...
+
+
 
 ### 2. CLI 설치 ###
 ```
@@ -21,6 +24,8 @@ sudo mv argocd-linux-amd64 /usr/local/bin/argocd
 
 
 ## 레퍼런스 ##
+
+* https://velog.io/@bbkyoo/ArgoCD-%EA%B8%B0%EB%B3%B8-%EC%A0%95%EB%A6%AC
 
 * https://nyyang.tistory.com/114
   
