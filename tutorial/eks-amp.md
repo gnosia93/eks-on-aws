@@ -124,6 +124,7 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 
 ## 레퍼런스 ##
+* https://velog.io/@joshua_s/Prometheus-Grafana%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-EC2-%EC%8B%9C%EA%B0%81%ED%99%94
 * https://st-ycloud.tistory.com/89
 * https://kschoi728.tistory.com/97
 * https://malwareanalysis.tistory.com/602
