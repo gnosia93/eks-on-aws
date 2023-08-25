@@ -62,4 +62,5 @@
 ## 레퍼런스 ##
 
 * [https://www.eksworkshop.com/](https://archive.eksworkshop.com/010_introduction/)
+* [Gradle, Layered Jar 그리고 Dockerbuild 최적화](https://velog.io/@ssol_916/Gradle-Layered-Jar-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Dockerbuild-%EC%B5%9C%EC%A0%81%ED%99%94)
 
