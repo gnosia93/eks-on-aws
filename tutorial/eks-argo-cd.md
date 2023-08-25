@@ -7,7 +7,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
-loadbalancer 타입으로 변경해서 접속한다. 기본설정이 SSL 경우라서 ...
+loadbalancer 타입으로 변경해서 접속한다. (참고-ALB 인그레스로 설치하는 경우 TLS 오류가 발생한다)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
 
 
 
