@@ -48,8 +48,9 @@ spec:
               name: argocd-server
               port:
                 number: 80
-"
-
+" | kubectl apply -f -
+```
+```
 kubectl apply -f shop-ingress.yaml
 kubectl describe ingress shop-ingress
 
