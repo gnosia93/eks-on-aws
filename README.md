@@ -45,7 +45,8 @@
   
   - [CloudWatch 컨테이너 인사이트]
   - [Amazon Managed Service for Prometheus 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
-  - [JMX ?]      
+  - [JMX ?]
+  - 자바 컨테이너 메모리 설정 방법 - https://recordsoflife.tistory.com/267
 
 * [#10. Liveness / Drain ...]
 
