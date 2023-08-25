@@ -117,7 +117,10 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 ## EC2 에 그라파나 설치 ##
 
 * https://st-ycloud.tistory.com/89 를 참조하여 ec2 에 설치한다.
-* terraform 스크립트에 반영예정.
+
+* 이것 역시 sigV4 인증 프로토콜을 지원하지 않아서 데이터소스로 AMP 를 추가할 수 없다.
+
+* 그냥 EKS 클러스터에 설치해야 할듯 ㅜㅜ
 
 
 ## 레퍼런스 ##
