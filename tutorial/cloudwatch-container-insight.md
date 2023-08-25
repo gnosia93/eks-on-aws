@@ -33,7 +33,7 @@ kubectl apply -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch
 
 ### 5. 설치 확인 ###
 ```
-$ kubectl get all -n amazon-cloudwatch
+kubectl get all -n amazon-cloudwatch
 ```
 [결과]
 ```
