@@ -1,5 +1,5 @@
 
-### 1. eks 클러스터 정보 확인 ###
+### 1. eks 클러스터 확인 ###
 ```
 export CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
 export EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
@@ -10,7 +10,7 @@ export END_POINT=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.e
 
 
 
-### 1. ArgoCD 배포 ###
+### 2. ArgoCD 설치 ###
 ```
 helm repo add argo https://argoproj.github.io/argo-helm
 
