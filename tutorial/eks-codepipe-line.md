@@ -1,8 +1,12 @@
 ## CI 구성하기 ##
 
-스프링 부트 shop 프로젝트를 이용하여 CI 파이프라인을 구성하고 테스트 하기 위해서는 
+shop 프로젝트로 CI 파이프라인을 테스트 하기 위해서는 
 
-1. 
+* 깃허브에 계정을 만들고, 깃허브 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리를 fork 한다.
+* Github 엑세스 토큰을 생성하고
+* AWS Codepipeline 을 구성
+
+해야 한다.
 
 깃 허브에 새로운 코드가 commit 이 되면 AWS CodeBuild 가 소스코드를 다운로드 받아서 컴파일하고,
 Docker 이미지를 빌드한 다음 ECR 레지스트리에 푸시한다. 
