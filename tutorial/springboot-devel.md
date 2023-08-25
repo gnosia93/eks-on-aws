@@ -9,6 +9,8 @@
 
 스프링 부트 개발에 대한 좀 더 자세한 설명은 https://goddaehee.tistory.com/238 를 참고한다. 
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-call-flow.png)
+
 ### 1. Controller ###
 
 웹브라우저로 부터 요청이 오면, 컨트롤러가 받아서 URI 맵핑 기준으로 처리하고, Service 객체를 호출해서 응답 결과를 반환한다.
