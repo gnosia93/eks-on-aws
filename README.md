@@ -1,4 +1,5 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-2.png)
+![lucid chart](https://lucid.app/lucidchart/9722688e-0fa2-4edb-928c-d8d73f195016/edit?rtempr=1&invitationId=inv_2fbaa4d4-9402-4943-8042-9c4d178de01e&page=ZCRzvPak~rVC#)
 
 * [#1. 기본 인프라 구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/basic-infra.md)
 
