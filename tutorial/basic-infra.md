@@ -1,4 +1,4 @@
-이번 챕터를 실행하기 위해서는 로컬 PC 에 AWS EC2 keypair 파일(aws-kp-2.pem)이 있어야 하며, AWS CLI 또한 최신 버전이 설치되어야 한다.   
+이번 챕터를 실행하기 위해서는 로컬 PC 에 AWS EC2 keypair 파일(aws-kp-2.pem)이 있어야 하며, AWS CLI 또한 최신 버전이 설치되어야 한다. 
 이미 존재하는 다른 이름의 EC2 keypair 를 사용하고자 한다면, 테라폼 tf/var.tf 파일에서 key_pair 변수값을 해당 keypair 명칭으로 수정한다. 
 ```
 variable "key_pair" {
