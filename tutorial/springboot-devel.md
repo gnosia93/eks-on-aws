@@ -207,6 +207,7 @@ public class MemberService {
 ```
 
 ### 4. Repository ###
+Entity 에 대한 CRUD 를 담당하는 인터페이스로 실제 구현체는 별도로 존재한다 (예-Hibernate) 
 ```
 package com.example.shop.repository;
 
