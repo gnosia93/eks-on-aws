@@ -1,6 +1,9 @@
 ## springboot 어플리케이션 개발 ##
 
-https://github.com/gnosia93/eks-on-aws-springboot 를 참고 하세요.
+스프링 개발 방법론에 의해, 컨트롤러, 엔터티, 레포지토리 등의 오브젝트 들을 구현한다.  
+전체 소스 코드는 https://github.com/gnosia93/eks-on-aws-springboot 를 참고 한다.
+
+
 
 ## 참고자료 ##
 * [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
