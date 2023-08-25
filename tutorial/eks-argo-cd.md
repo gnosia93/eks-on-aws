@@ -28,15 +28,9 @@ sudo mv argocd-linux-amd64 /usr/local/bin/argocd
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+[결과]
+```
 3YmHOEYvMl7yE7XQ
-
-argocd account update-password
-
-argocd login --grpc-web pingping2.shop:8443
-Username: admin
-Password: 
-'admin:login' logged in successfully
-Context 'pingping2.shop:8443' updated
 ```
 
 
