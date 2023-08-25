@@ -15,8 +15,9 @@ clusterrole.rbac.authorization.k8s.io/cloudwatch-agent-role created
 clusterrolebinding.rbac.authorization.k8s.io/cloudwatch-agent-role-binding created
 ```
 
-### 3. ###
+### 3. 컨피그 맵 생성 ###
 ```
+curl -O https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-configmap.yaml -o configmap.yaml
 ```
 
 ## 레퍼런스 ##
