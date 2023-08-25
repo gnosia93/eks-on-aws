@@ -116,6 +116,8 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
    
 ## EC2 에 그라파나 설치 ##
 
+* https://st-ycloud.tistory.com/89 를 참조하여 ec2 에 설치한다.
+* terraform 스크립트에 반영예정.
 
 
 ## 레퍼런스 ##
