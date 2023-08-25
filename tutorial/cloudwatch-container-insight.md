@@ -52,6 +52,11 @@ daemonset.apps/cloudwatch-agent   4         4         2       4            2    
 daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
 ``` 
 
+### [삭제] ###
+```
+$ kubectl delete daemonset cloudwatch-agent -n amazon-cloudwatch                                                                                        
+daemonset.apps "cloudwatch-agent" deleted
+```
 
 ## 레퍼런스 ##
 
