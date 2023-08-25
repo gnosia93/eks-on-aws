@@ -58,7 +58,14 @@ admin / 3YmHOEYvMl7yE7XQ (초기 패스워드) 로 로그인 하여, 패스워�
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-password.png)
 
 
+## 삭제 ##
+```
+# ArgoCD 삭제
+helm -n argocd uninstall argocd
 
+# Kubernetes 네임스페이스 삭제
+kubectl delete namespace argocd
+```
 
 
 ## 레퍼런스 ##
