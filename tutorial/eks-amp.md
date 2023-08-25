@@ -112,10 +112,19 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한다. 
 
+[Add user] 버튼을 클릭해서 새로운 유저를 추가한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-1.png)
+
+필수 정보를 입력하고 유저를 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-2.png)
+
+[Send email verification link] 를 클릭해서 초대 메일을 발송한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-3.png)
+
+[Accept invitation] 버튼을 클릭해서 초대에 응한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-4.png)
+
+비밀 번호를 설정한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-5.png)
 
 
