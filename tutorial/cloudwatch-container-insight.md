@@ -19,7 +19,11 @@ clusterrolebinding.rbac.authorization.k8s.io/cloudwatch-agent-role-binding creat
 ```
 export ClusterName=${CLUSTER_NAME}
 curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-configmap.yaml \
-| sed 's/{{cluster_name}}/${ClusterName}/' | kubectl apply -f - 
+| sed "s/{{cluster_name}}/${ClusterName}/" | kubectl apply -f - 
+```
+
+```
+kubectl describe configmap cwagentconfig -n amazon-cloudwatch
 ```
 
 ## 레퍼런스 ##
