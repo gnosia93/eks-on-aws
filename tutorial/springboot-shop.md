@@ -1,7 +1,7 @@
 ## springboot 프로젝트 생성 ##
 
 이번 챕터에서는 spring.io 와 InteliJ 통합 자바 개발환경을 이용해서 스프링 부트 프로젝트를 생성하는 방법에 대해서 설명한다.  
-eks-on-aws 워크샵에서 사용되는 shop 프로젝트 코드는 https://github.com/gnosia93/eks-on-aws-springboot 에서 확인 가능하다.
+eks-on-aws 워크샵에서 사용되는 shop 프로젝트 코드는 https://github.com/gnosia93/eks-on-aws-springboot 에서 확인 가능하다.  
 shop 프로젝트 역시 여기에서 기술하는 방식으로 생성하였다.
 
 ### 1. [spring.io](https://start.spring.io/) 사이트에서 아래 그림과 같은 설정으로 프로젝트 하나를 생성한다. ###
