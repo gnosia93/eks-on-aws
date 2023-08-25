@@ -218,6 +218,7 @@ public interface MemberRepository extends JpaRepository<Member, Integer> {
 ```
 
 ### 5. Entity ###
+RDB 의 테이블과 1 대 1 로 매핑되는 오브젝트 이다.
 ```
 package com.example.shop.entity;
 
