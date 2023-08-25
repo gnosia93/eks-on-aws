@@ -105,7 +105,7 @@ kubectl get node
 
 * EC2 인스턴스
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/karpenter-ec2-instance.png)
-동일 타입의 인스턴스를 증설하는 CA 와 달리 카펜터의 경우 서로 다른 타입의 인스턴스가 증설되는 것을 확인할 수 있다.
+동일 타입의 인스턴스를 증설하는 CA 와 달리 카펜터의 경우 서로 다른 타입의 인스턴스가 증설되는 것을 확인할 수 있다. 자세한 내용은 아래 블로그 확인.
 [Amazon EKS 클러스터를 비용 효율적으로 오토스케일링하기](https://aws.amazon.com/ko/blogs/tech/amazon-eks-cluster-auto-scaling-karpenter-bp/)
 
 ### 5. nginx 삭제 ###
