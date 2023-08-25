@@ -1,5 +1,5 @@
 
-### 1. eks 클러스터 확인 ###
+### 1. 환경 수집 ###
 ```
 export CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
 export EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
@@ -8,7 +8,6 @@ export PLATFORM_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cl
 export END_POINT=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.endpoint')
 
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-export ARN=$(aws sts get-caller-identity --query 'Arn' --output text)
 ```
 
 
@@ -24,6 +23,7 @@ helm -n argocd template argocd argo/argo-cd
 helm -n argocd install argocd argo/argo-cd
 ```
 
+---> 소스 코드 받아서 수정해야 할듯 하다. 
 
 
 ### 3. 접속 ###
