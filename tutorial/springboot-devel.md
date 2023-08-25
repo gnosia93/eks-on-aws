@@ -5,6 +5,9 @@
 
 단순 테스트 목적이라면, 이 챕터를 건너뛰고 [#5. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md) 으로 이동한다. 
 
+## Code Snippet ##
+
+
 ## 참고자료 ##
 * [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
   
