@@ -110,6 +110,20 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ## 그라파나(AMG) 설치 ##
 
+### 1. 워크스페이스 생성 ###
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-3.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-4.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-5.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-6.png)
+
 
 
 ## 레퍼런스 ##
