@@ -21,13 +21,14 @@ helm -n argocd template argocd argo/argo-cd
 helm -n argocd install argocd argo/argo-cd
 ```
 
+
+### 3. 접속 ###
+```
+kubectl -n argocd port-forward service/argocd-server 8080:443
+
 ```
 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
-```
-loadbalancer 타입으로 변경해서 접속한다. (참고-ALB 인그레스로 설치하는 경우 TLS 오류가 발생한다)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
 
@@ -61,6 +62,8 @@ admin / 3YmHOEYvMl7yE7XQ (초기 패스워드) 로 로그인 하여, 패스워�
 
 
 ## 레퍼런스 ##
+
+* https://happygram.tistory.com/entry/ArgoCD-helm-%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0
 
 * https://argo-cd.readthedocs.io/en/stable/operator-manual/installation/ 
 
