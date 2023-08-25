@@ -42,8 +42,7 @@ kubectl delete namespace argocd
 
 ## 트러블 슈팅 ##
 
-* https://stackoverflow.com/questions/71052421/argocd-app-create-in-ci-pipeline-github-actions-tekton-throws-permissio
-  
+* https://stackoverflow.com/questions/76863249/argocd-unable-to-create-application-permission-denied
 
 ## 레퍼런스 ##
 * https://mycup.tistory.com/423
