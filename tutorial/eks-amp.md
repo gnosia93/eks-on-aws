@@ -112,7 +112,11 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한다. 
 
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-3.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-4.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-5.png)
 
 
 ## 그라파나(AMG) 설치 ##
