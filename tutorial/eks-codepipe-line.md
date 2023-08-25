@@ -2,7 +2,7 @@
 
 스프링부트 shop 프로젝트로 CI 파이프라인을 테스트 하기 위해서는 
 
-* 깃허브에 계정을 만들어 로그인 
+* 개인 계정을 만들어 깃허브로 로그인 
 * 깃허브 웹에서 https://github.com/gnosia93/eks-on-aws-springboot 레포지토리를 fork
 * Github 엑세스 토큰을 생성
 * AWS Codepipeline 구성
