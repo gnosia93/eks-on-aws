@@ -45,7 +45,7 @@
   
   - [CloudWatch Container Insight 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/cloudwatch-container-insight.md)
     
-  - [Amazon Managed Service for Prometheus 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+  - [Amazon Managed Service for Prometheus / Grafana 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
 
   - [JMX ?] - 그라파나 또는 프로메테우스와 연동하는 방법 ???
 
