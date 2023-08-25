@@ -148,65 +148,6 @@ kubectl -n kube-system \
     cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 ```
 
-## CA 테스트 ##
-
-### 1. nginx 설치 ###
-```
-cat <<EOF > nginx.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-to-scaleout
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        service: nginx
-        app: nginx
-    spec:
-      containers:
-      - image: nginx
-        name: nginx-to-scaleout
-        resources:
-          limits:
-            cpu: 1000m
-            memory: 2048Mi
-          requests:
-            cpu: 1000m
-            memory: 2048Mi
-EOF
-
-kubectl apply -f nginx.yaml
-
-kubectl get deployment/nginx-to-scaleout
-```
-
-### 2. 테스트 ###
-
-```
-kubectl scale --replicas=30 deployment/nginx-to-scaleout
-```
-
-```
-kubectl get pods -l app=nginx -o wide --watch
-```
-
-```
-kubectl -n kube-system logs -f deployment/cluster-autoscaler
-```
-
-```
-kubectl get nodes
-```
-
-```
-k9s
-```
-
 ## CA 삭제 ##
 
 ```
