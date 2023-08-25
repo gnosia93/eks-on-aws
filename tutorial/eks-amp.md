@@ -12,7 +12,7 @@ export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ### 2. AMP 워크스페이스 생성 ### 
 
 ```
-aws amp create-workspace --alias adot-eks-workshop --tags env=eks-workshop
+aws amp create-workspace --alias adot-eks --tags env=eks-workshop
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace.png)
 
