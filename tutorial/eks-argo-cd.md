@@ -1,5 +1,6 @@
 
 ```
+CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
 EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
 ```
 
