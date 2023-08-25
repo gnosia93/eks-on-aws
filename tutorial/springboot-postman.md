@@ -5,7 +5,7 @@
 
 ### 어플리케이션 URL 테스트 ###
 
-[Postman](https://www.postman.com/) 을 설치해서 어플리케이션(CRUD)를 테스트한다. Intelij 로 shop 프로젝트를 오픈한 다음 좌측 패널에서 ShopApplication 을 선택한 다음 우측 상단의 숏컷 아이콘인 Run 아이콘을 클릭하면 스프링 부트 어플리케이션이 로컬 PC 에서 실행된다.
+[Postman](https://www.postman.com/) 을 설치해서 어플리케이션(CRUD)를 테스트한다. Intelij 로 shop 프로젝트를 오픈한 다음 좌측 패널에서 ShopApplication 을 선택한 다음 우측 상단의 Run 버튼(녹색 삼각형) 클릭하여 스프링 부트 어플리케이션을 로컬 PC 에서 실행한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/shop-run.png)
 
