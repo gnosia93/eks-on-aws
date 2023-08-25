@@ -121,7 +121,12 @@ AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한�
 
 ## 그라파나(AMG) 설치 ##
 
-   
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-1.png)   
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-2.png)   
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-3.png)   
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-4.png)   
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-5.png)   
+
 
 
 ## 레퍼런스 ##
