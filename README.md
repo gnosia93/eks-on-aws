@@ -61,5 +61,5 @@
 
 ## 레퍼런스 ##
 
-* eks workshop - https://www.eksworkshop.com/
+* [https://www.eksworkshop.com/](https://archive.eksworkshop.com/010_introduction/)
 
