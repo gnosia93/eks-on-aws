@@ -22,16 +22,16 @@ sudo mv argocd-linux-amd64 /usr/local/bin/argocd
 ### 3. 인그레스 생성 ###
 
 ```
-cat "\
+cat <<EOF > argocd-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: shop-ingress
+  name: argocd-ingress
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/load-balancer-name: shop-argocd-alb
+    alb.ingress.kubernetes.io/load-balancer-name: argocd-alb
 #    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '5'
     alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '3'
@@ -48,14 +48,13 @@ spec:
               name: argocd-server
               port:
                 number: 80
-" | kubectl apply -f -
+EOF
 ```
 
-
 ```
-kubectl apply -f shop-ingress.yaml
-kubectl describe ingress shop-ingress
+kubectl apply -f argocd-ingress.yaml
 
+kubectl describe ingress argocd-ingress
 ```
 
 
