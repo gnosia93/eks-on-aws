@@ -40,9 +40,13 @@ helm -n argocd uninstall argocd
 kubectl delete namespace argocd
 ```
 
+## 트러블 슈팅 ##
+
+* https://stackoverflow.com/questions/71052421/argocd-app-create-in-ci-pipeline-github-actions-tekton-throws-permissio
+  
 
 ## 레퍼런스 ##
-
+* https://mycup.tistory.com/423
 * https://sncap.tistory.com/1124
 
 
