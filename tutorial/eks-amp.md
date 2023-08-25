@@ -127,6 +127,9 @@ AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한�
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-4.png)   
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-5.png)   
 
+## 그라파나(AMG) 대시보드 설정 ##
+
+* https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
 
 
 ## 레퍼런스 ##
