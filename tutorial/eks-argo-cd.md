@@ -58,7 +58,7 @@ Applications 메뉴에서 + NEW APP 버튼을 클릭하고,
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app2.png)
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app3.png)
 
 
 
