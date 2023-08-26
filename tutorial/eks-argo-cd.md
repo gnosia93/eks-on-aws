@@ -28,6 +28,13 @@ kubectl delete deployment.apps/shop
 kubectl get all
 ```
 
+```
+$ kubectl get all
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   172.20.0.1   <none>        443/TCP   45h
+```
+
+
 
 
 ### 1. ArgoCD 설치 ###
