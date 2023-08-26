@@ -12,6 +12,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: shop-deployment
+  namespace: default
   labels:
     app: shop
 spec:
@@ -44,6 +45,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: shop
+  namespace: default
   labels:
     app: shop
 spec:
