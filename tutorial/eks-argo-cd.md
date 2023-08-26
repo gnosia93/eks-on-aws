@@ -45,7 +45,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### 3. argo-cd 접속 ###
 
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
 
 ## 레퍼런스 ##
 
