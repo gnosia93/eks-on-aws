@@ -92,5 +92,6 @@ replicaset.apps/shop-787954cc9b   3         3         3       14s
 ## 레퍼런스 ##
 
 * https://mycup.tistory.com/423
+* https://argo-cd.readthedocs.io/en/stable/getting_started/#creating-apps-via-cli/
 
 
