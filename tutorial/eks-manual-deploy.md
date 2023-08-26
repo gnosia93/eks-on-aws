@@ -57,7 +57,7 @@ spec:
       targetPort: 8080
 EOF
 ```
-* 자바 컨테이너 힙 메모리 설정 방법 - https://recordsoflife.tistory.com/267
+* 컨테이너화 된 자바 힙 메모리 설정 방법 - https://recordsoflife.tistory.com/267
 
 #### 생성 오브젝트 확인 ####
 ```
