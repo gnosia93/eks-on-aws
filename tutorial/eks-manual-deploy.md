@@ -11,7 +11,7 @@ cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shop-deployment
+  name: shop
   namespace: default
   labels:
     app: shop
