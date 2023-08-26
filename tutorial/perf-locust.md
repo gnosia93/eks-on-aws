@@ -56,6 +56,7 @@ class sample(HttpUser):
 ```
 locust -f ./test.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com
 ```
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/%20locust.png)
 
 
 
