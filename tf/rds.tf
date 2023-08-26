@@ -1,7 +1,8 @@
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group
 resource "aws_db_subnet_group" "eks_db_subnet_grp" {
   name       = "eks-db-subnet-grp"
-  subnet_ids = [ aws_subnet.eks_priv_subnet1_db.id, aws_subnet.eks_priv_subnet2_db.id, aws_subnet.eks_priv_subnet3_db.id ]
+#  subnet_ids = [ aws_subnet.eks_priv_subnet1_db.id, aws_subnet.eks_priv_subnet2_db.id, aws_subnet.eks_priv_subnet3_db.id ]
+  subnet_ids = [ aws_subnet.eks_priv_subnet1_db.id, aws_subnet.eks_priv_subnet2_db.id ]
 
   tags = {
     Name = "eks_db_subnet_grp"
