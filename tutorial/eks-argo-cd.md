@@ -14,16 +14,16 @@ export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output t
 
 ### 2. ArgoCD 설치 ###
 ```
-helm repo add argo https://argoproj.github.io/argo-helm
-
 kubectl create namespace argocd
 
-helm -n argocd template argocd argo/argo-cd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-helm -n argocd install argocd argo/argo-cd
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+
+kubectl describe svc argocd-server -n argocd
 ```
 
----> 소스 코드 받아서 수정해야 할듯 하다. / 로컬 PC 는 port-forward 이 되는데, cloud9 이라서 ㅜㅜㅜ 
+
 
 
 
