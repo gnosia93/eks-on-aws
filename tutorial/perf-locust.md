@@ -38,7 +38,7 @@ class sample(HttpUser):
 
 	@task
 	def get(self):
-		self.client.post("/member/1", headers={"Content-Type" : "application/json"})
+		self.client.get("/member/1", headers={"Content-Type" : "application/json"})
 ```
 
 ```
