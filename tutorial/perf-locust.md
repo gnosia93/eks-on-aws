@@ -42,7 +42,7 @@ class sample(HttpUser):
 ```
 
 ```
-locust -f ./test.py -port 8080
+locust -f ./test.py -P 8080
 ```
 
 
