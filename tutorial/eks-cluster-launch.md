@@ -273,7 +273,3 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 * https://kingofbackend.tistory.com/235
 
-* DB 스키마 생성 
-```
-mysql -u root -p -h springboot-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
-```
