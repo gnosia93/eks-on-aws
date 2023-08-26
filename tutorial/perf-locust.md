@@ -3,7 +3,7 @@
 ### 1. ec2 생성 ###
 AWS 콘솔에서 아마존 리눅스를 사용하는 c6i.2xlarge 인스턴스를 하나 만들고, 22, 8080 포트를 0.0.0.0/0 으로 오픈한다.
 ```
-$ ssh -i aws-keypair.pem ec2-user@10.10.10.x
+$ ssh -i aws-keypair.pem ec2-user@<server ip> 
 ```
 
 ### 2. python 설치 ###
