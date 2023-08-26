@@ -49,7 +49,7 @@
     
   - [Amazon Managed Service for Prometheus / Grafana 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
 
-  - [JMX ?] - 그라파나 또는 프로메테우스와 연동하는 방법 ???
+  - [SpringBoot Actuator with Grafana] - https://jydlove.tistory.com/70
 
   - 자바 컨테이너 힙 메모리 설정 방법 - https://recordsoflife.tistory.com/267
 
