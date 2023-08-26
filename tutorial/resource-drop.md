@@ -9,3 +9,5 @@ cd ~/eks-on-aws/tf
 
 terraform destroy
 ```
+
+* 기타 - AMP / AMG 및 SSO 는 AWS 콘솔에서 지운다. 
