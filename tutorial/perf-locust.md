@@ -27,18 +27,18 @@ class sample(HttpUser):
 		print("end test")		
 
 	@task
-	def login(self):
-		data = {
-			"id" : "sample"
-			,"password" : "ssss"
+	def add(self):
+		data = {	
+		    	"password": "7771",
+			"name": "111",
+    			"phoneNumber": "9-111-11",
+    			"emailAddress": "9999@example.com"
 		}
-		self.client.post("/api/auth/sign-in", json.dumps(data), headers={"Content-Type" : "application/json"})
+		self.client.post("/member/add", json.dumps(data), headers={"Content-Type" : "application/json"})
 
 	@task
-	def logout(self):
-		self.client.post("/api/auth/sign-out",
-						headers={"Content-Type" : "application/json"}
-		)
+	def get(self):
+		self.client.post("/member/1", headers={"Content-Type" : "application/json"})
 ```
 
 ```
