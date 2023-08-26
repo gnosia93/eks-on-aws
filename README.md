@@ -57,9 +57,7 @@
 
 * [#11. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
-* #12. 컨테이너 보안 - https://whchoi98.gitbook.io/k8s/eks-security
-
-* [#13. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
+* [#12. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
 ## 레퍼런스 ##
 
