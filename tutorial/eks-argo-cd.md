@@ -15,6 +15,8 @@ kubectl describe svc argocd-server -n argocd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 
+### 3. argo-cd 접속 ###
+
 
 
 ## 레퍼런스 ##
