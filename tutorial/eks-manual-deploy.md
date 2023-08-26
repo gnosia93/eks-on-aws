@@ -3,42 +3,9 @@
 이번 챕터에서는 shop 프로젝트를 서비스로 배포하고 인그레스를 설치하여 웹으로 노출할 예정이다.  
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
-#### Secret 생성 ####
-
-시크릿에 데이터를 저장하기 전에 base64로 인코딩을 먼저 해야 합니다. (EKS encyption 방식으로 테스트 예정)
-```
-$ echo "eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com" | base64
-ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
-
-$ echo "shop" | base64
-c2hvcAo=
-```
-시크릿을 생성합니다.
-```
-cat <<EOF > db-secret.yaml
-apiVersion: v1
-data:
-  db_endpoint: ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
-  db_password: c2hvcAo=
-  db_username: c2hvcAo=
-kind: Secret
-metadata:
-  name: db-secret
-type: Opaque
-EOF
-
-kubectl apply -f db-secret.yaml
-```
-데이터를 읽어온후 디코딩 합니다. 
-```
-$kubectl get secret db-user-pass -o jsonpath='{.data.db_password}' | base64 --decode                                 
-shop
-```
-
 #### 배포용 YAML 파일 생성 ####
 
-이 설정에는 Secret 를 적용하지 않습니다. 컨테이너 이미지 주소 및 DB_ENDPOINT 값은 수정이 필요하다. 
-
+컨테이너 이미지 주소 및 DB_ENDPOINT 값은 생성된 stage RDS 정보로 수정이 필요하다. 
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
