@@ -165,9 +165,7 @@ Events:
 
 ## 설치 삭제 ##
 ```
-$ kubectl delete daemonset cloudwatch-agent -n amazon-cloudwatch                                                                                        
-daemonset.apps "cloudwatch-agent" deleted
-```
+kubectl delete -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-daemonset.yaml                                                                                ```
 
 ## 트러블 슈팅 ##
 
