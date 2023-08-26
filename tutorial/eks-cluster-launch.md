@@ -39,7 +39,7 @@ vpc:
 managedNodeGroups:
 - name: eks-ng-1
   desiredCapacity: 3
-  instanceType: m6i.xlarge
+  instanceType: m6i.2xlarge
   privateNetworking: true
   subnets:
     - private-sub-1
