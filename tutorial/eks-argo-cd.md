@@ -4,14 +4,8 @@
 
 ```
 kubectl delete service/shop 
-
 kubectl delete deployment.apps/shop
-
 kubectl get all
-```
-
-```
-$ kubectl get all
 ```
 
 [결과]
