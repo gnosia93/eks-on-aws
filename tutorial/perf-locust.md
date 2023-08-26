@@ -18,7 +18,7 @@ locust 2.16.1 from /home/ec2-user/.local/lib/python3.9/site-packages/locust (pyt
 import json
 from locust import HttpUser,  task , between
 class sample(HttpUser):
-	wait_time = between(5, 15)
+	wait_time = between(1, 3)
 	access_token = ""
 	def on_start(self):		
 		print("start test")		
