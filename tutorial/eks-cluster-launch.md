@@ -1,6 +1,6 @@
 ## 1. EKS 클러스터 생성 ##
 
-이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 3곳에 EKS 클러스터를 설치할 것이다. 
+이전 단계에서 생성된 eks-workshop VPC 의 private 서브넷 2곳에 EKS 클러스터를 설치할 것이다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/aws-vpc.png)
 
