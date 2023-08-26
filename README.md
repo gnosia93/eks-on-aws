@@ -55,7 +55,7 @@
 
 * [#11. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
-* [#12. 리소스 삭제]
+* [#12. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
   
 ## 레퍼런스 ##
 
