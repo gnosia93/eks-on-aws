@@ -271,6 +271,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: shop-ingress
+  namespace: default
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: instance
