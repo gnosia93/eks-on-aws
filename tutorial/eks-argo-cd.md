@@ -9,6 +9,34 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 kubectl describe svc argocd-server -n argocd
 ```
 
+[결과]
+```
+Name:                     argocd-server
+Namespace:                argocd
+Labels:                   app.kubernetes.io/component=server
+                          app.kubernetes.io/name=argocd-server
+                          app.kubernetes.io/part-of=argocd
+Annotations:              <none>
+Selector:                 app.kubernetes.io/name=argocd-server
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       172.20.111.250
+IPs:                      172.20.111.250
+LoadBalancer Ingress:     aeba3b6bf5bba4851bc73abb9fcb26b0-83759394.ap-northeast-2.elb.amazonaws.com
+Port:                     http  80/TCP
+TargetPort:               8080/TCP
+NodePort:                 http  32140/TCP
+Endpoints:                10.1.103.42:8080
+Port:                     https  443/TCP
+TargetPort:               8080/TCP
+NodePort:                 https  32385/TCP
+Endpoints:                10.1.103.42:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+```
+
 ### 2. 비밀번호 변경 ###
 아래의 명령어로 초기 비밀번호를 알아낸 다음 argo-cd 웹 콘솔에서 비밀번호를 변경한다. 
 ```
