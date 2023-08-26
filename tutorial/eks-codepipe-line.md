@@ -158,7 +158,6 @@ phases:
       - docker tag $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$DOCKER_IMAGE_TAG $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
       - docker push --all-tags $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME
 
-
   post_build:
     commands:
       - DATE='date'
