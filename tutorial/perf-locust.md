@@ -12,11 +12,6 @@ locust 2.16.1 from /home/ec2-user/.local/lib/python3.9/site-packages/locust (pyt
 
 
 
-
-locust -V
-
-```
-
 ## 레퍼런스 ##
 
 * https://wookkl.tistory.com/67
