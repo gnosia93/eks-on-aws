@@ -62,6 +62,7 @@ resource "aws_subnet" "eks_pub_subnet2" {
     } 
 }
 
+/*
 resource "aws_subnet" "eks_pub_subnet3" {
     availability_zone = data.aws_availability_zones.azlist.names[2]
     vpc_id = aws_vpc.eks.id
@@ -71,6 +72,7 @@ resource "aws_subnet" "eks_pub_subnet3" {
         Name = "eks_pub_subnet3"
     } 
 }
+*/
 
 resource "aws_subnet" "eks_priv_subnet1" {
     availability_zone = data.aws_availability_zones.azlist.names[0]
@@ -92,6 +94,7 @@ resource "aws_subnet" "eks_priv_subnet2" {
     } 
 }
 
+/*
 resource "aws_subnet" "eks_priv_subnet3" {
     availability_zone = data.aws_availability_zones.azlist.names[2]
     vpc_id = aws_vpc.eks.id
@@ -101,7 +104,7 @@ resource "aws_subnet" "eks_priv_subnet3" {
         Name = "eks_priv_subnet3"
     } 
 }
-
+*/
 
 
 resource "aws_subnet" "eks_priv_subnet1_db" {
@@ -124,6 +127,7 @@ resource "aws_subnet" "eks_priv_subnet2_db" {
     } 
 }
 
+/*
 resource "aws_subnet" "eks_priv_subnet3_db" {
     availability_zone = data.aws_availability_zones.azlist.names[2]
     vpc_id = aws_vpc.eks.id
@@ -133,9 +137,7 @@ resource "aws_subnet" "eks_priv_subnet3_db" {
         Name = "eks_priv_subnet3_db"
     } 
 }
-
-
-
+*/
 
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table
@@ -178,11 +180,12 @@ resource "aws_route_table_association" "eks_rt_association2" {
     route_table_id = aws_route_table.eks_pub_rt.id
 }
 
+/*
 resource "aws_route_table_association" "eks_rt_association3" {
     subnet_id = aws_subnet.eks_pub_subnet3.id
     route_table_id = aws_route_table.eks_pub_rt.id
 }
-
+*/
 
 resource "aws_route_table_association" "eks_rt_association-priv1" {
     subnet_id = aws_subnet.eks_priv_subnet1.id
@@ -194,11 +197,12 @@ resource "aws_route_table_association" "eks_rt_association-priv2" {
     route_table_id = aws_route_table.eks_priv_rt.id
 }
 
+/*
 resource "aws_route_table_association" "eks_rt_association-priv3" {
     subnet_id = aws_subnet.eks_priv_subnet3.id
     route_table_id = aws_route_table.eks_priv_rt.id
 }
-
+*/
 
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route
