@@ -56,6 +56,12 @@ User Info 메뉴에서 패스워드를 변경한다.
 
 Applications 메뉴에서 + NEW APP 버튼을 클릭하고, 
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app2.png)
+
+
+
+
 ## 레퍼런스 ##
 
 * https://mycup.tistory.com/423
