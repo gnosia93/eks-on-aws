@@ -39,6 +39,8 @@ spec:
               value: shop
             - name: DB_PASSWORD
               value: shop
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms1024M -Xmx1024M" 
           imagePullPolicy: Always
 ---
 apiVersion: v1
