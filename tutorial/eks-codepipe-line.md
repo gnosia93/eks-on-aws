@@ -144,10 +144,20 @@ phases:
       - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/
   build:
     commands:
+#      - ./gradlew bootjar
+#      - BOOT_JAR=`ls build/libs/*.jar`
+#      - echo $BOOT_JAR
       - echo Building the Layered Docker Image with Gradlew
-      - ./gradlew clean bootBuildImage
-      - docker tag docker.io/library/shop:0.0.1-SNAPSHOT $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
-      - docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - ./gradlew clean bootBuildImage | tee ./tmp
+      - DOCKER_IMAGE_NAME=$(grep 'Building image' ./tmp | awk '{print $3}' | tr -d "'")
+      - DOCKER_IMAGE_TAG=$(echo $DOCKER_IMAGE_NAME | awk -F ':' '{print $2}')
+      - echo .....$DOCKER_IMAGE_NAME
+      - echo .....$DOCKER_IMAGE_TAG
+# Building image 'docker.io/library/shop:0.0.1-SNAPSHOT'
+      - docker tag $DOCKER_IMAGE_NAME $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$DOCKER_IMAGE_TAG
+      - docker tag $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:$DOCKER_IMAGE_TAG $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
+      - docker push --all-tags $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$IMAGE_REPO_NAME
+
 
   post_build:
     commands:
