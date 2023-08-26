@@ -1,3 +1,7 @@
+## ArgoCD 로 GitOps 구현 ##
+
+깃허브 https://github.com/gnosia93/eks-on-aws.git 레포지토리의 apps 디렉토리 밑에 있는 shop.yaml 어플리케이션을 ArgoCD 를 이용하여 배포 하고자 한다. 
+
 ### 1. ArgoCD 설치 ###
 ```
 kubectl create namespace argocd
