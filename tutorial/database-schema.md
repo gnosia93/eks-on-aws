@@ -1,4 +1,6 @@
 ### 로컬 PC에 MySQL 설치 ###  
+
+유저는 root 이고, 패스워드는 admin22admin 으로 입력한다.
 ```
 % brew install mysql
 % mysql -V
@@ -9,7 +11,7 @@ mysql  Ver 8.1.0 for macos12.6 on arm64 (Homebrew)
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
 ```
 
-#### 스키마 생성 ####
+#### 로컬 DB 스키마 생성 ####
 ```
 % mysql -u root -p
 Enter password:
