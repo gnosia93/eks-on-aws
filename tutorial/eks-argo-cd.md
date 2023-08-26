@@ -17,25 +17,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 
 
-
-
-
-
-## 삭제 ##
-```
-# ArgoCD 삭제
-helm -n argocd uninstall argocd
-
-# Kubernetes 네임스페이스 삭제
-kubectl delete namespace argocd
-```
-
-## 트러블 슈팅 ##
-
-* https://stackoverflow.com/questions/76863249/argocd-unable-to-create-application-permission-denied
-
 ## 레퍼런스 ##
+
 * https://mycup.tistory.com/423
-* https://sncap.tistory.com/1124
 
 
