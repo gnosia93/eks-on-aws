@@ -1,3 +1,7 @@
+## 리소스 삭제 ##
+
+eks 클러스터를 먼저 지운 후에 terraform 을 실행한다.
+
 * cloud9 터미널에서 실행
 ```
 eksctl delete cluster $CLUSTER_NAME
