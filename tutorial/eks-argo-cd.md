@@ -37,7 +37,7 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 ```
 
-### 2. 비밀번호 변경 ###
+### 2. 초기 비밀번호 확인 ###
 아래의 명령어로 초기 비밀번호를 알아낸 다음 argo-cd 웹 콘솔에서 비밀번호를 변경한다. 
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
