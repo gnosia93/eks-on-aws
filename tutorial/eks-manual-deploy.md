@@ -122,13 +122,13 @@ kubectl logs shop-deployment-547d69d74b-glzbt
 [결과]
 ``` 
 Setting Active Processor Count to 4
-Calculating JVM memory based on 15478272K available memory
+Calculating JVM memory based on 15143252K available memory
 For more information on this calculation, see https://paketo.io/docs/reference/java-reference/#memory-calculator
-Calculated JVM Memory Configuration: -XX:MaxDirectMemorySize=10M -Xmx14851315K -XX:MaxMetaspaceSize=114956K -XX:ReservedCodeCacheSize=240M -Xss1M (Total Memory: 15478272K, Thread Count: 250, Loaded Class Count: 17882, Headroom: 0%)
+Calculated JVM Memory Configuration: -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=118156K -XX:ReservedCodeCacheSize=240M -Xss1M (Total Memory: 15143252K, Thread Count: 250, Loaded Class Count: 18447, Headroom: 0%)
 Enabling Java Native Memory Tracking
 Adding 137 container CA certificates to JVM truststore
 Spring Cloud Bindings Enabled
-Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpacks_bellsoft-liberica/java-security-properties/java-security.properties -XX:+ExitOnOutOfMemoryError -XX:ActiveProcessorCount=4 -XX:MaxDirectMemorySize=10M -Xmx14851315K -XX:MaxMetaspaceSize=114956K -XX:ReservedCodeCacheSize=240M -Xss1M -XX:+UnlockDiagnosticVMOptions -XX:NativeMemoryTracking=summary -XX:+PrintNMTStatistics -Dorg.springframework.cloud.bindings.boot.enable=true
+Picked up JAVA_TOOL_OPTIONS: -Xms1024M -Xmx1024M -Djava.security.properties=/layers/paketo-buildpacks_bellsoft-liberica/java-security-properties/java-security.properties -XX:+ExitOnOutOfMemoryError -XX:ActiveProcessorCount=4 -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=118156K -XX:ReservedCodeCacheSize=240M -Xss1M -XX:+UnlockDiagnosticVMOptions -XX:NativeMemoryTracking=summary -XX:+PrintNMTStatistics -Dorg.springframework.cloud.bindings.boot.enable=true
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
