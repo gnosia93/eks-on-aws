@@ -1,8 +1,18 @@
 ## 설치 ##
 
+AWS 콘솔에서 c6i.2xlarge 인스턴스를 하나 만들고, 22, 8080 포트를 0.0.0.0/0 으로 오픈한다.
+```
+$ ssh -i aws-keypair.pem ec2-user@10.10.10.x
+```
+
+### python 설치 ###
 ```
 sudo yum install python
 sudo yum install python3-pip
+```
+
+### locust 설치 ###
+```
 pip install locust
 locust -V
 ```
@@ -12,7 +22,7 @@ locust -V
 locust 2.16.1 from /home/ec2-user/.local/lib/python3.9/site-packages/locust (python 3.9.16)
 ```
 
-## 코드작성 ##
+## 테스트 코드작성 ##
 [test.py]
 ```
 import json
