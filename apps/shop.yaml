@@ -1,1 +1,45 @@
-dd
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-deployment
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+    spec:
+      containers:
+        - name: shop
+          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              value: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+            - name: DB_USERNAME
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shop
+  labels:
+    app: shop
+spec:
+  type: NodePort
+  selector:
+    app: shop
+  ports:
+    - port: 80
+      targetPort: 8080
