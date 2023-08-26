@@ -57,7 +57,10 @@ User Info 메뉴에서 패스워드를 변경한다.
 Applications 메뉴에서 + NEW APP 버튼을 클릭하고, 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app1.png)
+프로젝트명은 default 로 입력한다. (다른값을 입력하는 경우 오류가 발생함) 
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app2.png)
+Repository URL 은 https://github.com/gnosia93/eks-on-aws.git 이고 Path 는 apps 이다.
 
 Create 버튼을 클릭하여 어플리케이션을 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app3.png)
