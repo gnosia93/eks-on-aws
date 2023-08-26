@@ -269,3 +269,51 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 
 * https://kingofbackend.tistory.com/235
 
+----
+
+```
+"Subnets": [
+        {
+            "AvailabilityZone": "ap-northeast-2a",
+            "AvailabilityZoneId": "apne2-az1",
+            "AvailableIpAddressCount": 250,
+            "CidrBlock": "10.1.101.0/24",
+            "DefaultForAz": false,
+            "MapPublicIpOnLaunch": false,
+            "MapCustomerOwnedIpOnLaunch": false,
+            "State": "available",
+            "SubnetId": "subnet-09509024e2b2c24a1",
+            "VpcId": "vpc-02ea26ebecef37cda",
+            "OwnerId": "499514681453",
+            "AssignIpv6AddressOnCreation": false,
+            "Ipv6CidrBlockAssociationSet": [],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "eks_priv_subnet1"
+                }
+            ],
+            "SubnetArn": "arn:aws:ec2:ap-northeast-2:499514681453:subnet/subnet-09509024e2b2c24a1",
+            "EnableDns64": false,
+            "Ipv6Native": false,
+            "PrivateDnsNameOptionsOnLaunch": {
+                "HostnameType": "ip-name",
+                "EnableResourceNameDnsARecord": false,
+                "EnableResourceNameDnsAAAARecord": false
+            }
+        },
+        {
+            "AvailabilityZone": "ap-northeast-2b",
+            "AvailabilityZoneId": "apne2-az2",
+            "AvailableIpAddressCount": 251,
+            "CidrBlock": "10.1.2.0/24",
+            "DefaultForAz": false,
+            "MapPublicIpOnLaunch": false,
+            "MapCustomerOwnedIpOnLaunch": false,
+            "State": "available",
+            "SubnetId": "subnet-0d0e43c9438b8d590",
+            "VpcId": "vpc-02ea26ebecef37cda",
+            "OwnerId": "499514681453",
+(base) soonbeom@bcd07468d10a tf % aws ec2 describe-subnets --filter "Name=vpc-id,Values=vpc-02ea26ebecef37cda" --query
+
+```
