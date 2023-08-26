@@ -48,7 +48,13 @@ EAekaj9K
 유저명 admin / 패스워드 EAekaj9K 로 로그인 한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
 
+User Info 메뉴에서 패스워드를 변경한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-update-pass.png)
+
+
+### 4. 어플리케이션 생성(배포) ###
+
+
 
 ## 레퍼런스 ##
 
