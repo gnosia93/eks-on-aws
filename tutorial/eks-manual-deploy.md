@@ -5,7 +5,7 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 
 #### 배포용 YAML 파일 생성 ####
 
-컨테이너 이미지 주소 및 DB_ENDPOINT 값은 생성된 stage RDS 정보로 수정이 필요하다. 
+컨테이너 이미지 주소(image) 및 DB_ENDPOINT 값은 생성된 stage RDS 정보로 수정해야 한다.
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
