@@ -1,7 +1,6 @@
 ## ArgoCD 로 GitOps 구현 ##
 
-깃허브 https://github.com/gnosia93/eks-on-aws.git 레포지토리의 apps 디렉토리 밑에 있는 shop.yaml 어플리케이션을 ArgoCD 를 이용하여 배포 하고자 한다. 
-ArgoCD 설치 전, 기존에 수동으로 배포 했던 shop 어플리케이션을 아래의 명령어를 이용하여 삭제한다 (단 shop-ingress 는 유지함)
+깃허브 https://github.com/gnosia93/eks-on-aws.git 레포지토리의 apps 디렉토리 밑에 있는 shop.yaml 어플리케이션을 ArgoCD 를 이용하여 배포 하고자 한다. 기존에 수동으로 배포 했던 shop 어플리케이션을 삭제한다 (단 shop-ingress 는 유지함)
 
 ```
 kubectl delete service/shop 
