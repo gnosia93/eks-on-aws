@@ -22,6 +22,7 @@ clusterrolebinding.rbac.authorization.k8s.io/cloudwatch-agent-role-binding creat
 ### 3. 컨피그 맵 생성 ###
 ```
 echo "CLUSTER_NAME is ${CLUSTER_NAME}..."
+
 curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-configmap.yaml \
 | sed "s/{{cluster_name}}/${CLUSTER_NAME}/" | kubectl apply -f - 
 ```
