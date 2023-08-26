@@ -48,7 +48,7 @@ EAekaj9K
 유저명 admin / 패스워드 EAekaj9K 로 로그인 한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
 
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-update-pass.png)
 
 ## 레퍼런스 ##
 
