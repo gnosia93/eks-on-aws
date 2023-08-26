@@ -57,6 +57,112 @@ daemonset.apps/cloudwatch-agent   4         4         2       4            2    
 daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
 ```
 
+### 6. pod 로그 확인 ###
+```
+ kubectl describe pod/cloudwatch-agent-t9xdj  -n amazon-cloudwatch
+Name:         cloudwatch-agent-t9xdj
+Namespace:    amazon-cloudwatch
+Priority:     0
+Node:         ip-10-1-103-239.ap-northeast-2.compute.internal/10.1.103.239
+Start Time:   Sat, 26 Aug 2023 13:01:21 +0000
+Labels:       controller-revision-hash=5c9b87d6ff
+              name=cloudwatch-agent
+              pod-template-generation=1
+Annotations:  <none>
+Status:       Running
+IP:           10.1.103.35
+IPs:
+  IP:           10.1.103.35
+Controlled By:  DaemonSet/cloudwatch-agent
+Containers:
+  cloudwatch-agent:
+    Container ID:   containerd://04e4020400800932b4fa08597229dc2a92ae5ef5d41ab3e1788a563f36d369a5
+    Image:          public.ecr.aws/cloudwatch-agent/cloudwatch-agent:1.247360.0b252689
+    Image ID:       public.ecr.aws/cloudwatch-agent/cloudwatch-agent@sha256:888fed6f7fb12948ec015ee4bdbbb759f044a569f5d2d49fb4dd0e49e747df31
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sat, 26 Aug 2023 13:01:22 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  200Mi
+    Requests:
+      cpu:     200m
+      memory:  200Mi
+    Environment:
+      HOST_IP:         (v1:status.hostIP)
+      HOST_NAME:       (v1:spec.nodeName)
+      K8S_NAMESPACE:  amazon-cloudwatch (v1:metadata.namespace)
+      CI_VERSION:     k8s/1.3.16
+    Mounts:
+      /dev/disk from devdisk (ro)
+      /etc/cwagentconfig from cwagentconfig (rw)
+      /rootfs from rootfs (ro)
+      /run/containerd/containerd.sock from containerdsock (ro)
+      /sys from sys (ro)
+      /var/lib/docker from varlibdocker (ro)
+      /var/run/docker.sock from dockersock (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4kd6h (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  cwagentconfig:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      cwagentconfig
+    Optional:  false
+  rootfs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /
+    HostPathType:  
+  dockersock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/docker.sock
+    HostPathType:  
+  varlibdocker:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/docker
+    HostPathType:  
+  containerdsock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/containerd/containerd.sock
+    HostPathType:  
+  sys:
+    Type:          HostPath (bare host directory volume)
+    Path:          /sys
+    HostPathType:  
+  devdisk:
+    Type:          HostPath (bare host directory volume)
+    Path:          /dev/disk/
+    HostPathType:  
+  kube-api-access-4kd6h:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              kubernetes.io/os=linux
+Tolerations:                 node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m37s  default-scheduler  Successfully assigned amazon-cloudwatch/cloudwatch-agent-t9xdj to ip-10-1-103-239.ap-northeast-2.compute.internal
+  Normal  Pulled     3m36s  kubelet            Container image "public.ecr.aws/cloudwatch-agent/cloudwatch-agent:1.247360.0b252689" already present on machine
+  Normal  Created    3m36s  kubelet            Created container cloudwatch-agent
+  Normal  Started    3m36s  kubelet            Started container cloudwatch-agent
+```
+
 ## 설치 삭제 ##
 ```
 $ kubectl delete daemonset cloudwatch-agent -n amazon-cloudwatch                                                                                        
