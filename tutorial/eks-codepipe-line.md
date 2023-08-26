@@ -167,8 +167,6 @@ phases:
 아래 그림과 같이 codebuild 의 environment 를 수정해 준다. IMAGE_REPO_NAME, IMAGE_TAG 등은 buildspec.yaml 에서 사용되는 환경 변수이다.  
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
 
-
-
 ### 5. ECR Private 레포지토리 생성 ###
 
 cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
@@ -208,6 +206,11 @@ buildspec.yaml 파일에서 codebuild 가 ECR에 로그인 하기위해서 아�
 ```
 $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name codebuild-service-role
 ```
+
+### 6. ECR 도커 이미지 ###
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/ecr-image.png)
+
 
 
 ## 레퍼런스 ##
