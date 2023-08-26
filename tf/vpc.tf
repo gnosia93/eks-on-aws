@@ -24,7 +24,7 @@ resource "aws_internet_gateway" "eks_igw" {
 }
 
 resource "aws_eip" "eks_eip_nat" {
-    vpc = true
+#    vpc = true
     lifecycle {
         create_before_destroy = true
     }
