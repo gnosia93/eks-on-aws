@@ -1,18 +1,4 @@
-
-### 1. 환경 수집 ###
-```
-export CLUSTER_NAME=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.name')
-export EKS_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.version')
-export VPC_ID=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.resourcesVpcConfig.vpcId')
-export PLATFORM_VERSION=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.platformVersion')
-export END_POINT=$(aws eks describe-cluster --name eks-workshop | jq '.cluster.endpoint')
-
-export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-```
-
-
-
-### 2. ArgoCD 설치 ###
+### 1. ArgoCD 설치 ###
 ```
 kubectl create namespace argocd
 
@@ -23,7 +9,11 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}
 kubectl describe svc argocd-server -n argocd
 ```
 
-
+### 2. 비밀번호 변경 ###
+아래의 명령어로 초기 비밀번호를 알아낸 다음 argo-cd 웹 콘솔에서 비밀번호를 변경한다. 
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
 
 
 
