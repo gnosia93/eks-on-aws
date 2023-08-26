@@ -1,6 +1,6 @@
 * cloud9 터미널에서 실행
 ```
-
+eksctl delete cluster $CLUSTER_NAME
 ```
 
 * 로컬 PC 에서 실행
