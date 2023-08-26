@@ -51,7 +51,8 @@ class sample(HttpUser):
 	def get(self):
 		self.client.get("/member/1", headers={"Content-Type" : "application/json"})
 ```
-
+- https://docs.locust.io/en/stable/
+  
 ### 5. 테스트 ###
 ```
 locust -f ./test.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com
