@@ -1,4 +1,9 @@
 ```
+sudo yum install python
+sudo yum install python3-pip
+```
+
+```
 pip install locust
 
 locust -V
