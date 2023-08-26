@@ -12,6 +12,8 @@
 
   * [스프링 부트 어플리케이션 개발](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-devel.md)
 
+  * [스프링 부트 - Redis 웹세션 구현하기]
+
   * [스프링 부트 - Redis 분산락 구현과 데이터베이스 Offloading]
  
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
