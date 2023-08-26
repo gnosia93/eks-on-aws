@@ -37,7 +37,7 @@ vpc:
     privateAccess: true                   # API 엔드포인트 접근을 VPC 내부에서 가능하도록 한다.       
 
 managedNodeGroups:
-- name: eks-ng-1
+- name: ng-2xlarge
   desiredCapacity: 3
   instanceType: m6i.2xlarge
   privateNetworking: true
