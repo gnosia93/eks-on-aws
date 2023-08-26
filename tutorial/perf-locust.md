@@ -13,6 +13,7 @@ locust 2.16.1 from /home/ec2-user/.local/lib/python3.9/site-packages/locust (pyt
 ```
 
 ## 코드작성 ##
+[test.py]
 ```
 import json
 from locust import HttpUser,  task , between
@@ -38,6 +39,10 @@ class sample(HttpUser):
 		self.client.post("/api/auth/sign-out",
 						headers={"Content-Type" : "application/json"}
 		)
+```
+
+```
+locust -f ./test.py -port 8080
 ```
 
 
