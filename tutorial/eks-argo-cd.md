@@ -63,7 +63,10 @@ Create 버튼을 클릭하여 어플리케이션을 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app3.png)
 Sync 버튼을 눌러서 어플리케이션을 배포한다. 
 
-#### 생성 확인 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app4.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app5.png)
+
+#### kubectl 로 확인 ####
 ```
 $ kubectl get all
 NAME                        READY   STATUS    RESTARTS   AGE
