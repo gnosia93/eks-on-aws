@@ -43,9 +43,11 @@ Events:                   <none>
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 
-### 3. argo-cd 접속 ###
+### 3. argo cd 로그인 ###
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-login.png)
+
+
 
 ## 레퍼런스 ##
 
