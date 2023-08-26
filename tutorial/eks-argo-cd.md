@@ -63,6 +63,24 @@ Create 버튼을 클릭하여 어플리케이션을 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app3.png)
 Sync 버튼을 눌러서 어플리케이션을 배포한다. 
 
+#### 생성 확인 ####
+```
+$ kubectl get all
+NAME                        READY   STATUS    RESTARTS   AGE
+pod/shop-787954cc9b-h9x6r   1/1     Running   0          13s
+pod/shop-787954cc9b-lgl9s   1/1     Running   0          13s
+pod/shop-787954cc9b-tcf6f   1/1     Running   0          13s
+
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+service/kubernetes   ClusterIP   172.20.0.1      <none>        443/TCP        44h
+service/shop         NodePort    172.20.93.200   <none>        80:30914/TCP   13s
+
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/shop   3/3     3            3           13s
+
+NAME                              DESIRED   CURRENT   READY   AGE
+replicaset.apps/shop-787954cc9b   3         3         3       14s
+```
 
 
 ## 레퍼런스 ##
