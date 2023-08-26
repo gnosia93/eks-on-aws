@@ -165,6 +165,7 @@ phases:
 ```
 
 아래 그림과 같이 codebuild 의 environment 를 수정해 준다. IMAGE_REPO_NAME, IMAGE_TAG 등은 buildspec.yaml 에서 사용되는 환경 변수이다.  
+아래 그림에서 환경변수 중 IMAGE_TAG 는 설정하지 않아도 된다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
 
 ### 5. ECR Private 레포지토리 생성 ###
