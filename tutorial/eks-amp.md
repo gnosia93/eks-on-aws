@@ -174,29 +174,6 @@ helm install prometheus prometheus-community/prometheus -n prometheus \
 -f prometheus-values.yaml
 ```
 
-
-### 6. awscurl 설치 ###
-awscurl을 이용해서 수집된 메트릭이 AMP 에 저장되었는지 확인한다. 
-```
-sudo pip install --upgrade pip
-
-sudo ln -s -f /usr/local/bin/pip /usr/bin/pip
-
-pip install awscurl==0.26
-```
-
-```
-awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?query=scrape_samples_scraped"
-```
-
-[결과]
-```
-/home/ec2-user/.local/lib/python3.6/site-packages/OpenSSL/_util.py:6: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
-  from cryptography.hazmat.bindings.openssl.binding import Binding
-{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"scrape_samples_scraped","app_kubernetes_io_instance":"aws-load-balancer-controller","app_kubernetes_io_name":"aws-load-balancer-controller","instance":"10.1.102.228:8080","job":"kubernetes-pods","kubernetes_namespace":"kube-system","kubernetes_pod_name":"aws-load-balancer-controller-7556b645df-k49gw","pod_template_hash":"7556b645df"},"value":[1692887220.496,"790"]},{"metric":{"__name__":"scrape_samples_scraped","app":"cert-manager","app_kubernetes_io_component":"controller","app_kubernetes_io_instance":"cert-manager","app_kubernetes_io_name":"cert-
-...
-```
-
 ## IAM Identify Center (SSO) ##
 
 그라파나(AMG) 설치하기 전에 IAM Identify Center 로 방문해서 Single Sign On 용 유저를 먼저 생성해야 한다.
