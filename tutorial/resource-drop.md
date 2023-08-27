@@ -1,8 +1,10 @@
 ## 리소스 삭제 ##
 
+eks 클러스터를 먼저 지우고 나머지 리소스를 지운다. 
+
 * Cloud9 에서 실행
 ```
-
+eksctl delete cluster $CLUSTER_NAME
 ```
 
 * 로컬 PC 에서 실행
