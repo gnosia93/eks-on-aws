@@ -170,6 +170,24 @@ server:
 * REGION 값을 ap-northeast-2
 * WORKSPACE_ID 값을 ws-65af76f8-c2bb-415a-9500-5b2eef043b30
 
+[values-rep.yaml]
+```
+serviceAccounts:
+  server:
+    name: amp-iamproxy-ingest-service-account
+    annotations: 
+    eks.amazonaws.com/role-arn: "arn:aws:iam::499514681453:role/amp-iamproxy-ingest-role"
+server:
+  remoteWrite:
+    - url: https://aps-workspaces.ap-northeast-2.amazonaws.com/workspaces/ws-65af76f8-c2bb-415a-9500-5b2eef043b30/api/v1/remote_write
+      sigv4:
+        region: ap-northeast-2
+      queue_config:
+        max_samples_per_send: 1000
+        max_shards: 200
+        capacity: 2500
+```
+
 ```
 helm install prometheus prometheus-community/prometheus -n prometheus \
 -f values-rep.yaml
