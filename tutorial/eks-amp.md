@@ -17,6 +17,9 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다.
 AMP 는 EKS 및 EC2 에 사용자가 직접 생성한 클러스터로 부터의 데이터 수집이 가능하다. 
 
 #### IAM 롤 생성 ####
+
+cloud9 터미널을 이동하여 아래 스크립트를 실행한다. 
+
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
 
 ```
