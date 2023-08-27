@@ -132,6 +132,17 @@ echo $SERVICE_ACCOUNT_IAM_AMP_INGEST_ROLE_ARN
 eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 ```
 
+#### 프로메테우스 서버 설치 ####
+
+프로메테스의 메트릭 gathering 서버가 설치된다고 생각하면 된다. 이 서버는 EKS 의 메트릭을 수집한 후 AMP workspace 로 데이터를 ingest 시킨다.  
+
+```
+helm ls --all-namespaces
+```
+
+```
+helm upgrade prometheus-chart-name prometheus-community/prometheus -n prometheus_namespace -f my_prometheus_values_yaml --version current_helm_chart_version
+```
 
 
 #### 프로메테우스 서버 설정 ####
