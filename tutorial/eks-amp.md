@@ -112,15 +112,44 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ## IAM Identify Center (SSO) ##
 
+그라파나(AMG) 설치하기 전에 IAM Identify Center 로 방문해서 Single Sign On 용 유저를 먼저 생성해야 한다.
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-1.png)
+
+필수 정보를 입력하고 유저를 생성한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-2.png)
+
+리스트에서 방금 생성한 유저명을 클릭하고 상세 화면으로 이동한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-3.png)
+
+[Send email verification link] 를 클릭해서 초대 메일을 발송한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-4.png)
+
+인증 메일을 발송한다. 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-5.png)
+
+메일함에서 인증에 응답한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6.png)
+
+신규 패스워드를 입력한다. 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-7.png)
+
+메일함에서 메일 주소를 확인한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-8.png)
+
+
+
+
+
+
 AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한다. 
 
 [Add user] 버튼을 클릭해서 새로운 유저를 추가한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-1.png)
 
-필수 정보를 입력하고 유저를 생성한다.
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-2.png)
 
-[Send email verification link] 를 클릭해서 초대 메일을 발송한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-3.png)
 
 [Accept invitation] 버튼을 클릭해서 초대에 응한다.
