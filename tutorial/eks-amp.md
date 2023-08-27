@@ -132,9 +132,7 @@ sh irsa-amp-ingest.sh
 ```
 
 
-#### 프로메테우스 서버 설치 ####
-
-프로메테스의 메트릭 gathering 서버가 설치된다고 생각하면 된다. 이 서버는 EKS 의 메트릭을 수집한 후 AMP workspace 로 데이터를 ingest 시킨다.  
+#### helm 으로 프로메테우스 설치 ####
 
 ```
 helm ls --all-namespaces
