@@ -2,7 +2,7 @@
 아직 동작 하지 않는다. 디버깅 필요.. 나중에  ~~~~
 ****
 
-* https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/ingest_metrics/
+
 
 ## 프로메테우스(AMP) 설치 ##
 
@@ -250,7 +250,5 @@ https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
 
 
 ## 레퍼런스 ##
-* https://velog.io/@joshua_s/Prometheus-Grafana%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-EC2-%EC%8B%9C%EA%B0%81%ED%99%94
-* https://st-ycloud.tistory.com/89
-* https://kschoi728.tistory.com/97
-* https://malwareanalysis.tistory.com/602
+
+* https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
