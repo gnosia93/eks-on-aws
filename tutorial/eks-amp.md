@@ -114,49 +114,30 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 그라파나(AMG) 설치하기 전에 IAM Identify Center 로 방문해서 Single Sign On 용 유저를 먼저 생성해야 한다.
 
+#### [Add user] 버튼을 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-1.png)
 
-필수 정보를 입력하고 유저를 생성한다.
+#### 필수 정보를 입력하고 유저를 생성한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-2.png)
 
-리스트에서 방금 생성한 유저명을 클릭하고 상세 화면으로 이동한다.
+#### 리스트에서 생성한 유저명을 클릭하고 상세 화면으로 이동한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-3.png)
 
-[Send email verification link] 를 클릭해서 초대 메일을 발송한다.
+#### [Send email verification link] 를 클릭해서 초대 메일을 발송한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-4.png)
 
-인증 메일을 발송한다. 
+#### 인증 메일을 발송을 확인하다 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-5.png)
 
-메일함에서 인증에 응답한다.
+#### 메일함에서 인증 요청에 응답한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6.png)
 
-신규 패스워드를 입력한다. 
+#### SSO 로그인 화면에서 신규 패스워드를 입력한다 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-7.png)
 
-메일함에서 메일 주소를 확인한다.
+#### 메일함에서 SSO용 메일 주소 자체에 대해 인증한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-8.png)
 
-
-
-
-
-
-AWS 콘솔의 IAM Identify Center 로 방문해서 SSO 용 유저를 생성한다. 
-
-[Add user] 버튼을 클릭해서 새로운 유저를 추가한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-1.png)
-
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-2.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-3.png)
-
-[Accept invitation] 버튼을 클릭해서 초대에 응한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-4.png)
-
-비밀 번호를 설정한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-5.png)
 
 
 ## 그라파나(AMG) 설치 ##
