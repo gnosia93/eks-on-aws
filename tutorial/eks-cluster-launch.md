@@ -38,7 +38,7 @@ vpc:
 
 managedNodeGroups:
 - name: ng-2xlarge
-  desiredCapacity: 3
+  desiredCapacity: 2
   instanceType: m6i.2xlarge
   privateNetworking: true
   subnets:
