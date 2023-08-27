@@ -251,4 +251,5 @@ https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
 
 ## 레퍼런스 ##
 
+* https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-OpenTelemetry.html
 * https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
