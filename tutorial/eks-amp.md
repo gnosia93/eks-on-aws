@@ -29,6 +29,8 @@ echo ${SERVICE_ACCOUNT_NAMESPACE}...
 #### irsa-amp-ingest.sh 파일 생성 ####
 ```
 #!/bin/bash -e
+CLUSTER_NAME=<my_amazon_eks_clustername>
+SERVICE_ACCOUNT_NAMESPACE=<my_prometheus_namespace>
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 OIDC_PROVIDER=$(aws eks describe-cluster --name $CLUSTER_NAME --query "cluster.identity.oidc.issuer" --output text | sed -e "s/^https:\/\///")
 SERVICE_ACCOUNT_AMP_INGEST_NAME=amp-iamproxy-ingest-service-account
