@@ -213,6 +213,9 @@ phases:
 
 ### 6. ECR 도커 이미지 ###
 
+CI 파이프 라인이 제대로 동작한다면 아래 그림이 같이 레포지토리에 여러개의 도커 이미지가 생성된 것을 확인할 수 있다.
+최신 버전은 latest 로 태깅되며, 새로운 빌드가 완료되면 latest 정보 또한 업데이트 된다.  
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/ecr-image.png)
 
 
