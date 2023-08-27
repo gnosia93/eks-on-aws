@@ -19,7 +19,7 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다. AMP �
 cloud9 터미널을 이동하여 아래 스크립트를 실행한다. 
 * https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-new-Prometheus.html
 
-#### helm char 레포지토리 등록 ####
+#### helm 차트 레포지토리 등록 ####
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
