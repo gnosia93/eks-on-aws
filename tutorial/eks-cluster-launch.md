@@ -7,8 +7,8 @@
 AWS VPC 콘솔에서 VPC_ID 와 프라이빗 서브넷 ID 를 확인한 후 아래 export 스크립트를 수정한다. 
 ```
 export VPC_ID=$(aws ec2 describe-vpcs --query 'Vpcs[?Tags[?Key==`Name`]|[?Value==`eks-workshop`]].VpcId' --output text)
-export PRIVATE_SUBNET_1=subnet-09509024e2b2c24a1
-export PRIVATE_SUBNET_2=subnet-0b42d58a3c5421ffc
+export PRIVATE_SUBNET_1=$(aws ec2 describe-subnets --filter Name=vpc-id,Values=${VPC_ID} --query 'Subnets[?Tags[?Key==`Name`]|[?Value==`eks_priv_subnet1`]].SubnetId' --output text )
+export PRIVATE_SUBNET_2=$(aws ec2 describe-subnets --filter Name=vpc-id,Values=${VPC_ID} --query 'Subnets[?Tags[?Key==`Name`]|[?Value==`eks_priv_subnet2`]].SubnetId' --output text )
 
 export CLUSTER_NAME=eks-workshop
 if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile; fi   
