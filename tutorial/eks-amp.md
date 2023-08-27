@@ -149,6 +149,16 @@ aws amg create-workspace \
 --permission-type CUSTOMER_MANAGED
 ```
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-3.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-4.png)
+
+
+
 
 #### 대시보드 설정 ####
 https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
