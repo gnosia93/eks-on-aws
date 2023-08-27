@@ -146,7 +146,7 @@ sh irsa-amp-ingest.sh
 
 #### 프로메테우스 서버 설치 ####
 
-[prometheus-values.yaml]
+[values.yaml]
 ```
 ## The following is a set of default values for prometheus server helm chart which enable remoteWrite to AMP
 ## For the rest of prometheus helm chart values see: https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml
@@ -166,14 +166,17 @@ server:
         max_shards: 200
         capacity: 2500
 ```
+* IAM_PROXY_PROMETHEUS_ROLE_ARN 값을 "arn:aws:iam::499514681453:role/amp-iamproxy-ingest-role"
+* REGION 값을 ap-northeast-2
+* WORKSPACE_ID 값을 ws-65af76f8-c2bb-415a-9500-5b2eef043b30
 
 ```
-export IAM_PROXY_PROMETHEUS_ROLE_ARN="arn:aws:iam::499514681453:role/amp-iamproxy-ingest-role"
-export REGION=ap-northeast-2
-export WORKSPACE_ID=ws-65af76f8-c2bb-415a-9500-5b2eef043b30
 
+```
+
+```
 helm install prometheus prometheus-community/prometheus -n prometheus \
--f prometheus-values.yaml
+-f values-occupied.yaml
 ```
 
 ## IAM Identify Center (SSO) ##
