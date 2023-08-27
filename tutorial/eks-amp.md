@@ -142,13 +142,8 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ## 그라파나(AMG) 워크스페이스 생성 ##
 
-```
-aws amg create-workspace \
---account-access-type CURRENT_ACCOUNT \
---authentication-providers AWS_SSO \
---permission-type CUSTOMER_MANAGED
-```
-AWS 그라파나(AMG) 콘솔으로 이동한다 
+AWS 그라파나(AMG) 콘솔으로 이동하여 AMG 워크스페이스 생성한다.
+AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되어 있어야 한다.
 
 ### 1. 워크스페이스 생성 ###
 #### [Create workspace] 버튼을 누른다 ####
