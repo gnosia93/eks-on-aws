@@ -148,6 +148,7 @@ aws amg create-workspace \
 --authentication-providers AWS_SSO \
 --permission-type CUSTOMER_MANAGED
 ```
+AWS 그라파나(AMG) 콘솔으로 이동한다 
 
 ### 1. 워크스페이스 생성 ###
 #### [Create workspace] 버튼을 누른다 ####
