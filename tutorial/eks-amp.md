@@ -22,8 +22,8 @@ cloud9 터미널을 이동하여 아래 스크립트를 실행한다.
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
 
 ```
-CLUSTER_NAME=${CLUSTER_NAME}
-SERVICE_ACCOUNT_NAMESPACE=springboot
+export CLUSTER_NAME=${CLUSTER_NAME}
+export SERVICE_ACCOUNT_NAMESPACE=springboot
 
 echo ${CLUSTER_NAME}...
 echo ${SERVICE_ACCOUNT_NAMESPACE}... 
@@ -32,8 +32,6 @@ echo ${SERVICE_ACCOUNT_NAMESPACE}...
 ```
 cat <<_EOF > createIRSA-AMPIngest.sh
 #!/bin/bash -e
-CLUSTER_NAME=<my_amazon_eks_clustername>
-SERVICE_ACCOUNT_NAMESPACE=<my_prometheus_namespace>
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 OIDC_PROVIDER=$(aws eks describe-cluster --name $CLUSTER_NAME --query "cluster.identity.oidc.issuer" --output text | sed -e "s/^https:\/\///")
 SERVICE_ACCOUNT_AMP_INGEST_NAME=amp-iamproxy-ingest-service-account
