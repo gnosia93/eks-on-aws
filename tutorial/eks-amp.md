@@ -2,9 +2,13 @@ AMG 를 이용해서 AMP 의 대시보드를 만들기 위해서는 SSO 를 설�
 
 ## 프로메테우스(AMP) 설치 ##
 
+AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다.  
 
 ### 1. 워크스페이스 생성 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace-2.png)
 
 ### 6. awscurl 설치 ###
 awscurl을 이용해서 수집된 메트릭이 AMP 에 저장되었는지 확인한다. 
