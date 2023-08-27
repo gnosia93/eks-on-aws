@@ -1,5 +1,7 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-archi-3.png)
 
+이 워크샵은 EKS 환경으로 어플리케이션 이동하고자 하는 스프링 개발자를 위해서 만들어 졌습니다.  
+
 * [#1. 기본 인프라 구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/basic-infra.md)
 
 * [#2. EKS 클러스터 설치](https://github.com/gnosia93/container-on-aws/blob/main/tutorial/eks-cluster-launch.md)
