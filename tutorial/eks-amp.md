@@ -29,7 +29,7 @@ helm repo update
 kubectl create namespace prometheus
 ```
 
-#### irsa-amp-ingest.sh 파일 생성 및 실행 ####
+#### IRSA 설정 ####
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
 ```
 export CLUSTER_NAME=${CLUSTER_NAME}
