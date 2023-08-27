@@ -97,8 +97,11 @@ eksctl version
 
 # k9s
 K9S_VERSION=v0.26.7
-curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz | sudo tar xfz - -C /usr/local/bin 
-  
+curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_x86_64.tar.gz | sudo tar xfz - -C /usr/local/bin
+
+# helm
+curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+helm version --short
 ```
 
 #### 3.2 cloud9 용 IAM 역할 생성 ####
