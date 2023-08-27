@@ -26,8 +26,8 @@ echo ${CLUSTER_NAME}...
 echo ${SERVICE_ACCOUNT_NAMESPACE}... 
 ```
 
+#### createIRSA-AMPIngest.sh 생성 ####
 ```
-cat "
 #!/bin/bash -e
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 OIDC_PROVIDER=$(aws eks describe-cluster --name $CLUSTER_NAME --query "cluster.identity.oidc.issuer" --output text | sed -e "s/^https:\/\///")
@@ -124,7 +124,7 @@ echo $SERVICE_ACCOUNT_IAM_AMP_INGEST_ROLE_ARN
 # Associate this IdP with AWS IAM so that the latter can validate and accept the OIDC tokens issued by Kubernetes to service accounts.
 # Doing this with eksctl is the easier and best approach.
 #
-eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve" > createIRSA-AMPIngest.sh
+eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 ```
 
 #### 프로메테우스 서버 설치 ####
