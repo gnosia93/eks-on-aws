@@ -17,16 +17,20 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다. AMP �
 cloud9 터미널을 이동하여 아래 스크립트를 실행한다. 
 * https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-new-Prometheus.html
 
-#### helm ####
+#### helm char 레포지토리 등록 ####
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
 helm repo update
 ```
 
+#### EKS namespace 생성 ####
+```
+kubectl create namespace prometheus
+```
 
+#### irsa-amp-ingest.sh 파일 생성 및 실행 ####
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
-
 ```
 export CLUSTER_NAME=${CLUSTER_NAME}
 export SERVICE_ACCOUNT_NAMESPACE=springboot
@@ -34,8 +38,6 @@ export SERVICE_ACCOUNT_NAMESPACE=springboot
 echo ${CLUSTER_NAME}...
 echo ${SERVICE_ACCOUNT_NAMESPACE}... 
 ```
-
-#### irsa-amp-ingest.sh 파일 생성 및 실행 ####
 ```
 #!/bin/bash -e
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
