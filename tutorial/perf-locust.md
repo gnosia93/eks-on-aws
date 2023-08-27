@@ -1,3 +1,5 @@
+* [TO-DO] python faker (https://www.daleseo.com/python-faker/) 를 이용하여 테스트 데이터를 생성후 성능 측정.
+
 ## 성능 테스트 ##
 
 ### 1. ec2 생성 ###
