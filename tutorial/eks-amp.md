@@ -29,7 +29,7 @@ helm repo update
 kubectl create namespace prometheus
 ```
 
-#### IRSA 설정 ####
+#### 서비스 어카운트용 Role 설정 ####
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
 ```
 export CLUSTER_NAME=${CLUSTER_NAME}
