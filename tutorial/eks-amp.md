@@ -142,13 +142,48 @@ eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 sh irsa-amp-ingest.sh
 ```
 
-#### 프로메테우스 서버 설정 ####
+#### 프로메테우스 서버 설치 ####
 
 ```
 helm search repo prometheus-community
 ```
 
+[결과]
+```
+...
 prometheus-community/prometheus  
+...
+```
+
+[prometheus-values.yaml]
+```
+## The following is a set of default values for prometheus server helm chart which enable remoteWrite to AMP
+## For the rest of prometheus helm chart values see: https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml
+##
+serviceAccounts:
+  server:
+    name: amp-iamproxy-ingest-service-account
+    annotations: 
+      eks.amazonaws.com/role-arn: ${IAM_PROXY_PROMETHEUS_ROLE_ARN}
+server:
+  remoteWrite:
+    - url: https://aps-workspaces.${REGION}.amazonaws.com/workspaces/${WORKSPACE_ID}/api/v1/remote_write
+      sigv4:
+        region: ${REGION}
+      queue_config:
+        max_samples_per_send: 1000
+        max_shards: 200
+        capacity: 2500
+```
+
+```
+export IAM_PROXY_PROMETHEUS_ROLE_ARN=
+export REGION=ap-northeast-2
+export WORKSPACE_ID=
+
+helm install prometheus prometheus-community/prometheus -n prometheus \
+-f prometheus-values.yaml
+```
 
 
 ### 6. awscurl 설치 ###
