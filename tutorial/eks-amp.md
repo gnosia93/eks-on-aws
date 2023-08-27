@@ -142,6 +142,13 @@ awscurl --service=aps --region=$AWS_REGION "${AMP_ENDPOINT_URL}api/v1/query?quer
 
 ## 그라파나(AMG) 워크스페이스 생성 ##
 
+```
+aws amg create-workspace \
+--account-access-type CURRENT_ACCOUNT \
+--authentication-providers AWS_SSO \
+--permission-type CUSTOMER_MANAGED
+```
+
 
 #### 대시보드 설정 ####
 https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
