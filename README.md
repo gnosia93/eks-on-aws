@@ -1,6 +1,6 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-archi-3.png)
 
-이 워크샵은 EKS 환경으로 어플리케이션 이동하고자 하는 스프링 개발자들이 좀 더 쉽게 K8S를 운영 환경에 적용할 수 있도록 하기 위해 만들어 졌습니다.  
+이 워크샵은 EKS 환경으로 어플리케이션 이동하고자 하는 스프링 개발자들을 위해 만들어 졌습니다.  
 
 * [#1. 기본 인프라 구성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/basic-infra.md)
 
