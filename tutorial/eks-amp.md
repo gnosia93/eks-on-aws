@@ -26,7 +26,7 @@ echo ${CLUSTER_NAME}...
 echo ${SERVICE_ACCOUNT_NAMESPACE}... 
 ```
 
-#### irsa-amp-ingest.sh 파일 생성 ####
+#### irsa-amp-ingest.sh 파일 생성 및 실행 ####
 ```
 #!/bin/bash -e
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
@@ -126,6 +126,11 @@ echo $SERVICE_ACCOUNT_IAM_AMP_INGEST_ROLE_ARN
 #
 eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 ```
+
+```
+sh irsa-amp-ingest.sh
+```
+
 
 #### 프로메테우스 서버 설치 ####
 
