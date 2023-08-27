@@ -16,8 +16,17 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다.
 
 AMP 는 EKS 및 EC2 에 사용자가 직접 생성한 클러스터로 부터의 데이터 수집이 가능하다. 
 
-#### 서비스 어카운트용 IAM 롤 생성 ####
+#### IAM 롤 생성 ####
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
+
+```
+CLUSTER_NAME=${CLUSTER_NAME}
+SERVICE_ACCOUNT_NAMESPACE=springboot
+
+echo ${CLUSTER_NAME}...
+echo ${SERVICE_ACCOUNT_NAMESPACE}... 
+```
+
 ```
 #!/bin/bash -e
 CLUSTER_NAME=<my_amazon_eks_clustername>
