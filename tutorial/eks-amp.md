@@ -2,6 +2,8 @@
 아직 동작 하지 않는다. 디버깅 필요.. 나중에  ~~~~
 ****
 
+* https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/ingest_metrics/
+
 ## 프로메테우스(AMP) 설치 ##
 
 AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다. AMP 는 EKS 및 EC2 에 사용자가 직접 생성한 클러스터로 부터의 데이터 수집이 가능하다.  
