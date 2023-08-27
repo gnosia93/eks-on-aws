@@ -177,9 +177,9 @@ server:
 ```
 
 ```
-export IAM_PROXY_PROMETHEUS_ROLE_ARN=
+export IAM_PROXY_PROMETHEUS_ROLE_ARN="arn:aws:iam::499514681453:role/amp-iamproxy-ingest-role"
 export REGION=ap-northeast-2
-export WORKSPACE_ID=
+export WORKSPACE_ID=ws-65af76f8-c2bb-415a-9500-5b2eef043b30
 
 helm install prometheus prometheus-community/prometheus -n prometheus \
 -f prometheus-values.yaml
