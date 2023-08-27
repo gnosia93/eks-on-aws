@@ -142,10 +142,13 @@ eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 sh irsa-amp-ingest.sh
 ```
 
-
-
-
 #### 프로메테우스 서버 설정 ####
+
+```
+helm search repo prometheus-community
+```
+
+prometheus-community/prometheus  
 
 
 ### 6. awscurl 설치 ###
