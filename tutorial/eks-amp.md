@@ -30,6 +30,7 @@ echo ${SERVICE_ACCOUNT_NAMESPACE}...
 ```
 
 ```
+cat <<_EOF > createIRSA-AMPIngest.sh
 #!/bin/bash -e
 CLUSTER_NAME=<my_amazon_eks_clustername>
 SERVICE_ACCOUNT_NAMESPACE=<my_prometheus_namespace>
@@ -129,6 +130,7 @@ echo $SERVICE_ACCOUNT_IAM_AMP_INGEST_ROLE_ARN
 # Doing this with eksctl is the easier and best approach.
 #
 eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
+_EOF
 ```
 
 #### 프로메테우스 서버 설치 ####
