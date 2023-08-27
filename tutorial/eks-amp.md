@@ -26,7 +26,7 @@ echo ${CLUSTER_NAME}...
 echo ${SERVICE_ACCOUNT_NAMESPACE}... 
 ```
 
-#### createIRSA-AMPIngest.sh 생성 ####
+#### irsa_amp_ingest.sh 파일 생성 ####
 ```
 #!/bin/bash -e
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
