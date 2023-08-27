@@ -6,7 +6,7 @@
 
 AWS VPC 콘솔에서 VPC_ID 와 프라이빗 서브넷 ID 를 확인한 후 아래 export 스크립트를 수정한다. 
 ```
-export VPC_ID=vpc-02ea26ebecef37cda
+export VPC_ID=`aws ec2 describe-vpcs --query 'Vpcs[?Tags[?Key==`Name`]|[?Value==`eks-workshop`]].VpcId' --output text`
 export PRIVATE_SUBNET_1=subnet-09509024e2b2c24a1
 export PRIVATE_SUBNET_2=subnet-0b42d58a3c5421ffc
 
