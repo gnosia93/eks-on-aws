@@ -149,15 +149,19 @@ aws amg create-workspace \
 --permission-type CUSTOMER_MANAGED
 ```
 
+#### [Create workspace] 버튼을 누른다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-1.png)
 
+#### Workspace name 을 입력한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-2.png)
 
+#### AWS IAM Identity Center 을 선택한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-3.png)
 
+#### Amazon Managed Service for Prometheus 를 선택한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-4.png)
 
-
+위의 설정으로 워크스페이스를 생성한다. 
 
 
 #### 대시보드 설정 ####
