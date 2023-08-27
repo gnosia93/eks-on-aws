@@ -63,7 +63,48 @@ Docker 이미지를 생성한 다음 프라이빗 ECR 레지스트리에 푸시�
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/code-pipeline-8.png)
 
 
-### 4. buildspec.yaml 파일 생성 ###
+
+### 4. ECR Private 레포지토리 생성 ###
+
+cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
+```
+$ ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`; REGION=ap-northeast-2
+
+$ aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
+WARNING! Your password will be stored unencrypted in /home/ec2-user/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+$ aws ecr create-repository \
+    --repository-name eks-on-aws-springboot \
+    --image-scanning-configuration scanOnPush=true \
+    --region $REGION
+{
+    "repository": {
+        "repositoryUri": "000000000000.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot", 
+        "imageScanningConfiguration": {
+            "scanOnPush": true
+        }, 
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }, 
+        "registryId": "000000000000", 
+        "imageTagMutability": "MUTABLE", 
+        "repositoryArn": "arn:aws:ecr:ap-northeast-2:000000000000:repository/eks-on-aws-springboot", 
+        "repositoryName": "eks-on-aws-springboot", 
+        "createdAt": 1692627316.0
+    }
+}
+```
+
+buildspec.yaml 파일에서 codebuild 가 ECR에 로그인 하기위해서 아래의 정책을 codebuild 서비스 롤인 codebuild-service-role에 바인딩한다. 
+```
+$ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name codebuild-service-role
+```
+
+### 5. buildspec.yaml 파일 생성 ###
 Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 이 파일의 내용을 참조하여 빌드작업이 수행된다.   
 codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있는데, 방안-2 를 사용하도록 한다. 
 
@@ -168,45 +209,7 @@ phases:
 아래 그림에서 환경변수 중 IMAGE_TAG 는 설정하지 않아도 된다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
 
-### 5. ECR Private 레포지토리 생성 ###
 
-cloud9 에서 아래 명령어를 실행하여 도커 이미지 레포지토리를 생성한다. 
-```
-$ ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`; REGION=ap-northeast-2
-
-$ aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
-WARNING! Your password will be stored unencrypted in /home/ec2-user/.docker/config.json.
-Configure a credential helper to remove this warning. See
-https://docs.docker.com/engine/reference/commandline/login/#credentials-store
-
-Login Succeeded
-
-$ aws ecr create-repository \
-    --repository-name eks-on-aws-springboot \
-    --image-scanning-configuration scanOnPush=true \
-    --region $REGION
-{
-    "repository": {
-        "repositoryUri": "000000000000.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot", 
-        "imageScanningConfiguration": {
-            "scanOnPush": true
-        }, 
-        "encryptionConfiguration": {
-            "encryptionType": "AES256"
-        }, 
-        "registryId": "000000000000", 
-        "imageTagMutability": "MUTABLE", 
-        "repositoryArn": "arn:aws:ecr:ap-northeast-2:000000000000:repository/eks-on-aws-springboot", 
-        "repositoryName": "eks-on-aws-springboot", 
-        "createdAt": 1692627316.0
-    }
-}
-```
-
-buildspec.yaml 파일에서 codebuild 가 ECR에 로그인 하기위해서 아래의 정책을 codebuild 서비스 롤인 codebuild-service-role에 바인딩한다. 
-```
-$ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name codebuild-service-role
-```
 
 ### 6. ECR 도커 이미지 ###
 
