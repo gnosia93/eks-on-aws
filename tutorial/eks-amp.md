@@ -131,8 +131,10 @@ eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 sh irsa-amp-ingest.sh
 ```
 
-
 #### helm 으로 프로메테우스 설치 ####
+* https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-new-Prometheus.html
+  
+
 
 ```
 helm ls --all-namespaces
