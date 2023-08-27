@@ -251,6 +251,7 @@ https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
 
 ## 레퍼런스 ##
 
+* [EKS Observability - ADOT, AMP 및 AMG를 사용한 모니터링](https://kschoi728.tistory.com/97)
 * https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-OpenTelemetry.html
 * https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
 * https://malwareanalysis.tistory.com/602
