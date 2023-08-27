@@ -10,3 +10,4 @@
 
   https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84
   
+* [helm](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/study-helm.md)
