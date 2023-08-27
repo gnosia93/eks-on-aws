@@ -12,9 +12,18 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다. AMP �
 #### Workspace alias 를 입력하고 [Create workspace] 버튼을 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace-2.png)
 
-### 2. IRSA 설정 ###
+### 2. Ingestion 설정 ###
 
 cloud9 터미널을 이동하여 아래 스크립트를 실행한다. 
+* https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-new-Prometheus.html
+
+#### helm ####
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
+helm repo update
+```
+
 
 * https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest
 
@@ -131,18 +140,7 @@ eksctl utils associate-iam-oidc-provider --cluster $CLUSTER_NAME --approve
 sh irsa-amp-ingest.sh
 ```
 
-#### helm 으로 프로메테우스 설치 ####
-* https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-new-Prometheus.html
-  
 
-
-```
-helm ls --all-namespaces
-```
-
-```
-helm upgrade prometheus-chart-name prometheus-community/prometheus -n prometheus_namespace -f my_prometheus_values_yaml --version current_helm_chart_version
-```
 
 
 #### 프로메테우스 서버 설정 ####
