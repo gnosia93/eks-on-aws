@@ -144,17 +144,6 @@ sh irsa-amp-ingest.sh
 
 #### 프로메테우스 서버 설치 ####
 
-```
-helm search repo prometheus-community
-```
-
-[결과]
-```
-...
-prometheus-community/prometheus  
-...
-```
-
 [prometheus-values.yaml]
 ```
 ## The following is a set of default values for prometheus server helm chart which enable remoteWrite to AMP
