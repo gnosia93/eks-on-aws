@@ -6,9 +6,14 @@ AMP 워크스페이스를 생성하기 위해, AMP 콘솔로 이동한다.
 
 ### 1. 워크스페이스 생성 ###
 
+#### [Create workspace] 버튼을 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace-1.png)
 
+#### Workspace alias 를 입력하고 [Create workspace] 버튼을 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-workspace-2.png)
+
+### 2. 권한설정 ###
+
 
 ### 6. awscurl 설치 ###
 awscurl을 이용해서 수집된 메트릭이 AMP 에 저장되었는지 확인한다. 
