@@ -8,13 +8,13 @@ ADOT(AWS Distro for [Open Telemetry](https://opentelemetry.io/)) 수집기로 �
 프로메테우스 helm 차트를 이용해서 수집기를 구성할 수는 있으나, 프로메테우스 서버가 메트릭을 저장하기 위해서는 K8S 볼륨을 필요하다. 즉 메트릭을 볼륨에 먼저 저장한 후, AMP 로 전송하는 하는 구조로 되어 있다.  
 이 워크샵에서는 EKS 클러스터 에 Volume 을 만들지 않는 관계로, ADOT 를 활용해서 메트릭을 AMP 로 보낸다. 
 
-## AMP ##
-
 ```
 export CLUSTER_NAME=`eksctl get cluster|awk '{print $1}'|tail -1`
 export REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
 export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ```
+
+## AMP ##
 
 ### 1. 워크스페이스 생성 ###
 ```
