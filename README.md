@@ -57,7 +57,7 @@
     
   - [Kubernetes 지표 서버 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-metrics.md)
 
-  - [Amazon Managed Service for Prometheus / Grafana 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+  - [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
  
   - [SpringBoot with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md) 
 
