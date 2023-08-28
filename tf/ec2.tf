@@ -3,7 +3,7 @@
 resource "aws_security_group" "eks_ec2_sg" {
     name        = "eks_ec2_sg"
     description = "eks_ec2_sg"
-    vpc_id = aws_vpc.bigdata.id
+    vpc_id = aws_vpc.eks.id
 
     ingress = [ 
         {
@@ -72,7 +72,7 @@ EOF
 
 resource "aws_iam_role_policy" "eks_ec2_policy" {
   name = "eks_ec2_policy"
-  role = aws_iam_role.bigdata_ec2_service_role.id
+  role = aws_iam_role.eks_ec2_service_role.id
   policy = <<EOF
 {
   "Version": "2012-10-17",
