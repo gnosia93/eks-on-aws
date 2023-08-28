@@ -56,6 +56,8 @@
   - [CloudWatch Container Insight 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/cloudwatch-container-insight.md)
     
   - [Amazon Managed Service for Prometheus / Grafana 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+ 
+  - [K8S 성능 메트릭](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-metrics.md)
 
   - [SpringBoot with Grafana](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md) 
 
