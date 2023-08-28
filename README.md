@@ -59,6 +59,8 @@
 
   - [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
  
+    - [A set of modern Grafana dashboards for Kubernetes](https://0xdc.me/blog/a-set-of-modern-grafana-dashboards-for-kubernetes/)
+ 
   - [SpringBoot with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md) 
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
