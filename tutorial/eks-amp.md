@@ -203,6 +203,38 @@ sed -i -e s/AWS_REGION/$AWS_REGION/g otel-collector-config.yaml
 sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 ```
 
+
+```
+- job_name: integrations/kubernetes/kube-state-metrics
+  kubernetes_sd_configs:
+    - role: pod
+  relabel_configs:
+    - action: keep
+      regex: kube-state-metrics
+      source_labels:
+        - __meta_kubernetes_pod_label_app_kubernetes_io_name
+
+- job_name: integrations/node_exporter
+  kubernetes_sd_configs:
+    - namespaces:
+        names:
+          - default
+      role: pod
+  relabel_configs:
+    - action: keep
+      regex: prometheus-node-exporter.*
+      source_labels:
+        - __meta_kubernetes_pod_label_app_kubernetes_io_name
+    - action: replace
+      source_labels:
+        - __meta_kubernetes_pod_node_name
+      target_label: instance
+    - action: replace
+      source_labels:
+        - __meta_kubernetes_namespace
+      target_label: namespace
+```
+
 ```
 kubectl apply -f ./otel-collector-config.yaml
 ```
