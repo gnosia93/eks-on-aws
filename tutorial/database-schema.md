@@ -73,10 +73,12 @@ cloud9 터미널을 이용하여 설치하고, root 패스워드는 admin22admin
 ```
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
+
+DB_ADDR=${STAGE_DB}
 ```
 
+DB_ADDR 를 ${STAGE_DB}, ${PROD_DB} 각각으로 설정하고 아래의 SQL 을 실행한다.
 ```
-DB_ADDR=${STAGE_DB}
 $ mysql -u root -p -h ${DB_ADDR}
 
 Enter password:
