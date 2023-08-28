@@ -155,7 +155,7 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 "ACTIVE"
 
 
-### 5. OTel CR(사용자 리소스) 설치 ###
+### 5. OTel collector 설치 ###
 ```
 WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
 AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
@@ -175,8 +175,15 @@ clusterrole.rbac.authorization.k8s.io/otel-prometheus-role created
 clusterrolebinding.rbac.authorization.k8s.io/otel-prometheus-role-binding created
 ```
 
+### 6. collector 정상동작 여부 확인 ###
+
+#### collector 확인 ####
 ```
-$ kubectl get all -n prometheus
+kubectl get all -n prometheus
+```
+
+[결과]
+```
 NAME                                           READY   STATUS    RESTARTS   AGE
 pod/observability-collector-69f488d4c7-qm85g   1/1     Running   0          86s
 
@@ -189,6 +196,8 @@ deployment.apps/observability-collector   1/1     1            1           87s
 NAME                                                 DESIRED   CURRENT   READY   AGE
 replicaset.apps/observability-collector-69f488d4c7   1         1         1       87s
 ```
+
+#### 메트릭 수집여부 확인 ####
 
 
 ---------------
