@@ -327,6 +327,8 @@ Default Region : ap-northeast-2
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-4.png)
 
+* [TO-DO} Open Telemetry 데이터 포맷을 확인한 후, 해당 포멧에 맞는 대시보드를 만들어야 한다. ㅜㅜ 위의 대시보드는 프로메테우스 용도인듯 ^_^
+
 ## 레퍼런스 ##
 
 * [ADOT, AMP 및 AMG를 사용한 모니터링](https://kschoi728.tistory.com/97)
