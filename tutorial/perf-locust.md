@@ -3,6 +3,8 @@
 ## 성능 테스트 ##
 
 ### 1. locust ec2 로그인 ###
+
+콘솔에서 Name 이 eks_locust 인 인스턴스를 찾아 로그인 한다. 
 ```
 $ ssh -i aws-kp-2.pem ec2-user@<server ip> 
 ```
