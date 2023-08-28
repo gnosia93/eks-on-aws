@@ -153,7 +153,46 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 "ACTIVE"
 
 
-### 5. OTel collector 설치 ###
+
+### 5. kube-state-metrics & node_exporter 설치 ###
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install ksm prometheus-community/kube-state-metrics --set image.tag="v2.8.2" -n "default"
+helm install nodeexporter prometheus-community/prometheus-node-exporter -n "default"
+```
+
+[결과]
+```
+$ kubectl get all
+NAME                                              READY   STATUS    RESTARTS   AGE
+pod/ksm-kube-state-metrics-58dcbb6dc9-t2kqf       1/1     Running   0          3m42s
+pod/nodeexporter-prometheus-node-exporter-cm5fm   1/1     Running   0          15s
+pod/nodeexporter-prometheus-node-exporter-kk94w   1/1     Running   0          15s
+pod/nodeexporter-prometheus-node-exporter-m4qj9   1/1     Running   0          15s
+pod/shop-8649fb4698-5ztkq                         1/1     Running   0          169m
+pod/shop-8649fb4698-fhwdd                         1/1     Running   0          169m
+pod/shop-8649fb4698-skckg                         1/1     Running   0          169m
+
+NAME                                            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/ksm-kube-state-metrics                  ClusterIP   172.20.102.83    <none>        8080/TCP       3m42s
+service/kubernetes                              ClusterIP   172.20.0.1       <none>        443/TCP        26h
+service/nodeexporter-prometheus-node-exporter   ClusterIP   172.20.248.153   <none>        9100/TCP       16s
+service/shop                                    NodePort    172.20.210.136   <none>        80:30751/TCP   169m
+
+NAME                                                   DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/nodeexporter-prometheus-node-exporter   3         3         3       3            3           kubernetes.io/os=linux   15s
+
+NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ksm-kube-state-metrics   1/1     1            1           3m42s
+deployment.apps/shop                     3/3     3            3           169m
+
+NAME                                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/ksm-kube-state-metrics-58dcbb6dc9   1         1         1       3m42s
+replicaset.apps/shop-8649fb4698                     3         3         3       169m
+```
+
+### 6. Otel collector 설치 ###
 ```
 WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
 AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
@@ -162,7 +201,9 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 curl -O https://raw.githubusercontent.com/aws-containers/eks-app-mesh-polyglot-demo/master/workshop/otel-collector-config.yaml 
 sed -i -e s/AWS_REGION/$AWS_REGION/g otel-collector-config.yaml
 sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
+```
 
+```
 kubectl apply -f ./otel-collector-config.yaml
 ```
 
@@ -173,7 +214,7 @@ clusterrole.rbac.authorization.k8s.io/otel-prometheus-role created
 clusterrolebinding.rbac.authorization.k8s.io/otel-prometheus-role-binding created
 ```
 
-### 6. collector 정상동작 여부 확인 ###
+### 7. collector 정상동작 여부 확인 ###
 
 #### collector 확인 ####
 ```
