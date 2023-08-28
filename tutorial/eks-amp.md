@@ -277,7 +277,7 @@ SSO 에서 생성한 유저를 등록하도록 한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-8.png)
 
-그라파나 워크스페이스 URL 을 클릭한다. 
+eks-workshop 워크스페이스 상세페이지로 이동하여 그라파나 워크스페이스 URL 을 클릭한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-9.png)
 
 Sign in with AWS Identity Center 버튼을 클릭한다.
