@@ -148,7 +148,7 @@ aws eks create-addon \
     }
 }
 ```
-#### 동작확인 ###
+#### 동작확인 ####
 ```
 aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .addon.status
 ```
@@ -197,7 +197,11 @@ NAME                                                 DESIRED   CURRENT   READY  
 replicaset.apps/observability-collector-69f488d4c7   1         1         1       87s
 ```
 
-#### 메트릭 수집여부 확인 ####
+#### AMP 수집 데이터 확인 ####
+```
+pip install awscurl==0.26
+
+```
 
 
 ---------------
