@@ -168,6 +168,14 @@ sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 kubectl apply -f ./otel-collector-config.yaml
 ```
 
+[결과]
+```
+opentelemetrycollector.opentelemetry.io/observability created
+clusterrole.rbac.authorization.k8s.io/otel-prometheus-role created
+clusterrolebinding.rbac.authorization.k8s.io/otel-prometheus-role-binding created
+```
+
+
 
 ---------------
 ## 프로메테우스(AMP) 설치 ##
