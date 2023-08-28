@@ -365,10 +365,6 @@ AMG 대시보드에 로그인 하였다.
 
 ### 2. 데이터 소스 설정 ###
 
-2023.5월 기준으로 서울리전은 AWS data source방법으로 AMP연결기능이 지원되지 않아서 SigV4서명방법으로 AMP를 연결해야 한다.
-
-** -> 현재 IAM 롤 설정으로 AMP 에 연결할 수 있다.....아래 내용 수정필요.
-
 Administration > Data sources 메뉴로 이동해서 [Add data source] 버튼을 클릭한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-1.png)
 
@@ -377,7 +373,7 @@ Administration > Data sources 메뉴로 이동해서 [Add data source] 버튼을
 
 ```
 HTTP - URL : AMP(프로메테우스) query URL 
-Auth - Sigv4 auth 를 선택
+Auth - Sigv4 auth 또는 Workspace IAM Role 를 선택
 Autentification Provider : Acess & secret key
 Access Key : ..
 Secret Access Key : ..
@@ -386,7 +382,11 @@ Default Region : ap-northeast-2
 #### AMP query URL (/api/v1/query 는 제외해야 함) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-query-url.png)
 
-위의 조건대로 각 항목을 입력하고 
+위의 조건대로 각 항목을 입력하고
+#### // SigV4 키 방식 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
+
+#### // IAMRole 방식 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
 
 [Save & test] 버튼을 눌러서 "Data source is working" 이라는 메시지를 확인한다. 
