@@ -113,6 +113,15 @@ validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook
 kubectl apply -f https://amazon-eks.s3.amazonaws.com/docs/addons-otel-permissions.yaml
 ```
 
+[결과]
+```
+namespace/opentelemetry-operator-system created
+clusterrole.rbac.authorization.k8s.io/eks:addon-manager-otel created
+clusterrolebinding.rbac.authorization.k8s.io/eks:addon-manager-otel created
+role.rbac.authorization.k8s.io/eks:addon-manager created
+rolebinding.rbac.authorization.k8s.io/eks:addon-manager created
+```
+
 
 ---------------
 ## 프로메테우스(AMP) 설치 ##
