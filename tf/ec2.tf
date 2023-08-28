@@ -9,7 +9,7 @@ data "aws_ami" "amazon-linux-2" {
 
     filter {
         name   = "name"
-        values = ["amzn2-ami-hvm*"]
+        values = ["al2023-ami-2023.1.20230825.0-kernel-6.1-x86_64"]              #  al2023-ami-2023.1.20230825.0-kernel-6.1-x86_64
     }
 }
 
