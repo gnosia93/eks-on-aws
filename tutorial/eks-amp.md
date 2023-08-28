@@ -300,22 +300,22 @@ awscurl --service "aps" --region=${AWS_REGION} \
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-2-1.png)
 
 #### 리스트에서 생성한 유저명을 클릭하고 상세 화면으로 이동한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-3.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-3-1.png)
 
 #### [Send email verification link] 를 클릭해서 초대 메일을 발송한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-4.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-4-1.png)
 
 #### 인증 메일을 발송을 확인하다 #### 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-5.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-5-1.png)
 
 #### 메일함에서 인증 요청에 응답한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6-1.png)
 
 #### SSO 로그인 화면에서 신규 패스워드를 입력한다 #### 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-7.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-7-1.png)
 
 #### 메일함에서 SSO용 메일 주소 자체에 대해 인증한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-8.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-8-1.png)
 
 
 
