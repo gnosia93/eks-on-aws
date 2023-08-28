@@ -319,7 +319,7 @@ awscurl --service "aps" --region=${AWS_REGION} \
 
 
 
-## 그라파나(AMG) 워크스페이스 생성 ##
+## AMG(매니지드 그라파나) ##
 
 AWS 그라파나(AMG) 콘솔으로 이동하여 AMG 워크스페이스 생성한다.
 AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되어 있어야 한다.
