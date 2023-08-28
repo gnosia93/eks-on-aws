@@ -132,8 +132,8 @@ resource "aws_instance" "eks_ec2" {
     subnet_id = aws_subnet.eks_pub_subnet1.id
     user_data = <<_DATA
 #! /bin/bash
-sudo yum install python
-sudo yum install python3-pip
+sudo yum install -y python
+sudo yum install -y python3-pip
 pip install locust
 locust -V
 _DATA
