@@ -307,8 +307,13 @@ Access Key : ..
 Secret Access Key : ..
 Default Region : ap-northeast-2
 ```
+#### AMP query URL (/api/v1/query 는 제외해야 함) ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-query-url.png)
+
+위의 조건대로 각 항목을 입력하고 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
 
+[Save & test] 버튼을 눌러서 "Data source is working" 이라는 메시지를 확인한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-4.png)
 
 
