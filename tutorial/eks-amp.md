@@ -297,7 +297,7 @@ awscurl --service "aps" --region=${AWS_REGION} \
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-1.png)
 
 #### 필수 정보를 입력하고 유저를 생성한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-2-1.png)
 
 #### 리스트에서 생성한 유저명을 클릭하고 상세 화면으로 이동한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-3.png)
