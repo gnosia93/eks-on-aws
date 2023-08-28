@@ -27,7 +27,7 @@
   * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
     
   
-* [#5. CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
+* [#5. AWS CodePipeline 으로 CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
 
 
 * #6. EKS 에 어플리케이션 배포하기
