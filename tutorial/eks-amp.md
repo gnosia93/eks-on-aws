@@ -293,11 +293,20 @@ AMG 대시보드에 로그인 하였다.
 
 2023.5월 기준으로 서울리전은 AWS data source방법으로 AMP연결기능이 지원되지 않아서 SigV4서명방법으로 AMP를 연결해야 한다.
 
---
+Administration > Data sources 메뉴로 이동해서 [Add data source] 버튼을 클릭한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-1.png)
 
+리스트 화면에서 Prometheus 를 선택한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-2.png)
 
+```
+HTTP - URL : AMP(프로메테우스) query URL 
+Auth - Sigv4 auth 를 선택
+Autentification Provider : Acess & secret key
+Access Key : ..
+Secret Access Key : ..
+Default Region : ap-northeast-2
+```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-4.png)
