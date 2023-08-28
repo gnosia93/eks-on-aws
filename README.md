@@ -20,6 +20,8 @@
  
   * [스프핑 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화]
  
+  * [스프링 부트 - 메시지 큐를 활용한 비동기 처리]
+ 
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
   * [스프링 부트 - 액츄에이터로 health check 설정하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-actuator.md) 
