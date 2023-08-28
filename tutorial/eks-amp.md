@@ -395,15 +395,21 @@ Default Region : ap-northeast-2
 
 ### 3. eks 대시보드 생성 ###
 
+#### New 버튼 하단의 Import 서브 메뉴를 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-1.png)
 
+#### Import via grafna.com 항목에 13548 입력하고 Load 버튼 클릭 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-2.png)
 
+#### Import 버튼 클릭 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-3.png)
 
+#### 대시보드 샘플 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-5.png)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-6.png)
+
+위와 같이 설치가 완료되었다.
 
 ## 레퍼런스 ##
 
