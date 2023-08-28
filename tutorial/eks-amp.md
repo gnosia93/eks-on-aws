@@ -150,8 +150,9 @@ aws eks create-addon \
 ```
 #### 동작확인 ###
 ```
-aws eks describe-addon --addon-name adot --cluster-name ${CUSTER_NAME} | jq .addon.status
+aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .addon.status
 ```
+"ACTIVE"
 
 
 ---------------
