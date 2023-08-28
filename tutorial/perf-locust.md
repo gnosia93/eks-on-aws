@@ -37,7 +37,7 @@ class sample(HttpUser):
 ```
 - https://docs.locust.io/en/stable/
   
-### 5. 테스트 ###
+### 3. 테스트 ###
 
 * -f 테스트 코드 파일
 * -P locust 웹페이지 포트
