@@ -395,6 +395,8 @@ Default Region : ap-northeast-2
 
 ### 3. eks 대시보드 생성 ###
 
+Home > Dashboards 메뉴로 이동한다. 
+
 #### New 버튼 하단의 Import 서브 메뉴를 클릭한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-1.png)
 
