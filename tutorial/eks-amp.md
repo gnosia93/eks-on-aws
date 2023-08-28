@@ -405,6 +405,7 @@ Home > Dashboards 메뉴로 이동한다.
 #### // 13548 차트 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-5.png)
 
+#### // 17119 차트 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-6.png)
 
 위와 같이 설치가 완료되었다.
