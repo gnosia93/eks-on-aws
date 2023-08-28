@@ -64,6 +64,7 @@ observability-collector-69f488d4c7-qm85g   7m           339Mi
 
 ---
 
+### Set up kube-state-metrics ###
 ```
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 "prometheus-community" already exists with the same configuration, skipping
