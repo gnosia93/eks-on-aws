@@ -401,6 +401,8 @@ Home > Dashboards 메뉴로 이동한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-3.png)
 
 #### 대시보드 샘플 ####
+
+#### // 13548 차트 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-5.png)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-6.png)
