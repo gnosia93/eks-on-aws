@@ -1,3 +1,5 @@
+## Kubernetes 지표 서버 설치 ##
+
 ### 1. 메트릭 서버 설치 ###
 
 Amazon EKS에서는 Metrics Server가 기본적으로 설치되지 않는다. cloud9 터미널에서 아래의 명령어를 이용하여 설치한다. 
