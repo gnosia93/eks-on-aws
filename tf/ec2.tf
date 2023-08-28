@@ -7,7 +7,7 @@ resource "aws_security_group" "eks_ec2_sg" {
 
     ingress = [ 
         {
-            cidr_blocks = [ var.your_ip_addr, var.vpc_cidr_block ] 
+            cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
             description = "ec2 ingress"
             from_port = 22
             to_port = 22
