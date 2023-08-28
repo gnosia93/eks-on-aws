@@ -1,4 +1,4 @@
-## CI 구성하기 ##
+## AWS CodePipeline CI 구성하기 ##
 
 스프링부트 shop 프로젝트로 CI 파이프라인을 구성하기 위해서는 
 
