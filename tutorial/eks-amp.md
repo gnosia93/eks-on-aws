@@ -10,7 +10,7 @@ ADOT(AWS Distro for [Open Telemetry](https://opentelemetry.io/)) 수집기로 �
 
 ```
 export CLUSTER_NAME=`eksctl get cluster|awk '{print $1}'|tail -1`
-export REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
+export AWS_REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
 export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ```
 
