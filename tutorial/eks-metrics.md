@@ -57,4 +57,6 @@ observability-collector-69f488d4c7-qm85g   7m           339Mi
 
 ## 레퍼런스 ##
 
+* [Kubernetes 지표 서버 설치](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/metrics-server.html)
+
 * [k8s metrics](https://ikcoo.tistory.com/104)
