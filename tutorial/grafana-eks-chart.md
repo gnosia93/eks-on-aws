@@ -3,6 +3,9 @@
 #### // 15758 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15758.png)
 
+#### // 15762 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15762.png)
+
 #### // 15761 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15761.png)
 
