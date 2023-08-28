@@ -1,3 +1,28 @@
+#### configmap 전체 출력 ####
+```
+$ kubectl get cm -A
+NAMESPACE                       NAME                                  DATA   AGE
+amazon-cloudwatch               cwagent-clusterleader                 0      96m
+amazon-cloudwatch               cwagentconfig                         1      97m
+amazon-cloudwatch               fluent-bit-cluster-info               6      104m
+amazon-cloudwatch               fluent-bit-config                     5      103m
+amazon-cloudwatch               kube-root-ca.crt                      1      104m
+cert-manager                    cert-manager-webhook                  0      10h
+cert-manager                    kube-root-ca.crt                      1      10h
+default                         kube-root-ca.crt                      1      26h
+kube-node-lease                 kube-root-ca.crt                      1      26h
+kube-public                     kube-root-ca.crt                      1      26h
+kube-system                     aws-auth                              1      26h
+kube-system                     aws-load-balancer-controller-leader   0      169m
+kube-system                     coredns                               1      26h
+kube-system                     extension-apiserver-authentication    6      26h
+kube-system                     kube-proxy                            1      26h
+kube-system                     kube-proxy-config                     1      26h
+kube-system                     kube-root-ca.crt                      1      26h
+opentelemetry-operator-system   kube-root-ca.crt                      1      10h
+prometheus                      kube-root-ca.crt                      1      11h
+prometheus                      observability-collector               1      10h
+```
 
 #### 네임스페이스의 모든 오브젝트 삭제 ####
 ```
