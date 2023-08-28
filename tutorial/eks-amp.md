@@ -2,7 +2,7 @@
 1. AMP - 정상동작
 2. SSO - 정상동작
 3. AMG - 설치완료
-4. AMG 대시보드 설정 (?)
+4. AMG 대시보드 설정 - 대시보드는 생성되나, 데이터가 보이지 않는다.(?) - Why ?
 ****
 
 ADOT(AWS Distro for [Open Telemetry](https://opentelemetry.io/)) 수집기로 서비스 메트릭 수집해서 AMP 로 내보내고, AMG 로 시각화하는 방법을 알아볼 예정이다.
@@ -317,6 +317,11 @@ Default Region : ap-northeast-2
 
 ### 3. eks 대시보드 생성 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-1.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-2.png)
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-3.png)
 
 
 ## 레퍼런스 ##
