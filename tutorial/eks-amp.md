@@ -262,8 +262,11 @@ AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되�
 
 위의 설정으로 워크스페이스를 생성한다. 
 
-### 2. 대시보드 설정 ###
-https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
+### 2. 데이터 소스 설정 ###
+* https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
+
+2023.5월 기준으로 서울리전은 AWS data source방법으로 AMP연결기능이 지원되지 않아서 SigV4서명방법으로 AMP를 연결해야 한다.
+
 
 
 ## 레퍼런스 ##
