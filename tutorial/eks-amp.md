@@ -109,6 +109,7 @@ validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook
 ```
 
 ### 4. ADOT 추가 기능 설치 ###
+#### 권한부여 ####
 ```
 kubectl apply -f https://amazon-eks.s3.amazonaws.com/docs/addons-otel-permissions.yaml
 ```
@@ -122,6 +123,7 @@ role.rbac.authorization.k8s.io/eks:addon-manager created
 rolebinding.rbac.authorization.k8s.io/eks:addon-manager created
 ```
 
+#### 추가기능 설치 ####
 ```
 aws eks create-addon \
 --addon-name adot \
