@@ -287,8 +287,6 @@ AMG 대시보드에 로그인 하였다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-11.png)
 
 
-
-
 ### 2. 데이터 소스 설정 ###
 
 2023.5월 기준으로 서울리전은 AWS data source방법으로 AMP연결기능이 지원되지 않아서 SigV4서명방법으로 AMP를 연결해야 한다.
@@ -315,6 +313,9 @@ Default Region : ap-northeast-2
 
 [Save & test] 버튼을 눌러서 "Data source is working" 이라는 메시지를 확인한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-4.png)
+
+
+### 3. eks 대시보드 생성 ###
 
 
 
