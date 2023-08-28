@@ -165,30 +165,8 @@ Events:
 
 ## 설치 삭제 ##
 ```
-kubectl delete -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-daemonset.yaml                                                                                ```
+kubectl delete -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/cwagent/cwagent-daemonset.yaml                                            ```                                    ```
 
-## 트러블 슈팅 ##
-
-### 1. Pod Status Pending ###
-
-```
-kubectl describe pod cloudwatch-agent-lx8rz -n amazon-cloudwatch
-```
-[결과]
-```
-ode-Selectors:              kubernetes.io/os=linux
-Tolerations:                 node.kubernetes.io/disk-pressure:NoSchedule op=Exists
-                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
-                             node.kubernetes.io/not-ready:NoExecute op=Exists
-                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
-                             node.kubernetes.io/unreachable:NoExecute op=Exists
-                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
-Events:
-  Type     Reason            Age    From               Message
-  ----     ------            ----   ----               -------
-  Warning  FailedScheduling  3m54s  default-scheduler  0/4 nodes are available: 1 Insufficient cpu. preemption: 0/4 nodes are available: 4 No preemption victims found for incoming pod.
-```
-노드 CPU 용량 부족으로 cloudwatch 에이전트가 스케줄 되지 않음 !!!! 노드의 CPU 용량이 작은거면 이런 경우도 있구나....헐~~~
 
 ## 레퍼런스 ##
 
