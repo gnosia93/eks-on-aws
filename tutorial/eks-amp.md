@@ -374,6 +374,7 @@ Administration > Data sources 메뉴로 이동해서 [Add data source] 버튼을
 AMP 콘솔에서 Endpoint - query URL 을 확인한 후 (/api/v1/query 는 제외해야 함) 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-query-url.png)
 
+HTTP 항목의 URL 텍스트 박스에 입력한다.    
 Auth 항목에서 SigV4 auth 를 선택한 다음, Audentification Provider 를 Access & Secret Key 또는 Workspace IAM Role 을 선택한다. 
 Access & Secret Key 을 선택한 경우 Access Key ID 와 Secret Acess Key 값을 입력해야 한다. Default Region 은 ap-northeast-2 으로 선택 한다.
 
