@@ -203,7 +203,9 @@ sed -i -e s/AWS_REGION/$AWS_REGION/g otel-collector-config.yaml
 sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 ```
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-append.png)
 
+위의 그림처럼 otel-collector-config.yaml 파일에 아래 내용을 추가한다. (라인번호 292)
 ```
 - job_name: integrations/kubernetes/kube-state-metrics
   kubernetes_sd_configs:
