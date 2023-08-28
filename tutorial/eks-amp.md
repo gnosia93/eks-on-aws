@@ -31,6 +31,7 @@ eksctl create iamserviceaccount \
 --approve \
 --override-existing-serviceaccounts
 ```
+cloudformation 이 동작하여 EKS 클러스터에 prometheus 네임스페이스를 생성하고 amp-irsa-role 이라는 서비스 계정을 생성한다. AmazonPrometheusRemoteWriteAccess 정책이 바인딩되고 IAM OpenID Connect 공급자(OIDC)와 EKS 서비스 어카운트 간에 신뢰 정책이 생성된다.  
 
 [결과]
 ```
