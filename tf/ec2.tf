@@ -52,7 +52,7 @@ resource "aws_security_group" "eks_ec2_sg" {
 
 
 resource "aws_iam_role" "eks_ec2_service_role" {
-  name = "bigdata_ec2_service_role"
+  name = "eks_ec2_service_role"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -71,7 +71,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "eks_ec2_policy" {
-  name = "bigdata_ec2_policy"
+  name = "eks_ec2_policy"
   role = aws_iam_role.bigdata_ec2_service_role.id
   policy = <<EOF
 {
