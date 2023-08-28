@@ -108,6 +108,11 @@ mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook c
 validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
 ```
 
+### 4. ADOT 설치 권한 설정 ###
+```
+kubectl apply -f https://amazon-eks.s3.amazonaws.com/docs/addons-otel-permissions.yaml
+```
+
 
 ---------------
 ## 프로메테우스(AMP) 설치 ##
