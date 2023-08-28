@@ -162,7 +162,7 @@ AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq 
 AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 
 curl -O https://raw.githubusercontent.com/aws-containers/eks-app-mesh-polyglot-demo/master/workshop/otel-collector-config.yaml 
-sed -i -e s/AWS_REGION/$REGION/g otel-collector-config.yaml
+sed -i -e s/AWS_REGION/$AWS_REGION/g otel-collector-config.yaml
 sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 
 kubectl apply -f ./otel-collector-config.yaml
