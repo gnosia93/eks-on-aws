@@ -51,8 +51,12 @@ Tokens:              <none>
 Events:              <none>
 ```
 
-### ADOT 설치 ###
+### 3. cert manager 설치 ###
 
+ADOT 오퍼레이터에서 작업(예-pod 에 사이드카 삽입시 webhook 호출 등) 을 할때 사용된다.
+```
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.2/cert-manager.yaml
+```
 
 
 
