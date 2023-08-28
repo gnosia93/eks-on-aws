@@ -387,7 +387,7 @@ Default Region : ap-northeast-2
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
 
 #### // IAMRole 방식 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3-1.png)
 
 [Save & test] 버튼을 눌러서 "Data source is working" 이라는 메시지를 확인한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-4.png)
