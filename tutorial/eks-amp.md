@@ -128,6 +128,24 @@ aws eks create-addon \
 --addon-version v0.74.0-eksbuild.1 \
 --cluster-name ${CLUSTER_NAME}
 ```
+[결과]
+```
+{
+    "addon": {
+        "addonName": "adot",
+        "clusterName": "eks-workshop",
+        "status": "CREATING",
+        "addonVersion": "v0.74.0-eksbuild.1",
+        "health": {
+            "issues": []
+        },
+        "addonArn": "arn:aws:eks:ap-northeast-2:499514681453:addon/eks-workshop/adot/f4c51d12-7c82-b56d-7474-f4e467b24717",
+        "createdAt": "2023-08-28T03:16:56.364000+00:00",
+        "modifiedAt": "2023-08-28T03:16:56.380000+00:00",
+        "tags": {}
+    }
+}
+```
 
 ---------------
 ## 프로메테우스(AMP) 설치 ##
