@@ -199,9 +199,11 @@ replicaset.apps/observability-collector-69f488d4c7   1         1         1      
 
 #### AMP 수집 데이터 확인 ####
 ```
+sudo pip install --upgrade pip
+sudo ln -s /usr/local/bin/pip /usr/bin/pip
 pip install awscurl==0.26
-
 ```
+
 
 
 ---------------
