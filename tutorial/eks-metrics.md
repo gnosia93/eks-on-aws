@@ -43,10 +43,10 @@ ip-10-1-102-227.ap-northeast-2.compute.internal   39m          0%     1254Mi    
 
 * kubectl top node - error: Metrics API not available
 
-아래 명령어로 메트릭 서버를 설치한다. 
-```
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-```
+  아래 명령어로 메트릭 서버를 설치한다. 
+  ```
+  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  ```
 
 
 
