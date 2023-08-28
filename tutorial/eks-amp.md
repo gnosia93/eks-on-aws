@@ -9,7 +9,7 @@ export AWS_REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
 export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ```
 
-OpenTelemetry 를 활용한 K8S 메트릭 수집에 대한 자세한 내용은 아래 링크에서 확인한다. 
+OpenTelemetry 를 활용한 K8S 메트릭 수집에 대한 보다 자세한 내용은 아래 링크에서 참조.
 * [Send Kubernetes metrics and logs using the OpenTelemetry Collector](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/)
 
 
