@@ -117,8 +117,52 @@ hopigaga:~/environment $
 
 ### Set up node_exporter ###
 ```
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-helm install nodeexporter prometheus-community/prometheus-node-exporter -n "default"
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" already exists with the same configuration, skipping
+hopigaga:~/environment $ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "eks" chart repository
+...Successfully got an update from the "prometheus-community" chart repository
+Update Complete. ⎈Happy Helming!⎈
+hopigaga:~/environment $ helm install nodeexporter prometheus-community/prometheus-node-exporter -n "default"
+NAME: nodeexporter
+LAST DEPLOYED: Mon Aug 28 13:57:32 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=prometheus-node-exporter,app.kubernetes.io/instance=nodeexporter" -o jsonpath="{.items[0].metadata.name}")
+  echo "Visit http://127.0.0.1:9100 to use your application"
+  kubectl port-forward --namespace default $POD_NAME 9100
+hopigaga:~/environment $ 
+hopigaga:~/environment $ 
+hopigaga:~/environment $ 
+hopigaga:~/environment $ kubectl get all
+NAME                                              READY   STATUS    RESTARTS   AGE
+pod/ksm-kube-state-metrics-58dcbb6dc9-t2kqf       1/1     Running   0          3m42s
+pod/nodeexporter-prometheus-node-exporter-cm5fm   1/1     Running   0          15s
+pod/nodeexporter-prometheus-node-exporter-kk94w   1/1     Running   0          15s
+pod/nodeexporter-prometheus-node-exporter-m4qj9   1/1     Running   0          15s
+pod/shop-8649fb4698-5ztkq                         1/1     Running   0          169m
+pod/shop-8649fb4698-fhwdd                         1/1     Running   0          169m
+pod/shop-8649fb4698-skckg                         1/1     Running   0          169m
 
+NAME                                            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/ksm-kube-state-metrics                  ClusterIP   172.20.102.83    <none>        8080/TCP       3m42s
+service/kubernetes                              ClusterIP   172.20.0.1       <none>        443/TCP        26h
+service/nodeexporter-prometheus-node-exporter   ClusterIP   172.20.248.153   <none>        9100/TCP       16s
+service/shop                                    NodePort    172.20.210.136   <none>        80:30751/TCP   169m
+
+NAME                                                   DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/nodeexporter-prometheus-node-exporter   3         3         3       3            3           kubernetes.io/os=linux   15s
+
+NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ksm-kube-state-metrics   1/1     1            1           3m42s
+deployment.apps/shop                     3/3     3            3           169m
+
+NAME                                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/ksm-kube-state-metrics-58dcbb6dc9   1         1         1       3m42s
+replicaset.apps/shop-8649fb4698                     3         3         3       169m
 ```
