@@ -204,6 +204,11 @@ sudo ln -s /usr/local/bin/pip /usr/bin/pip
 pip install awscurl==0.26
 ```
 
+```
+awscurl --service "aps" --region=${AWS_REGION} \
+    "${AMP_ENDPOINT_URL}api/v1/query?query=scrape_samples_scraped"
+```
+
 
 
 ---------------
