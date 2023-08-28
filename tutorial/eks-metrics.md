@@ -197,4 +197,6 @@ replicaset.apps/shop-8649fb4698                     3         3         3       
               target_label: namespace
 ```
 
-
+* kubectl describe cm observability-collector -n prometheus
+  otel configmap 인듯. 
+  
