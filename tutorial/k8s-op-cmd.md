@@ -67,3 +67,36 @@ kube-system       coredns                              0         15h
 kube-system       cronjob-controller                   0         15h
 kube-system       daemon-set-controller                0         15
 ```
+
+* prometheus                      observability-collector CM 내용 추가.
+```
+- job_name: integrations/kubernetes/kube-state-metrics
+          kubernetes_sd_configs:
+            - role: pod
+          relabel_configs:
+            - action: keep
+              regex: kube-state-metrics
+              source_labels:
+                - __meta_kubernetes_pod_label_app_kubernetes_io_name
+        - job_name: integrations/node_exporter
+          kubernetes_sd_configs:
+            - namespaces:
+                names:
+                  - default
+              role: pod
+          relabel_configs:
+            - action: keep
+              regex: prometheus-node-exporter.*
+              source_labels:
+                - __meta_kubernetes_pod_label_app_kubernetes_io_name
+            - action: replace
+              source_labels:
+                - __meta_kubernetes_pod_node_name
+              target_label: instance
+            - action: replace
+              source_labels:
+                - __meta_kubernetes_namespace
+              target_label: namespace
+```
+
+
