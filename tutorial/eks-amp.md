@@ -157,7 +157,7 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 
 ### 5. OTel CR(사용자 리소스) 설치 ###
 ```
-WORKSPACE_ID=$(aws amp list-workspaces --alias adot-eks | jq '.workspaces[0].workspaceId' -r)
+WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
 AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
 AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 
