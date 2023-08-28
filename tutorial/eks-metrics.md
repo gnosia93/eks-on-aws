@@ -199,4 +199,19 @@ replicaset.apps/shop-8649fb4698                     3         3         3       
 
 * kubectl describe cm observability-collector -n prometheus
   otel configmap 인듯. 
-  
+
+* ot collector 다시 시작하는 방법은 ?
+```
+$ kubectl get all -n prometheus
+NAME                                           READY   STATUS    RESTARTS   AGE
+pod/observability-collector-69f488d4c7-qm85g   1/1     Running   0          10h
+
+NAME                                         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
+service/observability-collector-monitoring   ClusterIP   172.20.55.1   <none>        8888/TCP   10h
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/observability-collector   1/1     1            1           10h
+
+NAME                                                 DESIRED   CURRENT   READY   AGE
+replicaset.apps/observability-collector-69f488d4c7   1         1         1       10h
+```  
