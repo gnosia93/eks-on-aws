@@ -1,7 +1,8 @@
 ***** 
 1. AMP - 정상동작
 2. SSO - 정상동작
-3. AMG - 
+3. AMG - 설치완료
+4. AMG 대시보드 설정 (?)
 ****
 
 ADOT(AWS Distro for [Open Telemetry](https://opentelemetry.io/)) 수집기로 서비스 메트릭 수집해서 AMP 로 내보내고, AMG 로 시각화하는 방법을 알아볼 예정이다.
@@ -275,6 +276,17 @@ SSO 에서 생성한 유저를 등록하도록 한다.
 [Action] 버튼을 클릭한 후 Viewer 권한을 Admin 으로 변경한다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-8.png)
+
+그라파나 워크스페이스 URL 을 클릭한다. 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-9.png)
+
+Sign in with AWS Identity Center 버튼을 클릭한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-10.png)
+
+AMG 대시보드에 로그인 하였다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-11.png)
+
+
 
 
 ### 2. 데이터 소스 설정 ###
