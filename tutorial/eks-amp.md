@@ -323,6 +323,7 @@ Default Region : ap-northeast-2
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-3.png)
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-4.png)
 
 ## 레퍼런스 ##
 
