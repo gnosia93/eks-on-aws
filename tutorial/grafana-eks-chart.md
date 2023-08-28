@@ -5,7 +5,7 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15759.png)
 
 
-#### // 15758 ####
+#### 15758 (Kubernetes / Views / Namespaces) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15758.png)
 
 #### // 15762 ####
