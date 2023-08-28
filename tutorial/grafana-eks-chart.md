@@ -1,5 +1,10 @@
 ### Dashboard IDs ###
 
+
+#### // 15759 (Kubernetes / Views / Nodes) ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15758.png)
+
+
 #### // 15758 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15758.png)
 
