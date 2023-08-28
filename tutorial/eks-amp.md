@@ -309,7 +309,7 @@ awscurl --service "aps" --region=${AWS_REGION} \
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-5-1.png)
 
 #### 메일함에서 인증 요청에 응답한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-6.png)
 
 #### SSO 로그인 화면에서 신규 패스워드를 입력한다 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-7-1.png)
