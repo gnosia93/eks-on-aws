@@ -1,5 +1,7 @@
 * Liveness / Readiness / Drain & Cardon ...
 
+* 노드 추가 / 삭제 
+
 * resource request / limit 
 
   https://kubernetes.io/ko/docs/concepts/configuration/manage-resources-containers/ 
