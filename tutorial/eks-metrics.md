@@ -55,11 +55,61 @@ observability-collector-69f488d4c7-qm85g   7m           339Mi
   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
   ```
 
-
-
-
 ## 레퍼런스 ##
 
 * [Kubernetes 지표 서버 설치](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/metrics-server.html)
 
 * [k8s metrics](https://ikcoo.tistory.com/104)
+
+
+---
+
+```
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" already exists with the same configuration, skipping
+hopigaga:~/environment $ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "eks" chart repository
+...Successfully got an update from the "prometheus-community" chart repository
+Update Complete. ⎈Happy Helming!⎈
+hopigaga:~/environment $ helm install ksm prometheus-community/kube-state-metrics --set image.tag="v2.8.2" -n "default"
+NAME: ksm
+LAST DEPLOYED: Mon Aug 28 13:54:06 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+kube-state-metrics is a simple service that listens to the Kubernetes API server and generates metrics about the state of the objects.
+The exposed metrics can be found here:
+https://github.com/kubernetes/kube-state-metrics/blob/master/docs/README.md#exposed-metrics
+
+The metrics are exported on the HTTP endpoint /metrics on the listening port.
+In your case, ksm-kube-state-metrics.default.svc.cluster.local:8080/metrics
+
+They are served either as plaintext or protobuf depending on the Accept header.
+They are designed to be consumed either by Prometheus itself or by a scraper that is compatible with scraping a Prometheus client endpoint.
+hopigaga:~/environment $ 
+hopigaga:~/environment $ 
+hopigaga:~/environment $ 
+hopigaga:~/environment $ kubectl get all
+NAME                                          READY   STATUS    RESTARTS   AGE
+pod/ksm-kube-state-metrics-58dcbb6dc9-t2kqf   1/1     Running   0          60s
+pod/shop-8649fb4698-5ztkq                     1/1     Running   0          166m
+pod/shop-8649fb4698-fhwdd                     1/1     Running   0          166m
+pod/shop-8649fb4698-skckg                     1/1     Running   0          166m
+
+NAME                             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/ksm-kube-state-metrics   ClusterIP   172.20.102.83    <none>        8080/TCP       60s
+service/kubernetes               ClusterIP   172.20.0.1       <none>        443/TCP        26h
+service/shop                     NodePort    172.20.210.136   <none>        80:30751/TCP   166m
+
+NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ksm-kube-state-metrics   1/1     1            1           60s
+deployment.apps/shop                     3/3     3            3           166m
+
+NAME                                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/ksm-kube-state-metrics-58dcbb6dc9   1         1         1       61s
+replicaset.apps/shop-8649fb4698                     3         3         3       166m
+hopigaga:~/environment $ 
+```
