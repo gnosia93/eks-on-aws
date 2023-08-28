@@ -18,7 +18,7 @@
 
   * [스프링 부트 - Redis 분산락 구현과 데이터베이스 Offloading]
  
-  * [스프핑 부트 - Secret Manager 데이터베이스 설정 암호화]
+  * [스프핑 부트 - Secret Manager 데이터베이스 설정 분리/암호화]
  
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
  
