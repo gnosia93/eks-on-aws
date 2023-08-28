@@ -26,6 +26,7 @@ metrics-server-5b4fc487-v26lr                   1/1     Running   0          52s
 ```
 metrics-server-5b4fc487-v26lr 서버가 설치된 것을 확인할 수 있다.
 
+### kubectl top ###
 ```
 $ kubectl top pod
 NAME                    CPU(cores)   MEMORY(bytes)   
