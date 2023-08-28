@@ -155,6 +155,20 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 "ACTIVE"
 
 
+### 5. OTel CR(사용자 리소스) 설치 ###
+```
+WORKSPACE_ID=$(aws amp list-workspaces --alias adot-eks | jq '.workspaces[0].workspaceId' -r)
+AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
+AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
+
+curl -O https://raw.githubusercontent.com/aws-containers/eks-app-mesh-polyglot-demo/master/workshop/otel-collector-config.yaml 
+sed -i -e s/AWS_REGION/$REGION/g otel-collector-config.yaml
+sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
+
+kubectl apply -f ./otel-collector-config.yaml
+```
+
+
 ---------------
 ## 프로메테우스(AMP) 설치 ##
 
