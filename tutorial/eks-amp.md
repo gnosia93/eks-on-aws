@@ -175,6 +175,20 @@ clusterrole.rbac.authorization.k8s.io/otel-prometheus-role created
 clusterrolebinding.rbac.authorization.k8s.io/otel-prometheus-role-binding created
 ```
 
+```
+$ kubectl get all -n prometheus
+NAME                                           READY   STATUS    RESTARTS   AGE
+pod/observability-collector-69f488d4c7-qm85g   1/1     Running   0          86s
+
+NAME                                         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
+service/observability-collector-monitoring   ClusterIP   172.20.55.1   <none>        8888/TCP   86s
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/observability-collector   1/1     1            1           87s
+
+NAME                                                 DESIRED   CURRENT   READY   AGE
+replicaset.apps/observability-collector-69f488d4c7   1         1         1       87s
+```
 
 
 ---------------
