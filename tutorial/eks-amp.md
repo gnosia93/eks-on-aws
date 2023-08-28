@@ -262,6 +262,21 @@ AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되�
 
 위의 설정으로 워크스페이스를 생성한다. 
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-5.png)
+
+워크스페이스가 생성되었다. AMG 에 접근하기 위해서 Autehntification 메뉴에서 [Assign new new or group] 버튼을 클릭한 후
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-6.png)
+
+SSO 에서 생성한 유저를 등록하도록 한다. 
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-7.png)
+
+[Action] 버튼을 클릭한 후 Viewer 권한을 Admin 으로 변경한다. 
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-8.png)
+
+
 ### 2. 데이터 소스 설정 ###
 
 2023.5월 기준으로 서울리전은 AWS data source방법으로 AMP연결기능이 지원되지 않아서 SigV4서명방법으로 AMP를 연결해야 한다.
