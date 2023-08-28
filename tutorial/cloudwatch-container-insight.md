@@ -171,7 +171,6 @@ kubectl delete -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatc
 
 * cloudwatch container insight 에 정보가 출력되지 않는다.
 
--> 아래의 스크립트로 재설치.
 ```
 RegionName=ap-northeast-2
 FluentBitHttpPort='2020'
