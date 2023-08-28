@@ -32,6 +32,21 @@ eksctl create iamserviceaccount \
 --override-existing-serviceaccounts
 ```
 
+[결과]
+```
+$ kubectl get ns
+NAME              STATUS   AGE
+default           Active   15h
+kube-node-lease   Active   15h
+kube-public       Active   15h
+kube-system       Active   15h
+prometheus        Active   18s
+
+$ kubectl get sa -n prometheus
+NAME            SECRETS   AGE
+amp-irsa-role   0         27s
+default         0         27s
+```
 
 ### ADOT 설치 ###
 
