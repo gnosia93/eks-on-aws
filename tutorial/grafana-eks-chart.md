@@ -1,14 +1,12 @@
 ### Dashboard IDs ###
 
-
 #### 15759 (Kubernetes / Views / Nodes) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15759.png)
-
 
 #### 15758 (Kubernetes / Views / Namespaces) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15758.png)
 
-#### // 15762 ####
+#### 15762 (Kubernetes / System / CoreDNS) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15762.png)
 
 #### 15761 (Kubernetes / System / API Server) ####
@@ -19,6 +17,7 @@
 
 #### 15757 (Kubernetes / Views / Global) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15757.png)
+
 
 ## 레퍼런스 ##
 
