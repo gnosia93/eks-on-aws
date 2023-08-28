@@ -71,8 +71,8 @@ Bye
 stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
 cloud9 터미널을 이용하여 설치하고, root 패스워드는 admin22admin 이다. 
 ```
-STAGE_DB_=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
-PROD_DB_=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
+STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
+PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
 ```
 
 ```
