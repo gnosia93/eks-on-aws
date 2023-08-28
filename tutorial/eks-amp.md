@@ -1,8 +1,7 @@
 ***** 
-1. OpenTelemetry 을 이용한 AMP 로의 데이터 수집은 정상적으로 동작함.
-
-
-
+1. AMP - 정상동작
+2. SSO -
+3. AMG - 
 ****
 
 ADOT(AWS Distro for [Open Telemetry](https://opentelemetry.io/)) 수집기로 서비스 메트릭 수집해서 AMP 로 내보내고, AMG 로 시각화하는 방법을 알아볼 예정이다.
