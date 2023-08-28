@@ -271,8 +271,8 @@ AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되�
 
 ## 레퍼런스 ##
 
-* [EKS Observability - ADOT, AMP 및 AMG를 사용한 모니터링](https://kschoi728.tistory.com/97)
+* [ADOT, AMP 및 AMG를 사용한 모니터링](https://kschoi728.tistory.com/97)
+* [AMG - SigV4 서명으로 AMP에 연결하기](https://malwareanalysis.tistory.com/602)
 * [AWS SSO와 Directory Service 연동하기](https://blog.leedoing.com/176)
 * https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
-* https://malwareanalysis.tistory.com/602
 * [AWS EKS에 볼륨 마운트 해보기](https://blog.wonizz.tk/2019/11/28/kubernetes-aws-eks-volume/)
