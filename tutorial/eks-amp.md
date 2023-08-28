@@ -34,18 +34,20 @@ eksctl create iamserviceaccount \
 
 [결과]
 ```
-$ kubectl get ns
-NAME              STATUS   AGE
-default           Active   15h
-kube-node-lease   Active   15h
-kube-public       Active   15h
-kube-system       Active   15h
-prometheus        Active   18s
-
 $ kubectl get sa -n prometheus
 NAME            SECRETS   AGE
 amp-irsa-role   0         27s
 default         0         27s
+
+$ kubectl describe sa amp-irsa-role -n prometheus
+Name:                amp-irsa-role
+Namespace:           prometheus
+Labels:              app.kubernetes.io/managed-by=eksctl
+Annotations:         eks.amazonaws.com/role-arn: arn:aws:iam::499514681453:role/eksctl-eks-workshop-addon-iamserviceaccount-Role1-C8K9CXJIJXXW
+Image pull secrets:  <none>
+Mountable secrets:   <none>
+Tokens:              <none>
+Events:              <none>
 ```
 
 ### ADOT 설치 ###
