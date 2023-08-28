@@ -35,7 +35,11 @@ $ kubectl top node
 NAME                                              CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
 ip-10-1-101-166.ap-northeast-2.compute.internal   30m          0%     988Mi           3%        
 ip-10-1-102-148.ap-northeast-2.compute.internal   27m          0%     946Mi           3%        
-ip-10-1-102-227.ap-northeast-2.compute.internal   39m          0%     1254Mi          4%   
+ip-10-1-102-227.ap-northeast-2.compute.internal   39m          0%     1254Mi          4%
+
+$ kubectl top pod -n prometheus
+NAME                                       CPU(cores)   MEMORY(bytes)   
+observability-collector-69f488d4c7-qm85g   7m           339Mi    
 ```
 메트릭 서버가 설치되어서 kubectl top 명령어가 동작한다.
 
