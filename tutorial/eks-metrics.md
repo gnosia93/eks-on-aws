@@ -114,3 +114,11 @@ replicaset.apps/ksm-kube-state-metrics-58dcbb6dc9   1         1         1       
 replicaset.apps/shop-8649fb4698                     3         3         3       166m
 hopigaga:~/environment $ 
 ```
+
+### Set up node_exporter ###
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install nodeexporter prometheus-community/prometheus-node-exporter -n "default"
+
+```
