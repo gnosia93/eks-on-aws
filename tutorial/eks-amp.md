@@ -156,6 +156,7 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 
 
 ### 5. kube-state-metrics & node_exporter 설치 ###
+* [Send Kubernetes metrics and logs using the OpenTelemetry Collector](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/)
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
