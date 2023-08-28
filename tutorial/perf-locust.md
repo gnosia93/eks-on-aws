@@ -2,30 +2,12 @@
 
 ## 성능 테스트 ##
 
-### 1. ec2 생성 ###
-AWS 콘솔에서 아마존 리눅스를 사용하는 c6i.2xlarge 인스턴스를 하나 만들고, 22, 8080 포트를 0.0.0.0/0 으로 오픈한다.
+### 1. locust ec2 로그인 ###
 ```
 $ ssh -i aws-kp-2.pem ec2-user@<server ip> 
 ```
 
-### 2. python 설치 ###
-```
-sudo yum install python
-sudo yum install python3-pip
-```
-
-### 3. locust 설치 ###
-```
-pip install locust
-locust -V
-```
-
-[결과]
-```
-locust 2.16.1 from /home/ec2-user/.local/lib/python3.9/site-packages/locust (python 3.9.16)
-```
-
-### 4. 테스트 코드작성 ###
+### 2. 테스트 코드작성 ###
 [test.py]
 ```
 import json
