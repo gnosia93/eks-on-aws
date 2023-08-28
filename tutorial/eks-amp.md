@@ -6,7 +6,6 @@ OpenTelemetry 로 설치해야 하는 듯.
 
 ADOT(AWS Distro for Open Telemetry) 수집기로 서비스 메트릭 수집해서 AMP 로 내보내고, AMG 로 시각화하는 방법을 알아볼 예정이다.
 프로메테우스 helm 차트를 이용해서 수집기를 설치할 수는 있으나, 이 워크샵에서는 EKS 클러스터 에 Volume 을 만들지 않는 관계로, ADOT 를 활용해서 메트릭을 수집한다. 
-* https://blog.wonizz.tk/2019/11/28/kubernetes-aws-eks-volume/
 
 ## 프로메테우스(AMP) 설치 ##
 
@@ -259,3 +258,4 @@ https://malwareanalysis.tistory.com/602 의 AMG 연동 부분 참고.
 * https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-OpenTelemetry.html
 * https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
 * https://malwareanalysis.tistory.com/602
+* [AWS EKS에 볼륨 마운트 해보기](https://blog.wonizz.tk/2019/11/28/kubernetes-aws-eks-volume/)
