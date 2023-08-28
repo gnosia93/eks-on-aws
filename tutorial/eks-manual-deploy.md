@@ -334,6 +334,40 @@ $ curl shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com/actuator/health
 ```
 
 
+## 트러블 슈팅 ##
+
+*  Failed build model due to couldn't auto-discover subnets: unable to resolve at least one subnet (0 match VPC and tags)
+
+```
+$ kubectl describe ingress shop-ingress
+Name:             shop-ingress
+Namespace:        default
+Address:          
+Default backend:  default-http-backend:80 (<error: endpoints "default-http-backend" not found>)
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /   shop:80 (10.1.101.42:8080,10.1.102.12:8080,10.1.102.5:8080)
+Annotations:  alb.ingress.kubernetes.io/healthcheck-interval-seconds: 5
+              alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
+              alb.ingress.kubernetes.io/healthcheck-timeout-seconds: 3
+              alb.ingress.kubernetes.io/healthy-threshold-count: 2
+              alb.ingress.kubernetes.io/load-balancer-name: shop-alb
+              alb.ingress.kubernetes.io/scheme: internet-facing
+              alb.ingress.kubernetes.io/target-type: instance
+              alb.ingress.kubernetes.io/unhealthy-threshold-count: 2
+              kubernetes.io/ingress.class: alb
+Events:
+  Type     Reason            Age                 From     Message
+  ----     ------            ----                ----     -------
+  Warning  FailedBuildModel  14s (x13 over 36s)  ingress  Failed build model due to couldn't auto-discover subnets: unable to resolve at least one subnet (0 match VPC and tags)
+```
+
+[해결방법]
+* ALB 가 생성되는 VPC의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다.  
+ 
+
 ## 레퍼런스 ##
 * [AWS EKS에서 ALB Ingress Controller 활용기](https://medium.com/coinone/aws-eks%EC%97%90%EC%84%9C-alb-ingress-controller-%ED%99%9C%EC%9A%A9%EA%B8%B0-6a29aa2a1144)
 * [eks에서 exec plugin is configured to use API version 이슈](https://shblue21.github.io/aws/eks%EC%97%90%EC%84%9C-exec-plugin-is-configured-to-use-API-version-%EC%9D%B4%EC%8A%88/)
