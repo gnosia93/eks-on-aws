@@ -169,23 +169,6 @@ kubectl delete -f https://raw.githubusercontent.com/aws-samples/amazon-cloudwatc
 ```
 
 
-## 트러블 슈팅 ##
-
-* cloudwatch container insight 에 정보가 출력되지 않는다.
-
-```
-RegionName=ap-northeast-2
-FluentBitHttpPort='2020'
-FluentBitReadFromHead='Off'
-[[ ${FluentBitReadFromHead} = 'On' ]] && FluentBitReadFromTail='Off'|| FluentBitReadFromTail='On'
-[[ -z ${FluentBitHttpPort} ]] && FluentBitHttpServer='Off' || FluentBitHttpServer='On'
-curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights\
-/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring\
-/quickstart/cwagent-fluent-bit-quickstart.yaml | sed 's/{{cluster_name}}/'${CLUSTER_NAME}'/;s/{{region_name}}/'${RegionName}'/;s/{{http_server_toggle}}/"'${FluentBitHttpServer}'"/;s/{{http_server_port}}/"'${FluentBitHttpPort}'"/;s/{{read_from_head}}/"'${FluentBitReadFromHead}'"/;s/{{read_from_tail}}/"'${FluentBitReadFromTail}'"/' | kubectl apply -f - 
-```
-
-
-
 ## 레퍼런스 ##
 
 * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-metrics.html
