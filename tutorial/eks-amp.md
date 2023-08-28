@@ -371,12 +371,11 @@ Administration > Data sources 메뉴로 이동해서 [Add data source] 버튼을
 리스트 화면에서 Prometheus 를 선택한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-2.png)
 
-AMP 콘솔에서 query URL 을 확인한 후
-#### AMP query URL (/api/v1/query 는 제외해야 함) ####
+AMP 콘솔에서 AMP query URL 을 확인한 후 (/api/v1/query 는 제외해야 함) 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amp-query-url.png)
 
 SigV4 의 경우 아래 두가지중 하나를 선택하고, Default Region 은 ap-northeast-2 로 입력한다.
-#### // Access / Secret Key 방식 ####
+#### // Access & Secret Key 방식 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-datasource-3.png)
 
 #### // IAMRole 방식 ####
