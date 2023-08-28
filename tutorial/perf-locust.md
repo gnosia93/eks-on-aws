@@ -56,6 +56,11 @@ class sample(HttpUser):
 - https://docs.locust.io/en/stable/
   
 ### 5. 테스트 ###
+
+* -f 테스트 코드 파일
+* -P locust 웹페이지 포트
+* -H 테스트 대상 http URL 
+
 ```
 locust -f ./test.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com
 ```
