@@ -13,7 +13,7 @@ OpenTelemetry 를 활용한 K8S 메트릭 수집에 대한 보다 자세한 내�
 * [Send Kubernetes metrics and logs using the OpenTelemetry Collector](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/)
 
 
-## AMP ##
+## AMP (매니지드 프로메테우스) ##
 
 ### 1. 워크스페이스 생성 ###
 ```
