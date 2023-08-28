@@ -148,6 +148,11 @@ aws eks create-addon \
     }
 }
 ```
+#### 동작확인 ###
+```
+aws eks describe-addon --addon-name adot --cluster-name ${CUSTER_NAME} | jq .addon.status
+```
+
 
 ---------------
 ## 프로메테우스(AMP) 설치 ##
