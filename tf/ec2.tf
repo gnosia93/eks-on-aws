@@ -1,3 +1,18 @@
+data "aws_ami" "amazon-linux-2" {
+    most_recent = true
+    owners = [ "amazon" ]
+
+    filter {
+        name   = "owner-alias"
+        values = ["amazon"]
+    }
+
+    filter {
+        name   = "name"
+        values = ["amzn2-ami-hvm*"]
+    }
+}
+
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 resource "aws_security_group" "eks_ec2_sg" {
@@ -104,7 +119,7 @@ resource "aws_iam_instance_profile" "eks_ec2_profile" {
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 resource "aws_instance" "eks_ec2" {
-#    ami = data.aws_ami.amazon-linux-2.id
+    ami = data.aws_ami.amazon-linux-2.id
     associate_public_ip_address = true
     instance_type = "c6i.2xlarge"
     iam_instance_profile = aws_iam_instance_profile.eks_ec2_profile.name
