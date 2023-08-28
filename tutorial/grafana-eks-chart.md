@@ -17,7 +17,7 @@
 #### // 15760 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15760.png)
 
-#### // 15757 ####
+#### 15757 (Kubernetes / Views / Global) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-15757.png)
 
 ## 레퍼런스 ##
