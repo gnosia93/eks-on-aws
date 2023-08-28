@@ -8,7 +8,8 @@ export CLUSTER_NAME=`eksctl get cluster|awk '{print $1}'|tail -1`
 export AWS_REGION=`eksctl get cluster|awk '{print $2}'|tail -1`
 export ACCOUNT_ID=`aws sts get-caller-identity|grep "Arn"|cut -d':' -f6`
 ```
-* https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/
+
+* [Send Kubernetes metrics and logs using the OpenTelemetry Collector](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/)
 
 
 ## AMP ##
