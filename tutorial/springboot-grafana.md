@@ -86,3 +86,5 @@ service:
 * [Automatic Instrumentation of Spring Boot 3.x Applications with Grafana OpenTelemetry Starter](https://grafana.com/docs/opentelemetry/instrumentation/java/spring-starter/)
   
 * [SpringBoot Actuator + Prometheus + Grafana](https://jydlove.tistory.com/70)
+
+* https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/
