@@ -22,7 +22,7 @@ aws cloud9 delete-environment \
 ```
 cd ~/eks-on-aws/tf
 
-terraform destroy --approve
+terraform destroy
 ```
 
 * 기타 - AMP / AMG 및 SSO 는 AWS 콘솔에서 지운다. 
