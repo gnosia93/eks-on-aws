@@ -1,3 +1,33 @@
+
+
+### 1. build.gradle ###
+dependencies 에 io.micrometer:micrometer-registry-prometheus 를 actuator 밑에 추가한다.
+```
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-gradle-plugin:3.1.2'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'io.micrometer:micrometer-registry-prometheus'   
+```
+
+### 2. application.yaml 수정 ###
+exposure.include 에 prometheus 추가
+```
+spring:
+  profiles:
+    active: dev
+
+# http://localhost:8080/actuator/health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+```
+
+
+### 3. ###
+
+
 '''
 1. spring boot acutator / prometheus endpoint 설정. 
 
