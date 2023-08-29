@@ -44,8 +44,10 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 이미 소스 코드상에 actuator/prometheus 설정이 적용된 관계로 이 섹션을 건너뛰어도 된다. 
 
 #### 4.1 prometheus 가 적용된 도커 이미지 생성 ####
+CI 파이프 라인 실행
 
 #### 4.2 k8s 서비스 재배포 ####
+cloud9 터미널에서 아래 명령어를 실행한다. 
 ```
 kubectl delete -f shop_service.yaml
 kubectl apply -f shop_service.yaml
