@@ -1,3 +1,7 @@
+******
+ (주의) 첫 테스트에서는 동작했으나, 두번째 테스트에서는 그라파나 그래프가 그려지지 않는다. 디버깅 필요함, plz stay in tuned.
+******
+
 ## SpringBoot with OpenTelemetry ##
 
 이번 챕터에서는 OpenTelemetry 로 springboot 의 메트릭을 수집하여 AMP 로 보내고자 한다. 
