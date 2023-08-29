@@ -40,6 +40,8 @@ OpenTelemetry 컬렉터는 메트릭 데이터를 수신, 처리 및 내보내�
 스프링 부트의 prometheus 엔드포인트로 부터 데이터를 모우고, 수신한 데이터를 처리한 후 백엔드 시스템(AMP) 으로 전송하는 역할을 한다.
 
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
+
 [otel-collector-config.yaml]
 ```
 - job_name: integrations/springboot
