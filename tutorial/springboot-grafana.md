@@ -25,16 +25,10 @@ management:
 ```
 
 
-### 3. ###
+### 3. prometheus 메트릭 확인 ###
 
+http://localhost:8080/actuator/prometheus 에 접근해서 아래 내용을 확인한다
 
-'''
-1. spring boot acutator / prometheus endpoint 설정. 
-
-2. otel collector 설정 변경
-
-3. 
-'''
 
 
 ## 레퍼런스 ##
