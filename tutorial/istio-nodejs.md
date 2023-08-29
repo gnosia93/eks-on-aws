@@ -1,8 +1,11 @@
+## 개발환경 구성 ##
+
+#### 1. [node 설치] ####
 ```
 brew install node
 ```
 
-#### [프로젝트 생성] ####
+#### 2. [프로젝트 생성] ####
 ```
 $ npm init
 This utility will walk you through creating a package.json file.
@@ -17,6 +20,8 @@ save it as a dependency in the package.json file.
 Press ^C at any time to quit.
 package name: (soonbeom) point
 ```
+
+## Express 개발 ##
 
 
 ## 레퍼런스 ##
