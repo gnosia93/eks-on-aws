@@ -39,6 +39,32 @@ OpenTelemetry 컬렉터는 메트릭 데이터를 수신, 처리 및 내보내�
 
 스프링 부트의 prometheus 엔드포인트로 부터 데이터를 모우고, 수신한 데이터를 처리한 후 백엔드 시스템(AMP) 으로 전송하는 역할을 한다.
 
+```
+receivers:
+  prometheus:
+    config:
+      scrape_configs:
+        - job_name: "example"
+          scrape_interval: 5s
+          metrics_path: '/actuator/prometheus'
+          static_configs:
+            - targets: ["localhost:8080"]
+
+processors:
+  batch:
+
+exporters:
+  prometheus:
+    endpoint: "localhost:8889"
+
+service:
+  pipelines:
+    metrics:
+      receivers: [prometheus]
+      processors: [batch]
+      exporters: [prometheus]
+```
+
 ### 5. AMG 대시보드 설정 ###
 
 
