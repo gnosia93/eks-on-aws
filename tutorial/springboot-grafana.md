@@ -7,7 +7,8 @@
 OpenTelemetry 컬렉터는 스프링 부트의 prometheus 엔드포인트로 부터 데이터를 수집하고, 수집된 데이터를 처리한 후 백엔드 시스템(AMP) 으로 전송하는 역할을 한다.
 
 ### 1. build.gradle ###
-dependencies 에 io.micrometer:micrometer-registry-prometheus 를 추가한다.
+
+io.micrometer:micrometer-registry-prometheus 디펜던시를 추가한다.
 ```
 dependencies {
 ...
@@ -17,6 +18,7 @@ dependencies {
 ```
 
 ### 2. application.yaml ###
+
 exposure.include 에 prometheus 추가한다.
 ```
 spring:
