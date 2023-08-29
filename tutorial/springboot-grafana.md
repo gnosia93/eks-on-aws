@@ -62,6 +62,8 @@ kubectl apply -f shop-service.yaml
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
 
+replacement: $1:8080 에서 8080 는 현재 어플리케이션이 실행되는 포트이다. 
+
 [otel-collector-config.yaml 에 추가할 설정]
 ```
 - job_name: integrations/springboot
@@ -72,14 +74,14 @@ kubectl apply -f shop-service.yaml
         names:
           - default
   relabel_configs:
-    - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
-      action: keep
-      regex: true
-    - source_labels: [__address__]
-      action: replace
-      regex: ([^:]+)(?::\d+)?
-      replacement: $1:8080
-      target_label: __address__
+  - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+    action: keep
+    regex: true
+  - source_labels: [__address__]
+    action: replace
+    regex: ([^:]+)(?::\d+)?
+    replacement: $1:8080
+    target_label: __address__
 ```
 
 OpenTelemetry 컬렉터의 설정을 바꾸고, 재실행한다. 
