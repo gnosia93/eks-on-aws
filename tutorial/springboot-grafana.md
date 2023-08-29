@@ -67,12 +67,11 @@ kubectl apply -f shop-service.yaml
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
 
-replacement: $1:8080 에서 8080 는 현재 어플리케이션이 실행되는 포트이다. 
-
 [otel-collector-config.yaml 에 추가할 설정]
 * https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods
   * kubernetes_sd_configs: 쿠버네티스 서비스디스커버리(sd) 컨피그
   * relabel_configs: 레이블 컨피그(입력값을 출력값으로 변경하는 룰)
+  * replacement: $1:8080 에서 8080 은 어플리케이션 실행 포트임. 
 * (Indentation 주의) - 컬렉터 동작에 영향을 주는 듯(?) 하다
   
 ```
