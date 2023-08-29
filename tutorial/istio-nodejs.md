@@ -108,16 +108,23 @@ nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 #### ECR 생성 ####
 ```
 ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
+IMAGE_REPO=eks-on-aws-nodejs-point
 
 aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
 
 aws ecr create-repository \
-    --repository-name eks-on-aws-nodejs-point \
+    --repository-name ${IMAGE_REPO} \
     --image-scanning-configuration scanOnPush=true \
     --region ${AWS_REGION}
 ```
 
 #### 이미지 푸시 ####
+```
+docker tag ${IMAGE_REPO}:latest ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}:latest
+
+docker push ${ACCOUNT_ID}.dkr.ecr.$REGION.amazonaws.com/${IMAGE_REPO}:latest
+```
+
 
 ## 레퍼런스 ##
 
