@@ -20,10 +20,45 @@ save it as a dependency in the package.json file.
 Press ^C at any time to quit.
 package name: (soonbeom) point
 ```
-
-## Express 개발 ##
 ```
 npm install --save express
+```
+
+## Express 개발 ##
+#### package.json ####
+```
+{
+  "name": "point",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+```
+
+#### app.js ####
+```
+const express = require('express');
+const app = express();
+
+app.get("/point", (req, res) => {
+    res.json(
+        {
+            success: true,
+        }
+    );
+});
+
+app.listen(3000, () => {
+    console.log("Server running at http://localhost:3000"); 
+});
 ```
 
 ## 레퍼런스 ##
