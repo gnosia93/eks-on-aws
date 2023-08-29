@@ -98,10 +98,12 @@ npm-debug.log
 docker build . -t nodejs-point
 ```
 ```
-docker image ls nodejs-point
+$ docker image ls nodejs-point
 REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
 nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 ```
+
+## ecr push ##
 
 
 ## 레퍼런스 ##
