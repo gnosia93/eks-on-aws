@@ -12,39 +12,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shop
+  name: nodejs-point
   namespace: default
   labels:
-    app: shop
+    app: nodejs-point
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: shop
+      app: nodejs-point
   template:
     metadata:
       labels:
-        app: shop
+        app: nodejs-point
     spec:
       containers:
-        - name: shop
-          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
+        - name: nodejs-point
+          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/nodejs-point
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
           imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: shop
+  name: nodejs-point
   namespace: default
   labels:
-    app: shop
+    app: nodejs-point
 spec:
-  type: NodePort
   selector:
-    app: shop
+    app: nodejs-point
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 3000
 ```
