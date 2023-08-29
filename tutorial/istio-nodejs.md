@@ -102,6 +102,8 @@ docker build . -t nodejs-point
 
 ## 레퍼런스 ##
 
+* [도커이미지 사이즈 줄이기](https://jeffminsungkim.medium.com/docker-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0-2f90fa5c96)
+
 * [node 도커라이징](https://cocoon1787.tistory.com/749)
 
 * [node express](https://blog.codefactory.ai/nodejs/creating-server-with-express/express-intro/)
