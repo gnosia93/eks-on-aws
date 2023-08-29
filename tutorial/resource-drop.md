@@ -13,12 +13,12 @@ aws amp delete-workspace --workspace-id=\
 eksctl delete cluster $CLUSTER_NAME
 ```
 
+* 로컬 PC 에서 실행
 ```
 aws cloud9 delete-environment --environment-id=\
   $(aws cloud9 list-environments --query environmentIds --output text) 
 ```
 
-* 로컬 PC 에서 실행
 ```
 cd ~/eks-on-aws/tf
 
