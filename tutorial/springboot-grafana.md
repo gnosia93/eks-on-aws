@@ -80,6 +80,10 @@ service:
 
 ## 레퍼런스 ##
 
+* https://github.com/prometheus/prometheus/blob/release-2.46/config/testdata/conf.good.yml
+
+* https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kubernetes_sd_config
+
 * [How to capture Spring Boot metrics with the OpenTelemetry Java Instrumentation Agent](https://grafana.com/blog/2022/05/04/how-to-capture-spring-boot-metrics-with-the-opentelemetry-java-instrumentation-agent/)
   
 * [Spring Boot + Actuator + Micrometer로 Prometheus 연동하기](https://velog.io/@windsekirun/Spring-Boot-Actuator-Micrometer%EB%A1%9C-Prometheus-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0)
