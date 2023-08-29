@@ -39,8 +39,8 @@ http://localhost:8080/actuator/prometheus 접근해서 출력 내용을 확인�
 
 ### 4. open telemetry 컬렉터 설정 ###
 
+![..](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
 
-#### ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
 
 [otel-collector-config.yaml]
