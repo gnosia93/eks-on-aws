@@ -1,3 +1,4 @@
+## ##
 
 
 ### 1. build.gradle ###
@@ -29,6 +30,17 @@ management:
 
 http://localhost:8080/actuator/prometheus 접근해서 출력 내용을 확인한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-prometheus.png)
+
+### 4. open telemetry 컬렉터 설정 ###
+
+
+
+### 5. AMG 대시보드 설정 ###
+
+
+
+
+
 
 ## 레퍼런스 ##
 
