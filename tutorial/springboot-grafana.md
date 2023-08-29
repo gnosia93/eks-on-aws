@@ -11,4 +11,4 @@
   
 * [Automatic Instrumentation of Spring Boot 3.x Applications with Grafana OpenTelemetry Starter](https://grafana.com/docs/opentelemetry/instrumentation/java/spring-starter/)
   
-* https://jydlove.tistory.com/70
+* [SpringBoot Actuator + Prometheus + Grafana](https://jydlove.tistory.com/70)
