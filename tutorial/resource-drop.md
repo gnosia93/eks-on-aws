@@ -2,10 +2,10 @@
 
 * AMP / AMG 삭제
 ```
-aws grafana delete-workspace --workspace-id=\
-  $(aws grafana list-workspaces --query workspaces[].id --output text)
-aws amp delete-workspace --workspace-id=\
-  $(aws amp list-workspaces --query workspaces[].workspaceId --output text)
+aws grafana delete-workspace \
+--workspace-id=$(aws grafana list-workspaces --query workspaces[].id --output text)
+aws amp delete-workspace \
+--workspace-id=$(aws amp list-workspaces --query workspaces[].workspaceId --output text)
 ```
 
 * Cloud9 에서 실행
@@ -15,8 +15,8 @@ eksctl delete cluster $CLUSTER_NAME
 
 * 로컬 PC 에서 실행
 ```
-aws cloud9 delete-environment --environment-id=\
-  $(aws cloud9 list-environments --query environmentIds --output text) 
+aws cloud9 delete-environment \
+--environment-id=$(aws cloud9 list-environments --query environmentIds --output text) 
 ```
 
 ```
