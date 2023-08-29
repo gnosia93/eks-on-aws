@@ -9,7 +9,7 @@
 
 ### nodejs-point ###
 ```
-cat <<EOF > shop-service.yaml
+cat <<EOF > nodejs-point.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -48,4 +48,7 @@ spec:
     - port: 80
       targetPort: 3000
 EOF
+```
+```
+kubectl apply -f nodejs-point.yaml
 ```
