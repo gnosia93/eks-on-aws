@@ -1,3 +1,8 @@
+/*
+ * otel collector 가 파트의 springboot address 를 어떻게 찾을까  ??????? 
+ */
+ 
+
 ## SpringBoot with OpenTelemetry ##
 
 OpenTelemetry 로 springboot 의 메트릭을 수집하여 AMG 로 출력하고자 한다. 
@@ -88,3 +93,5 @@ service:
 * [SpringBoot Actuator + Prometheus + Grafana](https://jydlove.tistory.com/70)
 
 * https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/
+
+* https://blog.devops.dev/monitoring-a-spring-boot-application-in-kubernetes-with-prometheus-a2d4ec7f9922
