@@ -103,8 +103,12 @@ REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
 nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 ```
 
-## ecr push ##
+## ECR PUSH ##
 
+#### ECR 생성 ####
+
+
+#### PUSH ####
 
 ## 레퍼런스 ##
 
