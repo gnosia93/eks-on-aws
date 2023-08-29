@@ -1,6 +1,10 @@
 ## 리소스 삭제 ##
 
-eks 클러스터를 먼저 지우고 나머지 리소스를 지운다. 
+* AMP / AMG 삭제
+```
+aws grafana delete-workspace --workspace-id=$(aws grafana list-workspaces --query workspaces[].id --output text)
+aws amp delete-workspace --workspace-id=$(aws amp list-workspaces --query workspaces[].workspaceId --output text)
+```
 
 * Cloud9 에서 실행
 ```
