@@ -1,8 +1,3 @@
-/*
- * otel collector 가 파트의 springboot address 를 어떻게 찾을까  ??????? 
- */
- 
-
 ## SpringBoot with OpenTelemetry ##
 
 OpenTelemetry 로 springboot 의 메트릭을 수집하여 AMG 로 출력하고자 한다. 
@@ -46,13 +41,27 @@ OpenTelemetry 컬렉터는 메트릭 데이터를 수신, 처리 및 내보내�
 
 [open telemetry 기본설정 파일]
 ```
-        - job_name: integrations/springboot
-            kubernetes_sd_configs:
-              - role: endpoints
-                api_server: "http://localhost:8080/actuator/prometheus"
-                namespaces:
-                  names:
-                    - default
+- job_name: integrations/springboot
+  metrics_path: '/actuator/prometheus'
+  kubernetes_sd_configs:
+    - role: pod
+      namespaces:
+        names:
+          - default
+  relabel_configs:
+    - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+      action: keep
+      regex: true
+    - source_labels: [__address__]
+      action: replace
+      regex: ([^:]+)(?::\d+)?
+      replacement: $1:8080
+      target_label: __address__
+```
+
+
+```
+kubectl apply -f otel-collector-config.yaml
 ```
 
 ### 5. AMG 대시보드 설정 ###
