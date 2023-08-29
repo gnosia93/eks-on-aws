@@ -46,29 +46,13 @@ OpenTelemetry 컬렉터는 메트릭 데이터를 수신, 처리 및 내보내�
 
 [open telemetry 기본설정 파일]
 ```
-receivers:
-  prometheus:
-    config:
-      scrape_configs:
-        - job_name: "example"
-          scrape_interval: 5s
-          metrics_path: '/actuator/prometheus'
-          static_configs:
-            - targets: ["localhost:8080"]
-
-processors:
-  batch:
-
-exporters:
-  prometheus:
-    endpoint: "localhost:8889"
-
-service:
-  pipelines:
-    metrics:
-      receivers: [prometheus]
-      processors: [batch]
-      exporters: [prometheus]
+        - job_name: integrations/springboot
+            kubernetes_sd_configs:
+              - role: endpoints
+                api_server: "http://localhost:8080/actuator/prometheus"
+                namespaces:
+                  names:
+                    - default
 ```
 
 ### 5. AMG 대시보드 설정 ###
