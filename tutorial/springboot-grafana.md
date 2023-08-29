@@ -51,8 +51,8 @@ CI 파이프 라인 실행
 #### 4.2 shop 서비스 재배포 ####
 cloud9 터미널에서 아래 명령어를 실행한다. 
 ```
-kubectl delete -f shop_service.yaml
-kubectl apply -f shop_service.yaml
+kubectl delete -f shop-service.yaml
+kubectl apply -f shop-service.yaml
 ```
 
 ### 5. open telemetry 컬렉터 설정 ###
