@@ -10,7 +10,7 @@ dependencies {
 ...
 ```
 
-### 2. application.yaml 수정 ###
+### 2. application.yaml ###
 exposure.include 에 prometheus 추가
 ```
 spring:
