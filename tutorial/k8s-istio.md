@@ -1,5 +1,5 @@
 ****
-in the middle of development ..
+currently in development ..
 ****
 
 * 주문 -> 혜택(포인트) -> 결제 
