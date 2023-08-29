@@ -1,6 +1,6 @@
 * [k8s command](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op-cmd.md)
 
-* Liveness / Readiness / Drain & Cardon ...
+* [Drain & Cardon](https://velog.io/@koo8624/Kubernetes-Drain-Cordon-and-Uncordon)
 
 * 노드 추가 / 삭제 
 
