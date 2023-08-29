@@ -21,6 +21,8 @@ package name: (soonbeom) point
 
 ## 레퍼런스 ##
 
+* [node express](https://blog.codefactory.ai/nodejs/creating-server-with-express/express-intro/)
+  
 * [node.js Controller, Service, Repository](https://jin-coder.tistory.com/entry/nodejs-Controller-Service-Repository)
 
 * [VSCode node 개발환경 구성](https://devmoony.tistory.com/151)
