@@ -84,10 +84,12 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
 ```
 
 ## 레퍼런스 ##
+
+* [node 도커라이징](https://cocoon1787.tistory.com/749)
 
 * [node express](https://blog.codefactory.ai/nodejs/creating-server-with-express/express-intro/)
   
