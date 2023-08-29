@@ -28,7 +28,6 @@ management:
 ### 3. prometheus 메트릭 확인 ###
 
 http://localhost:8080/actuator/prometheus 접근해서 출력 내용을 확인한다.
-
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-prometheus.png)
 
 ## 레퍼런스 ##
