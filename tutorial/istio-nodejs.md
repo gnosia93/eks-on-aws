@@ -22,7 +22,9 @@ package name: (soonbeom) point
 ```
 
 ## Express 개발 ##
-
+```
+npm install --save express
+```
 
 ## 레퍼런스 ##
 
