@@ -1,3 +1,11 @@
+'''
+1. spring boot acutator / prometheus endpoint 설정. 
+
+2. otel collector 설정 변경
+
+3. 
+'''
+
 
 ## 레퍼런스 ##
 
