@@ -1,4 +1,6 @@
-* [TO-DO] python faker (https://www.daleseo.com/python-faker/) 를 이용하여 테스트 데이터를 생성후 성능 측정.
+******
+[TO-DO] python faker (https://www.daleseo.com/python-faker/) 를 이용한 테스트 코드 작성.
+******
 
 ## 성능 테스트 ##
 
