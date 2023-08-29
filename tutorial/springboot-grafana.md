@@ -48,7 +48,7 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 
 ELB(Ingress) 퍼블릭 엔드포인트에서 prometheus 메트릭이 출력되는지를 확인한다. 
 * http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus
-값이 출력되는 경우 이번 단계는 건너뛴다.
+값이 출력되는 경우 이번 단계(4. shop 서비스 재배포) 는 건너뛴다.
   
 #### 4.1 actuator/prometheus 가 적용된 도커 이미지 ECR 등록 ####
 CI 파이프 라인 실행
