@@ -55,3 +55,5 @@ kubectl apply -f nodejs-point.yaml
 
 ### 2. flask-pay ###
 
+## istio 설치 ##
+
