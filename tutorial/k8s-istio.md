@@ -2,11 +2,11 @@
 currently in development ..
 ****
 
-* 주문 -> 혜택(포인트) -> 결제 
+* 주문 -> 상품재고 -> 혜택(포인트) -> 결재완료  
 
-  * 주문 - 스프링부트 
-  * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-nodejs.md)
+  * 주문 - 스프링부트
   * 상품재고 - flask
+  * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-nodejs.md)
 
 
 ## 서비스 배포 ##
