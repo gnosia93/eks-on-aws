@@ -3,8 +3,6 @@
 * [Drain & Cardon](https://velog.io/@koo8624/Kubernetes-Drain-Cordon-and-Uncordon)
 
 * [Graceful Shutdown](https://waspro.tistory.com/682)
-
-* 배포 전략
   
 * resource request / limit 
 
@@ -12,8 +10,9 @@
 
 * [Cluster upgrade](https://jerryljh.tistory.com/86)
 
-* Kubernetes CrashLoopBackOff — How to Troubleshoot
-
-  https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84
+* 트러블 슈팅
+  - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
   
 * [helm](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/study-helm.md)
+
+* 배포 전략
