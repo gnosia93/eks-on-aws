@@ -68,6 +68,9 @@
 
 * [#12. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
+## Revision History ##
+
+* 2023-08-30 First Released
   
 ## 레퍼런스 ##
 
