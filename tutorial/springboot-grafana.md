@@ -9,6 +9,6 @@
   
 * [OpenTelemetry Setup in Spring Boot Application](https://www.baeldung.com/spring-boot-opentelemetry-setup)
   
-* [https://grafana.com/docs/opentelemetry/instrumentation/java/spring-starter/](https://grafana.com/docs/opentelemetry/instrumentation/java/spring-starter/)
+* [Automatic Instrumentation of Spring Boot 3.x Applications with Grafana OpenTelemetry Starter](https://grafana.com/docs/opentelemetry/instrumentation/java/spring-starter/)
   
 * https://jydlove.tistory.com/70
