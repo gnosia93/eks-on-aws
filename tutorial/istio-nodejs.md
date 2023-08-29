@@ -92,6 +92,14 @@ CMD [ "node", "app.js" ]
 node_modules
 npm-debug.log
 ```
+
+#### 이미지 빌드 ####
+```
+docker build . -t nodejs-point
+```
+
+
+
 ## 레퍼런스 ##
 
 * [node 도커라이징](https://cocoon1787.tistory.com/749)
