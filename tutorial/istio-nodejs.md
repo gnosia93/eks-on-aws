@@ -112,7 +112,7 @@ ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeas
 aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
 
 aws ecr create-repository \
-    --repository-name eks-on-aws-springboot \
+    --repository-name eks-on-aws-nodejs-point \
     --image-scanning-configuration scanOnPush=true \
     --region ${AWS_REGION}
 ```
