@@ -8,7 +8,7 @@ OpenTelemetry 컬렉터는 스프링 부트의 prometheus 엔드포인트로 부
 
 ### 1. build.gradle ###
 
-io.micrometer:micrometer-registry-prometheus 디펜던시를 추가한다.
+io.micrometer:micrometer-registry-prometheus 의존성을 추가한다.
 ```
 dependencies {
 ...
