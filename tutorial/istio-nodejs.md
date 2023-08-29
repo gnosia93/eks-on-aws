@@ -1,11 +1,11 @@
 ## 개발환경 구성 ##
 
-#### 1. [node 설치] ####
+#### 1. node 설치 ####
 ```
 brew install node
 ```
 
-#### 2. [프로젝트 생성] ####
+#### 2. 프로젝트 생성 ####
 ```
 $ npm init
 This utility will walk you through creating a package.json file.
