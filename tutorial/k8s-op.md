@@ -2,6 +2,8 @@
 
 * [Drain & Cardon](https://velog.io/@koo8624/Kubernetes-Drain-Cordon-and-Uncordon)
 
+* [Graceful Shutdown](https://waspro.tistory.com/682)
+
 * 배포 전략
   
 * resource request / limit 
