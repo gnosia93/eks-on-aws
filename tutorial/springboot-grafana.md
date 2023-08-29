@@ -69,8 +69,36 @@ kubectl apply -f otel-collector-config.yaml
 ```
 
 [결과]
+prometheus 네임스페이스의 observability-collector 컬렉터 파드가 동작중인 것을 볼수 있다. logs 명령어로 확인해 보면 receiver 가 스프링 부트 메트릭을 수집하고 있다. 
 ```
+$ kubectl get all -n prometheus
+NAME                                           READY   STATUS    RESTARTS   AGE
+pod/observability-collector-6f564d8489-hpk8w   1/1     Running   0          22m
 
+NAME                                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/observability-collector-monitoring   ClusterIP   172.20.130.82   <none>        8888/TCP   57m
+
+NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/observability-collector   1/1     1            1           57m
+
+NAME                                                 DESIRED   CURRENT   READY   AGE
+replicaset.apps/observability-collector-6b4576d759   0         0         0       43m
+replicaset.apps/observability-collector-6bc78d99b7   0         0         0       57m
+replicaset.apps/observability-collector-6f564d8489   1         1         1       22m
+replicaset.apps/observability-collector-74d88486c5   0         0         0       42m
+replicaset.apps/observability-collector-f57d5bcf8    0         0         0       32m
+
+$ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
+
+...
+2023-08-29T11:15:01.096Z        info    prometheusreceiver@v0.74.0/metrics_receiver.go:243      Scrape job added        {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "jobName": "integrations/springboot"}
+2023-08-29T11:15:01.096Z        info    kubernetes/kubernetes.go:326    Using pod service account via in-cluster config {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "discovery": "kubernetes", "config": "kubernetes-nodes-cadvisor"}
+2023-08-29T11:15:01.096Z        info    kubernetes/kubernetes.go:326    Using pod service account via in-cluster config {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "discovery": "kubernetes", "config": "kubernetes-service-endpoints-slow"}
+2023-08-29T11:15:01.096Z        info    kubernetes/kubernetes.go:326    Using pod service account via in-cluster config {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "discovery": "kubernetes", "config": "kubernetes-pods-slow"}
+2023-08-29T11:15:01.096Z        info    kubernetes/kubernetes.go:326    Using pod service account via in-cluster config {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "discovery": "kubernetes", "config": "integrations/springboot"}
+2023-08-29T11:15:01.096Z        info    kubernetes/kubernetes.go:326    Using pod service account via in-cluster config {"kind": "receiver", "name": "prometheus", "data_type": "metrics", "discovery": "kubernetes", "config": "prometheus-pushgateway"}
+2023-08-29T11:15:01.097Z        info    service/service.go:145  Everything is ready. Begin running and processing data.
+2023-08-29T11:15:01.097Z        info    prometheusreceiver@v0.74.0/metrics_receiver.go:289      Starting scrape manager {"kind": "receiver", "name": "prometheus", "data_type": "metrics"}
 ```
 
 ### 5. AMG 대시보드 설정 ###
