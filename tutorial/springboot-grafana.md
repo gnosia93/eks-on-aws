@@ -68,11 +68,12 @@ kubectl apply -f shop-service.yaml
 
 replacement: $1:8080 에서 8080 는 현재 어플리케이션이 실행되는 포트이다. 
 
-[otel-collector-config.yaml 에 추가할 설정(Indentation 주의)]
+[otel-collector-config.yaml 에 추가할 설정]
 * https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods
   * kubernetes_sd_configs: 쿠버네티스 서비스디스커버리(sd) 컨피그
   * relabel_configs: 레이블 컨피그(입력값을 출력값으로 변경하는 룰)
-
+* (Indentation 주의) - 컬렉터 동작에 영향을 주는 듯(?) 하다
+  
 ```
 - job_name: integrations/springboot
   metrics_path: '/actuator/prometheus'
