@@ -68,6 +68,8 @@
 
 * [#12. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
+* [#13. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)
+
 ## Revision History ##
 
 * 2023-08-30 First Released
