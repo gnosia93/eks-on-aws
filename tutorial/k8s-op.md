@@ -2,15 +2,13 @@
 
 * [Drain & Cardon](https://velog.io/@koo8624/Kubernetes-Drain-Cordon-and-Uncordon)
 
-* 노드 추가 / 삭제 
-
 * 배포 전략
   
 * resource request / limit 
 
   https://kubernetes.io/ko/docs/concepts/configuration/manage-resources-containers/ 
 
-* Cluster upgrade
+* [Cluster upgrade](https://jerryljh.tistory.com/86)
 
 * Kubernetes CrashLoopBackOff — How to Troubleshoot
 
