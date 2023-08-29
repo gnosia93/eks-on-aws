@@ -103,7 +103,7 @@ REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
 nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 ```
 
-## ECR PUSH ##
+## ECR 이미지 푸시 ##
 
 #### ECR 생성 ####
 ```
@@ -117,7 +117,7 @@ aws ecr create-repository \
     --region ${AWS_REGION}
 ```
 
-#### PUSH ####
+#### 이미지 푸시 ####
 
 ## 레퍼런스 ##
 
