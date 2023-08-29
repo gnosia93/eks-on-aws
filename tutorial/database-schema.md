@@ -31,10 +31,10 @@ mysql> create database shop;
 mysql> use shop;
 mysql> create table member( 
      member_id     int not null auto_increment, 
-     password      char(12) not null, 
-     name          char(10) not null, 
-     phone_no      char(13) not null, 
-     email_addr    char(32) not null, 
+     password      char(30) not null, 
+     name          char(60) not null, 
+     phone_no      char(30) not null, 
+     email_addr    char(30) not null, 
      PRIMARY KEY(member_id) 
 );
 mysql> show tables;
@@ -98,10 +98,10 @@ mysql> create database shop;
 mysql> use shop;
 mysql> create table member( 
      member_id     int not null auto_increment, 
-     password      char(12) not null, 
-     name          char(10) not null, 
-     phone_no      char(13) not null, 
-     email_addr    char(32) not null, 
+     password      char(30) not null, 
+     name          char(60) not null, 
+     phone_no      char(30) not null, 
+     email_addr    char(30) not null, 
      PRIMARY KEY(member_id) 
 );
 mysql> show tables;
