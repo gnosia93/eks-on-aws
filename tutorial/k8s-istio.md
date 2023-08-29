@@ -53,5 +53,5 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
-### 2. flash-pay ###
+### 2. flask-pay ###
 
