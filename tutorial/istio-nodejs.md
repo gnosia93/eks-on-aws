@@ -87,6 +87,11 @@ EXPOSE 3000
 CMD [ "node", "app.js" ]
 ```
 
+#### .dockerignore ####
+```
+node_modules
+npm-debug.log
+```
 ## 레퍼런스 ##
 
 * [node 도커라이징](https://cocoon1787.tistory.com/749)
