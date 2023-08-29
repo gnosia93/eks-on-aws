@@ -106,7 +106,16 @@ nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 ## ECR PUSH ##
 
 #### ECR 생성 ####
+```
+ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`; REGION=ap-northeast-2
 
+aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
+
+aws ecr create-repository \
+    --repository-name eks-on-aws-springboot \
+    --image-scanning-configuration scanOnPush=true \
+    --region $REGION
+```
 
 #### PUSH ####
 
