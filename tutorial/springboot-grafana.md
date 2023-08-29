@@ -13,7 +13,7 @@ dependencies {
 ```
 
 ### 2. application.yaml ###
-exposure.include 에 prometheus 추가
+exposure.include 에 prometheus 추가한다.
 ```
 spring:
   profiles:
