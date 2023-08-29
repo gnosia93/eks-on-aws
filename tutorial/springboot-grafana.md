@@ -1,6 +1,6 @@
 ## SpringBoot with OpenTelemetry ##
 
-OpenTelemetry 를 이용하여 springboot 의 메트릭을 수집하여 AMG 로 출력하고자 한다. 
+OpenTelemetry 로 springboot 의 메트릭을 수집하여 AMG 로 출력하고자 한다. 
 
 ### 1. build.gradle ###
 dependencies 에 io.micrometer:micrometer-registry-prometheus 를 추가한다.
