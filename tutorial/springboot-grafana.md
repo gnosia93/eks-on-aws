@@ -46,7 +46,7 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 #### 4.1 actuator/prometheus 가 적용된 도커 이미지 ECR 등록 ####
 CI 파이프 라인 실행
 
-#### 4.2 k8s 서비스 재배포 ####
+#### 4.2 shop 서비스 재배포 ####
 cloud9 터미널에서 아래 명령어를 실행한다. 
 ```
 kubectl delete -f shop_service.yaml
