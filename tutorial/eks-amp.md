@@ -156,7 +156,10 @@ aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .ad
 
 
 ### 5. kube-state-metrics & node_exporter 설치 ###
-* [Send Kubernetes metrics and logs using the OpenTelemetry Collector](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/kubernetes-monitoring/configuration/configure-infrastructure-manually/otel-collector/)
+
+node_exporter는 서버 노드의 자원(CPU, 메모리, 디스크 등)에 대한 매트릭을 수집해주는 exporter이고,
+kube_state_metrics는 쿠버네티스 클러스터 내부의 자원(CPU, 메모리, 디스크 및 각 컨테이너가 사용하고 있는 리소스 현황, 네트워크 I/O, 정상 컨테이너, 비정상 컨테이너 갯수 등)에 대한 매트릭을 수집해주는 exporter이다.
+
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
