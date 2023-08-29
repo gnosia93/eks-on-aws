@@ -57,7 +57,7 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
-### 2. flask-pay ###
+### 2. flask-inventory ###
 
 ## istio 설치 ##
 
