@@ -11,7 +11,8 @@ aws amp delete-workspace \
 * Cloud9 에서 실행
 ```
 eksctl delete nodegroup --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --name ng-2xlarge
-eksctl delete cluster $CLUSTER_NAME
+
+eksctl delete cluster ${CLUSTER_NAME}
 ```
 
 * 로컬 PC 에서 실행
