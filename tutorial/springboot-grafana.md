@@ -64,6 +64,8 @@ OpenTelemetry 컬렉터는 메트릭 데이터를 수신, 처리 및 내보내�
 
 ## 레퍼런스 ##
 
+* https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods
+  
 * https://github.com/prometheus/prometheus/blob/release-2.46/config/testdata/conf.good.yml
 
 * https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kubernetes_sd_config
