@@ -71,7 +71,7 @@ public class MemberController {
 ```
 
 ### 2. Dto (Data to Object) ###
-정규화 되어진 데이터베이스 테이블을 표현하는 Entity 콤포넌트와 사용자 UI 단의 입/출력을 책임지는 Request 또는 Response 객체간의 메핑을 담당하는 클래스가 바로 Dto 이다. 이 예제에서는 MemberDto 가 입력/출력을 모두 담당하고 있다. 
+정규화 되어진 데이터베이스 테이블을 표현하는 Entity 콤포넌트와 사용자 UI 단의 입/출력을 책임지는 Request 또는 Response 객체간의 메핑을 담당하는 클래스가 바로 Dto 이다. 이 예제에서는 MemberDto 가 입력/출력을 모두 담당하고 있다. 사용자 UI 상으로 출력되는 데이터들은 데이터베이스 테이블 설계와는 달리 비즈니스 요건에 맞게 상당히 반정규화 되게 된다. 즉 여러 데이터베이스 테이블간의 조인의 결과이다. 스프링 부트에서는 여러 Entity 간의 조인의 결과에 해당하겠다. 
 ```
 package com.example.shop.dto;
 
