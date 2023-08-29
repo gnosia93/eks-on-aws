@@ -60,7 +60,7 @@ kubectl apply -f shop_service.yaml
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
 
-[otel-collector-config.yaml]
+[otel-collector-config.yaml 에 추가할 설정]
 ```
 - job_name: integrations/springboot
   metrics_path: '/actuator/prometheus'
