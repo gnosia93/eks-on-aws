@@ -9,8 +9,8 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-position.png)
 
 OpenTelemetry 컬렉터는 스프링 부트의 prometheus 엔드포인트로 부터 데이터를 수집하고, 수집된 데이터를 처리한 후 백엔드 시스템(AMP) 으로 전송하는 역할을 한다.   
-스프링 부트 어플리케이션에서 prometheus 데이터 포맷으로 메트릭을 제공하기 위해서는 #1, #2 단계의 설정을 해야 한다.
 
+스프링 부트 어플리케이션에서 prometheus 데이터 포맷으로 메트릭을 제공하기 위해서는 #1, #2 단계의 설정을 해야 한다.
 ### 1. build.gradle ###
 
 io.micrometer:micrometer-registry-prometheus 의존성을 추가한다.
