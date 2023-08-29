@@ -38,6 +38,7 @@ management:
 Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/prometheus 접근해서 출력 내용을 확인한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-prometheus.png)
 
+
 ### 4. open telemetry 컬렉터 설정 ###
 
 [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 321)  
@@ -109,6 +110,16 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 
 #### 19004(Spring Boot 3.x Statistics) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-springboot.png)
+
+
+## 트러블 슈팅 ##
+
+* AMG 대시보드 데이터 출력안됨.
+  
+
+
+
+
 
 ## 레퍼런스 ##
 
