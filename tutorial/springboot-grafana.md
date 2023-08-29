@@ -105,7 +105,7 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 
 ### 5. AMG 대시보드 설정 ###
 
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-springboot.png)
 
 ## 레퍼런스 ##
 
