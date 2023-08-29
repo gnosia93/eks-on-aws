@@ -70,7 +70,8 @@ kubectl apply -f otel-collector-config.yaml
 
 
 [결과]
-* prometheus 네임스페이스의 observability-collector 컬렉터 파드가 동작중인 것을 볼수 있다. logs 명령어로 확인해 보면 receiver 가 스프링 부트 메트릭을 수집하고 있다. 
+* prometheus 네임스페이스의 observability-collector 컬렉터 파드가 동작중인 것을 볼수 있다.
+* logs 명령어로 확인해 보면 receiver 가 스프링 부트 메트릭을 수집하고 있다. 
 ```
 $ kubectl get all -n prometheus
 NAME                                           READY   STATUS    RESTARTS   AGE
