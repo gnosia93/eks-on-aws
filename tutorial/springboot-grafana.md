@@ -38,7 +38,7 @@ http://localhost:8080/actuator/prometheus 접근해서 출력 내용을 확인�
 
 ### 4. open telemetry 컬렉터 설정 ###
 
-[Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. 
+[Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 321)
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
 
@@ -68,9 +68,6 @@ kubectl apply -f otel-collector-config.yaml
 ```
 
 ### 5. AMG 대시보드 설정 ###
-
-
-
 
 
 
