@@ -33,6 +33,7 @@ npm install --save express
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
