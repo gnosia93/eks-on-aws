@@ -5,8 +5,6 @@
 * 노드 추가 / 삭제 
 
 * 배포 전략
-
-* MSA 구성
   
 * resource request / limit 
 
