@@ -119,7 +119,7 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 2023-08-29T11:15:01.097Z        info    prometheusreceiver@v0.74.0/metrics_receiver.go:289      Starting scrape manager {"kind": "receiver", "name": "prometheus", "data_type": "metrics"}
 ```
 
-### 6. AMG 대시보드 설정 ###
+### 6. AMG 대시보드 ###
 
 #### 19004(Spring Boot 3.x Statistics) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-springboot.png)
