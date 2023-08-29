@@ -39,7 +39,19 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-prometheus.png)
 
 
-### 4. open telemetry 컬렉터 설정 ###
+### 4. shop 서비스 재배포 (optional) ###
+
+이미 소스 코드상에 actuator/prometheus 설정이 적용된 관계로 이 섹션을 건너뛰어도 된다. 
+
+#### 4.1 prometheus 가 적용된 도커 이미지 생성 ####
+
+#### 4.2 k8s 서비스 재배포 ####
+```
+kubectl delete -f shop_service.yaml
+kubectl apply -f shop_service.yaml
+```
+
+### 5. open telemetry 컬렉터 설정 ###
 
 [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 321)  
 해당 yaml 파일을 cloud9 터미널에서 확인할 수 있다.
@@ -70,7 +82,6 @@ OpenTelemetry 컬렉터의 설정을 바꾸고, 재실행한다.
 ```
 kubectl apply -f otel-collector-config.yaml
 ```
-
 
 [결과]
 * prometheus 네임스페이스의 observability-collector 컬렉터 파드가 동작중인 것을 볼수 있다.
@@ -106,18 +117,10 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 2023-08-29T11:15:01.097Z        info    prometheusreceiver@v0.74.0/metrics_receiver.go:289      Starting scrape manager {"kind": "receiver", "name": "prometheus", "data_type": "metrics"}
 ```
 
-### 5. AMG 대시보드 설정 ###
+### 6. AMG 대시보드 설정 ###
 
 #### 19004(Spring Boot 3.x Statistics) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-springboot.png)
-
-
-## 트러블 슈팅 ##
-
-* AMG 대시보드 데이터 출력안됨.
-  
-
-
 
 
 
