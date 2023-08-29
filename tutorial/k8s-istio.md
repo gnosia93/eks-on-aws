@@ -9,6 +9,7 @@
 
 ### nodejs-point ###
 ```
+cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -46,4 +47,5 @@ spec:
   ports:
     - port: 80
       targetPort: 3000
+EOF
 ```
