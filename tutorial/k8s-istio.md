@@ -7,7 +7,7 @@
 
 ## 서비스 배포 ##
 
-### nodejs-point ###
+### 1. nodejs-point ###
 ```
 cat <<EOF > nodejs-point.yaml
 apiVersion: apps/v1
@@ -52,3 +52,6 @@ EOF
 ```
 kubectl apply -f nodejs-point.yaml
 ```
+
+### 2. flash-pay ###
+
