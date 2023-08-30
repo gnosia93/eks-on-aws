@@ -43,7 +43,9 @@
 * [#7. Fluent Bit로 EKS 어플리케이션 로그 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-logging.md)
 
 * #8. 클러스터 오토 스케일링
-  
+
+  - HPA / VPA
+    
   - [Cluster AutoScaler 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
   - [Karpenter 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-karpenter.md)
