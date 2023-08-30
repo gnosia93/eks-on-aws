@@ -62,7 +62,7 @@
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)(?)
 
-  - [데이터베이스 메트릭 수집]
+  - [데이터베이스 메트릭 수집](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/prometheus-mysql.md)
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
