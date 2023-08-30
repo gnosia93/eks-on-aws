@@ -62,6 +62,8 @@
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)(?)
 
+  - [데이터베이스 메트릭 수집]
+
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
 * [#11. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
@@ -70,7 +72,9 @@
 
 * [#13. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)
 
-* http acess log - https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl
+* [#14. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
+
+
 * https://opensource.com/article/22/4/percona-monitoring-management
 ## Revision History ##
 
