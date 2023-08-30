@@ -142,6 +142,8 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 ## 레퍼런스 ##
 
 * https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods
+
+* https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus-kubernetes.yml
   
 * https://github.com/prometheus/prometheus/blob/release-2.46/config/testdata/conf.good.yml
 
