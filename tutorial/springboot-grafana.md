@@ -162,3 +162,5 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 * https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/
 
 * https://blog.devops.dev/monitoring-a-spring-boot-application-in-kubernetes-with-prometheus-a2d4ec7f9922
+
+* [Deploying the OpenTelemetry Collector on Kubernetes | OpenTelemetry Fundamentals LIVE](https://www.youtube.com/watch?v=X60owauFkGA)
