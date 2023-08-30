@@ -71,7 +71,7 @@
 * [#13. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)
 
 * http acess log - https://stackoverflow.com/questions/33744875/spring-boot-how-to-log-all-requests-and-responses-with-exceptions-in-single-pl
-
+* https://opensource.com/article/22/4/percona-monitoring-management
 ## Revision History ##
 
 * 2023-08-30 First Released
