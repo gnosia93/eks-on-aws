@@ -69,9 +69,10 @@
 
 * [#12. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
 
-* [#13. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
+* [#13. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
-* [#14. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
+* [#14. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
+
 
 
 ## Revision History ##
