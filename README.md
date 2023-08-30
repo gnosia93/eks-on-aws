@@ -65,13 +65,13 @@
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
-* [#11. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
+* [#11. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)
 
-* [#12. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
+* [#12. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
 
-* [#13. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)
+* [#13. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
 
-* [#14. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
+* [#14. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
 
 ## Revision History ##
