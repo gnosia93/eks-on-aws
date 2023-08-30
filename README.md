@@ -75,7 +75,6 @@
 * [#14. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
 
 
-* https://opensource.com/article/22/4/percona-monitoring-management
 ## Revision History ##
 
 * 2023-08-30 First Released
