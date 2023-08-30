@@ -289,7 +289,7 @@ spec:
               source_labels:
               - __meta_kubernetes_pod_phase
 
-# k8s metric reciever              
+
           - job_name: integrations/kubernetes/kube-state-metrics
             kubernetes_sd_configs:
               - role: pod
@@ -319,7 +319,7 @@ spec:
                   - __meta_kubernetes_namespace
                 target_label: namespace
 
-# springboot receiver
+
           - job_name: integrations/springboot
             metrics_path: '/actuator/prometheus'
             kubernetes_sd_configs:
