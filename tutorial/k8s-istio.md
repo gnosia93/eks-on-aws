@@ -207,7 +207,7 @@ kubectl logs -f -l app=shop --all-containers=true
 
 ## istio 구성하기 ##
 
- * [Istio 설치](https://github.com/gnosia93/eks-on-aws/edit/main/tutorial/k8s-istio-install.md)
+ * [Istio 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
 
 ## 레퍼런스 ##
 
