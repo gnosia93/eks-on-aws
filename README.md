@@ -70,7 +70,7 @@
 
 * [#11. Istio](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)(p)
 
-* [#12. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)
+* [#12. Web Access Log](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/web-accesslog.md)(p)
 
 * [#13. k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
