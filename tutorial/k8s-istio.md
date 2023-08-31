@@ -198,12 +198,12 @@ kubectl apply -f shop-service.yaml
 ```
 
 
-## 서비스 실행 ##
+### 4. 서비스 실행 ###
 ```
 kubectl logs -f -l app=shop --all-containers=true
 ```
-
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-order-eks.png)
+
 
 ## istio 구성하기 ##
 
