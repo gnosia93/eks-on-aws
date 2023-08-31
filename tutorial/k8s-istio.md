@@ -19,6 +19,11 @@ EKS 클러스터에 서비스를 배포한다.
 ### 1. flask-prod ###
 3001 포트로 노출한다.
 ```
+PROD_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'flask-prod')
+POINT_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'nodejs-point')
+```
+
+```
 cat <<EOF > flask-prod.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -39,7 +44,7 @@ spec:
     spec:
       containers:
         - name: flask-prod
-          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/flask-prod
+          image: ${PROD_IMAGE_REPO_ADDR}
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
@@ -86,7 +91,7 @@ spec:
     spec:
       containers:
         - name: nodejs-point
-          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/nodejs-point
+          image: ${POINT_IMAGE_REPO_ADDR}
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
