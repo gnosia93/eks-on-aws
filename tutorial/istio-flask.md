@@ -27,6 +27,12 @@ python app.py
 
 ## 도커라이징 ##
 
+#### requirements.txt ####
+```
+flask
+flask-migrate
+```
+
 #### Dockerfile ####
 ```
 FROM python:3.9
@@ -37,12 +43,6 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 3001
 CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
-```
-
-#### requirements.txt ####
-```
-flask
-flask-migrate
 ```
 
 #### 이미지 빌드 ####
