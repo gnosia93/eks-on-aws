@@ -217,7 +217,7 @@ phases:
 
 ### 6. 빌드 파이프 라인 트리거 하기 ###
 
-여러분의 깃허브 계정으로 fork 한 shop 프로젝트 코드에 대한 변경이 발생하는 경우 AWS CodePipeline 이 동작하게 되는데, 본 워크삽에서는 아래 그림에서 보이는 것처럼 CodePipeline 콘솔화면에서 [Release Change] 버튼을 눌러 수동으로 빌드 작업을 트리거 한다. 물론 fork 한 shop 프로젝트 레포지토리의 특정 파일을 변경해도 빌드 파이프 라인으로 이를 인지하고 빌드 작업을 수행한다. 또는 InteliJ 와 같은 통합개발 환경이 여러분들의 깃허브와 연동된 경우, InteliJ 에서 소스 코드를 변경한 다음 git 명령어로 푸시하면 AWS CodePipeline 이 이를 인지하여 빌드 작업을 시작한다.
+여러분의 깃허브 계정으로 fork 한 shop 프로젝트 코드에 대한 변경이 발생하는 경우 AWS CodePipeline 이 동작하게 되는데, 본 워크삽에서는 아래 그림에서 보이는 것처럼 CodePipeline 콘솔화면에서 [Release Change] 버튼을 눌러 수동으로 빌드 작업을 트리거 한다. 물론 fork 한 shop 프로젝트 레포지토리의 특정 파일을 변경해도 빌드 파이프 라인이 이를 인지하고 빌드 작업을 수행한다. 또는 InteliJ 와 같은 통합개발 환경이 여러분들의 깃허브와 연동된 경우, InteliJ 에서 소스 코드를 변경한 다음 git 명령어로 푸시하면 AWS CodePipeline 이 이를 인지하여 빌드 작업을 수행한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codepipeline-release-change.png)
 
