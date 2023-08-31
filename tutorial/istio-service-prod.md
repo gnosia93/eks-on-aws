@@ -49,10 +49,9 @@ CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 
 #### 이미지 빌드 ####
 ```
-docker build . -t flask-prod
+#docker build . -t flask-prod
 
-$ docker buildx build --platform linux/arm/v7 -t arm-build .
-
+docker buildx build --platform=linux/amd64,linux/arm64 -t flask-prod .
 ```
 
 ```
