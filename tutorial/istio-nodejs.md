@@ -62,6 +62,11 @@ app.listen(3000, () => {
 });
 ```
 
+## Express 실행 ##
+```
+node app.js
+```
+
 ## 도커라이징 ##
 
 #### Dockerfile ####
