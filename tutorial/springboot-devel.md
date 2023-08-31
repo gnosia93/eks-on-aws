@@ -384,6 +384,9 @@ logging.level.root : info
 ```
 
 ## 참고자료 ##
+
+* [RestAPI 예외처리](https://veneas.tistory.com/entry/Spring-Boot-REST-API-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%ACResponse-Json)
+  
 * [Springboot Connection Pool 설정방법](https://oingdaddy.tistory.com/415)
   
 * https://goddaehee.tistory.com/203
