@@ -27,7 +27,20 @@ if __name__ == "__main__":
 python app.py
 ```
 
-## 도커라이징 ##
+## ECR 생성 ##
+```
+ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
+IMAGE_REPO=eks-on-aws-flask-prod
+
+aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+aws ecr create-repository \
+    --repository-name ${IMAGE_REPO} \
+    --image-scanning-configuration scanOnPush=true \
+    --region ${AWS_REGION}
+```
+
+## ECR 이미지 푸시 ##
 
 #### requirements.txt ####
 ```
@@ -47,33 +60,15 @@ EXPOSE 3001
 CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 ```
 
-## ECR 이미지 푸시 ##
-
-#### ECR 생성 ####
+#### 이미지 빌드 및 푸시 ####
 ```
-ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
-IMAGE_REPO=eks-on-aws-flask-prod
-
-aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
-
-aws ecr create-repository \
-    --repository-name ${IMAGE_REPO} \
-    --image-scanning-configuration scanOnPush=true \
-    --region ${AWS_REGION}
-```
-
-#### 이미지 푸시 ####
-```
-#docker tag nodejs-point ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}:latest
-#docker buildx push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
-
 docker buildx create --use
 
 docker buildx build --push \
      --platform linux/amd64,linux/arm64 \
      -t ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO} .
 ```
-
+docker buildx 를 이용해 빌드와 푸시를 동시에 진행한다.
 
 ## 레퍼런스 ##
 
