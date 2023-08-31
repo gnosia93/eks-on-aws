@@ -39,6 +39,12 @@ EXPOSE 3001
 CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 ```
 
+#### requirements.txt ####
+```
+flask
+flask-migrate
+```
+
 #### 이미지 빌드 ####
 ```
 docker build . -t flask-prod
