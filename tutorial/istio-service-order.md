@@ -52,7 +52,9 @@ public class OrderController {
 
     @Autowired
     private MsaServiceConfiguration msaServiceConfiguration;
+
     private final RestTemplate restTemplate = new RestTemplate();
+
     @ResponseBody
     @RequestMapping(value="/memberId={memberId}&productId={productId}", method= RequestMethod.GET)
     public ResponseEntity<?> order(@PathVariable Integer memberId,
