@@ -7,6 +7,10 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 
 컨테이너 이미지 주소(image) 및 DB_ENDPOINT 값은 생성된 stage RDS 정보로 수정해야 한다.
 ```
+STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
+```
+
+```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
 kind: Deployment
