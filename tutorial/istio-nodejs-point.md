@@ -66,12 +66,25 @@ app.listen(3000, () => {
 });
 ```
 
-## Express 실행 ##
+#### flask 실행 ####
 ```
 node app.js
 ```
 
-## 도커라이징 ##
+## ECR 생성 ##
+```
+ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
+IMAGE_REPO=eks-on-aws-nodejs-point
+
+aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+aws ecr create-repository \
+    --repository-name ${IMAGE_REPO} \
+    --image-scanning-configuration scanOnPush=true \
+    --region ${AWS_REGION}
+```
+
+## ECR 이미지 푸시 ##
 
 #### Dockerfile ####
 ```
@@ -102,46 +115,8 @@ node_modules
 npm-debug.log
 ```
 
-#### 이미지 빌드 ####
+#### 이미지 빌드 및 푸시 ####
 ```
-docker build . -t nodejs-point
-```
-```
-$ docker image ls nodejs-point
-REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
-nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
-```
-
-#### 도커 어플리케이션 테스트 ####
-```
-docker run -it --name nodejs-point -p 3000:3000 nodejs-point
-```
-
-```
-curl http://localhost:3000
-```
-
-
-## ECR 이미지 푸시 ##
-
-#### ECR 생성 ####
-```
-ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
-IMAGE_REPO=eks-on-aws-nodejs-point
-
-aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
-
-aws ecr create-repository \
-    --repository-name ${IMAGE_REPO} \
-    --image-scanning-configuration scanOnPush=true \
-    --region ${AWS_REGION}
-```
-
-#### 이미지 푸시 ####
-```
-#docker tag nodejs-point ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}:latest
-#docker push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
-
 docker buildx create --use
 
 docker buildx build --push \
