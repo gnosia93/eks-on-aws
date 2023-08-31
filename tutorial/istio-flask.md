@@ -6,7 +6,7 @@ pip install flask-migrate
 ```
 
 ## flask 개발 ##
-[app.py]
+#### [app.py] ####
 ```
 from flask import Flask, jsonify
 
