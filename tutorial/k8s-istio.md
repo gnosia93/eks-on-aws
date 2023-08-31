@@ -190,6 +190,10 @@ spec:
 EOF
 ```
 
+### 4. 로그 모니터링 ###
+```
+kubectl logs -f -l app=shop --all-containers=true
+```
 
 ## istio 구성하기 ##
 
