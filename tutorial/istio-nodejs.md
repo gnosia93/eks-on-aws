@@ -49,10 +49,12 @@ npm install --save express
 const express = require('express');
 const app = express();
 
-app.get("/point", (req, res) => {
+app.get("/point/:memberNo", (req, res) => {
+    let memberNo = req.params.memberNo 
     res.json(
         {
-            success: true,
+            memberNo: memberNo,
+            point: 'ok' 
         }
     );
 });
