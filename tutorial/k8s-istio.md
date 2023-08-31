@@ -21,7 +21,7 @@ isto 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주�
 EKS 클러스터에 서비스를 배포한다. 
 
 ### 1. flask-prod ###
-3001 포트로 노출한다.
+
 ```
 PROD_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'flask-prod')
 POINT_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'nodejs-point')
@@ -73,7 +73,7 @@ kubectl apply -f flask-prod.yaml
 ```
 
 ### 2. nodejs-point ###
-3000 포트로 노출한다. 
+
 ```
 cat <<EOF > nodejs-point.yaml
 apiVersion: apps/v1
