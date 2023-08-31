@@ -1,5 +1,5 @@
 ## 개발환경 구성 ##
-### 1. flask 설치 ###
+### flask 설치 ###
 ```
 pip install flask
 pip install flask-migrate
