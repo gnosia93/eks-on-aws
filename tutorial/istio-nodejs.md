@@ -108,6 +108,16 @@ REPOSITORY     TAG       IMAGE ID       CREATED         SIZE
 nodejs-point   latest    f2e9776cb622   3 minutes ago   1.1GB
 ```
 
+#### 도커 어플리케이션 테스트 ####
+```
+docker run -it --name nodejs-point -p 3000:3000 nodejs-point
+```
+
+```
+curl localhost:3000
+```
+
+
 ## ECR 이미지 푸시 ##
 
 #### ECR 생성 ####
