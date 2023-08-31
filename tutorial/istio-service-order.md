@@ -7,8 +7,8 @@ msa.service.endpoint.prod : "http://localhost:3001/prod"
 msa.service.endpoint.point: "http://localhost:3000/point"
 ```
 
-### MsaServiceConfiguration.java 추가 ###
-com.example.shop.configuration 패키지 밑에 추가한다.
+### Customer Config 작성 ###
+com.example.shop.configuration 패키지 MsaServiceConfiguration.java 추가한다.
 ```
 package com.example.shop.configuration;
 
