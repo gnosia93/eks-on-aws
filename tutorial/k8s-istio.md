@@ -110,6 +110,6 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
-## istio 설치 ##
+## istio 구성하기 ##
 
- * https://github.com/gnosia93/eks-on-aws/edit/main/tutorial/k8s-istio-install.md
+ * [Istio 설치](https://github.com/gnosia93/eks-on-aws/edit/main/tutorial/k8s-istio-install.md)
