@@ -266,7 +266,7 @@ kubectl -n kube-system rollout status deployment aws-load-balancer-controller
 https://kubernetes.io/ko/docs/concepts/services-networking/ingress/
 
 ******
-ALB 가 생성되는 VPC의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다.  
+ALB 가 생성되는 VPC의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다. (AWS 콘솔에서 설정)  
 aws ec2 create-tags --resources $subnet-id --tags "Key=kubernetes.io/role/elb,Value=1"
 ******
 
