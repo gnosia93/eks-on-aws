@@ -116,10 +116,78 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
-### 3. springboot 패치 ###
+### 3. springboot-order ###
 
 ```
-kubectl patch deployment 
+$ kubectl get endpoints
+NAME           ENDPOINTS                                              AGE
+flask-prod     10.1.101.133:3001,10.1.101.190:3001,10.1.102.10:3001   20m
+kubernetes     10.1.101.212:443,10.1.102.215:443                      4h29m
+nodejs-point   10.1.101.87:3000,10.1.102.46:3000,10.1.102.64:3000     19m
+shop           10.1.101.15:8080,10.1.101.99:8080,10.1.102.78:8080     3h16m
+```
+
+```
+STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
+IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
+```
+
+```
+cat <<EOF > shop-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+    spec:
+      containers:
+        - name: shop
+          image: ${IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              value: ${STAGE_DB}
+            - name: DB_USERNAME
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms1024M -Xmx1024M"
+            - name: PROD_SERVICE_ENDPOINT
+              value: flask-prod 
+            - name: POINT_SERVICE_ENDPOINT
+              value: nodejs-point
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  type: NodePort
+  selector:
+    app: shop
+  ports:
+    - port: 80
+      targetPort: 8080
+EOF
 ```
 
 
