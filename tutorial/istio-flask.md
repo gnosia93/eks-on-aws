@@ -2,6 +2,7 @@
 ### 1. flask 설치 ###
 ```
 pip install flask
+pip install flask-migrate
 ```
 
 
