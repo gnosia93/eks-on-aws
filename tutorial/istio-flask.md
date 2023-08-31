@@ -54,7 +54,7 @@ docker build . -t flask-prod
 docker image ls flask-prod
 ```
 
-#### 도커 테스트 ####
+#### 도커 어플리케이션 테스트 ####
 ```
 docker run -it --name flask-prod -p 3001:3001 flask-prod
 ```
