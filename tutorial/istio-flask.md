@@ -1,4 +1,8 @@
 
+### 1. flask 설치 ###
+```
+pip install Flask, Flask-Migrate
+```
 
 
 ## 레퍼런스 ##
