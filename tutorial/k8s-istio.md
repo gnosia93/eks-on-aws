@@ -198,7 +198,7 @@ kubectl apply -f shop-service.yaml
 ```
 
 
-### 4. 로그 모니터링 ###
+## 서비스 실행 ##
 ```
 kubectl logs -f -l app=shop --all-containers=true
 ```
