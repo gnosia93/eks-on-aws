@@ -3,13 +3,12 @@ currently in development ..
 ****
 
 ## 서비스 개발 ##
+isto 를 적용할 마이크로 서비스의 코드는 다음과 같다. 아래 서브 링크로 방문해서 각 서비스를 ECR 에 푸시한다.
 
 * 주문 -> 상품재고 -> 혜택(포인트) -> 결재완료  
-
-  * 주문 - 스프링부트
+  * 주문 - 스프링부트(https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-springboot.md)
   * [상품 - python flask](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-flask.md)
   * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-nodejs.md)
-
 
 ## 서비스 배포 ##
 
