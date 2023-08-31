@@ -29,6 +29,14 @@ python app.py
 
 #### Dockerfile ####
 ```
+FROM python:3.9
+ENV FLASK_APP=app
+COPY . /usr/src/main/
+WORKDIR /usr/src/main
+RUN pip3 install -r requirements.txt
+
+EXPOSE 3001
+CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 ```
 
 #### 이미지 빌드 ####
