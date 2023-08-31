@@ -47,18 +47,6 @@ EXPOSE 3001
 CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 ```
 
-#### 이미지 빌드 ####
-```
-#docker build . -t flask-prod
-
-docker buildx create --use
-docker buildx build --platform=linux/amd64,linux/arm64 -t flask-prod .
-```
-
-```
-docker image ls flask-prod
-```
-
 #### 도커 어플리케이션 테스트 ####
 ```
 docker run -it --name flask-prod -p 3001:3001 flask-prod
@@ -83,8 +71,13 @@ aws ecr create-repository \
 #### 이미지 푸시 ####
 ```
 #docker tag nodejs-point ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}:latest
+#docker buildx push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
 
-docker buildx push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
+docker buildx create --use
+
+docker buildx build --push \
+     --platform linux/amd64,linux/arm64 \
+     -t ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO} .
 ```
 
 
