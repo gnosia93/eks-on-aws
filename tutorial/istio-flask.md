@@ -1,11 +1,11 @@
-
+## 개발환경 구성 ##
 ### 1. flask 설치 ###
 ```
 pip install flask
 pip install flask-migrate
 ```
 
-### 2. 서비스 개발 ###
+## flask 개발 ##
 [app.py]
 ```
 from flask import Flask, jsonify
@@ -20,9 +20,14 @@ if __name__ == "__main__":
     app.run(host="localhost", port=3001, debug=False)
 ```
 
+## flask 실행 ##
 ```
 python app.py
 ```
+
+## 도커라이징 ##
+
+## ECR 이미지 푸시 ##
 
 ## 레퍼런스 ##
 
