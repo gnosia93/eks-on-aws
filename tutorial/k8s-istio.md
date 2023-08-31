@@ -116,6 +116,13 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
+### 3. springboot 패치 ###
+
+```
+kubectl patch deployment 
+```
+
+
 ## istio 구성하기 ##
 
  * [Istio 설치](https://github.com/gnosia93/eks-on-aws/edit/main/tutorial/k8s-istio-install.md)
@@ -124,4 +131,5 @@ kubectl apply -f nodejs-point.yaml
 
 ## 레퍼런스 ##
 
+* https://bcho.tistory.com/1266
 
