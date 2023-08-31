@@ -46,7 +46,7 @@ spec:
         - name: flask-prod
           image: ${PROD_IMAGE_REPO_ADDR}
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
           imagePullPolicy: Always
 ---
 apiVersion: v1
