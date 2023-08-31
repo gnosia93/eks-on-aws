@@ -118,3 +118,9 @@ kubectl apply -f nodejs-point.yaml
 ## istio 구성하기 ##
 
  * [Istio 설치](https://github.com/gnosia93/eks-on-aws/edit/main/tutorial/k8s-istio-install.md)
+
+
+
+## 레퍼런스 ##
+
+  * [docker 멀티아키텍처 이미지 생성하기](https://velog.io/@baeyuna97/exec-user-process-caused-exec-format-error-%EC%97%90%EB%9F%AC%ED%95%B4%EA%B2%B0)
