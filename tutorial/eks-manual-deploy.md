@@ -307,7 +307,7 @@ kubectl apply -f shop-ingress.yaml
 ```
 kubectl describe ingress shop-ingress
 ```
-[결과]
+[결과]  
 Successfully reconciled 라는 메시지가 출력되어야 한다.
 ```
 Name:             shop-ingress
