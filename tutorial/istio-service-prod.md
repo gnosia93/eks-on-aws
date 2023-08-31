@@ -90,3 +90,5 @@ docker push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
 * https://doitgrow.com/37#google_vignette
 
 * [점프 투 플라스크](https://wikidocs.net/book/4542)
+
+* [docker 멀티아키텍처 이미지 생성하기](https://velog.io/@baeyuna97/exec-user-process-caused-exec-format-error-%EC%97%90%EB%9F%AC%ED%95%B4%EA%B2%B0)
