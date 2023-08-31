@@ -52,7 +52,7 @@
 
   - [노드 스케일링 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-scale-test.md)
 
-* #9. 메트릭 모니터링(Observability)
+* #9. 성능 메트릭 모니터링(Observability)
   
   - [CloudWatch Container Insight 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/cloudwatch-container-insight.md)(?)
     
