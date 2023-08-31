@@ -54,8 +54,28 @@ docker build . -t flask-prod
 docker image ls flask-prod
 ```
 
-
 ## ECR 이미지 푸시 ##
+
+#### ECR 생성 ####
+```
+ACCOUNT_ID=`aws sts get-caller-identity|jq -r ".Account"`;AWS_REGION=ap-northeast-2
+IMAGE_REPO=eks-on-aws-flask-prod
+
+aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+aws ecr create-repository \
+    --repository-name ${IMAGE_REPO} \
+    --image-scanning-configuration scanOnPush=true \
+    --region ${AWS_REGION}
+```
+
+#### 이미지 푸시 ####
+```
+docker tag nodejs-point ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}:latest
+
+docker push ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_REPO}
+```
+
 
 ## 레퍼런스 ##
 
