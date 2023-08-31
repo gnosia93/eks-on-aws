@@ -27,6 +27,20 @@ python app.py
 
 ## 도커라이징 ##
 
+#### Dockerfile ####
+```
+```
+
+#### 이미지 빌드 ####
+```
+docker build . -t flask-prod
+```
+
+```
+docker image ls flask-prod
+```
+
+
 ## ECR 이미지 푸시 ##
 
 ## 레퍼런스 ##
