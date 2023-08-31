@@ -2,12 +2,12 @@ node.js 를 이용하여 point 서비스를 구현 한다.
 
 ## 개발환경 구성 ##
 
-#### 1. node 설치 ####
+#### node 설치 ####
 ```
 brew install node
 ```
 
-#### 2. 프로젝트 생성 ####
+#### 프로젝트 생성 ####
 ```
 $ npm init
 This utility will walk you through creating a package.json file.
