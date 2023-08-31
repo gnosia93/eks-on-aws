@@ -1,5 +1,7 @@
+## 서비스 개발 ##
 
 ### application-dev.yaml ###
+msa.service.endpoint.prod 및 point 를 추가한다. 
 ```
 logging.level.root : info
 
