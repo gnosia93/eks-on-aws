@@ -1,3 +1,10 @@
+#### 로그출력 ####
+
+```
+kubectl logs -f -l app=shop --all-containers=true
+```
+
+
 #### configmap 전체 출력 ####
 ```
 $ kubectl get cm -A
