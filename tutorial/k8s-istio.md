@@ -14,7 +14,55 @@ isto 를 적용할 마이크로 서비스의 구조는 다음과 같다. 아래 
 
 ## 서비스 배포 ##
 
-### 1. nodejs-point ###
+### 1. flask-prod ###
+3001 포트로 노출한다.
+```
+cat <<EOF > flask-prod.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-prod
+  namespace: default
+  labels:
+    app: flask-prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-prod
+  template:
+    metadata:
+      labels:
+        app: flask-prod
+    spec:
+      containers:
+        - name: flask-prod
+          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/flask-prod
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-prod
+  namespace: default
+  labels:
+    app: flask-prod
+spec:
+  selector:
+    app: flask-prod
+  ports:
+    - port: 80
+      targetPort: 3001
+EOF
+```
+```
+kubectl apply -f flask-prod.yaml
+```
+
+### 2. nodejs-point ###
+3000 포트로 노출한다. 
 ```
 cat <<EOF > nodejs-point.yaml
 apiVersion: apps/v1
@@ -59,8 +107,6 @@ EOF
 ```
 kubectl apply -f nodejs-point.yaml
 ```
-
-### 2. flask-inventory ###
 
 ## istio 설치 ##
 
