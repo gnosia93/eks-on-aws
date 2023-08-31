@@ -8,7 +8,8 @@ isto 를 적용할 마이크로 서비스의 호출 구조는 다음과 같다. 
 * 주문 -> 상품(재고조회) -> 혜택(포인트)
   
   * [주문 - 스프링부트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-service-order.md)
-  * [상품 - python flask](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-service-prod.md)
+  * [상품 - python flask](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-flask-prod.md
+)
   * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-service-point.md)
 
 
