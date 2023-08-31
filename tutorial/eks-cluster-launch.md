@@ -263,6 +263,10 @@ Unable to connect to the server: dial tcp 172.31.28.35:443: i/o timeout
 - https://stackoverflow.com/questions/70787520/your-current-user-or-role-does-not-have-access-to-kubernetes-objects-on-this-eks
 - https://varlogdiego.com/eks-your-current-user-or-role-does-not-have-access-to-kubernetes
 
+### 3. 2023-08-31 11:54:47 [✖]  creating CloudFormation stack "eksctl-eks-workshop-cluster": operation error CloudFormation: CreateStack, https response error StatusCode: 400, RequestID: 29bbd745-8f90-4170-a1b8-851643d9d245, AlreadyExistsException: Stack [eksctl-eks-workshop-cluster] already exists ###
+
+AWS Cloudformation 콘솔로 가서 해당 스택을 지운다.
+
 ## 레퍼런스 ##
 
 * https://eksctl.io/usage/creating-and-managing-clusters/
