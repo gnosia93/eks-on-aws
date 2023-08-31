@@ -47,12 +47,6 @@ EXPOSE 3001
 CMD ["flask", "run", "--host=0.0.0.0", "--port=3001"]
 ```
 
-#### 도커 어플리케이션 테스트 ####
-```
-docker run -it --name flask-prod -p 3001:3001 flask-prod
-```
-
-
 ## ECR 이미지 푸시 ##
 
 #### ECR 생성 ####
