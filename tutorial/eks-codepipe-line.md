@@ -104,9 +104,14 @@ buildspec.yaml 파일에서 codebuild 가 ECR에 로그인 하기위해서 아�
 $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess --role-name codebuild-service-role
 ```
 
-### 5. buildspec.yaml 파일 생성 ###
-Intelij 의 shop 프로젝트 root 디렉토리에 buildspec.yaml 파일을 생성한다. codebuild 생성시 정의했던 파일로 이 파일의 내용을 참조하여 빌드작업이 수행된다.   
-codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있는데, 방안-2 를 사용하도록 한다. 
+### 5. buildspec.yaml 파일의 이해 ###
+
+buildspec.yaml 파일은 codebuild 생성시 정의했던 파일로, 빌드 작업시 이 파일에 나와 있는 명령어들이 순차적으로 실행된다.     
+shop 프로젝트 원본 레포지토리인 https://github.com/gnosia93/eks-on-aws-springboot 에 보면 root 디렉토리에 
+buildspec.yaml 파일이 존재하는 것을 확인할 수 있다. (fork 한 프로젝트 역시 동일한 구조이다) 
+
+codebiuld 에서 도커 이미지를 빌드하는 방법은 아래와 같이 두가지 방식이 있는데, 방안-2 를 사용하는 것이 훨씬 좋다.  
+이미 빌드에 필요한 명령어 들이 정의되어 있기 때문에 별도로 추가하거나 수정할 내용은 없다.
 
 #### 방안-1 ####
 이 방식을 사용하는 경우 도커 이미지를 빌들하기 위해서 Dockerfile 이 필요하다. 아래는 도커 파일의 예시이다.
@@ -210,8 +215,9 @@ phases:
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/codebuild-env.png)
 
 
+### 6. 빌드 파이프 라인 트리거 하기 ###
 
-### 6. ECR 도커 이미지 ###
+### 7. ECR 도커 이미지 ###
 
 CI 파이프 라인이 제대로 동작한다면 아래 그림이 같이 레포지토리에 여러개의 도커 이미지가 생성된 것을 확인할 수 있다.
 최신 버전은 latest 로 태깅되며, 새로운 빌드가 완료되면 latest 정보 또한 업데이트 된다.  
