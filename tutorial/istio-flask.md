@@ -9,4 +9,4 @@ pip install flask
 
 * https://doitgrow.com/37#google_vignette
 
-* https://wikidocs.net/book/4542
+* [점프 투 플라스크](https://wikidocs.net/book/4542)
