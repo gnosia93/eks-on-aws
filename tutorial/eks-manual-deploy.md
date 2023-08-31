@@ -45,7 +45,11 @@ spec:
             - name: DB_PASSWORD
               value: shop
             - name: JAVA_TOOL_OPTIONS
-              value: "-Xms1024M -Xmx1024M" 
+              value: "-Xms1024M -Xmx1024M"
+            - name: PROD_SERVICE_ENDPOINT
+              value: ${PROD_SERVICE_ENDPOINT}
+            - name: POINT_SERVICE_ENDPOINT
+              value: ${POINT_SERVICE_ENDPOINT}
           imagePullPolicy: Always
 ---
 apiVersion: v1
