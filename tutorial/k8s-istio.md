@@ -171,9 +171,9 @@ spec:
             - name: JAVA_TOOL_OPTIONS
               value: "-Xms1024M -Xmx1024M"
             - name: PROD_SERVICE_ENDPOINT
-              value: flask-prod.default.svc.cluster.local
+              value: "http://flask-prod.default.svc.cluster.local/prod"
             - name: POINT_SERVICE_ENDPOINT
-              value: nodejs-point.default.svc.cluster.local
+              value: "http://nodejs-point.default.svc.cluster.local/point"
           imagePullPolicy: Always
 ---
 apiVersion: v1
