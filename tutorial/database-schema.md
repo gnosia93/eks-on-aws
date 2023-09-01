@@ -72,7 +72,7 @@ Success.
 All done!
 ```
 
-ps 명령어로 실행여부를 확인한다. 
+ps로 MySQL 실행여부를 확인한다. 
 ```
 % ps aux | grep mysql
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
