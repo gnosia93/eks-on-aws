@@ -1,4 +1,4 @@
-주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있어서, 아래 코드만 참고한다. 
+주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있어서, 별도의 작업이 불필요하다.
 
 ## 서비스 개발 ##
 
