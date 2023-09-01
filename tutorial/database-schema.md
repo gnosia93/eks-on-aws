@@ -1,6 +1,6 @@
 ## 로컬 PC에 MySQL 설치 ##  
 
-brew 로 mysql 을 설치하고 버전이 8.1.0 또는 이보다 상위 버전임을 확인한다.
+brew 로 mysql 을 설치하고 출력 버전이 8.1.0 또는 이보다 상위 버전임을 확인한다.
 ```
 brew install mysql
 mysql -V
