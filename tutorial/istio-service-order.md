@@ -1,3 +1,5 @@
+주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있어서, 아래 코드만 참고한다. 
+
 ## 서비스 개발 ##
 
 ### application-dev.yaml ###
