@@ -143,3 +143,8 @@ rm /usr/local/etc/my.cnf
 ```
 
 
+
+## 레퍼런스 ##
+
+* [mac mysql 설치](https://eunhee-programming.tistory.com/262)
+
