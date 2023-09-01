@@ -213,3 +213,5 @@ kubectl logs -f -l app=shop --all-containers=true
 
 * https://bcho.tistory.com/1266
 
+* https://www.lihaoyi.com/post/SimpleWebandApiServerswithScala.html
+
