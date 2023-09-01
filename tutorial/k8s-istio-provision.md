@@ -3,11 +3,12 @@ cloud9 터미널에서 아래 명령어를 실행한다.
 
 ```
 curl -O https://raw.githubusercontent.com/istio/istio/master/release/downloadIstioCandidate.sh ​
+
+sh downloadIstioCandidate.sh
 ```
 
+[결과]
 ```
-hopigaga:~/environment $ sh downloadIstioCandidate.sh 
-
 Downloading istio-1.18.2 from https://github.com/istio/istio/releases/download/1.18.2/istio-1.18.2-linux-amd64.tar.gz ...
 
 Istio 1.18.2 Download Complete!
