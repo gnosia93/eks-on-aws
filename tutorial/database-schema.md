@@ -133,7 +133,7 @@ mysql> quit
 Bye
 ```
 
-## 로컬 MySQL 삭제 ##
+## 로컬 PC MySQL 삭제 ##
 
 ```
 brew services stop mysql
