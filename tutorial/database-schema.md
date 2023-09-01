@@ -1,4 +1,4 @@
-이 챕터에서는 로컬 PC에 MySQL 을 개발용 DB 로 설치하고, AWS 클라우에 생성된 stage / production RDS MySQL 에 접속하여  
+이 챕터에서는 로컬 PC에 개발용 MySQL DB 로 설치하고, AWS 클라우에 생성된 stage / production RDS MySQL 에 접속하여  
 shop 유저 및 관련 테이블을 생성한다.
 
 ## 로컬 PC에 MySQL 설치 ##  
