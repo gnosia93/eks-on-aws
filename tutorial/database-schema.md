@@ -1,4 +1,4 @@
-### 로컬 PC에 MySQL 설치 ###  
+## 로컬 PC에 MySQL 설치 ##  
 
 유저는 root 이고, 패스워드는 admin22admin 으로 입력한다.
 ```
@@ -66,7 +66,7 @@ mysql> quit
 Bye
 ```
 
-### Stage / Production DB 스키마 생성 ###
+## RDS MySQL 스키마 생성 ##
 
 stage, production 용 데이터베이스에 접속해서 유저 및 관련 테이블을 생성한다. 
 cloud9 터미널을 이용하여 설치하고, root 패스워드는 admin22admin 이다. 
@@ -131,6 +131,15 @@ mysql> select host, user, account_locked from user;
 mysql> grant all privileges ON shop.* TO shop@'%';
 mysql> quit
 Bye
+```
+
+## 로컬 MySQL 삭제 ##
+
+```
+brew services stop mysql
+brew uninstall mysql
+rm -rf /usr/local/var/mysql
+rm /usr/local/etc/my.cnf
 ```
 
 
