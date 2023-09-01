@@ -4,11 +4,8 @@
 brew install mysql
 mysql -V
 ```
-[결과]
-```
-mysql  Ver 8.1.0 for macos12.6 on arm64 (Homebrew)
-```
 
+mysql 데이터베이스의 보안 설정 강화를 위해 아래 명령어를 실행한다.
 ```
 mysql_secure_installation
 ```
