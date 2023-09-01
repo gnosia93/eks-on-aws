@@ -75,7 +75,7 @@ ps 명령어로 실행여부를 확인한다.
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
 ```
 
-#### 로컬 DB 스키마 생성 ####
+#### 로컬 DB 스키마 및 유저생성 ####
 ```
 % mysql -u root -p
 Enter password:                       <-------------- admin22admin 입력
