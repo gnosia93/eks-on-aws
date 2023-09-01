@@ -2,4 +2,5 @@
 
 ## 레퍼런스 ##
 
+* https://stackoverflow.com/questions/71646503/how-to-monitor-aws-rds-vis-prometheus-using-cloudwatch-exporter
 * https://github.com/nerdswords/yet-another-cloudwatch-exporter/tree/master
