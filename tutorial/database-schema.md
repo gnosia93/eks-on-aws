@@ -11,7 +11,7 @@ mysql 데이터베이스의 보안 설정 강화를 위해 아래 명령어를 �
 mysql_secure_installation
 ```
 
-실행 결과 화면에서 아래의 예제와 같이 입력한다. mysql 의 초기 root 패스워드는 root 인데, 아래의 예제에서 보이는 것처럼 admin22admin 으로 root 패스워드를 변경한다.
+실행 결과 화면에서 아래와 같이 입력한다. mysql 의 초기 root 패스워드는 root 인데, 아래의 예제에서 보이는 것처럼 admin22admin 으로 root 패스워드를 변경한다.
 ```
 Securing the MySQL server deployment.
 
