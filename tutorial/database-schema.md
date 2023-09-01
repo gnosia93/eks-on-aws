@@ -1,12 +1,76 @@
 ## 로컬 PC에 MySQL 설치 ##  
 
-유저는 root 이고, 패스워드는 admin22admin 으로 입력한다.
 ```
-% brew install mysql
-% mysql -V
+brew install mysql
+mysql -V
+```
+[결과]
+```
 mysql  Ver 8.1.0 for macos12.6 on arm64 (Homebrew)
+```
 
-% mysql_secure_installation
+```
+mysql_secure_installation
+```
+[결과]
+```
+Securing the MySQL server deployment.
+
+Enter password for user root:                    <------------ root 입력
+
+VALIDATE PASSWORD COMPONENT can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No: n
+Using existing password for root.
+Change the password for root ? ((Press y|Y for Yes, any other key for No) : y
+
+New password:                        <-------------- admin22admin 입력
+
+Re-enter new password:               <-------------- admin22admin 입력
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+ - Dropping test database...
+Success.
+
+ - Removing privileges on test database...
+Success.
+
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done!
+```
+
+```
 % ps aux | grep mysql
 _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 /usr/local/mysql/bin/mysqld --user=_mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --log-error=/usr/local/mysql/data/mysqld.local.err --pid-file=/usr/local/mysql/data/mysqld.local.pid --keyring-file-data=/usr/local/mysql/keyring/keyring --early-plugin-load=keyring_file=keyring_file.so
 ```
