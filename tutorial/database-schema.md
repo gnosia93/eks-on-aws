@@ -1,3 +1,5 @@
+이 챕터에서는 로컬 PC에 MySQL 을 개발용 DB 로 설치하고, AWS 클라우에 생성된 stage / production RDS MySQL 에 접속하여 shop 유저 및 관련 테이블을 생성한다.
+
 ## 로컬 PC에 MySQL 설치 ##  
 
 brew 로 mysql 을 설치하고 출력 버전이 8.1.0 또는 이보다 상위 버전임을 확인한다.
