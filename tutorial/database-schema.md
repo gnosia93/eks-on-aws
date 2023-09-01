@@ -78,7 +78,7 @@ _mysql           51995   0.1  0.7 410164160 443200   ??  Ss    7:40PM   0:01.80 
 #### 로컬 DB 스키마 및 유저생성 ####
 ```
 % mysql -u root -p
-Enter password:                       <-------------- admin22admin 입력
+Enter password:                              <-------------- admin22admin 입력
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 10
 Server version: 8.0.33 MySQL Community Server - GPL
