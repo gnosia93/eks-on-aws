@@ -37,7 +37,7 @@ kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.
  -c ratings -- curl -sS productpage:9080/productpage | grep -o "<title>.*</title>"
 ```
 
-#### 외부 노출 ####
+#### 외부 노출 설정 ####
 ```
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 kubectl get gateway
