@@ -33,6 +33,8 @@ kubectl logs -f -l app=shop --all-containers=true
 
 ## SHOP 어플리케이션 Istio 적용 ##
 
+later..
+
 
 ## 레퍼런스 ##
 
