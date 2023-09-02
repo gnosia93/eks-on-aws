@@ -43,6 +43,7 @@ Events:
 ```
 
 #### ELB 정보 ####
+AWS EC2 콘솔의 Load Balancers 서브메뉴에서 생성된 로드밸런서의 정보를 확인한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-11.png)
 
 #### ELB 인스턴스 #### 
