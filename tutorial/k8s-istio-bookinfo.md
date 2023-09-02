@@ -51,11 +51,16 @@ NAME               AGE
 bookinfo-gateway   3s
 ```
 
-ingressgateway 파드 확인 
+#### ingressgateway 파드 확인 #### 
 ```
 $ kubectl get pod -n istio-system -l istio=ingressgateway
 NAME                                    READY   STATUS    RESTARTS   AGE
 istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          149m
+```
+
+#### 설정오류 확인 ####
+```
+istioctl analyze 
 ```
 
 ## 트러블 슈팅 ##
