@@ -16,7 +16,7 @@ aws secretsmanager create-secret \
 }
 ```
 
-### springboot applicaiton properties 수정 ###
+### springboot 수정 ###
 
 ## 레퍼런스 ##
 
