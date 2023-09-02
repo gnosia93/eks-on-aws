@@ -7,28 +7,7 @@ curl -O https://raw.githubusercontent.com/istio/istio/master/release/downloadIst
 sh downloadIstioCandidate.sh
 ```
 
-[결과]
-```
-Downloading istio-1.18.2 from https://github.com/istio/istio/releases/download/1.18.2/istio-1.18.2-linux-amd64.tar.gz ...
-
-Istio 1.18.2 Download Complete!
-
-Istio has been successfully downloaded into the istio-1.18.2 folder on your system.
-
-Next Steps:
-See https://istio.io/latest/docs/setup/install/ to add Istio to your Kubernetes cluster.
-
-To configure the istioctl client tool for your workstation,
-add the /home/ec2-user/environment/istio-1.18.2/bin directory to your environment path variable with:
-         export PATH="$PATH:/home/ec2-user/environment/istio-1.18.2/bin"
-
-Begin the Istio pre-installation check by running:
-         istioctl x precheck 
-
-Need more information? Visit https://istio.io/latest/docs/setup/install/ 
-```
-
-.bash_profile 의 PATH 환경변수에 istioctl 의 경로를 추가하고, precheck 로  클러스터에 이슈가 있는지 체크한다.  
+.bash_profile 의 PATH 변수에 istioctl 의 경로를 추가하고, precheck 로 클러스터에 이슈가 있는지 체크한다.  
 iostoctl 은 ./istio-1.18.2/bin 에 있다. (예시) /home/ec2-user/environment/istio-1.18.2/bin
 ```
 istioctl x precheck
