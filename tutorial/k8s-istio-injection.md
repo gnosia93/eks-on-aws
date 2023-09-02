@@ -36,7 +36,13 @@ istio-operator    Active   75m
 istio-system      Active   97m   
 kube-node-lease   Active   37h   
 kube-public       Active   37h   
-kube-system       Active   37h   
+kube-system       Active   37h
+
+$ kubectl delete pod -l app=sleep
+pod "sleep-84549b8696-zpfb7" deleted
+
+$ kubectl get pod | grep sleep
+sleep-84549b8696-ws4r5          2/2     Running   0          10s
 ```
 
 
