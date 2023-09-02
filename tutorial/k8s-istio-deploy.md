@@ -64,6 +64,14 @@ gateway.networking.istio.io/bookinfo-gateway created
 virtualservice.networking.istio.io/bookinfo created
 ```
 
+ingressgateway 파드 확인 
+```
+$ kubectl get pod -n istio-system -l istio=ingressgateway
+NAME                                    READY   STATUS    RESTARTS   AGE
+istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          149m
+```
+
+
 ## 레퍼런스 ##
 
 * https://istio.io/latest/docs/reference/config/networking/gateway/
