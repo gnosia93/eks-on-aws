@@ -8,3 +8,5 @@
 * https://istio.io/latest/docs/setup/getting-started/
   
 * https://malwareanalysis.tistory.com/307
+
+* https://istio.io/latest/docs/examples/bookinfo/
