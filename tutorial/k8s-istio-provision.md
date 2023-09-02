@@ -127,6 +127,8 @@ Events:
 
 ## 레퍼런스 ##
 
+* https://istio.io/latest/docs/setup/getting-started/
+  
 * [Tagging VPC Subnet](https://repost.aws/knowledge-center/eks-vpc-subnet-discovery)
   
 * https://istio.io/latest/docs/setup/install/istioctl/
