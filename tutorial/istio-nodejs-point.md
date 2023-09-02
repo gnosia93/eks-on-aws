@@ -125,6 +125,54 @@ docker buildx build --push \
 ```
 
 
+## 서비스 배포 ####
+
+EKS 클러스터에 배포한다.
+```
+cat <<EOF > nodejs-point.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-point
+  namespace: default
+  labels:
+    app: nodejs-point
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs-point
+  template:
+    metadata:
+      labels:
+        app: nodejs-point
+    spec:
+      containers:
+        - name: nodejs-point
+          image: ${POINT_IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-point
+  namespace: default
+  labels:
+    app: nodejs-point
+spec:
+  selector:
+    app: nodejs-point
+  ports:
+    - port: 80
+      targetPort: 3000
+EOF
+```
+```
+kubectl apply -f nodejs-point.yaml
+```
+
 ## 레퍼런스 ##
 
 * [도커이미지 사이즈 줄이기](https://jeffminsungkim.medium.com/docker-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0-2f90fa5c96)
