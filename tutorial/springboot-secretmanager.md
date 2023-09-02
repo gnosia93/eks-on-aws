@@ -56,8 +56,15 @@ dependencies {
 
 ### EKS 노드그룹 권한 설정 ###
 
+EKS 콘솔에서 ng-2xlarge 노드그룹의 Role을 확인한 후, 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-0.png)
+
+해당 Role 에 대해서 아래와 같이
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-1.png)
+
+SecretsManagerReadWrite 권한을 추가한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-2.png)
+
 
 ## 트러블 슈팅 ##
 
