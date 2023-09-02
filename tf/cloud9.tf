@@ -8,5 +8,6 @@ resource "aws_cloud9_environment_ec2" "cloud9_instance" {
 
   tags = {
     Terraform = "true"
+    Name = "eks-workshop-cloud9"
   }
 }
