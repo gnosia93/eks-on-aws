@@ -26,7 +26,7 @@ kind: ClusterConfig
 metadata:
   name: ${CLUSTER_NAME}
   region: ${AWS_REGION}
-  version: 1.26
+  version: "1.26"
 
 vpc:
   id: "${VPC_ID}"
@@ -56,7 +56,7 @@ EOF
 
 eksctl 를 이용하여 클러스터를 생성한다. 
 ```
-eksctl create cluster -f $CLUSTER_NAME.yaml
+eksctl create cluster -f ${CLUSTER_NAME}.yaml
 ```
 
 [결과]
