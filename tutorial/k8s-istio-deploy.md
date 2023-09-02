@@ -12,6 +12,12 @@ customresourcedefinition.apiextensions.k8s.io/gateways.gateway.networking.k8s.io
 customresourcedefinition.apiextensions.k8s.io/httproutes.gateway.networking.k8s.io created
 ```
 
+#### default 네임스페이스 설정 ####
+```
+kubectl label namespace default istio-injection=enabled
+```
+
+
 #### bookinfo 배포 ####
 ```
 cd ~/istio-1.18.2
