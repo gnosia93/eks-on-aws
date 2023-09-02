@@ -85,6 +85,8 @@ kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.por
 
 ## 크롬 브라우저에서 확인 ## 
 
+http://a2000b639c9a147f8840ba80dd7be449-1085459483.ap-northeast-2.elb.amazonaws.com/productpage 접속
+
 
 ## 트러블 슈팅 ##
 * kubectl get gateway 출력결과 없음.
