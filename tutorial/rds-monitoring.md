@@ -2,6 +2,7 @@ MySQL 데이터베이스에서 메트릭을 수집해서 AMG 로 보내기 위�
 
 ## 레퍼런스 ##
 
+* https://omty.tistory.com/54
 * https://observiq.com/blog/how-to-monitor-mysql-with-opentelemetry
 * https://stackoverflow.com/questions/71646503/how-to-monitor-aws-rds-vis-prometheus-using-cloudwatch-exporter
 * https://github.com/nerdswords/yet-another-cloudwatch-exporter/tree/master
