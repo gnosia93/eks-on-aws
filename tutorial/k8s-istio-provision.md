@@ -86,4 +86,6 @@ horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod    
 
 ## 레퍼런스 ##
 
+* https://istio.io/latest/docs/setup/install/istioctl/
+  
 * https://malwareanalysis.tistory.com/297
