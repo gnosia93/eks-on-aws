@@ -1,4 +1,4 @@
-## bookinfo 어플리케이션 배포 ##
+## Istio 어플리케이션 배포 - bookinfo ##
 
 #### default 네임스페이스 인젝션 설정 ####
 ```
