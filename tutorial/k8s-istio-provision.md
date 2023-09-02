@@ -62,6 +62,8 @@ horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingr
 horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          36s
 ```
 
+AWS EC2 콘솔의 Load Balancers 메뉴에서 로드밸런서의 상태를 확인한다. 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-ingressgw.png)
 
 
 ## 레퍼런스 ##
