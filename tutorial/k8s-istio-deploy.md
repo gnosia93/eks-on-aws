@@ -1,22 +1,4 @@
 
-#### gateway 설정 ####
-```
-#kubectl get crd gateways.gateway.networking.k8s.io &> /dev/null || \
-# { kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v0.6.2" | kubectl apply -f -; }
-```
-
-```
-kubectl get crd | grep gateways
-gateways.networking.istio.io                 2023-09-02T12:00:52Z
-```
-
-
-[결과]
-```
-customresourcedefinition.apiextensions.k8s.io/gatewayclasses.gateway.networking.k8s.io created
-customresourcedefinition.apiextensions.k8s.io/gateways.gateway.networking.k8s.io created
-customresourcedefinition.apiextensions.k8s.io/httproutes.gateway.networking.k8s.io created
-```
 
 #### default 네임스페이스 설정 ####
 ```
