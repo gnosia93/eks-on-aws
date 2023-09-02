@@ -1,4 +1,4 @@
-주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있어서, 별도의 작업은 할 필요가 없다.
+주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있다. 
 
 ## 서비스 개발 ##
 
@@ -85,6 +85,77 @@ public class OrderController {
         return ResponseEntity.status(HttpStatus.OK).body(orderResponse);
     }
 }
+```
+
+## 서비스 배포 ##
+
+EKS 클러스터에 서비스를 배포한다. 
+
+```
+STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
+IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
+```
+
+```
+cat <<EOF > shop-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+    spec:
+      containers:
+        - name: shop
+          image: ${IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              value: ${STAGE_DB}
+            - name: DB_USERNAME
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms1024M -Xmx1024M"
+            - name: PROD_SERVICE_ENDPOINT
+              value: "http://flask-prod.default.svc.cluster.local/prod"
+            - name: POINT_SERVICE_ENDPOINT
+              value: "http://nodejs-point.default.svc.cluster.local/point"
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  type: NodePort
+  selector:
+    app: shop
+  ports:
+    - port: 80
+      targetPort: 8080
+EOF
+```
+
+```
+kubectl apply -f shop-service.yaml
 ```
 
 ## 서비스 응답 ##
