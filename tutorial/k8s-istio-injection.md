@@ -43,6 +43,8 @@ pod "sleep-84549b8696-zpfb7" deleted
 
 $ kubectl get pod | grep sleep
 sleep-84549b8696-ws4r5          2/2     Running   0          10s
+
+$ kubectl patch deployment sleep --patch 'spec:\n template:\n  spec:\n   containers:\n   - name: hello-deployment\n     image: gcr.io/terrycho-sandbox/deployment:v2’
 ```
 
 
