@@ -22,61 +22,7 @@ istio 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주�
   * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-nodejs-point.md)
 
 
-### 서비스 배포 ###
 
-EKS 클러스터에 서비스를 배포한다. 
-
-#### 1. flask-prod ####
-
-```
-PROD_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'flask-prod')
-POINT_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'nodejs-point')
-```
-
-```
-cat <<EOF > flask-prod.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: flask-prod
-  namespace: default
-  labels:
-    app: flask-prod
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: flask-prod
-  template:
-    metadata:
-      labels:
-        app: flask-prod
-    spec:
-      containers:
-        - name: flask-prod
-          image: ${PROD_IMAGE_REPO_ADDR}
-          ports:
-            - containerPort: 3001
-          imagePullPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: flask-prod
-  namespace: default
-  labels:
-    app: flask-prod
-spec:
-  selector:
-    app: flask-prod
-  ports:
-    - port: 80
-      targetPort: 3001
-EOF
-```
-```
-kubectl apply -f flask-prod.yaml
-```
 
 #### 2. nodejs-point ####
 
