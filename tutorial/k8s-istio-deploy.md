@@ -22,7 +22,7 @@ kubectl label namespace default istio-injection=enabled
 ```
 cd ~/istio-1.18.2
 
-kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml 
 ```
 [결과]
 ```
@@ -40,6 +40,13 @@ deployment.apps/reviews-v3 created
 service/productpage created
 serviceaccount/bookinfo-productpage created
 deployment.apps/productpage-v1 created
+```
+
+#### 어플리케이션 확인 ####
+```
+kubectl get pod -l app=ratings -o yaml > rating.yaml
+
+kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}')" -c ratings -- curl -sS productpage:9080/productpage | grep -o "<title>.*</title>"
 ```
 
 
