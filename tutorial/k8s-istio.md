@@ -8,6 +8,7 @@ currently in development ..
 
  * [Istio 인젝션 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-injection.md)
 
+ * [Istio 어플리케이션 배포](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-deploy.md)
 
 
 ## 서비스 개발 ##
