@@ -1,4 +1,5 @@
 
+### secret 생성 ###
 ```
 aws secretsmanager create-secret \
     --name "prod/shop/mysql-8.x" \
