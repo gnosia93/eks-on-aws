@@ -28,6 +28,58 @@ Begin the Istio pre-installation check by running:
 Need more information? Visit https://istio.io/latest/docs/setup/install/ 
 ```
 
+.bash_profile 에 istioctl 실행파일의 경로를  PATH 환경변수에 추가한다. precheck 명령어를 실행해서 클러스터에 이슈가 있는지 체크한다. 
+```
+istioctl x precheck
+```
+[결과]
+```
+✔ No issues found when checking the cluster. Istio is safe to install or upgrade!
+  To get started, check out https://istio.io/latest/docs/setup/getting-started/
+```
+
+```
+istioctl install
+```
+
+[결과]
+```
+This will install the Istio 1.18.2 default profile with ["Istio core" "Istiod" "Ingress gateways"] components into the cluster. Proceed? (y/N) y
+✔ Istio core installed                                                                                         
+✔ Istiod installed                                                                                             
+✔ Ingress gateways installed                                                                                   
+✔ Installation complete                                                                                        Making this installation the default for injection and validation.
+```
+
+```
+$ kubectl -n istio-system get deploy
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+istio-ingressgateway   1/1     1            1           45s
+istiod                 1/1     1            1           53s
+
+$ kubectl get all -n istio-system
+NAME                                        READY   STATUS    RESTARTS   AGE
+pod/istio-ingressgateway-6f488f8f45-fnp6v   1/1     Running   0          70s
+pod/istiod-6dbd6db74f-9qppx                 1/1     Running   0          79s
+
+NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                                      AGE
+service/istio-ingressgateway   LoadBalancer   172.20.6.75     <pending>     15021:30227/TCP,80:32420/TCP,443:31372/TCP   70s
+service/istiod                 ClusterIP      172.20.108.52   <none>        15010/TCP,15012/TCP,443/TCP,15014/TCP        79s
+
+NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/istio-ingressgateway   1/1     1            1           71s
+deployment.apps/istiod                 1/1     1            1           79s
+
+NAME                                              DESIRED   CURRENT   READY   AGE
+replicaset.apps/istio-ingressgateway-6f488f8f45   1         1         1       70s
+replicaset.apps/istiod-6dbd6db74f                 1         1         1       79s
+
+NAME                                                       REFERENCE                         TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingressgateway   <unknown>/80%   1         5         1          70s
+horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          79s
+```
+
+
 
 ## 레퍼런스 ##
 
