@@ -16,7 +16,7 @@ if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUS
 export KEY_NAME=aws-kp-2
 ```
 
-cloud9 콘솔에서 $CLUSTER_NAME.yaml 파일을 생성한 후, 
+cloud9 콘솔에서 ${CLUSTER_NAME}.yaml 파일을 생성한 후, 
 * https://eksctl.io/usage/schema/
 ```
 cat <<EOF > ${CLUSTER_NAME}.yaml
