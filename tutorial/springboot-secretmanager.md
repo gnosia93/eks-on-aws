@@ -20,6 +20,8 @@ aws secretsmanager create-secret \
 
 AWS 콘솔의 secret manager 로 이동해서 아래 람다 함수를 등록한다. 
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-rotation.png)
+
 * https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas/blob/master/SecretsManagerRDSMySQLRotationSingleUser/lambda_function.py
 
 ### springboot 수정 ###
