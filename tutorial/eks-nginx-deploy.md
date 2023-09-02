@@ -37,4 +37,7 @@ EKS 클러스터에 할당된 프라이빗 서브넷의 AZ 가 a, b 이므로, �
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-3.png)
 
 
+## 레퍼런스 ##
+
+* https://stackoverflow.com/questions/66039501/eks-alb-is-not-to-able-to-auto-discover-subnets
 
