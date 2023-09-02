@@ -18,6 +18,18 @@ deployment.apps/sleep created
 
 $ kubectl get pod | grep sleep
 sleep-84549b8696-zpfb7          1/1     Running   0          17s
+
+$ kubectl label namespace default istio-injection=enabled --overwrite
+namespace/default labeled
+
+$ kubectl describe ns default
+Name:         default
+Labels:       istio-injection=enabled
+              kubernetes.io/metadata.name=default
+Annotations:  <none>
+Status:       Active
+
+$ 
 ```
 
 
