@@ -1,5 +1,5 @@
 
-gateway 설정
+#### gateway 설정 ####
 ```
 kubectl get crd gateways.gateway.networking.k8s.io &> /dev/null || \
  { kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v0.6.2" | kubectl apply -f -; }
@@ -12,7 +12,7 @@ customresourcedefinition.apiextensions.k8s.io/gateways.gateway.networking.k8s.io
 customresourcedefinition.apiextensions.k8s.io/httproutes.gateway.networking.k8s.io created
 ```
 
-bookinfo 배포 
+#### bookinfo 배포 ####
 ```
 cd ~/istio-1.18.2
 
