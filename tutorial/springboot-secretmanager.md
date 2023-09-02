@@ -1,7 +1,7 @@
 
 ```
 aws secretsmanager create-secret \
-    --name "prod/shop/mysql8.1.3" \
+    --name "prod/shop/mysql-8.x" \
     --description "eks-workshop mysql id/password" \
     --secret-string "{\"user\":\"shop\",\"password\":\"shop\"}"
 ```
