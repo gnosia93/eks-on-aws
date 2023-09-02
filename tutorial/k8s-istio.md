@@ -1,10 +1,6 @@
-****
-currently in development ..
-****
-
 ## istio ##
 
- * [Istio 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
+ * [Istio 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
 
  * [Istio 인젝션 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-injection.md)
 
