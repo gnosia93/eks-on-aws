@@ -43,13 +43,13 @@ Events:
 ```
 
 #### ELB 정보 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-11.png)
 
 #### ELB 인스턴스 #### 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-22.png)
 
 EKS 클러스터에 할당된 프라이빗 서브넷의 AZ 가 a, b 이므로, 그림에서 보는 것처럼 퍼브릭 서브넷 역시 a, b 에 존재해야 한다.
-단 CrossRegion 로드밸런싱에 대해서는 체크가 필요함. 
+EKS 에서 로드밸런서 타입의 서비스를 생성하는 경우 CLB 의 CrossRegion 로드밸런싱은 disable 상태에서 생성된다.  
 
 #### 웹 화면 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-3.png)
