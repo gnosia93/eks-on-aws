@@ -28,7 +28,8 @@ Begin the Istio pre-installation check by running:
 Need more information? Visit https://istio.io/latest/docs/setup/install/ 
 ```
 
-.bash_profile 에 istioctl 실행파일의 경로를  PATH 환경변수에 추가한다. precheck 명령어를 실행해서 클러스터에 이슈가 있는지 체크한다. 
+.bash_profile 의 PATH 환경변수에 istioctl 의 경로를 추가하고, precheck 로  클러스터에 이슈가 있는지 체크한다.  
+iostoctl 은 ./istio-1.18.2/bin 에 있다. (예시) /home/ec2-user/environment/istio-1.18.2/bin
 ```
 istioctl x precheck
 ```
@@ -38,6 +39,7 @@ istioctl x precheck
   To get started, check out https://istio.io/latest/docs/setup/getting-started/
 ```
 
+install 명령어로 EKS 클러스터에 istio 를 설치한다. 
 ```
 istioctl install
 ```
@@ -51,6 +53,7 @@ This will install the Istio 1.18.2 default profile with ["Istio core" "Istiod" "
 ✔ Installation complete                                                                                        Making this installation the default for injection and validation.
 ```
 
+설치 내용을 확인한다. 
 ```
 $ kubectl -n istio-system get deploy
 NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
