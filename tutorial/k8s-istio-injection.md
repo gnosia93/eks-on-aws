@@ -49,4 +49,5 @@ sleep-84549b8696-ws4r5          2/2     Running   0          10s
 ## 레퍼런스 ##
 
 * https://malwareanalysis.tistory.com/299
+* https://malwareanalysis.tistory.com/305
 * https://malwareanalysis.tistory.com/307
