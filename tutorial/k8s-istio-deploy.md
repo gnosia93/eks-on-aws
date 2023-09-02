@@ -84,7 +84,7 @@ Info [IST0118] (Service default/nginx) Port name  (port: 80, targetPort: 80) doe
 Error: Analyzers found issues when analyzing namespace: default.
 See https://istio.io/v1.18/docs/reference/config/analysis for more information about causes and resolutions.
 ```
-
+* https://stackoverflow.com/questions/76330171/why-i-cant-find-istio-gateway-under-namespace-of-istio-system-or-any-other-names
 
 ## 레퍼런스 ##
 
