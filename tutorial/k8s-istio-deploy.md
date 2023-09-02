@@ -56,6 +56,7 @@ export INGRESS_NAME=istio-ingressgateway
 export INGRESS_NS=istio-system
 
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl get gateway
 ```
 [결과]
 ```
