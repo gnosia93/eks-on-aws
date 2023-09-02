@@ -94,6 +94,12 @@ NAME                                        DESIRED   CURRENT   READY   AGE
 replicaset.apps/istio-operator-7d8f6b889f   1         1         1       48m
 ```
 
+## istio 삭제 ##
+
+```
+istioctl uninstall --purge
+```
+
 ## 레퍼런스 ##
 
 * https://istio.io/latest/docs/setup/getting-started/
