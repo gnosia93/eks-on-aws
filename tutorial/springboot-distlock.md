@@ -3,5 +3,4 @@
 
 ## 레퍼런스 ##
 
-* https://thalals.tistory.com/370
-* [Redis로 동시성 문제 해결하기](https://everydayyy.tistory.com/168)
+* [재고시스템으로 알아보는 동시성이슈 해결방법](https://thalals.tistory.com/370)
