@@ -70,6 +70,61 @@ docker buildx build --push \
 ```
 docker buildx 를 이용해 빌드와 푸시를 동시에 진행한다.
 
+
+## 서비스 배포 ##
+
+EKS 클러스터에 서비스를 배포한다. 
+
+```
+PROD_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'flask-prod')
+POINT_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'nodejs-point')
+```
+
+```
+cat <<EOF > flask-prod.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-prod
+  namespace: default
+  labels:
+    app: flask-prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-prod
+  template:
+    metadata:
+      labels:
+        app: flask-prod
+    spec:
+      containers:
+        - name: flask-prod
+          image: ${PROD_IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 3001
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-prod
+  namespace: default
+  labels:
+    app: flask-prod
+spec:
+  selector:
+    app: flask-prod
+  ports:
+    - port: 80
+      targetPort: 3001
+EOF
+```
+```
+kubectl apply -f flask-prod.yaml
+```
+
 ## 레퍼런스 ##
 
 * https://doitgrow.com/37#google_vignette
