@@ -25,7 +25,7 @@ isto 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주�
 
 EKS 클러스터에 서비스를 배포한다. 
 
-### 1. flask-prod ###
+#### 1. flask-prod ####
 
 ```
 PROD_IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'flask-prod')
@@ -77,7 +77,7 @@ EOF
 kubectl apply -f flask-prod.yaml
 ```
 
-### 2. nodejs-point ###
+#### 2. nodejs-point ####
 
 ```
 cat <<EOF > nodejs-point.yaml
@@ -124,7 +124,7 @@ EOF
 kubectl apply -f nodejs-point.yaml
 ```
 
-### 3. springboot-order ###
+#### 3. springboot-order ####
 
 ```
 $ kubectl get endpoints
@@ -203,7 +203,7 @@ kubectl apply -f shop-service.yaml
 ```
 
 
-### 4. 서비스 실행 ###
+#### 4. 서비스 실행 ####
 ```
 kubectl logs -f -l app=shop --all-containers=true
 ```
