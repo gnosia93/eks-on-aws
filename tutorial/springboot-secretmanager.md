@@ -29,7 +29,8 @@ AWS 콘솔의 secret manager 로 이동해서 rotation configuration 에서 [edi
 
 ### springboot 수정 ###
 
-eks-workshop 에서는 prod 데이터베이스에 대해서만 secret manager 를 적용하기 때문에 스프링 부트의 application-prod.yml 을 아래와 같이 수정한다. stage 데이터베이스에 대해서도 수정이 필요한 경우 spring.datasource 부분을 application-stage.yaml 에도 적용하도록 한다. stage 데이터베이스의 user/password 값이 prod 와 다른 경우 secret manager 에서 stage 데이터베이스용으로 별도의 secret 를 생성해야 한다. (stage/shop/mysql-8.x) 
+eks-workshop 에서는 prod 데이터베이스에 대해서만 secret manager 를 적용하기 때문에 스프링 부트의 application-prod.yml 을 아래와 같이 수정한다. stage 데이터베이스에 대해서도 수정이 필요한 경우 spring.datasource 부분을 application-stage.yaml 에도 적용하도록 한다.  
+stage 데이터베이스의 user/password 값이 prod 와 다른 경우 secret manager 에서 stage 데이터베이스용으로 별도의 secret 를 생성해야 한다. (stage/shop/mysql-8.x) 
 
 #### application-prod.yml ####
 ```
