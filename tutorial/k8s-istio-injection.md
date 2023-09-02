@@ -29,7 +29,14 @@ Labels:       istio-injection=enabled
 Annotations:  <none>
 Status:       Active
 
-$ 
+$ kubectl get namespace -L istio-injection
+NAME              STATUS   AGE   ISTIO-INJECTION
+default           Active   37h   enabled
+istio-operator    Active   75m   
+istio-system      Active   97m   
+kube-node-lease   Active   37h   
+kube-public       Active   37h   
+kube-system       Active   37h   
 ```
 
 
