@@ -1,4 +1,4 @@
-istio는 각 파드에 envoy proxy를 설치하여 서비스 메시를 관리한다.
+istio는 각 파드에 envoy proxy를 sidecar 패턴으로 설치하여 서비스 메시를 관리한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-mesh.png)
 
