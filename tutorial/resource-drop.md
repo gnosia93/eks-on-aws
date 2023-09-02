@@ -13,6 +13,8 @@ aws amp delete-workspace \
 
 #### 2. EKS 삭제 #### 
 
+* Ingress 및 LoadBalancer 타입의 서비스를 먼저 지운다.
+
 노드 그룹을 먼저 지우고, 클러스터를 지운다. cardon 에러가 발생하는 경우 AWS EKS 콘솔에서 지운다.
 ```
 eksctl delete nodegroup --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --name ng-2xlarge
