@@ -68,6 +68,16 @@ AWS EC2 콘솔의 Load Balancers 메뉴에서 로드밸런서의 상태를 확�
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-ingressgw.png)
 
 
+#### gateway CRD 확인 ####
+```
+kubectl get crd | grep gateways
+```
+[결과]
+```
+gateways.networking.istio.io                 2023-09-02T12:00:52Z
+```
+위와 같이 gateways.networking.istio.io 만 나와야 한다. 다른 gateway CRD 을 추가적으로 설치하면 안된다. 
+
 ### istio 오퍼레이터 설치 ###
 istio 설정을 파일로 관리하는 기능을 제공하는 것이 istio operator 이다. 오퍼레이터를 이용하면 yaml 파일로 istio 를 설정할 수 있다.   
 
