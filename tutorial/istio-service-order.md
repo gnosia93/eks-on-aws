@@ -158,8 +158,6 @@ EOF
 kubectl apply -f shop-service.yaml
 ```
 
-## 서비스 응답 ##
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-order.png)
 
 ## 레퍼런스 ##
 
