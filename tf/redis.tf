@@ -1,5 +1,5 @@
-resource "aws_elasticache_cluster" "example" {
-  cluster_id           = "cluster-example"
+resource "aws_elasticache_cluster" "eks_redis" {
+  cluster_id           = "eks-redis"
   engine               = "redis"
   node_type            = "cache.m3.medium"
   num_cache_nodes      = 1
