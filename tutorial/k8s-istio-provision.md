@@ -62,47 +62,7 @@ horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingr
 horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          36s
 ```
 
-## 트러블 슈팅 ##
-* Failed build model due to unable to resolve at least one subnet (0 match VPC and tags)
-```
-$ kubectl describe service istio-ingressgateway -n istio-system
-Name:                     istio-ingressgateway
-Namespace:                istio-system
-Labels:                   app=istio-ingressgateway
-                          install.operator.istio.io/owning-resource=unknown
-                          install.operator.istio.io/owning-resource-namespace=istio-system
-                          istio=ingressgateway
-                          istio.io/rev=default
-                          operator.istio.io/component=IngressGateways
-                          operator.istio.io/managed=Reconcile
-                          operator.istio.io/version=1.18.2
-                          release=istio
-Annotations:              <none>
-Selector:                 app=istio-ingressgateway,istio=ingressgateway
-Type:                     LoadBalancer
-IP Family Policy:         SingleStack
-IP Families:              IPv4
-IP:                       172.20.6.75
-IPs:                      172.20.6.75
-Port:                     status-port  15021/TCP
-TargetPort:               15021/TCP
-NodePort:                 status-port  30227/TCP
-Endpoints:                10.1.102.16:15021
-Port:                     http2  80/TCP
-TargetPort:               8080/TCP
-NodePort:                 http2  32420/TCP
-Endpoints:                10.1.102.16:8080
-Port:                     https  443/TCP
-TargetPort:               8443/TCP
-NodePort:                 https  31372/TCP
-Endpoints:                10.1.102.16:8443
-Session Affinity:         None
-External Traffic Policy:  Cluster
-Events:
-  Type     Reason            Age                  From     Message
-  ----     ------            ----                 ----     -------
-  Warning  FailedBuildModel  12m (x28 over 3h4m)  service  Failed build model due to unable to resolve at least one subnet (0 match VPC and tags)
-```
+
 
 ## 레퍼런스 ##
 
