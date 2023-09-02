@@ -19,6 +19,7 @@ aws secretsmanager create-secret \
 ### 패스워드 rotation 설정 ###
 
 AWS 콘솔의 secret manager 로 이동해서 아래 람다 함수를 등록한다. 
+rotation configuration 에서 [edit rotation] 버튼 클릭.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-rotation.png)
 
