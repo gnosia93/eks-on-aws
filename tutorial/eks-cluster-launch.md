@@ -4,7 +4,7 @@
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/aws-vpc.png)
 
-아래 KEY_NAME 은 여러분의 키이름으로 수정한다.
+KEY_NAME 을 생성한 키명으로 수정하고, cloud9 터미널에서 아래 스크립트를 실행한다.
 ```
 export VPC_ID=$(aws ec2 describe-vpcs --query 'Vpcs[?Tags[?Key==`Name`]|[?Value==`eks-workshop`]].VpcId' --output text)
 export PRIVATE_SUBNET_1=$(aws ec2 describe-subnets --filter Name=vpc-id,Values=${VPC_ID} --query 'Subnets[?Tags[?Key==`Name`]|[?Value==`eks_priv_subnet1`]].SubnetId' --output text)
