@@ -18,8 +18,9 @@ aws secretsmanager create-secret \
 
 ### 패스워드 rotation 설정 ###
 
-AWS 콘솔의 secret manager 로 이동해서 아래와 같이 람다 함수를 등록한다. 
+AWS 콘솔의 secret manager 로 이동해서 아래 람다 함수를 등록한다. 
 
+* https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas/blob/master/SecretsManagerRDSMySQLRotationSingleUser/lambda_function.py
 
 ### springboot 수정 ###
 
