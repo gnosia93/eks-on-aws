@@ -66,6 +66,8 @@ virtualservice.networking.istio.io/bookinfo created
 
 ## 레퍼런스 ##
 
+* https://istio.io/latest/docs/reference/config/networking/gateway/
+
 * https://cwal.tistory.com/42
 
 * https://istio.io/latest/docs/setup/getting-started/
