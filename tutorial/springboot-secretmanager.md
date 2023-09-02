@@ -56,6 +56,8 @@ dependencies {
 
 ### EKS 노드그룹 권한 설정 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-2.png)
 
 ## 트러블 슈팅 ##
 
