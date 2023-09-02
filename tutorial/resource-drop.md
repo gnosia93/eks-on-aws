@@ -37,7 +37,7 @@ aws cloud9 delete-environment \
 ```
 cd ~/eks-on-aws/tf
 
-terraform destroy
+terraform destroy -auto-approve
 ```
 * 테라폼으로 지우다가 에러가 발생하는 경우 AWS 콘솔로 이동하여 수동으로 지워준다.
 
