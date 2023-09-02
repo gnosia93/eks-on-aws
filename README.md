@@ -16,7 +16,7 @@
 
   * [스프링 부트 - Redis 웹세션 구현하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-redis-session.md)
 
-  * [스프링 부트 - Redis 분산락 구현과 데이터베이스 Offloading]
+  * [스프링 부트 - Redis 분산락 구현과 데이터베이스 Offloading](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distlock.md)
  
   * [스프핑 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md)
  
