@@ -1,5 +1,15 @@
 MySQL 데이터베이스에서 메트릭을 수집해서 AMG 로 보내기 위해, ec2 인스턴스를 하나 만든다. 
 
+### mysql 설정 ###
+
+```
+CREATE USER 'exporter'@'localhost' IDENTIFIED BY 'XXXXXXXX';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'localhost';
+GRANT SELECT ON performance_schema.* TO 'exporter'@'localhost';
+FLUSH PRIVILEGES
+```
+
+
 ## 레퍼런스 ##
 
 * https://omty.tistory.com/54
