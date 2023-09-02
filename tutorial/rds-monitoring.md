@@ -3,9 +3,10 @@ MySQL 데이터베이스에서 메트릭을 수집해서 AMG 로 보내기 위�
 ```
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
-```
 
 DB_ADDR=${STAGE_DB}
+```
+
 
 ### mysql 설정 ###
 
