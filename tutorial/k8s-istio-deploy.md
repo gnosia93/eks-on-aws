@@ -53,8 +53,11 @@ kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.
 #### 외부 노출 ####
 ```
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
-
-kubectl get gateway
+```
+[결과]
+```
+gateway.networking.istio.io/bookinfo-gateway created
+virtualservice.networking.istio.io/bookinfo created
 ```
 
 ## 레퍼런스 ##
