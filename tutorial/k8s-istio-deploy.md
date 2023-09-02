@@ -88,6 +88,8 @@ See https://istio.io/v1.18/docs/reference/config/analysis for more information a
 
 ## 레퍼런스 ##
 
+* [Istio #3 - 설치와 bookinfo 예제 실습](https://musclebear.tistory.com/157)
+ 
 * https://istio.io/latest/docs/reference/config/networking/gateway/
 
 * https://cwal.tistory.com/42
