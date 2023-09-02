@@ -1,3 +1,6 @@
+## Secret Manager 데이터베이스 설정 분리 / 암호화 ##
+
+RDS MySQL 데이터베이스의 유저 및 패스워드를 Secret Manager 를 이용하여 어플리케이션 코드에서 분리하고 암호화 한다.
 
 ### secret 생성 ###
 ```
@@ -54,7 +57,7 @@ dependencies {
 ```
 
 ### EKS 노드그룹 권한 설정 ###
-
+EKS 노드그룹의 인스턴스(파드)가 SecretManager 에 접근하기 위해서는 아래와 같이 ReadWrite 권한을 추가해야 한다.  
 EKS 콘솔에서 ng-2xlarge 노드그룹의 Role을 확인한 후, 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-0.png)
 
