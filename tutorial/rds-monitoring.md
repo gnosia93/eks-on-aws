@@ -1,12 +1,21 @@
 MySQL 데이터베이스에서 메트릭을 수집해서 AMG 로 보내기 위해, ec2 인스턴스를 하나 만든다. 
 
+```
+STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
+PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
+```
+
+DB_ADDR=${STAGE_DB}
+
 ### mysql 설정 ###
 
 ```
-CREATE USER 'exporter'@'localhost' IDENTIFIED BY 'XXXXXXXX';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'localhost';
-GRANT SELECT ON performance_schema.* TO 'exporter'@'localhost';
+cat <<EOF > mysql.sql
+CREATE USER 'exporter'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'{DB_ADDR}';
+GRANT SELECT ON performance_schema.* TO 'exporter'@'{DB_ADDR}';
 FLUSH PRIVILEGES
+EOF
 ```
 
 
