@@ -1,4 +1,10 @@
-
+```
+ $ kubectl get crd gateways.gateway.networking.k8s.io &> /dev/null || \
+>   { kubectl kustomize "github.com/kubernetes-sigs/gateway-api/config/crd?ref=v0.6.2" | kubectl apply -f -; }
+customresourcedefinition.apiextensions.k8s.io/gatewayclasses.gateway.networking.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/gateways.gateway.networking.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/httproutes.gateway.networking.k8s.io created
+```
 
 
 ## 레퍼런스 ##
