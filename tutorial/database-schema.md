@@ -148,7 +148,7 @@ DB_ADDR 를 ${STAGE_DB}, ${PROD_DB} 각각으로 설정하고 아래의 SQL 을 
 ```
 $ mysql -u root -p -h ${DB_ADDR}
 
-Enter password:
+Enter password:                                     <-------------- admin22admin 입력
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 10
 Server version: 8.0.33 MySQL Community Server - GPL
