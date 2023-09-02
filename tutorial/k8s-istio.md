@@ -24,52 +24,7 @@ istio 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주�
 
 
 
-#### 2. nodejs-point ####
 
-```
-cat <<EOF > nodejs-point.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nodejs-point
-  namespace: default
-  labels:
-    app: nodejs-point
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nodejs-point
-  template:
-    metadata:
-      labels:
-        app: nodejs-point
-    spec:
-      containers:
-        - name: nodejs-point
-          image: ${POINT_IMAGE_REPO_ADDR}
-          ports:
-            - containerPort: 3000
-          imagePullPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nodejs-point
-  namespace: default
-  labels:
-    app: nodejs-point
-spec:
-  selector:
-    app: nodejs-point
-  ports:
-    - port: 80
-      targetPort: 3000
-EOF
-```
-```
-kubectl apply -f nodejs-point.yaml
-```
 
 #### 3. springboot-order ####
 
