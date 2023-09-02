@@ -42,7 +42,7 @@ serviceaccount/bookinfo-productpage created
 deployment.apps/productpage-v1 created
 ```
 
-#### 어플리케이션 확인 ####
+#### POD 동작 확인 ####
 ```
 kubectl get pod -l app=ratings -o yaml > rating.yaml
 
@@ -50,6 +50,12 @@ kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.
  -c ratings -- curl -sS productpage:9080/productpage | grep -o "<title>.*</title>"
 ```
 
+#### 외부 노출 ####
+```
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+
+kubectl get gateway
+```
 
 ## 레퍼런스 ##
 
