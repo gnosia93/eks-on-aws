@@ -1,4 +1,4 @@
-## istio ##
+## istio 적용하기 ##
 
  * [Istio 설치하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
 
