@@ -75,7 +75,10 @@ istiod                 ClusterIP      172.20.231.243   <none>                   
 ```
 
 ```
-~/istio-1.18.2 $ kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}'
+kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}'
+```
+[결과]
+```
 32292
 ```
 
