@@ -8,17 +8,7 @@ Injection은 두가지 방식으로 가능한데, ①명령어로 수동으로 �
 
 ## Istio 인젝션 설정 ##
 
-### 1. 샘플 어플리케이션 배포 ###
-
 ```
-$ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/sleep/sleep.yaml
-serviceaccount/sleep created
-service/sleep created
-deployment.apps/sleep created
-
-$ kubectl get pod | grep sleep
-sleep-84549b8696-zpfb7          1/1     Running   0          17s
-
 $ kubectl label namespace default istio-injection=enabled --overwrite
 namespace/default labeled
 
@@ -37,6 +27,21 @@ istio-system      Active   97m
 kube-node-lease   Active   37h   
 kube-public       Active   37h   
 kube-system       Active   37h
+
+```
+
+
+
+### 1. 샘플 어플리케이션 배포 ###
+
+```
+$ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/sleep/sleep.yaml
+serviceaccount/sleep created
+service/sleep created
+deployment.apps/sleep created
+
+$ kubectl get pod | grep sleep
+sleep-84549b8696-zpfb7          1/1     Running   0          17s
 
 $ kubectl delete pod -l app=sleep
 pod "sleep-84549b8696-zpfb7" deleted
