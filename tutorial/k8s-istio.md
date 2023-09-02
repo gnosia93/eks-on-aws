@@ -22,7 +22,7 @@ istio 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주�
   * [혜택(포인트) - node.js](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/istio-nodejs-point.md)
 
 
-#### 서비스 동작 확인 ####
+#### 주문 동작 확인 ####
 ```
 kubectl logs -f -l app=shop --all-containers=true
 ```
