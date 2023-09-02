@@ -81,6 +81,10 @@ horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingr
 horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          79s
 ```
 
+```
+istioctl profile dump
+```
+
 ## 트러블 슈팅 ##
 * Failed build model due to unable to resolve at least one subnet (0 match VPC and tags)
 ```
