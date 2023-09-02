@@ -11,18 +11,21 @@ export PRIVATE_SUBNET_1=$(aws ec2 describe-subnets --filter Name=vpc-id,Values=$
 export PRIVATE_SUBNET_2=$(aws ec2 describe-subnets --filter Name=vpc-id,Values=${VPC_ID} --query 'Subnets[?Tags[?Key==`Name`]|[?Value==`eks_priv_subnet2`]].SubnetId' --output text)
 
 export CLUSTER_NAME=eks-workshop
-if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile; fi   
+if ! grep -q CLUSTER_NAME ~/.bash_profile; then echo "export CLUSTER_NAME="$CLUSTER_NAME >>  ~/.bash_profile; fi
+export KEY_NAME=aws-kp-2
 ```
 
 cloud9 콘솔에서 $CLUSTER_NAME.yaml 파일을 생성한 후, 
+* https://eksctl.io/usage/schema/
 ```
-cat <<EOF > $CLUSTER_NAME.yaml
+cat <<EOF > ${CLUSTER_NAME}.yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: $CLUSTER_NAME
-  region: ap-northeast-2
+  name: ${CLUSTER_NAME}
+  region: ${AWS_REGION}
+  version: 1.26
 
 vpc:
   id: "${VPC_ID}"
@@ -46,7 +49,7 @@ managedNodeGroups:
     - private-sub-2
   volumeSize: 80
   ssh: # use existing EC2 key, check from AWS EC2 console's keypair sub menu.
-      publicKeyName: aws-kp-2
+      publicKeyName: ${KEY_NAME}                #aws-kp-2
 EOF
 ```
 
