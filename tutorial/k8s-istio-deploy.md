@@ -52,6 +52,9 @@ kubectl exec "$(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.
 
 #### 외부 노출 ####
 ```
+export INGRESS_NAME=istio-ingressgateway
+export INGRESS_NS=istio-system
+
 kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
 ```
 [결과]
