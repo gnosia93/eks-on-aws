@@ -10,7 +10,7 @@ DB_ADDR=${STAGE_DB}
 
 ### mysql 설정 ###
 
-mysql 메트릭 수집용 계정을 생성한다. cloud9 터미널에서 아래 명령어를 수행한다. 
+mysql 메트릭 수집용 계정을 생성하기 위해, cloud9 터미널에서 아래 명령어를 수행한다. 
 ```
 cat <<EOF > mysql.sql
 CREATE USER 'receiver'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
