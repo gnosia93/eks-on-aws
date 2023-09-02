@@ -2,6 +2,14 @@
 currently in development ..
 ****
 
+## istio ##
+
+ * [Istio 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
+
+ * [Istio 인젝션 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-injection.md)
+
+
+
 ## 서비스 개발 ##
 isto 를 적용할 마이크로 서비스의 구조는 다음과 같은데 주문 발생시 상품과 혜택(포인트)를 호출한다. 각 서비스의 서브 링크로 방문해서 어플리케이션을 빌드후 ECR 에 푸시한다.
 
@@ -205,13 +213,6 @@ kubectl logs -f -l app=shop --all-containers=true
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-order-eks.png)
 
 
-## istio 구성하기 ##
-
- * [Istio 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-provision.md)
-
- * [Istio 오퍼레이터 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-operator.md)
-
- * [Istio 인젝션 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-injection.md)
 
 ## 레퍼런스 ##
 
