@@ -1,4 +1,4 @@
-주문 서비스의 경우 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있다. 
+주문 서비스의 경우 이미 https://github.com/gnosia93/eks-on-aws-springboot 에 통합되어 있다. 서비스 배포 섹션으로 이동하여 주문 서비스를 배포한다.
 
 ## 서비스 개발 ##
 
