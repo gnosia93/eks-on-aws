@@ -66,3 +66,5 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 
 * [MySQL application.yml 설정](https://velog.io/@minbo2002/JPA-application.yml-%EC%84%A4%EC%A0%95)
 
+* https://kdg-is.tistory.com/entry/Spring-Boot-Redis-Sorted-Set%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8C%80%EA%B8%B0%EC%97%B4-%EA%B5%AC%ED%98%84
+
