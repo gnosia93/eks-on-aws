@@ -16,6 +16,11 @@ aws secretsmanager create-secret \
 }
 ```
 
+### 패스워드 rotation 설정 ###
+
+AWS 콘솔의 secret manager 로 이동해서 아래와 같이 람다 함수를 등록한다. 
+
+
 ### springboot 수정 ###
 
 #### application-prod.yml ####
@@ -44,6 +49,9 @@ dependencies {
 	implementation 'com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:1.0.8'
     ...
 ```
+
+
+
 
 ## 레퍼런스 ##
 
