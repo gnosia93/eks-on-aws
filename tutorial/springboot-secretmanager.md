@@ -1,4 +1,10 @@
 
+```
+aws secretsmanager create-secret \
+    --name "prod/shop/mysql8.1.3" \
+    --description "eks-workshop mysql id/password" \
+    --secret-string "{\"user\":\"shop\",\"password\":\"shop\"}"
+```
 
 ## 레퍼런스 ##
 
