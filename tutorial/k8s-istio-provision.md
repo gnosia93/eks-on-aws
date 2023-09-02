@@ -42,24 +42,24 @@ kubectl get all -n istio-system
 [결과]
 ```
 NAME                                        READY   STATUS    RESTARTS   AGE
-pod/istio-ingressgateway-6f488f8f45-fnp6v   1/1     Running   0          70s
-pod/istiod-6dbd6db74f-9qppx                 1/1     Running   0          79s
+pod/istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          26s
+pod/istiod-758754dcd5-ff6kh                 1/1     Running   0          36s
 
-NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                                      AGE
-service/istio-ingressgateway   LoadBalancer   172.20.6.75     <pending>     15021:30227/TCP,80:32420/TCP,443:31372/TCP   70s
-service/istiod                 ClusterIP      172.20.108.52   <none>        15010/TCP,15012/TCP,443/TCP,15014/TCP        79s
+NAME                           TYPE           CLUSTER-IP       EXTERNAL-IP                                                                    PORT(S)                                      AGE
+service/istio-ingressgateway   LoadBalancer   172.20.241.252   a5a6a5f298b8441658371be38ae36d67-1397138782.ap-northeast-2.elb.amazonaws.com   15021:32328/TCP,80:30904/TCP,443:31882/TCP   26s
+service/istiod                 ClusterIP      172.20.27.106    <none>                                                                         15010/TCP,15012/TCP,443/TCP,15014/TCP        36s
 
 NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/istio-ingressgateway   1/1     1            1           71s
-deployment.apps/istiod                 1/1     1            1           79s
+deployment.apps/istio-ingressgateway   1/1     1            1           26s
+deployment.apps/istiod                 1/1     1            1           36s
 
 NAME                                              DESIRED   CURRENT   READY   AGE
-replicaset.apps/istio-ingressgateway-6f488f8f45   1         1         1       70s
-replicaset.apps/istiod-6dbd6db74f                 1         1         1       79s
+replicaset.apps/istio-ingressgateway-767b5dd74c   1         1         1       26s
+replicaset.apps/istiod-758754dcd5                 1         1         1       36s
 
 NAME                                                       REFERENCE                         TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
-horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingressgateway   <unknown>/80%   1         5         1          70s
-horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          79s
+horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingressgateway   <unknown>/80%   1         5         1          26s
+horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          36s
 ```
 
 ## 트러블 슈팅 ##
