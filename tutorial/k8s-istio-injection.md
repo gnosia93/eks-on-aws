@@ -8,6 +8,14 @@ Injection은 두가지 방식으로 가능한데, ①명령어로 수동으로 �
 
 ## Istio 인젝션 설정 ##
 
+### 1. 샘플 어플리케이션 배포 ###
+
+```
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.13/samples/sleep/sleep.yaml
+
+kubectl get pod | grep sleep
+```
+
 ## 레퍼런스 ##
 
 * https://malwareanalysis.tistory.com/299
