@@ -55,12 +55,11 @@ This will install the Istio 1.18.2 default profile with ["Istio core" "Istiod" "
 
 설치 내용을 확인한다. 
 ```
-$ kubectl -n istio-system get deploy
-NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
-istio-ingressgateway   1/1     1            1           45s
-istiod                 1/1     1            1           53s
+kubectl get all -n istio-system
+```
 
-$ kubectl get all -n istio-system
+[결과]
+```
 NAME                                        READY   STATUS    RESTARTS   AGE
 pod/istio-ingressgateway-6f488f8f45-fnp6v   1/1     Running   0          70s
 pod/istiod-6dbd6db74f-9qppx                 1/1     Running   0          79s
