@@ -1,6 +1,6 @@
 ## 리소스 삭제 ##
 
-Cloud9 에서 실행
+1, 2 단계는 Cloud9 에서 실행한다.
 
 #### 1. AMP / AMG 삭제 ####
 
@@ -13,13 +13,14 @@ aws amp delete-workspace \
 
 #### 2. EKS 삭제 #### 
 
+노드 그룹을 먼저 지우고, 클러스터를 지운다. cardon 에러가 발생하는 경우 AWS EKS 콘솔에서 지운다.
 ```
 eksctl delete nodegroup --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --name ng-2xlarge
 
 eksctl delete cluster ${CLUSTER_NAME}
 ```
 
-로컬 PC 에서 실행
+3, 4 단계는 로컬 PC 에서 실행한다.
 
 #### 3. cloud9 삭제 ####
 
