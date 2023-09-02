@@ -1,9 +1,9 @@
+## bookinfo 어플리케이션 배포 ##
 
-#### default 네임스페이스 설정 ####
+#### default 네임스페이스 인젝션 설정 ####
 ```
 kubectl label namespace default istio-injection=enabled
 ```
-
 
 #### bookinfo 배포 ####
 ```
