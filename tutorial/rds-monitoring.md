@@ -8,14 +8,14 @@ DB_ADDR=${STAGE_DB}
 ```
 
 
-### mysql 설정 ###
+### mysql 계정 생성 ###
 
-mysql 메트릭 수집용 계정을 생성하기 위해, cloud9 터미널에서 아래 명령어를 수행한다. 
+mysql 에서 메트릭을 수집하기 위해서 collector DB 계정을 만든다. cloud9 터미널에서 아래 명령어를 수행한다. 
 ```
 cat <<EOF > mysql.sql
-CREATE USER 'receiver'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'receiver'@'{DB_ADDR}';
-GRANT SELECT ON performance_schema.* TO 'receiver'@'{DB_ADDR}';
+CREATE USER 'collector'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'collector'@'{DB_ADDR}';
+GRANT SELECT ON performance_schema.* TO 'collector'@'{DB_ADDR}';
 FLUSH PRIVILEGES
 EOF
 ```
