@@ -9,11 +9,12 @@ DB_ADDR=${STAGE_DB}
 
 ### mysql 설정 ###
 
+mysql 메트릭 수집용 계정을 생성한다.
 ```
 cat <<EOF > mysql.sql
-CREATE USER 'exporter'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'{DB_ADDR}';
-GRANT SELECT ON performance_schema.* TO 'exporter'@'{DB_ADDR}';
+CREATE USER 'receiver'@'${DB_ADDR}' IDENTIFIED BY 'XXXXXXXX';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'receiver'@'{DB_ADDR}';
+GRANT SELECT ON performance_schema.* TO 'receiver'@'{DB_ADDR}';
 FLUSH PRIVILEGES
 EOF
 ```
