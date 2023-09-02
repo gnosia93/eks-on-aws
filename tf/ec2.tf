@@ -123,7 +123,7 @@ resource "aws_instance" "eks_ec2" {
     associate_public_ip_address = true
     instance_type = "c6i.2xlarge"
     iam_instance_profile = aws_iam_instance_profile.eks_ec2_profile.name
-    monitoring = true
+    monitoring = false
     root_block_device {
         volume_size = "50"
     }
@@ -142,6 +142,33 @@ _DATA
       "Name" = "eks_locust"
     } 
 }
+
+resource "aws_instance" "eks_ec2_mysql_collector" {
+    ami = data.aws_ami.amazon-linux-2.id
+    associate_public_ip_address = true
+    instance_type = "c6i.xlarge"
+    iam_instance_profile = aws_iam_instance_profile.eks_ec2_profile.name
+    monitoring = false
+    root_block_device {
+        volume_size = "80"
+    }
+    key_name = var.key_pair
+    vpc_security_group_ids = [ aws_security_group.eks_ec2_sg.id ]
+    subnet_id = aws_subnet.eks_pub_subnet2.id
+    user_data = <<_DATA
+#! /bin/bash
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -aG docker ec2-user
+_DATA
+
+    tags = {
+      "Name" = "eks_ec2_mysql_collector"
+    } 
+}
+
+
 
 output "locust_public_ip" {
     value = aws_instance.eks_ec2.public_dns
