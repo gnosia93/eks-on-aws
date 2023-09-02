@@ -1,3 +1,5 @@
+istio 설정을 파일로 관리하는 기능을 제공하는 것이 바로 istio operator 이다. 이를 이용하면 쿠버네티스 CRD로 istio 를 설정할 수 있다.   
+아래 화면에서는 istio operator 를 설치하고 있다. 
 
 ```
 $ istioctl operator init
