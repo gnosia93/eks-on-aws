@@ -71,6 +71,20 @@ NAME                                    READY   STATUS    RESTARTS   AGE
 istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          149m
 ```
 
+## 트러블 슈팅 ##
+* kubectl get gateway 출력결과 없음.
+-> istioctl analyze 로 확인
+```
+$ istioctl analyze 
+Error [IST0101] (VirtualService default/demo-virtualservice) Referenced host not found: "demo-version"
+Error [IST0145] (Gateway default/bookinfo-gateway) Conflict with gateways default/demo-gateway (workload selector istio=ingressgateway, port 80, hosts *).
+Error [IST0145] (Gateway default/demo-gateway) Conflict with gateways default/bookinfo-gateway (workload selector istio=ingressgateway, port 80, hosts helloworld.com).
+Warning [IST0103] (Pod default/nginx-748c667d99-pxbn5) The pod default/nginx-748c667d99-pxbn5 is missing the Istio proxy. This can often be resolved by restarting or redeploying the workload.
+Info [IST0118] (Service default/nginx) Port name  (port: 80, targetPort: 80) doesn't follow the naming convention of Istio port.
+Error: Analyzers found issues when analyzing namespace: default.
+See https://istio.io/v1.18/docs/reference/config/analysis for more information about causes and resolutions.
+```
+
 
 ## 레퍼런스 ##
 
