@@ -70,7 +70,7 @@ SecretsManagerReadWrite 권한을 추가한다.
 *  s.AwsSecretsManagerPropertySourceLocator : Fail fast is set and there was an error reading configuration from AWS Secrets Manager:
 User: arn:aws:sts::0000000000000:assumed-role/eksctl-eks-workshop-nodegroup-ng-NodeInstanceRole-1VUIDMEQADL6L/i-050601b9544ac5653 is not authorized to perform: secretsmanager:GetSecretValue on resource: /secret/springboot-shop-stage_stage because no identity-based policy allows the secretsmanager:GetSecretValue action (Service: AWSSecretsManager; Status Code: 400; Error Code: AccessDeniedException; Request ID: 425815ec-5503-4d14-93ec-9b210b384c76; Proxy: null)
 
-
+-> EKS 노드그룹의 Role에 SecretsManagerReadWrite 권한 추가
 
 
 
