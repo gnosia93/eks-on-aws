@@ -10,6 +10,7 @@ cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다.
 STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
 PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
 IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
+DB_ENDPOINT=${STAGE_DB}
 ```
 
 ```
@@ -40,7 +41,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: stage
             - name: DB_ENDPOINT
-              value: ${STAGE_DB}
+              value: ${DB_ENDPOINT}
             - name: DB_USERNAME
               value: shop
             - name: DB_PASSWORD
