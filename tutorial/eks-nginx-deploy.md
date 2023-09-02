@@ -24,6 +24,24 @@ NAME                              DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-76d6c9b8c   1         1         1       23s
 ```
 
+nginx 서비스 로드밸런서 상태를 확인한다.
+```
+
+IPs:                      172.20.144.176
+LoadBalancer Ingress:     a4ef0f72b80d74d64aabaab36c1528bf-1972944178.ap-northeast-2.elb.amazonaws.com
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32395/TCP
+Endpoints:                10.1.102.145:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  23s   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   20s   service-controller  Ensured load balancer
+```
+
 #### ELB 정보 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/nginx-1.png)
 
