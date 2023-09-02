@@ -8,6 +8,11 @@ customresourcedefinition.apiextensions.k8s.io/gateways.gateway.networking.k8s.io
 customresourcedefinition.apiextensions.k8s.io/httproutes.gateway.networking.k8s.io created
 ```
 
+```
+cd ~/istio-1.18.2
+
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+```
 
 ## 레퍼런스 ##
 
