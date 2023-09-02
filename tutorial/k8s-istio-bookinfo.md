@@ -63,6 +63,23 @@ istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          149m
 istioctl analyze 
 ```
 
+#### 설정확인 ####
+``` 
+kubectl get service -n istio-system
+```
+[결과]
+```
+NAME                   TYPE           CLUSTER-IP       EXTERNAL-IP                                                                    PORT(S)                                      AGE
+istio-ingressgateway   LoadBalancer   172.20.27.104    a2000b639c9a147f8840ba80dd7be449-1085459483.ap-northeast-2.elb.amazonaws.com   15021:30047/TCP,80:32292/TCP,443:32358/TCP   9m57s
+istiod                 ClusterIP      172.20.231.243   <none>                                                                         15010/TCP,15012/TCP,443/TCP,15014/TCP        10m
+```
+
+```
+~/istio-1.18.2 $ kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}'
+32292
+```
+
+
 ## 트러블 슈팅 ##
 * kubectl get gateway 출력결과 없음.
 -> istioctl analyze 로 확인
