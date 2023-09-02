@@ -2,7 +2,7 @@ istio는 각 파드에 envoy proxy를 sidecar 패턴으로 설치하여 서비�
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-mesh.png)
 
-원하는 pod만 envory proxy를 설치하고 싶은 겁니다. 객체지향 DI(Dependency Injection)처럼 Istio도 Sidecar Injection을 지원합니다. 공식문서(https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/)에서도 따로 문서로 정리될만큼 중요한 개념입니다.
+전체 pod 에도 설치할 수 있지만, 원하는 pod 에만 envory proxy를 설치할 수도 있다. 이때 사용되는 기술이 바로 객체지향의 DI(Dependency Injection)와 같은 기술로, Istio는 Sidecar Injection을 지원한다.(https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/)
 
  
 
