@@ -47,6 +47,7 @@ sleep-84549b8696-ws4r5          2/2     Running   0          10s
 
 
 ## 레퍼런스 ##
+* https://devocean.sk.com/experts/techBoardDetail.do?ID=163656&boardType=experts&page=&searchData=&subIndex=&idList=
 * https://devocean.sk.com/blog/techBoardDetail.do?ID=163655
 * https://malwareanalysis.tistory.com/299
 * https://malwareanalysis.tistory.com/305
