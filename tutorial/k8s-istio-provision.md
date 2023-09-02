@@ -41,6 +41,8 @@ istioctl x precheck
 
 install 명령어로 EKS 클러스터에 istio 를 설치한다. 
 ```
+istioctl profile dump
+
 istioctl install
 ```
 
@@ -79,10 +81,6 @@ replicaset.apps/istiod-6dbd6db74f                 1         1         1       79
 NAME                                                       REFERENCE                         TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
 horizontalpodautoscaler.autoscaling/istio-ingressgateway   Deployment/istio-ingressgateway   <unknown>/80%   1         5         1          70s
 horizontalpodautoscaler.autoscaling/istiod                 Deployment/istiod                 <unknown>/80%   1         5         1          79s
-```
-
-```
-istioctl profile dump
 ```
 
 ## 트러블 슈팅 ##
