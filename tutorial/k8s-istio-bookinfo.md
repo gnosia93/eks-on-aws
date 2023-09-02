@@ -63,7 +63,7 @@ istio-ingressgateway-767b5dd74c-662sd   1/1     Running   0          149m
 istioctl analyze 
 ```
 
-#### 설정확인 ####
+#### istio-ingressgateway 서비스 확인 ####
 ``` 
 kubectl get service -n istio-system
 ```
@@ -74,6 +74,7 @@ istio-ingressgateway   LoadBalancer   172.20.27.104    a2000b639c9a147f8840ba80d
 istiod                 ClusterIP      172.20.231.243   <none>                                                                         15010/TCP,15012/TCP,443/TCP,15014/TCP        10m
 ```
 
+http2 포트를 확인해서 80:32292/TCP 로 바인딩되어 있음 확인한다.
 ```
 kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}'
 ```
@@ -81,6 +82,8 @@ kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.por
 ```
 32292
 ```
+
+## 크롬 브라우저에서 확인 ## 
 
 
 ## 트러블 슈팅 ##
