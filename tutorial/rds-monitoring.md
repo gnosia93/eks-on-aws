@@ -14,8 +14,8 @@ mysql 에서 메트릭을 수집하기 위해서 collector DB 계정을 만든�
 ```
 cat <<EOF > mysql.sql
 CREATE USER 'collector'@'${DB_ADDR}' IDENTIFIED BY 'collector';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'collector'@'{DB_ADDR}';
-GRANT SELECT ON performance_schema.* TO 'collector'@'{DB_ADDR}';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'collector'@'${DB_ADDR}';
+GRANT SELECT ON performance_schema.* TO 'collector'@'${DB_ADDR}';
 FLUSH PRIVILEGES
 EOF
 ```
