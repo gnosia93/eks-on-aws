@@ -67,7 +67,7 @@ msa.service.endpoint.point: "http://localhost:3000/point"
 ```
 
 ## 레퍼런스 ##
-
+* https://wildeveloperetrain.tistory.com/280
 * https://kkambi.tistory.com/196
 * [재고시스템으로 알아보는 동시성이슈 해결방법](https://thalals.tistory.com/370)
 * https://lktprogrammer.tistory.com/42
