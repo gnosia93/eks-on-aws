@@ -20,3 +20,5 @@
   - https://blog.yevgnenll.me/k8s/deployment-declaration-update-application
 
 * [k8s 환경변수 구성하기 - ConfigMap/Secret](https://waspro.tistory.com/681)
+  
+* [Spring Security / JWT - 로그인 구현](https://webfirewood.tistory.com/115)
