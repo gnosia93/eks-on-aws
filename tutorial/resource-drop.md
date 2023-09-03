@@ -17,7 +17,10 @@ aws amp delete-workspace \
 * EKS SG 3개를 지운다. 
 * Ingress 및 LoadBalancer 타입의 K8S 오브젝트를 지운다.
 * 노드 그룹을 지우고 - cardon 에러가 발생하는 경우 AWS EKS 콘솔에서 지운다.
-* 클러스터를 지운다.  
+* 클러스터를 지운다.
+
+#### eks 노드그룹을 지운다 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudformation-eks-nodegroup.png)
 ```
 eksctl delete nodegroup --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --name ng-2xlarge
 
