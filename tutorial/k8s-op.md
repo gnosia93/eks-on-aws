@@ -24,3 +24,4 @@
 * [k8s 환경변수 구성하기 - ConfigMap/Secret](https://waspro.tistory.com/681)
   
 * [Spring Security / JWT - 로그인 구현](https://webfirewood.tistory.com/115)
+  * https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-redis-session.md   
