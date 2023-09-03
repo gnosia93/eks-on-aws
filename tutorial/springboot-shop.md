@@ -60,9 +60,7 @@ drwxr-xr-x@  4 soonbeom  staff   128  8 20 18:54 src
 
 * [IntelliJ Springboot 프로젝트 생성 및 실행](https://velog.io/@deannn/Spring-IntelliJ-Springboot-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%8B%A4%ED%96%89)
 
-* [Mac에 MySQL 설치하기](https://losskatsu.github.io/it-infra/mysql-install-mac/#%EC%B0%B8%EA%B3%A0-%EB%A7%81%ED%81%AC)
-
-* [MySQL 유저 생성](https://nickjoit.tistory.com/144)
+* [InteliJ Auto Import](https://tychejin.tistory.com/340)
 
 * [MySQL application.yml 설정](https://velog.io/@minbo2002/JPA-application.yml-%EC%84%A4%EC%A0%95)
 
