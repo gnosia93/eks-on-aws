@@ -57,7 +57,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   redis:
-      host: loalhost
+      host: localhost
       port: 6379
       
 logging.level.root : info
