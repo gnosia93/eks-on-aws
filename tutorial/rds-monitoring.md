@@ -13,9 +13,9 @@ DB_ADDR=${STAGE_DB}
 mysql 에서 메트릭을 수집하기 위해서 collector DB 계정을 만든다. cloud9 터미널에서 아래 명령어를 수행한다. 
 ```
 cat <<EOF > collector.sql
-CREATE USER 'collector'@'${DB_ADDR}' IDENTIFIED BY 'collector';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'collector'@'${DB_ADDR}';
-GRANT SELECT ON performance_schema.* TO 'collector'@'${DB_ADDR}';
+CREATE USER 'collector'@'%' IDENTIFIED BY 'collector';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'collector'@'%';
+GRANT SELECT ON performance_schema.* TO 'collector'@'%';
 FLUSH PRIVILEGES
 EOF
 ```
