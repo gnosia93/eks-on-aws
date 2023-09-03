@@ -30,6 +30,41 @@ dependencies {
 	...
 ```
 
+### application-dev.yaml ###
+아래와 같이 redis 설정을 넣어준다.
+```
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot-shop-dev
+  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    generate-ddl: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/shop
+    username: shop
+    password: shop
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+      host: loalhost
+      port: 6379
+      
+logging.level.root : info
+
+msa.service.endpoint.prod : "http://localhost:3001/prod"
+msa.service.endpoint.point: "http://localhost:3000/point"
+```
 
 ## 레퍼런스 ##
 
