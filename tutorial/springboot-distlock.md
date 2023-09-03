@@ -2,6 +2,12 @@ ElastiCache For Redis 를 활용한 판매 및 재고수량 관리 방법에 대
 
 ### build.gradle ###
 
+redisson 패키지 의존성을 추가한다.
+```
+dependencies {
+	implementation 'org.redisson:redisson-spring-boot-starter:3.23.4'
+```
+
 
 ## 레퍼런스 ##
 
