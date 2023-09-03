@@ -6,6 +6,8 @@ ElastiCache For Redis 를 활용한 판매 및 재고수량 관리 방법에 대
 docker pull redis
 
 docker images
+
+docker run --name my-redis -p 6379:6379 -d redis
 ```
 
 
