@@ -1,3 +1,5 @@
+## k8s 운영 ##
+
 * [k8s command 모음](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op-cmd.md)
 
 * [helm](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/study-helm.md)
@@ -16,6 +18,8 @@
 
 * 트러블 슈팅
   - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
+
+## 개발 ##
 
 * [k8s 환경변수 구성하기 - ConfigMap/Secret](https://waspro.tistory.com/681)
   
