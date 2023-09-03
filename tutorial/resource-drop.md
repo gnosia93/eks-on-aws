@@ -13,6 +13,7 @@ aws amp delete-workspace \
 
 ### 2. EKS 삭제 ### 
 
+수동으로 리소를 삭제할 경우 아래 순서대로 지워줘야 한다.
 * EKS Control Plan 시큐리티 그룹 인바운드 룰을 지운다 (cloud9 용으로 설정한 룰)
 * EKS SG 3개를 지운다. 
 * Ingress 및 LoadBalancer 타입의 K8S 오브젝트를 지운다.
