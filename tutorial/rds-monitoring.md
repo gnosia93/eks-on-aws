@@ -29,7 +29,18 @@ mysql -u root -p -h ${DB_ADDR}
 
 AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그인 한다.
 ```
+global:
+  scrape_interval:     15s    
 
+scrape_configs:
+  - job_name : 'rds'    
+    static_configs:
+      - targets: ['${STAGE_DB}:3306']  
+        labels:
+          name: 'stage-db'    
+      - targets: ['${PROD_DB}:3306']
+        labels:
+          name: 'prod-db'
 ```
 
 ## 레퍼런스 ##
