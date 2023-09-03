@@ -12,6 +12,12 @@ docker run --name my-redis -p 6379:6379 -d redis
 ```
 % docker ps -a | grep my-redis
 2465999b7f47   redis                           "docker-entrypoint.s…"   8 seconds ago   Up 8 seconds                0.0.0.0:6379->6379/tcp   my-redis
+
+% docker exec -it my-redis /bin/bash
+root@2465999b7f47:/data# redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379>
 ```
 
 ### build.gradle ###
