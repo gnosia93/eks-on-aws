@@ -25,6 +25,9 @@ mysql 에 로그인해서 coll.sql 을 실행한다.
 mysql -u root -p -h ${DB_ADDR} 
 ```
 
+### 프로메테우스 설치 ###
+
+
 
 ## 레퍼런스 ##
 
