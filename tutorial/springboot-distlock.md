@@ -20,7 +20,6 @@ redisson 패키지 의존성을 추가한다.
 ```
 dependencies {
 	implementation 'org.redisson:redisson-spring-boot-starter:3.23.4'
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	...
 ```
 
