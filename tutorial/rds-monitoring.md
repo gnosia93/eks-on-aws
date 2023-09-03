@@ -16,12 +16,13 @@ cat <<EOF > coll.sql
 CREATE USER 'coll'@'%' IDENTIFIED BY 'coll';
 GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'coll'@'%';
 GRANT SELECT ON performance_schema.* TO 'coll'@'%';
-FLUSH PRIVILEGES
+FLUSH PRIVILEGES;
 EOF
 ```
 
+mysql 에 로그인해서 coll.sql 을 실행한다. 
 ```
-mysql -u root -p -h ${DB_ADDR} < coll.sql
+mysql -u root -p -h ${DB_ADDR} 
 ```
 
 
