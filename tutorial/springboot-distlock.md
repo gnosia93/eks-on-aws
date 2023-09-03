@@ -2,6 +2,11 @@ ElastiCache For Redis 를 활용한 판매 및 재고수량 관리 방법에 대
 
 ### 로컬 PC 에 Redis 설치 ###
 
+```
+docker pull redis
+
+docker images
+```
 
 
 ### build.gradle ###
