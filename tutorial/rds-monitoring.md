@@ -25,6 +25,12 @@ mysql 에 로그인해서 coll.sql 을 실행한다.
 mysql -u root -p -h ${DB_ADDR} 
 ```
 
+### IAM Role 생성 및 EC2 Role 변경 ###
+```
+```
+
+
+
 ### 프로메테우스 설치 ###
 
 AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그인 한다.
