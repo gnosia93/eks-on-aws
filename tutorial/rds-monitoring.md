@@ -28,6 +28,12 @@ mysql -u root -p -h ${DB_ADDR}
 ### 프로메테우스 설치 ###
 
 AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그인 한다.
+
+```
+curl -O prometheus-2.47.0-rc.0.linux-amd64.tar.gz	
+```
+
+
 ```
 global:
   scrape_interval:     15s    
