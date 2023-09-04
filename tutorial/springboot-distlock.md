@@ -1,4 +1,6 @@
-ElastiCache For Redis 를 활용한 제한이 설정된 판매 및 재고수량 관리 방법에 대해서 설명한다. 데이터베이스로도 관리할 수 있으나 트랜잭션 관리에 초점을 두고 있는 RDMS 시스템들은 Redis 와 같은 캐쉬 시스템에 비해서 처리 속도가 상당히 느린편이고, DeadLock이 발생할 가능성이 있다. (select ~ for update)
+분산락이란 race condition 상태에서 공유자원에 접근할 때, 데이터 무결성을 지키기 위해 어떠한 오퍼레이션의 원자성(atomic)을 보장하는 기법이다.   
+ElastiCache For Redis 를 활용해서 제한이 설정된 판매 및 재고수량 관리시 분산락 기법을 활용할 수 있다.   
+데이터베이스로도 관리할 수 있으나 트랜잭션 관리에 초점을 두고 있는 RDMS 시스템들은 Redis 와 같은 캐쉬 시스템에 비해서 처리 속도가 상당히 느린편이고, DeadLock이 발생할 가능성이 있다. (select ~ for update)
 
 ### 로컬 PC 에 Redis 설치 ###
 
