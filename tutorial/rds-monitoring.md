@@ -36,20 +36,6 @@ tar xvfz prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
 ```
 
 
-```
-global:
-  scrape_interval:     15s    
-
-scrape_configs:
-  - job_name : 'rds'    
-    static_configs:
-      - targets: ['${STAGE_DB}:3306']  
-        labels:
-          name: 'stage-db'    
-      - targets: ['${PROD_DB}:3306']
-        labels:
-          name: 'prod-db'
-```
 
 ## 레퍼런스 ##
 
