@@ -66,6 +66,159 @@ msa.service.endpoint.prod : "http://localhost:3001/prod"
 msa.service.endpoint.point: "http://localhost:3000/point"
 ```
 
+### RedissonConfiguration ###
+```
+package com.example.shop.configuration;
+
+import lombok.Getter;
+import org.redisson.Redisson;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Getter
+@Configuration
+public class RedissonConfiguration {
+
+    @Value( "${spring.redis.host}" )
+    private String host;
+
+    @Value( "${spring.redis.port}" )
+    private int port;
+
+    @Bean
+    public RedissonClient redissonClient(){
+        Config config = new Config();
+        config.useSingleServer()
+                .setAddress("redis://"+ this.host+":"+ this.port);
+
+        return Redisson.create(config);
+    }
+}
+```
+
+### ProductController.java ###
+```
+package com.example.shop.controller;
+
+import com.example.shop.service.ProductService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+
+@Slf4j
+@RequiredArgsConstructor
+@RequestMapping(value="/product")
+@RestController
+public class ProductController {
+
+    private final ProductService productService;
+
+    @ResponseBody
+    @RequestMapping(value="/sellCount/productId={productId}&count={count}", method=RequestMethod.PUT)
+    public ResponseEntity<?> updateSellCount(@PathVariable int productId,
+                                  @PathVariable int count) {
+        productService.increaseSellCount(productId, count);
+        int productSellCount = productService.getProductSellCount(productId);
+
+        HashMap<String, Object> productResponse = new HashMap<String, Object>();
+        productResponse.put("sellCount", productSellCount);
+
+        return ResponseEntity.status(HttpStatus.OK).body(productResponse);
+    }
+}
+```
+
+### ProductService.java ###
+```
+package com.example.shop.service;
+
+
+import com.example.shop.configuration.RedissonConfiguration;
+import com.example.shop.exception.ProductSoldOutException;
+import com.example.shop.exception.ProductTryLockFail;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
+import org.springframework.stereotype.Service;
+
+import java.util.concurrent.TimeUnit;
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class ProductService {
+
+    private final RedissonClient redissonClient;
+    private final RedissonConfiguration redissonConfiguration;
+    private static final int MAX_SELLABLE_COUNT = 3;
+
+
+    public String getLockName(int productId){
+        final String prefix = "%s-lock";
+        return String.format(prefix, productId);
+    }
+
+    public String getKey(int productId) {
+        return String.valueOf(productId);
+    }
+
+    public void increaseSellCount(final int productId, final int count){
+        final String key = getKey(productId);
+        final String lockName = getLockName(productId);
+        final RLock lock = redissonClient.getLock(lockName);
+        final String worker = Thread.currentThread().getName();
+
+        int currentSellCount;
+        try {
+            if(!lock.tryLock(1, 3, TimeUnit.SECONDS))
+                throw new ProductTryLockFail();
+                //return;
+
+            currentSellCount = getCurrentSellCount(key);
+            if(currentSellCount + count > MAX_SELLABLE_COUNT) {
+                log.info("[{}] 모두 팔렸음!!! ({}개)", worker, currentSellCount + count);
+                throw new ProductSoldOutException();
+                //return;
+            }
+
+            setSellCount(key, currentSellCount + count);
+            log.info("현재 진행중인 사람 : {} & 현재 팔린 갯수 : {}개", worker, currentSellCount + count);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            if(lock != null && lock.isLocked()) {
+                lock.unlock();
+            }
+        }
+    }
+
+    public void setSellCount(String key, int amount){
+
+        redissonClient.getBucket(key).set(amount);
+    }
+
+    public int getCurrentSellCount(String key) {
+        if(redissonClient.getBucket(key).get() == null)
+            return 0;
+
+        return (int) redissonClient.getBucket(key).get();
+    }
+
+    public int getProductSellCount(int productId) {
+        return getCurrentSellCount(getKey(productId));
+    }
+}
+```
+
 ## 레퍼런스 ##
 
 * https://incheol-jung.gitbook.io/docs/q-and-a/spring/redisson-trylock
