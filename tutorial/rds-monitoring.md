@@ -30,7 +30,8 @@ mysql -u root -p -h ${DB_ADDR}
 AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그인 한다.
 
 ```
-curl -O prometheus-2.47.0-rc.0.linux-amd64.tar.gz	
+PROMETHEUS_VERSION=2.47.0-rc.0
+curl -O https://github.com/prometheus/prometheus/releases/download/prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz	
 ```
 
 
