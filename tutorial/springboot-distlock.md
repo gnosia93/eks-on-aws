@@ -68,6 +68,7 @@ msa.service.endpoint.point: "http://localhost:3000/point"
 
 ## 레퍼런스 ##
 
+* https://incheol-jung.gitbook.io/docs/q-and-a/spring/redisson-trylock
 * https://github.com/hgs-study/distributed-lock-practice/tree/master
 * https://wildeveloperetrain.tistory.com/280
 * https://kkambi.tistory.com/196
