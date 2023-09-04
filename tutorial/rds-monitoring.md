@@ -29,6 +29,12 @@ mysql -u root -p -h ${DB_ADDR}
 ```
 ```
 
+```
+WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
+AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
+AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
+```
+
 
 
 ### 프로메테우스 설치 ###
