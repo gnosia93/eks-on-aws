@@ -14,7 +14,7 @@
 
   * [스프링 부트 어플리케이션 개발](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-devel.md)
 
-  * [스프링 부트 - Redis 분산락 구현과 데이터베이스 Off Loading](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distlock.md)
+  * [스프링 부트 - Redis 분산락 구현 (상품 판매수량 제한)](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distlock.md)
  
   * [스프핑 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md)
  
