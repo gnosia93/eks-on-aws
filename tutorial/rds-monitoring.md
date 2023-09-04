@@ -52,3 +52,5 @@ scrape_configs:
 * https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-ingest-metrics-remote-write-EC2.html
 
 * https://prometheus.io/docs/prometheus/latest/getting_started/
+
+* https://prometheus.io/download/
