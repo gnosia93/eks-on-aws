@@ -45,9 +45,4 @@ scrape_configs:
 
 ## 레퍼런스 ##
 
-* https://omty.tistory.com/54
-* https://observiq.com/blog/how-to-monitor-mysql-with-opentelemetry
-* https://stackoverflow.com/questions/71646503/how-to-monitor-aws-rds-vis-prometheus-using-cloudwatch-exporter
-* https://github.com/nerdswords/yet-another-cloudwatch-exporter/tree/master
-* https://aws.amazon.com/blogs/mt/enhance-observability-for-amazon-rds-custom-for-sql-server-using-amazon-managed-service-for-prometheus-and-amazon-managed-grafana/
-* https://medium.com/@Amet13/sending-aws-metrics-into-prometheus-using-operator-and-cloudwatch-exporter-180481cce2a6
+* https://velog.io/@sojukang/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EC%A0%9C%EC%9D%BC-%EC%89%AC%EC%9A%B4-Prometheus-Grafana-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-%EC%84%A4%EC%A0%95-MySQL%ED%8E%B8
