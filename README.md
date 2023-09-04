@@ -24,7 +24,7 @@
 
   * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
 
-  * [대기열 시스템 구현 블로그](https://dev-jj.tistory.com/entry/%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98%EC%9D%84-%EB%8C%80%EB%B9%84%ED%95%9C-%EB%8C%80%EA%B8%B0%EC%97%B4-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-Redis-WebSocket-Spring)  
+
     
 * [#5. AWS CodePipeline CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
 
