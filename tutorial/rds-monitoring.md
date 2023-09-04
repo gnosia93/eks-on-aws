@@ -49,6 +49,10 @@ aws iam create-role \
 aws iam attach-role-policy \
     --role-name test-role \
     --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusRemoteWriteAccess
+
+aws iam attach-role-policy \
+    --role-name test-role \
+    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
 ```
 
 ```
