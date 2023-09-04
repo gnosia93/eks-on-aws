@@ -125,7 +125,7 @@ public class ProductController {
     @ResponseBody
     @RequestMapping(value="/sellCount/productId={productId}&count={count}", method=RequestMethod.PUT)
     public ResponseEntity<?> updateSellCount(@PathVariable int productId,
-                                  @PathVariable int count) {
+   					     @PathVariable int count) {
         productService.increaseSellCount(productId, count);
         int productSellCount = productService.getProductSellCount(productId);
 
