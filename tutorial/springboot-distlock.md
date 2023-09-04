@@ -196,7 +196,7 @@ public class ProductService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            if(lock != null && lock.isLocked()) {
+            if(lock != null && lock.isLocked() && lock.isHeldByCurrentThread()) {
                 lock.unlock();							// 분산락 해제
             }
         }
