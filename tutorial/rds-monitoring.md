@@ -56,6 +56,11 @@ aws iam attach-role-policy \
 ```
 
 ```
+aws iam create-instance-profile --instance-profile-name MySQLPrometheusRole-Instance-Profile
+aws iam add-role-to-instance-profile --role-name MySQLPrometheusRole --instance-profile-name MySQLPrometheusRole-Instance-Profile
+```
+
+```
 WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
 AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
 AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
