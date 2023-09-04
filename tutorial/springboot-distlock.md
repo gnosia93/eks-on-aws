@@ -158,7 +158,7 @@ public class ProductService {
 
     private final RedissonClient redissonClient;
     private final RedissonConfiguration redissonConfiguration;
-    private static final int MAX_SELLABLE_COUNT = 3;
+    private static final int MAX_SELLABLE_COUNT = 30;		// 최대 판매수량을 상품별로 30개로 설정
 
 
     public String getLockName(int productId){
@@ -170,6 +170,7 @@ public class ProductService {
         return String.valueOf(productId);
     }
 
+    // 판매수량을 증가시키는 함수 
     public void increaseSellCount(final int productId, final int count){
         final String key = getKey(productId);
         final String lockName = getLockName(productId);
@@ -178,25 +179,25 @@ public class ProductService {
 
         int currentSellCount;
         try {
-            if(!lock.tryLock(1, 3, TimeUnit.SECONDS))
+            if(!lock.tryLock(1, 3, TimeUnit.SECONDS))        			// 분산락 획득시도 1초 동안 여러번 반복하다가 락 획득레 실패하는 경우실패하는 경우 예외 처리
                 throw new ProductTryLockFail();
                 //return;
 
-            currentSellCount = getCurrentSellCount(key);
-            if(currentSellCount + count > MAX_SELLABLE_COUNT) {
+            currentSellCount = getCurrentSellCount(key);     			// 현재 판매수량 조회
+            if(currentSellCount + count > MAX_SELLABLE_COUNT) {			// 판매 가능여부 체크
                 log.info("[{}] 모두 팔렸음!!! ({}개)", worker, currentSellCount + count);
                 throw new ProductSoldOutException();
                 //return;
             }
 
-            setSellCount(key, currentSellCount + count);
+            setSellCount(key, currentSellCount + count);			// 판매수량 업데이트
             log.info("현재 진행중인 사람 : {} & 현재 팔린 갯수 : {}개", worker, currentSellCount + count);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             if(lock != null && lock.isLocked()) {
-                lock.unlock();
+                lock.unlock();							// 분산락 해제
             }
         }
     }
