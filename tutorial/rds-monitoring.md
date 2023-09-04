@@ -33,7 +33,32 @@ AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그
 PROMETHEUS_VERSION=2.46.0
 curl -LO https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
 tar xvfz prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
+cd prometheus-${PROMETHEUS_VERSION}.linux-amd64
 ```
+
+[prometheus.yaml]
+```
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: 'prometheus'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:8000']
+
+remote_write:
+  -
+    url: https://aps-workspaces.my-region.amazonaws.com/workspaces/my-workspace-id/api/v1/remote_write
+    queue_config:
+        max_samples_per_send: 1000
+        max_shards: 200
+        capacity: 2500
+    sigv4:
+         region: ap-northeast-2
+```
+
 
 
 
