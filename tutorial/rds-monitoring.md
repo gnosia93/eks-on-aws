@@ -47,11 +47,11 @@ aws iam create-role \
     --assume-role-policy-document file://assumeRole.json
 
 aws iam attach-role-policy \
-    --role-name test-role \
+    --role-name MySQLPrometheusRole \
     --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusRemoteWriteAccess
 
 aws iam attach-role-policy \
-    --role-name test-role \
+    --role-name MySQLPrometheusRole \
     --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
 ```
 
