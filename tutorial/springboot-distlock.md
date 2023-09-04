@@ -181,7 +181,7 @@ public class ProductService {
 
         int currentSellCount;
         try {
-            if(!lock.tryLock(1, 3, TimeUnit.SECONDS))        			// 분산락 획득시도 1초 동안 여러번 반복하다가 락 획득레 실패하는 경우실패하는 경우 예외 처리
+            if(!lock.tryLock(1, 3, TimeUnit.SECONDS))        			// 1초동안 분산락을 여러번 획득시도 / 실패하는 경우 예외 처리
                 throw new ProductTryLockFail();
                 //return;
 
