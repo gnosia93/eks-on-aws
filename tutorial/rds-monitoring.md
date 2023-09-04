@@ -41,6 +41,14 @@ cat <<EOF > assumeRole.json
      ]
 }
 EOF
+
+aws iam create-role \
+    --role-name MySQLPrometheusRole \
+    --assume-role-policy-document file://assumeRole.json
+
+aws iam attach-role-policy \
+    --role-name test-role \
+    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusRemoteWriteAccess
 ```
 
 ```
@@ -102,3 +110,5 @@ prometheus --config.file=prometheus.yaml
 * https://prometheus.io/docs/prometheus/latest/getting_started/
 
 * https://prometheus.io/download/
+
+* https://dev.classmethod.jp/articles/try-creating-an-iam-role-in-aws-cli/
