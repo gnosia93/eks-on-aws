@@ -59,6 +59,9 @@ remote_write:
          region: ap-northeast-2
 ```
 
+```
+prometheus --config.file=prometheus.yaml
+```
 
 
 
