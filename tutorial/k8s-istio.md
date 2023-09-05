@@ -32,7 +32,7 @@ kubectl logs -f -l app=shop --all-containers=true
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/istio-service-order-eks.png)
 
 
-## SHOP 어플리케이션 Istio 적용 ##
+## SHOP 어플리케이션 Istio 적용하기 ##
 
 later..
 
