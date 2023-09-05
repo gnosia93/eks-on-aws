@@ -97,12 +97,6 @@ aws ec2 replace-iam-instance-profile-association \
      --association-id ${ASSOCIATION_ID}
 ```
 
-```
-WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
-AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
-AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
-```
-
 ### MySQL Exporter 설치 및 Systemd 서비스 등록 ###
 exporter ec2 인스턴스에 설치한다. 
 ```
@@ -226,7 +220,13 @@ tar xvfz prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
 cd prometheus-${PROMETHEUS_VERSION}.linux-amd64
 ```
 
-AMP 주소를 확인 및 설정하고 프로메테우스를 실행한다.
+AMP 주소를 확인하고, 로컬 프로메테우스 설정을 변경하여 실행한다.
+```
+WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
+AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
+AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
+```
+
 
 [prometheus.yaml]
 ```
