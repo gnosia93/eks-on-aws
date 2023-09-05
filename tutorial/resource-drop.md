@@ -47,4 +47,8 @@ terraform destroy -auto-approve
 * 테라폼으로 지우다가 에러가 발생하는 경우 AWS 콘솔로 이동하여 수동으로 지워준다.
 
 ### 5. SSO 를 지운다 ###
-* AWS Identity Centor 콘솔에서 지운다. 
+* AWS Identity Centor 콘솔에서 지운다.
+
+## 레퍼런스 ##
+
+* https://bobbyhadz.com/blog/aws-cli-query-contains
