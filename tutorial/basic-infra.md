@@ -146,11 +146,11 @@ aws iam attach-role-policy \
 
 cloud9 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
 ```
-INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
+INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:app,Values=cloud9" --query 'Reservations[].Instances[].InstanceId' --out text)
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
 ```
 
-ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
+cloud9 ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
 ```
 aws iam create-instance-profile --instance-profile-name eksworkshop-admin-Instance-Profile
 
