@@ -154,6 +154,8 @@ go_info{version="go1.20.5"} 1
 ```
 
 필요한 경우 [systemd 서비스 등록 방법](https://chhanz.github.io/linux/2019/01/18/linux-how-to-create-custom-systemd-service/) 을 참고하여 exporter 를 등록한다.
+
+[exporter-mysql.service]
 ```
 [Unit]
 Description=Prometheus MySQL Exporter
