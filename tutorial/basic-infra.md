@@ -141,18 +141,10 @@ aws iam create-role \
 
 aws iam attach-role-policy \
     --role-name eksworkshop-admin \
-    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusRemoteWriteAccess
-
-aws iam attach-role-policy \
-    --role-name eksworkshop-admin \
-    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
-
-aws iam attach-role-policy \
-    --role-name eksworkshop-admin \
-    --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
+    --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
 ```
 
-eks_mysql_exporter 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
+cloud9 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
