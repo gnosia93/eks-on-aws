@@ -77,7 +77,7 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 ### MySQL Exporter 설치 ###
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
-wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.12.1/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
+wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EXPORTER_VERSION}/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
 ```
 
 
