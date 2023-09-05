@@ -118,6 +118,8 @@ socket=/var/run/mysqld/mysqld.sock
 user=exporter
 password=exporter
 EOF
+
+sudo mkdir /var/run/mysqld/
 ```
 
 mysql exporter 를 실행한다. (9104 Listen)
@@ -126,6 +128,15 @@ mysql exporter 를 실행한다. (9104 Listen)
 --config.my-cnf="my.cnf" --mysqld.address="${DB_ADDR}:3306" &
 ```
 
+curl 을 이용하여 정상 동작여부를 확인한다. 
+```
+curl http://localhost:9104/metrics
+```
+
+[결과]
+```
+
+```
 
 
 아래 명령어를 이용하여 linux 서비스로 등록한다. 
