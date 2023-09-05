@@ -17,10 +17,24 @@ OpenTelemetry 를 활용한 K8S 메트릭 수집에 대한 보다 자세한 내�
 
 ### 1. 워크스페이스 생성 ###
 ```
-aws amp create-workspace --alias eks-workshop --tags env=eks-workshop
+aws amp create-workspace --alias ${CLUSTER_NAME} --tags env=eks-workshop
 ```
 
 ### 2. IRSA 설정 ###
+```
+aws eks describe-cluster --name ${CLUSTER_NAME} --query cluster.identity.oidc.issuer --output text                    
+
+eksctl utils associate-iam-oidc-provider --cluster eks-workshop --approve
+```
+
+[결과]
+```
+https://oidc.eks.ap-northeast-2.amazonaws.com/id/5A8CF8848ACAFCAEB397FBB9BC4A084E
+
+2023-09-05 10:27:43 [ℹ]  will create IAM Open ID Connect provider for cluster "eks-workshop" in "ap-northeast-2"
+2023-09-05 10:27:43 [✔]  created IAM Open ID Connect provider for cluster "eks-workshop" in "ap-northeast-2" 
+```
+
 ```
 eksctl create iamserviceaccount \
 --name amp-irsa-role \
