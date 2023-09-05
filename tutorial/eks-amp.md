@@ -16,8 +16,23 @@ OpenTelemetry 를 활용한 K8S 메트릭 수집에 대한 보다 자세한 내�
 ## AMP (매니지드 프로메테우스) ##
 
 ### 1. 워크스페이스 생성 ###
+
+(주의) 실행할때 마다 서로 다른 워크스페이스가 만들어진다.
 ```
 aws amp create-workspace --alias ${CLUSTER_NAME} --tags env=eks-workshop
+```
+[결과]
+```
+{
+    "workspaceId": "ws-abc7f244-1558-4125-81d6-b977f42abac6",
+    "arn": "arn:aws:aps:ap-northeast-2:499514681453:workspace/ws-abc7f244-1558-4125-81d6-b977f42abac6",
+    "status": {
+        "statusCode": "CREATING"
+    },
+    "tags": {
+        "env": "eks-workshop"
+    }
+}
 ```
 
 ### 2. IRSA 설정 ###
