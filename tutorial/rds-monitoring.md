@@ -307,7 +307,7 @@ ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule ma
 
 ## 트러블 슈팅 ##
 
-* err="region not configured in sigv4 or in default credentials chain"
+* err="region not configured in sigv4 or in default credentials chain"   
 -> 프로메테우스 prometheus.yml 파일의 sigv4 설정을 확인한다.
 
 ## 레퍼런스 ##
