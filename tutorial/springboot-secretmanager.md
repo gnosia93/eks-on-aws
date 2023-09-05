@@ -49,7 +49,7 @@ msa.service.endpoint.prod : ${PROD_SERVICE_ENDPOINT}
 msa.service.endpoint.point: ${POINT_SERVICE_ENDPOINT}
 ```
 
-[다른 데이터베이스 예시]
+[참고 - 다른 데이터베이스 예시]
 ```
 driverClass=com.amazonaws.secretsmanager.sql.AWSSecretsManagerPostgreSQLDriver
 jdbcUrl=jdbc-secretsmanager:postgresql://example.com:5432/database
