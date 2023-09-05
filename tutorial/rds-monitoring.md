@@ -21,7 +21,7 @@ FLUSH PRIVILEGES;
 EOF
 ```
 
-mysql 에 로그인해서 exporter.sql 을 실행한다. 
+mysql 에 로그인해서 exporter.sql 을 실행한다.
 ```
 mysql -u root -p -h ${DB_ADDR} < exporter.sql
 ```
@@ -45,7 +45,7 @@ MySQL [mysql]> select host, user, account_locked, select_priv from user;
 
 
 ### IAM Role 생성 및 EC2 Role 변경 ###
-로컬 PC 에서 아래 명령어를 실행한다.
+로컬 PC 에서 아래 명령어를 실행한다 (어드민 권한 필요)
 ```
 cat <<EOF > assumeRole.json
 {
