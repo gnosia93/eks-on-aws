@@ -1,5 +1,6 @@
 ## AMP / AMG 를 활용한 Mysql RDS 성능 모니터링 ##
- 
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/rds-monitoring-archi.png) 
 2023 Amazon Linux 에 MySQL exporter 를 이용하여 RDS MySQL 서비스를 모니터링 하는 방법에 대해서 설명한다. 테라폼 실행시 아래 명령어가 동작하면서 EC2 인스턴스에 mariadb 가 설치되기 때문에 MySQL 와 관련된 별도의 설치 작업은 불필요하다 
 ```
 sudo dnf update -y
