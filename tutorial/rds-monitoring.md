@@ -122,7 +122,7 @@ cd mysqld_exporter-*.*-amd64
 
 cat <<EOF > my.cnf
 [client]
-socket=/var/run/mysqld/mysqld.sock
+socket=/home/ec2-user/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64/mysqld.sock
 user=exporter
 password=exporter
 EOF
