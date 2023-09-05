@@ -126,9 +126,6 @@ socket=/home/ec2-user/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64/mysq
 user=exporter
 password=exporter
 EOF
-
-sudo mkdir /var/run/mysqld/
-sudo chgrp ec2-user /var/run/mysqld/
 ```
 
 mysql exporter 를 실행한다. (9104 Listen)
