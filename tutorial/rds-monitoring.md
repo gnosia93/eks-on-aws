@@ -235,6 +235,7 @@ Restart=always
 User=ec2-user
 Group=ec2-user
 ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
+--mysqld.address="${DB_ADDR}:3306" \
 --config.my-cnf=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/my.cnf \
 --web.listen-address=0.0.0.0:9104 \
 --collect.global_status \
