@@ -277,6 +277,9 @@ chmod +x /etc/systemd/system/mysql-exporter.service
 sudo systemctl daemon-reload
 sudo systemctl start mysql-exporter
 sudo systemctl enable mysql-exporter
+```
+동작여부를 확인한다. 
+```
 sudo systemctl status mysql-exporter
 ```
 
