@@ -77,13 +77,16 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 ```
 
 ### MySQL Exporter 설치 ###
-exporter ec2 인스턴스에 설치한다.
+exporter ec2 인스턴스에 설치한다. (https://github.com/prometheus/mysqld_exporter)
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
 wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EXPORTER_VERSION}/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
 
 tar xvfz mysqld_exporter-*.*-amd64.tar.gz
 cd mysqld_exporter-*.*-amd64
+```
+아래 명령어를 이용하여 linux 서비스로 등록한다. 
+```
 ```
 
 
