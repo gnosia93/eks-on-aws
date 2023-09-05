@@ -230,7 +230,7 @@ AWS_REGION=ap-northeast-2
 
 기존 prometheus.yaml 을 아래의 설정을 대체한다.
 ```
-cat <<EOF > prometheus.yaml
+cat <<EOF > prometheus.yml
 global:
   scrape_interval: 15s
   external_labels:
@@ -254,7 +254,7 @@ EOF
 ```
 
 ```
-prometheus --config.file=prometheus.yaml
+prometheus --config.file=prometheus.yml
 ```
 
 
