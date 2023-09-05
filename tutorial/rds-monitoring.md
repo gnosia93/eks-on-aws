@@ -221,8 +221,6 @@ cat <<EOF > /etc/systemd/system/mysql-exporter.service
 [Unit]
 Description=Prometheus MySQL Exporter
 After=network.target
-User=ec2-user
-Group=ec2-user
 
 [Service]
 Type=simple
