@@ -173,11 +173,7 @@ mysql exporter 를 실행한다. (9104 Listen)
 --collect.perf_schema.replication_group_member_stats \
 --collect.perf_schema.replication_applier_status_by_worker \
 --collect.slave_status \
---collect.slave_hosts \
---collect.heartbeat \
---collect.heartbeat.database=true \
---collect.heartbeat.table=true \
---collect.heartbeat.utc &
+--collect.slave_hosts &
 ```
 
 curl 을 이용하여 정상 동작여부를 확인한다. 
