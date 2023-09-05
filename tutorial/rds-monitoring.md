@@ -177,17 +177,42 @@ curl http://localhost:9104/metrics
 ```
 
 [결과]
+MySQL 리플리케이션 설정을 하지 않은 관계로 마지막 에러 메시지는 정상 메시지이다. 
 ```
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:220 level=info msg="Starting mysqld_exporter" version="(version=0.15.0, branch=HEAD, revision=6ca2a42f97f3403c7788ff4f374430aa267a6b6b)"
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:221 level=info msg="Build context" build_context="(go=go1.20.5, platform=linux/amd64, user=root@c4fca471a5b1, date=20230624-04:09:04, tags=netgo)"
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_status
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_variables
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_status
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmp
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
-ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.query_response_time
-ts=2023-09-05T13:28:41.976Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
-ts=2023-09-05T13:28:41.976Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:220 level=info msg="Starting mysqld_exporter" version="(version=0.15.0, branch=HEAD, revision=6ca2a42f97f3403c7788ff4f374430aa267a6b6b)"
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:221 level=info msg="Build context" build_context="(go=go1.20.5, platform=linux/amd64, user=root@c4fca471a5b1, date=20230624-04:09:04, tags=netgo)"
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_tablespaces
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_metrics
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_status
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_variables
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_status
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.processlist
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=mysql.user
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.tables
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.eventswaits
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.tableiowaits
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.indexiowaits
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.tablelocks
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.eventsstatements
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.userstats
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.file_events
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.file_instances
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.memory_events
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.replication_group_members
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.replication_group_member_stats
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=perf_schema.replication_applier_status_by_worker
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.clientstats
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.tablestats
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.schemastats
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmp
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
+ts=2023-09-05T14:58:58.549Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.query_response_time
+ts=2023-09-05T14:58:58.550Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_hosts
+ts=2023-09-05T14:58:58.550Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.replica_host
+ts=2023-09-05T14:58:58.550Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
+ts=2023-09-05T14:58:58.550Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
+ts=2023-09-05T14:59:09.813Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
+
 ```
 
 아래와 같이 systemd 에 서비스로 등록한다.
