@@ -155,7 +155,10 @@ go_info{version="go1.20.5"} 1
 
 필요한 경우 [systemd 서비스 등록 방법](https://chhanz.github.io/linux/2019/01/18/linux-how-to-create-custom-systemd-service/) 을 참고하여 exporter 를 등록한다.
 
-[exporter-mysql.service]
+'''
+sudo vi /etc/systemd/system/mysql-exporter.service
+'''
+[mysql-exporter.service]
 ```
 [Unit]
 Description=Prometheus MySQL Exporter
@@ -211,11 +214,17 @@ ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
 --collect.heartbeat.table=true \
 --collect.heartbeat.utc
 
-
 [Install]
 WantedBy=multi-user.target
 ```
 
+systemd 에 mysql-exporter 를 등록한다.
+```
+sudo systemctl daemon-reload
+sudo systemctl start mysql-exporter
+sudo systemctl enable mysql-exporter
+sudo systemctl status mysql-exporter
+```
 
 ### 프로메테우스 설치 ###
 eks_mysql_exporter ec2 인스턴스에 프로메테우스 최신 버전을 설치한다. [prometheus release](https://prometheus.io/download/)
