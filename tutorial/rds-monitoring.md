@@ -5,7 +5,7 @@
 sudo dnf update -y
 sudo dnf install mariadb105-server -y
 ```
-ec2 에 설치된 mysql exporter 는 RDS MySQL DB 계정을 이용하여 데이터베이스 성능 메트릭을 수집하고, 동일 서버에 설치된 prometheus 는 exporter 의 http 엔드포인트에 접근해서 메트릭을 TSDB 에 기록한다. prometheus 는 AMP 와 Sigv4 를 이용하여 연동되어 있어서 MySQL DB 메트릭이 AMP 로 전송된다.  
+eks_mysql_exporter ec2 에 설치된 mysql exporter 는 RDS MySQL DB 계정을 이용하여 데이터베이스 성능 메트릭을 수집하고, 동일 서버에 설치된 prometheus 는 exporter 의 http 엔드포인트에 접근해서 메트릭을 TSDB 에 기록한다. prometheus 는 AMP 와 Sigv4 를 이용하여 연동되어 있어서 MySQL DB 메트릭이 AMP 로 전송된다.  
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/rds-monitoring-archi-2.png) 
 
