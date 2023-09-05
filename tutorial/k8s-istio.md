@@ -4,7 +4,7 @@
 
  * [Istio 인젝션 설정](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-injection.md)
 
- * [Istio 어플리케이션 배포 - bookinfo](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-bookinfo.md)
+ * [Istio 샘플 어플리케이션 배포 - bookinfo](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio-bookinfo.md)
 
 
 ## SHOP 어플리케이션 EKS 배포하기 ##
