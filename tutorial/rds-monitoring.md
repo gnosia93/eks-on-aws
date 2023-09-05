@@ -79,14 +79,13 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
 ```
 
-
-
-인스턴스 ID 와 associate-id 를 찾는 스크립트를 만들어야 한다. 지금은 콘솔에서 셋팅한다.
+eks_mysql_exporter 인스턴스 ID 와 인스턴스 프러파일 정보를 받아온다. 
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
 ```
 
+인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
 ```
 aws iam create-instance-profile --instance-profile-name MySQLPrometheusRole-Instance-Profile
 
