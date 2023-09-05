@@ -224,8 +224,6 @@ prometheus --config.file=prometheus.yaml
 
 * https://prometheus.io/docs/prometheus/latest/getting_started/
 
-* https://prometheus.io/download/
-
 * https://dev.classmethod.jp/articles/try-creating-an-iam-role-in-aws-cli/
 
 * https://aws.amazon.com/blogs/security/new-attach-an-aws-iam-role-to-an-existing-amazon-ec2-instance-by-using-the-aws-cli/
