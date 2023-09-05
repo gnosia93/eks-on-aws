@@ -120,9 +120,10 @@ password=exporter
 EOF
 ```
 
+mysql exporter 를 실행한다. (9104 Listen)
 ```
 ./mysqld_exporter \
---config.my-cnf="my.cnf" --mysqld.address="${DB_ADDR}:3306"
+--config.my-cnf="my.cnf" --mysqld.address="${DB_ADDR}:3306" &
 ```
 
 
