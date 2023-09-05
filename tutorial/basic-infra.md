@@ -147,7 +147,6 @@ aws iam attach-role-policy \
 cloud9 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:app,Values=cloud9" --query 'Reservations[].Instances[].InstanceId' --out text)
-#ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
 ```
 
 cloud9 ec2 인스턴스 프로파일을 만들고 ec2 에 attach 한다. 
