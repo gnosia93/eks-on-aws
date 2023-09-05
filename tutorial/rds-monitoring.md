@@ -258,6 +258,10 @@ prometheus --config.file=prometheus.yml
 ```
 
 
+## 트러블 슈팅 ##
+
+* err="region not configured in sigv4 or in default credentials chain"
+
 
 ## 레퍼런스 ##
 
