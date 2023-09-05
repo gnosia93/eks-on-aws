@@ -51,6 +51,8 @@ eks_mysql_exporter 인스턴스 ID 와 인스턴스 프로파일 정보를 받�
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
+
+echo "INSTANCE_ID=${INSTANCE_ID}, ASSOCIATION_ID=${ASSOCIATION_ID}"
 ```
 
 ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
@@ -105,9 +107,6 @@ MySQL [mysql]> select host, user, account_locked, select_priv from user;
 +---------------------------------------------------------------+------------------+----------------+-------------+
 8 rows in set (0.000 sec)
 ```
-
-
-
 
 ### MySQL Exporter 설치 ###
 exporter ec2 인스턴스에 설치한다. 
