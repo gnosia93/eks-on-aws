@@ -19,6 +19,7 @@ STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentif
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
 
 DB_ADDR=${STAGE_DB}
+echo ${DB_ADDR}
 ```
 ```
 cat <<EOF > exporter.sql
