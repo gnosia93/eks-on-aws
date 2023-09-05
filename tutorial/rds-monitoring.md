@@ -144,24 +144,17 @@ curl http://localhost:9104/metrics
 ```
 
 [결과]
-* mysqld.sock 오류 이유는 확인이 필요.
 ```
-ts=2023-09-05T03:47:30.042Z caller=exporter.go:152 level=error msg="Error pinging mysqld" err="dial unix /var/run/mysqld/mysqld.sock: connect: no such file or directory"
-# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
-# TYPE go_gc_duration_seconds summary
-go_gc_duration_seconds{quantile="0"} 0
-go_gc_duration_seconds{quantile="0.25"} 0
-go_gc_duration_seconds{quantile="0.5"} 0
-go_gc_duration_seconds{quantile="0.75"} 0
-go_gc_duration_seconds{quantile="1"} 0
-go_gc_duration_seconds_sum 0
-go_gc_duration_seconds_count 0
-# HELP go_goroutines Number of goroutines that currently exist.
-# TYPE go_goroutines gauge
-go_goroutines 7
-# HELP go_info Information about the Go environment.
-# TYPE go_info gauge
-go_info{version="go1.20.5"} 1
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:220 level=info msg="Starting mysqld_exporter" version="(version=0.15.0, branch=HEAD, revision=6ca2a42f97f3403c7788ff4f374430aa267a6b6b)"
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:221 level=info msg="Build context" build_context="(go=go1.20.5, platform=linux/amd64, user=root@c4fca471a5b1, date=20230624-04:09:04, tags=netgo)"
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_status
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=global_variables
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_status
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmp
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
+ts=2023-09-05T13:28:41.975Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.query_response_time
+ts=2023-09-05T13:28:41.976Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
+ts=2023-09-05T13:28:41.976Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
 ```
 
 아래와 같이 systemd 에 서비스로 등록한다.
