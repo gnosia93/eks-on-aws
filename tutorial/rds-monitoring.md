@@ -154,9 +154,9 @@ go_info{version="go1.20.5"} 1
 ```
 
 아래와 같이 systemd 에 서비스로 등록한다.
-'''
+```
 sudo vi /etc/systemd/system/mysql-exporter.service
-'''
+```
 [mysql-exporter.service]
 ```
 [Unit]
