@@ -361,7 +361,7 @@ AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되�
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-1.png)
 
 #### Workspace name 을 입력한다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-2-1.png)
 
 #### AWS IAM Identity Center 을 선택한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-3.png)
