@@ -164,7 +164,7 @@ sudo usermod -aG docker ec2-user
 _DATA
 
     tags = {
-      "Name" = "eks_ec2_mysql_collector"
+      "Name" = "eks_ec2_mysql_exporter"
     } 
 }
 
