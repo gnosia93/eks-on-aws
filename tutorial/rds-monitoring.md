@@ -272,6 +272,8 @@ EOF
 ```
 
 ```
+chmod +x /etc/systemd/system/mysql-exporter.service
+
 sudo systemctl daemon-reload
 sudo systemctl start mysql-exporter
 sudo systemctl enable mysql-exporter
