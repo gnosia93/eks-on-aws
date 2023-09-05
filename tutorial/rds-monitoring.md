@@ -101,7 +101,7 @@ aws ec2 replace-iam-instance-profile-association \
      --association-id ${ASSOCIATION_ID}
 ```
 
-### MySQL Exporter 설치 및 Systemd 서비스 등록 ###
+### MySQL Exporter 설치 ###
 exporter ec2 인스턴스에 설치한다. 
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
@@ -153,7 +153,7 @@ go_goroutines 7
 go_info{version="go1.20.5"} 1
 ```
 
-아래 명령어를 이용하여 systemd 서비스로 등록한다. 
+필요한 경우 [systemd 서비스 등록 방법](https://chhanz.github.io/linux/2019/01/18/linux-how-to-create-custom-systemd-service/) 을 참고하여 exporter 를 등록한다.
 ```
 [Unit]
 Description=Prometheus MySQL Exporter
