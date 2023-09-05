@@ -111,6 +111,13 @@ wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EX
 
 tar xvfz mysqld_exporter-*.*-amd64.tar.gz
 cd mysqld_exporter-*.*-amd64
+
+cat <<EOF > my.cnf
+[client]
+socket=/var/run/mysqld/mysqld.sock
+user=exporter
+password=exporter
+EOF
 ```
 아래 명령어를 이용하여 linux 서비스로 등록한다. 
 ```
