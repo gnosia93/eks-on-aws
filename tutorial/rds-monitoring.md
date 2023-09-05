@@ -84,7 +84,7 @@ aws iam attach-role-policy \
 인스턴스 ID 와 associate-id 를 찾는 스크립트를 만들어야 한다. 지금은 콘솔에서 셋팅한다.
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
-aws ec2 describe-iam-instance-profile-associations
+aws ec2 describe-iam-instance-profile-associations --filter "Name=InstanceId,Values=$INSTANCE_ID"
 ```
 
 ```
