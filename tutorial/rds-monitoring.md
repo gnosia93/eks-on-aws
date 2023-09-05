@@ -389,6 +389,11 @@ ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule ma
 * err="region not configured in sigv4 or in default credentials chain"   
 -> 프로메테우스 prometheus.yml 파일의 sigv4 설정을 확인한다.
 
+* systemd 메시지 출력
+```
+journalctl  | grep mysql
+```
+
 ## 레퍼런스 ##
 
 * https://velog.io/@sojukang/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EC%A0%9C%EC%9D%BC-%EC%89%AC%EC%9A%B4-Prometheus-Grafana-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-%EC%84%A4%EC%A0%95-MySQL%ED%8E%B8
