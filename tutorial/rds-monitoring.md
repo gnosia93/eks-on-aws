@@ -26,6 +26,22 @@ mysql 에 로그인해서 exporter.sql 을 실행한다.
 mysql -u root -p -h ${DB_ADDR} < exporter.sql
 ```
 
+```
+MySQL [mysql]> use mysql;
+MySQL [mysql]> select host, user, account_locked, select_priv from user;
++---------------------------------------------------------------+------------------+----------------+-------------+
+| host                                                          | user             | account_locked | select_priv |
++---------------------------------------------------------------+------------------+----------------+-------------+
+| %                                                             | exporter         | N              | Y           |
+| %                                                             | root             | N              | Y           |
+| localhost                                                     | mysql.infoschema | Y              | Y           |
+| localhost                                                     | mysql.session    | Y              | N           |
+| localhost                                                     | mysql.sys        | Y              | N           |
+| localhost                                                     | rdsadmin         | N              | Y           |
++---------------------------------------------------------------+------------------+----------------+-------------+
+8 rows in set (0.000 sec)
+```
+
 
 ### IAM Role 생성 및 EC2 Role 변경 ###
 로컬 PC 에서 아래 명령어를 실행한다.
