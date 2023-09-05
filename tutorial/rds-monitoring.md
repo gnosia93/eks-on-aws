@@ -83,7 +83,7 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
 ```
 
-eks_mysql_exporter 인스턴스 ID 와 인스턴스 프러파일 정보를 받아온다. 
+eks_mysql_exporter 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
 ```
 INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
