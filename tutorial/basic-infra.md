@@ -150,16 +150,16 @@ INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:app,Values=cloud9" -
 #ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
 ```
 
-cloud9 ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
+cloud9 ec2 인스턴스 프로파일을 만들고 ec2 에 attach 한다. 
 ```
 aws iam create-instance-profile --instance-profile-name eksworkshop-admin-Instance-Profile
 
 aws iam add-role-to-instance-profile --role-name eksworkshop-admin \
      --instance-profile-name eksworkshop-admin-Instance-Profile
 
-aws ec2 replace-iam-instance-profile-association \
+aws ec2 associate-iam-instance-profile \
      --iam-instance-profile Name=eksworkshop-admin-Instance-Profile \
-     --association-id ${ASSOCIATION_ID}
+     --instance-id ${INSTANCE_ID}
 ```
 
 
