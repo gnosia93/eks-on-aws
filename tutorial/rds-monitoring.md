@@ -138,6 +138,7 @@ mysql exporter 를 실행한다. (9104 Listen)
 --mysqld.address="${DB_ADDR}:3306" \
 --config.my-cnf="./my.cnf" \
 --web.listen-address=0.0.0.0:9104 \
+--collect.engine_tokudb_status \
 --collect.global_status \
 --collect.global_variables \
 --collect.info_schema.clientstats \
@@ -172,8 +173,8 @@ mysql exporter 를 실행한다. (9104 Listen)
 --collect.perf_schema.replication_group_members \
 --collect.perf_schema.replication_group_member_stats \
 --collect.perf_schema.replication_applier_status_by_worker \
---collect.slave_status \
---collect.slave_hosts &
+--collect.slave_status
+--collect.slave_hosts
 ```
 
 curl 을 이용하여 정상 동작여부를 확인한다. 
