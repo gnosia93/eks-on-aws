@@ -1,5 +1,6 @@
 ****
-(to-do) systemd - mysql-exporter 을 ec2-user 로 실행하는 방법은 ? 현재는 root 임. 제대로 동작하지 않음.
+(bug) 터미널에서 exporter / prometheus를 ec2-user로 실행하면 그라파나 대시보드에 데이터가 나오는데, systemd 로 등록하면 제대로 나오지 않음..
+(to-do) systemd - mysql-exporter 을 ec2-user 로 실행하는 방법은 ? 현재는 root 임.
 ****
 
 
