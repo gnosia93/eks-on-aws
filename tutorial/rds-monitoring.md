@@ -23,7 +23,7 @@ EOF
 
 mysql 에 로그인해서 exporter.sql 을 실행한다. 
 ```
-mysql -u root -p -h ${DB_ADDR} 
+mysql -u root -p -h ${DB_ADDR} < exporter.sql
 ```
 
 
