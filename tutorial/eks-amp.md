@@ -240,6 +240,7 @@ sed -i -e s^AMP_WORKSPACE_URL^$AMP_REMOTE_WRITE_URL^g otel-collector-config.yaml
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-append-1.png)
 
+vi 에디터를 이용하여 에디팅한다. 붙여넣기시 자동 identation 기능을 끄기 위해서 :set paste 를 먼저 입력한다.  
 위의 그림처럼 otel-collector-config.yaml 파일에 아래 내용을 추가하고 (라인번호 292),
 ```
 - job_name: integrations/kubernetes/kube-state-metrics
