@@ -55,6 +55,8 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
 ```
 
+
+인스턴스 ID 와 associate-id 를 찾는 스크립트를 만들어야 한다. 지금은 콘솔에서 셋팅한다.
 ```
 INSTANCE_ID=i-04be78c6663268a7f
 aws ec2 describe-iam-instance-profile-associations
