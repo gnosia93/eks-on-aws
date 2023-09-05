@@ -15,7 +15,7 @@ DB_ADDR=${STAGE_DB}
 ```
 cat <<EOF > exporter.sql
 CREATE USER 'exporter'@'%' IDENTIFIED BY 'exporter';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'%';
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
 GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
 FLUSH PRIVILEGES;
 EOF
