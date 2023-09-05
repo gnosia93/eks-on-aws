@@ -59,7 +59,7 @@ aws iam attach-role-policy \
 INSTANCE_ID=i-04be78c6663268a7f
 aws iam create-instance-profile --instance-profile-name MySQLPrometheusRole-Instance-Profile
 aws iam add-role-to-instance-profile --role-name MySQLPrometheusRole --instance-profile-name MySQLPrometheusRole-Instance-Profile
-aws ec2 associate-iam-instance-profile --iam-instance-profile Name=MySQLPrometheusRole-Instance-Profile --instance-id ${INSTANCE_ID}
+aws ec2 replace-iam-instance-profile-association --iam-instance-profile Name=MySQLPrometheusRole-Instance-Profile --instance-id ${INSTANCE_ID}
 ```
 
 ```
