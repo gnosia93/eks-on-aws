@@ -7,6 +7,6 @@ resource "aws_cloud9_environment_ec2" "cloud9_instance" {
   subnet_id                   = aws_subnet.eks_pub_subnet1.id
 
   tags = {
-    Terraform = "true"
+    app = "cloud9"
   }
 }
