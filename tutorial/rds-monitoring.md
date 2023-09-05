@@ -254,7 +254,7 @@ EOF
 ```
 
 ```
-prometheus --config.file=prometheus.yml
+./prometheus --config.file=prometheus.yml
 ```
 
 
