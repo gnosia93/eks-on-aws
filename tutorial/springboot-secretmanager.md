@@ -39,7 +39,7 @@ spring:
   application:
     name: springboot-shop-prod
   datasource:
-    url: jdbc-secretsmanager:postgresql://${DB_ENDPOINT}:3306/shop
+    url: jdbc-secretsmanager:mysql://${DB_ENDPOINT}:3306/shop
     username: prod/shop/mysql-8.x
     driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMySQLDriver
 
@@ -47,6 +47,18 @@ logging.level.root : info
 
 msa.service.endpoint.prod : ${PROD_SERVICE_ENDPOINT}
 msa.service.endpoint.point: ${POINT_SERVICE_ENDPOINT}
+```
+
+[다른 데이터베이스 예시]
+```
+driverClass=com.amazonaws.secretsmanager.sql.AWSSecretsManagerPostgreSQLDriver
+jdbcUrl=jdbc-secretsmanager:postgresql://example.com:5432/database
+
+driverClass=com.amazonaws.secretsmanager.sql.AWSSecretsManagerOracleDriver
+jdbcUrl=jdbc-secretsmanager:oracle:thin:@example.com:1521/ORCL
+
+driverClass=com.amazonaws.secretsmanager.sql.AWSSecretsManagerMSSQLServerDriver
+jdbcUrl=jdbc-secretsmanager:sqlserver://example.com:1433
 ```
 
 #### build.gradle ####
