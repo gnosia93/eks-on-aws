@@ -256,12 +256,41 @@ EOF
 ```
 ./prometheus --config.file=prometheus.yml
 ```
+[결과]
+```
+ts=2023-09-05T04:12:08.445Z caller=main.go:541 level=info msg="No time or size retention was set so using the default time retention" duration=15d
+ts=2023-09-05T04:12:08.445Z caller=main.go:585 level=info msg="Starting Prometheus Server" mode=server version="(version=2.46.0, branch=HEAD, revision=cbb69e51423565ec40f46e74f4ff2dbb3b7fb4f0)"
+ts=2023-09-05T04:12:08.445Z caller=main.go:590 level=info build_context="(go=go1.20.6, platform=linux/amd64, user=root@42454fc0f41e, date=20230725-12:31:24, tags=netgo,builtinassets,stringlabels)"
+ts=2023-09-05T04:12:08.445Z caller=main.go:591 level=info host_details="(Linux 6.1.41-63.114.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Aug  1 20:47:25 UTC 2023 x86_64 ip-10-1-2-79.ap-northeast-2.compute.internal (none))"
+ts=2023-09-05T04:12:08.445Z caller=main.go:592 level=info fd_limits="(soft=65535, hard=65535)"
+ts=2023-09-05T04:12:08.445Z caller=main.go:593 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+ts=2023-09-05T04:12:08.446Z caller=web.go:563 level=info component=web msg="Start listening for connections" address=0.0.0.0:9090
+ts=2023-09-05T04:12:08.446Z caller=main.go:1026 level=info msg="Starting TSDB ..."
+ts=2023-09-05T04:12:08.448Z caller=tls_config.go:274 level=info component=web msg="Listening on" address=[::]:9090
+ts=2023-09-05T04:12:08.448Z caller=tls_config.go:277 level=info component=web msg="TLS is disabled." http2=false address=[::]:9090
+ts=2023-09-05T04:12:08.450Z caller=head.go:595 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+ts=2023-09-05T04:12:08.450Z caller=head.go:676 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=1.612µs
+ts=2023-09-05T04:12:08.450Z caller=head.go:684 level=info component=tsdb msg="Replaying WAL, this may take a while"
+ts=2023-09-05T04:12:08.451Z caller=head.go:755 level=info component=tsdb msg="WAL segment loaded" segment=0 maxSegment=2
+ts=2023-09-05T04:12:08.451Z caller=head.go:755 level=info component=tsdb msg="WAL segment loaded" segment=1 maxSegment=2
+ts=2023-09-05T04:12:08.451Z caller=head.go:755 level=info component=tsdb msg="WAL segment loaded" segment=2 maxSegment=2
+ts=2023-09-05T04:12:08.451Z caller=head.go:792 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=20.396µs wal_replay_duration=462.178µs wbl_replay_duration=137ns total_replay_duration=513.279µs
+ts=2023-09-05T04:12:08.452Z caller=main.go:1047 level=info fs_type=XFS_SUPER_MAGIC
+ts=2023-09-05T04:12:08.452Z caller=main.go:1050 level=info msg="TSDB started"
+ts=2023-09-05T04:12:08.452Z caller=main.go:1231 level=info msg="Loading configuration file" filename=prometheus.yml
+ts=2023-09-05T04:12:08.455Z caller=dedupe.go:112 component=remote level=info remote_name=b253e1 url=https://aps-workspaces.ap-northeast-2.amazonaws.com/workspaces/ws-a7486aec-8f79-4cf0-84a7-7d2715e86ef6/api/v1/remote_write msg="Starting WAL watcher" queue=b253e1
+ts=2023-09-05T04:12:08.455Z caller=dedupe.go:112 component=remote level=info remote_name=b253e1 url=https://aps-workspaces.ap-northeast-2.amazonaws.com/workspaces/ws-a7486aec-8f79-4cf0-84a7-7d2715e86ef6/api/v1/remote_write msg="Starting scraped metadata watcher"
+ts=2023-09-05T04:12:08.455Z caller=dedupe.go:112 component=remote level=info remote_name=b253e1 url=https://aps-workspaces.ap-northeast-2.amazonaws.com/workspaces/ws-a7486aec-8f79-4cf0-84a7-7d2715e86ef6/api/v1/remote_write msg="Replaying WAL" queue=b253e1
+ts=2023-09-05T04:12:08.458Z caller=main.go:1268 level=info msg="Completed loading of configuration file" filename=prometheus.yml totalDuration=5.773867ms db_storage=767ns remote_storage=2.516235ms web_handler=270ns query_engine=483ns scrape=3.032784ms scrape_sd=17.958µs notify=824ns notify_sd=2.18µs rules=1.439µs tracing=6.566µs
+ts=2023-09-05T04:12:08.458Z caller=main.go:1011 level=info msg="Server is ready to receive web requests."
+ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule manager" msg="Starting rule manager..."
+```
 
 
 ## 트러블 슈팅 ##
 
 * err="region not configured in sigv4 or in default credentials chain"
-
+-> 프로메테우스 prometheus.yml 파일의 sigv4 설정을 확인한다.
 
 ## 레퍼런스 ##
 
