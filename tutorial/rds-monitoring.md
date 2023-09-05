@@ -175,7 +175,7 @@ WantedBy=multi-user.target
 
 
 ### 프로메테우스 설치 ###
-exporter ec2 인스턴스에 설치한다.
+eks_mysql_exporter ec2 인스턴스에 프로메테우스 최신 버전을 설치한다. [prometheus release](https://prometheus.io/download/)
 ```
 PROMETHEUS_VERSION=2.46.0
 curl -LO https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
