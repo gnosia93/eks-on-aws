@@ -225,11 +225,13 @@ AMP 주소를 확인하고, 로컬 프로메테우스 설정을 변경하여 실
 WORKSPACE_ID=$(aws amp list-workspaces --alias eks-workshop | jq '.workspaces[0].workspaceId' -r)
 AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq '.workspace.prometheusEndpoint' -r)
 AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
+AWS_REGION=ap-northeast-2
 ```
 
 
 [prometheus.yaml]
 ```
+cat <<EOF > prometheus.yaml
 global:
   scrape_interval: 15s
   external_labels:
@@ -238,17 +240,18 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:8000']
+      - targets: ['localhost:9104']
 
 remote_write:
   -
-    url: https://aps-workspaces.my-region.amazonaws.com/workspaces/my-workspace-id/api/v1/remote_write
+    url: ${AMP_REMOTE_WRITE_URL}
     queue_config:
         max_samples_per_send: 1000
         max_shards: 200
         capacity: 2500
     sigv4:
-         region: ap-northeast-2
+         region: ${AWS_REGION}
+EOF
 ```
 
 ```
