@@ -177,11 +177,11 @@ aws eks create-addon \
 }
 ```
 #### 동작확인 ####
+CREATING 상태에서 ACTIVE 상태로 변경될때 까지 대기한다.
 ```
 aws eks describe-addon --addon-name adot --cluster-name ${CLUSTER_NAME} | jq .addon.status
 ```
 "ACTIVE"
-
 
 
 ### 5. kube-state-metrics & node_exporter 설치 ###
