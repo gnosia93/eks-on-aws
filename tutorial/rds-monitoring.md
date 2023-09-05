@@ -153,8 +153,7 @@ go_goroutines 7
 go_info{version="go1.20.5"} 1
 ```
 
-필요한 경우 [systemd 서비스 등록 방법](https://chhanz.github.io/linux/2019/01/18/linux-how-to-create-custom-systemd-service/) 을 참고하여 exporter 를 등록한다.
-
+아래와 같이 systemd 에 서비스로 등록한다.
 '''
 sudo vi /etc/systemd/system/mysql-exporter.service
 '''
@@ -326,3 +325,6 @@ ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule ma
 * https://aws.amazon.com/blogs/security/new-attach-an-aws-iam-role-to-an-existing-amazon-ec2-instance-by-using-the-aws-cli/
 
 * [MySQL Exporter - Prometheus 연동](https://velog.io/@zihs0822/MySQL-Exporter-Prometheus-%EC%97%B0%EB%8F%99)
+
+* https://chhanz.github.io/linux/2019/01/18/linux-how-to-create-custom-systemd-service/
+
