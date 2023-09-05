@@ -1,12 +1,13 @@
 ## AMP / AMG 를 활용한 Mysql RDS 성능 모니터링 ##
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/rds-monitoring-archi.png) 
 2023 Amazon Linux 에 MySQL exporter 를 이용하여 RDS MySQL 서비스를 모니터링 하는 방법에 대해서 설명한다. 테라폼 실행시 아래 명령어가 동작하면서 EC2 인스턴스에 mariadb 가 설치되기 때문에 MySQL 와 관련된 별도의 설치 작업은 불필요하다 
 ```
 sudo dnf update -y
 sudo dnf install mariadb105-server -y
 ```
 ec2 에 설치된 mysql exporter 는 RDS MySQL DB 계정을 이용하여 데이터베이스 성능 메트릭을 수집하고, 동일 서버에 설치된 prometheus 는 exporter 의 http 엔드포인트에 접근해서 메트릭을 TSDB 에 기록한다. prometheus 는 AMP 와 Sigv4 를 이용하여 연동되어 있어서 MySQL DB 메트릭이 AMP 로 전송된다.  
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/rds-monitoring-archi.png) 
 
 ### mysql 모니터링 계정 생성 ###
 
