@@ -282,6 +282,8 @@ ts=2023-09-05T04:12:08.458Z caller=main.go:1011 level=info msg="Server is ready 
 ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule manager" msg="Starting rule manager..."
 ```
 
+### AMG 대시보트 설정 ###
+
 
 ## 트러블 슈팅 ##
 
