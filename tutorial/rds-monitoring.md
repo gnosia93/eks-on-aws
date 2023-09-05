@@ -394,6 +394,25 @@ ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule ma
 journalctl  | grep mysql
 ```
 
+* mysql-export 실행오류
+```
+$ sudo systemctl status mysql-exporter
+× mysql-exporter.service - Prometheus MySQL Exporter
+     Loaded: loaded (/etc/systemd/system/mysql-exporter.service; enabled; preset: disabled)
+     Active: failed (Result: exit-code) since Tue 2023-09-05 23:22:39 UTC; 2s ago
+   Duration: 353us
+    Process: 2969 ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter --config.my-cnf=/home/ec2-user/mysqld_exporter-0.15.0.linux-am>
+   Main PID: 2969 (code=exited, status=216/GROUP)
+        CPU: 0
+
+Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-exporter.service: Scheduled restart job, restart counter is at 5.
+Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: Stopped mysql-exporter.service - Prometheus MySQL Exporter.
+Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-exporter.service: Start request repeated too quickly.
+Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-exporter.service: Failed with result 'exit-code'.
+Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: Failed to start mysql-exporter.service - Prometheus MySQL Exporter.
+lines 1-13/13 (END)
+```  
+
 ## 레퍼런스 ##
 
 * https://velog.io/@sojukang/%EC%84%B8%EC%83%81%EC%97%90%EC%84%9C-%EC%A0%9C%EC%9D%BC-%EC%89%AC%EC%9A%B4-Prometheus-Grafana-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-%EC%84%A4%EC%A0%95-MySQL%ED%8E%B8
