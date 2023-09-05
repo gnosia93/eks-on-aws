@@ -282,6 +282,9 @@ sudo systemctl enable mysql-exporter
 ```
 sudo systemctl status mysql-exporter
 ```
+***********
+root 유저로 실행되는데 ec2-user로 바꿀수 있는 방법은 ??????
+***********
 
 ### 프로메테우스 설치 ###
 eks_mysql_exporter ec2 인스턴스에 프로메테우스 최신 버전을 설치한다. [prometheus release](https://prometheus.io/download/)
