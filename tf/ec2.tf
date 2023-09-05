@@ -163,6 +163,9 @@ sudo service docker start
 sudo usermod -aG docker ec2-user
 sudo dnf update -y
 sudo dnf install mariadb105-server -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo systemctl status mariadb
 _DATA
 
     tags = {
