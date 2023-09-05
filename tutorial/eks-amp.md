@@ -450,3 +450,4 @@ Home > Dashboards 메뉴로 이동한다.
 * [AWS SSO와 Directory Service 연동하기](https://blog.leedoing.com/176)
 * https://archive.eksworkshop.com/intermediate/246_monitoring_amp_amg/
 * [AWS EKS에 볼륨 마운트 해보기](https://blog.wonizz.tk/2019/11/28/kubernetes-aws-eks-volume/)
+* https://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
