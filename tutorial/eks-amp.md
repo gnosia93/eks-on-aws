@@ -272,8 +272,7 @@ vi 에디터를 이용하여 에디팅한다. 붙여넣기시 자동 identation 
         - __meta_kubernetes_namespace
       target_label: namespace
 ```
-
-otel collector 를 실행한다.
+Identation 을 맞춘후, otel collector 를 실행한다.
 ```
 kubectl apply -f ./otel-collector-config.yaml
 ```
