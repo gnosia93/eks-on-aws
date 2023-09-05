@@ -8,7 +8,7 @@
 
 * [#3. 데이터베이스 스키마 생성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/database-schema.md)
 
-* #4. 스프링 부트 어플리케이션 만들기 (https://github.com/gnosia93/eks-on-aws-springboot)
+* #4. 스프링 부트 어플리케이션 만들기
 
   * [프로젝트 생성](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-shop.md)
 
@@ -24,6 +24,7 @@
 
   * [스프링 부트 - Swagger 설정 및 URL 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-postman.md)
 
+  * git repo - https://github.com/gnosia93/eks-on-aws-springboot
 
     
 * [#5. AWS CodePipeline CI 구성하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-codepipe-line.md)
