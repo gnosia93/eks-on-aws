@@ -118,6 +118,58 @@ AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다.
 
 
 
+로컬 PC 에서 아래 명령어를 실행한다 (어드민 권한 필요)
+```
+cat <<EOF > assumeRole.json
+{
+     "Version": "2012-10-17",
+     "Statement": [
+         {
+         "Effect": "Allow",
+         "Principal": {
+             "Service": "ec2.amazonaws.com"
+         },
+         "Action": "sts:AssumeRole"
+         }
+     ]
+}
+EOF
+
+aws iam create-role \
+    --role-name eksworkshop-admin \
+    --assume-role-policy-document file://assumeRole.json
+
+aws iam attach-role-policy \
+    --role-name eksworkshop-admin \
+    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusRemoteWriteAccess
+
+aws iam attach-role-policy \
+    --role-name eksworkshop-admin \
+    --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
+
+aws iam attach-role-policy \
+    --role-name eksworkshop-admin \
+    --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
+```
+
+eks_mysql_exporter 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
+```
+INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
+ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
+```
+
+ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
+```
+aws iam create-instance-profile --instance-profile-name eksworkshop-admin-Instance-Profile
+
+aws iam add-role-to-instance-profile --role-name eksworkshop-admin \
+     --instance-profile-name eksworkshop-admin-Instance-Profile
+
+aws ec2 replace-iam-instance-profile-association \
+     --iam-instance-profile Name=eksworkshop-admin-Instance-Profile \
+     --association-id ${ASSOCIATION_ID}
+```
+
 
 #### 3.3 cloud9 IAM 역할 수정 ####
 
