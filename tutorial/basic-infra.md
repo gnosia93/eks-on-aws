@@ -106,19 +106,7 @@ helm version --short
 
 #### 3.2 cloud9 용 IAM 역할 생성 ####
 
-AWS IAM 콘솔에서 eksworkshop-admin 역할을 만듭니다. 
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-1.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-2.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-3.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-4.png)
-
-
-
-로컬 PC 에서 아래 명령어를 실행한다 (어드민 권한 필요)
+로컬 PC 에서 아래 명령어로 eksworkshop-admin 역할을 만듭니다.(어드민 권한 필요)
 ```
 cat <<EOF > assumeRole.json
 {
@@ -161,16 +149,7 @@ aws ec2 associate-iam-instance-profile \
      --instance-id ${INSTANCE_ID}
 ```
 
-
-#### 3.3 cloud9 IAM 역할 수정 ####
-
-EC2 콘솔에서 cloud9 인스턴스의 IAM 역할을 eksworkshop-admin 으로 수정한다. 
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-1.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-2.png)
-
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloud9-role-apply-3.png)
+#### 3.3 cloud9 자격증명 교체 ####
 
 Cloud9의 기존 자격증명과 임시 자격 증명등을 비활성화 합니다. 우측 상단의 톱니바뀌 모양 아이콘을 클릭한 후 좌측 Preferences 에서 AWS Settings 을 선택한 후 AWS managed temporary credentials 을 비활성화 합니다. 
 
