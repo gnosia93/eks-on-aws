@@ -114,10 +114,6 @@ MySQL [mysql]> select host, user, account_locked, select_priv from user;
 ### MySQL Exporter 설치 ###
 exporter ec2 인스턴스에 설치한다. 
 ```
-$ netstat -ln | grep mysql
-unix  2      [ ACC ]     STREAM     LISTENING     72883    /var/lib/mysql/mysql.sock
-```
-```
 MYSQL_EXPORTER_VERSION=0.15.0
 wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EXPORTER_VERSION}/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
 
@@ -132,7 +128,7 @@ password=exporter
 EOF
 ```
 
-mysql exporter 를 실행한다. (9104 Listen)
+mysql exporter 를 실행해서 정상 동작여부를 확인한다. (9104 포트 Listen)
 ```
 ./mysqld_exporter \
 --mysqld.address="${DB_ADDR}:3306" \
