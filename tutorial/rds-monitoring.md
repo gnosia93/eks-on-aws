@@ -10,12 +10,12 @@ DB_ADDR=${STAGE_DB}
 
 ### mysql 계정 생성 ###
 
-mysql 에서 메트릭을 수집하기 위해서 collector DB 계정을 만든다. cloud9 터미널에서 아래 명령어를 수행한다. 
+cloud9 터미널에서 mysql 에서 메트릭을 수집하기 위해서 exporter DB 계정을 만든다.  
 ```
-cat <<EOF > coll.sql
-CREATE USER 'coll'@'%' IDENTIFIED BY 'coll';
-GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'coll'@'%';
-GRANT SELECT ON performance_schema.* TO 'coll'@'%';
+cat <<EOF > exporter.sql
+CREATE USER 'exporter'@'%' IDENTIFIED BY 'exporter';
+GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'exporter'@'%';
+GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
 FLUSH PRIVILEGES;
 EOF
 ```
