@@ -119,6 +119,14 @@ user=exporter
 password=exporter
 EOF
 ```
+
+```
+./mysqld_exporter \
+--config.my-cnf="my.cnf" --mysqld.address="${DB_ADDR}:3306"
+```
+
+
+
 아래 명령어를 이용하여 linux 서비스로 등록한다. 
 ```
 [Unit]
