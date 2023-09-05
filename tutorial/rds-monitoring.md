@@ -123,8 +123,8 @@ Group=prometheus
 [Service]
 Type=simple
 Restart=always
-ExecStart=/opt/mysqld_exporter-0.14.0.linux-amd64/mysqld_exporter \
---config.my-cnf=/etc/mysql/my.cnf \
+ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
+--config.my-cnf=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/my.cnf \
 --web.listen-address=0.0.0.0:9104 \
 --collect.engine_tokudb_status \
 --collect.global_status \
