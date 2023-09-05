@@ -161,9 +161,8 @@ sudo yum update -y
 sudo yum install docker -y
 sudo service docker start
 sudo usermod -aG docker ec2-user
-sudo dnf update
-sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-3.noarch.rpm
-sudo dnf install mysql-selinux-1.0.4-2.amzn2023.0.3.noarch
+sudo dnf update -y
+sudo dnf install mariadb105-server -y
 _DATA
 
     tags = {
