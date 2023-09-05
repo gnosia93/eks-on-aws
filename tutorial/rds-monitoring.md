@@ -1,5 +1,5 @@
 ****
-(to-do) systemd - mysql-exporter 을 ec2-user 로 실행하는 방법은 ? 현재는 root 임.
+(to-do) systemd - mysql-exporter 을 ec2-user 로 실행하는 방법은 ? 현재는 root 임. 제대로 동작하지 않음.
 ****
 
 
