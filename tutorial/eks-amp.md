@@ -196,7 +196,7 @@ helm install ksm prometheus-community/kube-state-metrics --set image.tag="v2.8.2
 helm install nodeexporter prometheus-community/prometheus-node-exporter -n "default"
 ```
 
-[결과]
+[결과]  
 kube-state-metrics 와 nodeexporter 파드가 설치된 것을 확인할 수 있다.
 ```
 $ kubectl get all
