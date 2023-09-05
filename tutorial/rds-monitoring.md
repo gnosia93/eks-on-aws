@@ -76,7 +76,7 @@ AMP_ENDPOINT_URL=$(aws amp describe-workspace --workspace-id $WORKSPACE_ID | jq 
 AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 ```
 
-### MySQL Exporter 설치 및 서비스 등록 ###
+### MySQL Exporter 설치 및 Systemd 서비스 등록 ###
 exporter ec2 인스턴스에 설치한다. 
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
