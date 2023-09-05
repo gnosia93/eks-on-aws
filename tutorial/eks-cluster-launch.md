@@ -277,3 +277,4 @@ AWS Cloudformation 콘솔로 가서 해당 스택을 지운다.
 
 * https://kingofbackend.tistory.com/235
 
+* https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-sg.html
