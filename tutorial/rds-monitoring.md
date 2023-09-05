@@ -160,6 +160,8 @@ tar xvfz prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
 cd prometheus-${PROMETHEUS_VERSION}.linux-amd64
 ```
 
+AMP 주소를 확인 및 설정하고 프로메테우스를 실행한다.
+
 [prometheus.yaml]
 ```
 global:
