@@ -369,7 +369,7 @@ AMG 워크스페이스 생성하기 전에 AMP 워크스페이스가 생성되�
 #### Amazon Managed Service for Prometheus 를 선택한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-4.png)
 
-위의 설정으로 워크스페이스를 생성한다. 
+위의 설정으로 워크스페이스를 생성한다. 시간이 다소 걸리니 기다려야 한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-ws-5.png)
 
