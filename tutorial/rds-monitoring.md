@@ -77,7 +77,7 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 ```
 
 ### MySQL Exporter 설치 ###
-exporter ec2 인스턴스에 설치한다. (https://github.com/prometheus/mysqld_exporter)
+exporter ec2 인스턴스에 설치한다. 
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
 wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EXPORTER_VERSION}/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
@@ -143,3 +143,5 @@ prometheus --config.file=prometheus.yaml
 * https://dev.classmethod.jp/articles/try-creating-an-iam-role-in-aws-cli/
 
 * https://aws.amazon.com/blogs/security/new-attach-an-aws-iam-role-to-an-existing-amazon-ec2-instance-by-using-the-aws-cli/
+
+* [MySQL Exporter - Prometheus 연동](https://velog.io/@zihs0822/MySQL-Exporter-Prometheus-%EC%97%B0%EB%8F%99)
