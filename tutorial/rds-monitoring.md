@@ -1,7 +1,3 @@
-*****
-Under development.
-*****
-
 
 ### mysql 모니터링 계정 생성 ###
 
