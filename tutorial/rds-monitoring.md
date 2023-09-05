@@ -2,19 +2,16 @@
 Under development.
 *****
 
-MySQL 데이터베이스에서 메트릭을 수집해서 AMG 로 보내기 위해, ec2 인스턴스를 하나 만든다. 
 
+### mysql 모니터링 계정 생성 ###
+
+eks_mysql_exporter 터미널에서 mysql 에서 메트릭을 수집하기 위해서 exporter DB 계정을 만든다.  
 ```
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
 
 DB_ADDR=${STAGE_DB}
 ```
-
-
-### mysql 계정 생성 ###
-
-cloud9 터미널에서 mysql 에서 메트릭을 수집하기 위해서 exporter DB 계정을 만든다.  
 ```
 cat <<EOF > exporter.sql
 CREATE USER 'exporter'@'%' IDENTIFIED BY 'exporter';
