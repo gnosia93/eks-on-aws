@@ -287,9 +287,30 @@ sudo systemctl enable mysql-exporter
 ```
 sudo systemctl status mysql-exporter
 ```
-***********
-root 유저로 실행되는데 ec2-user로 바꿀수 있는 방법은 ??????
-***********
+[결과]
+```
+● mysql-exporter.service - Prometheus MySQL Exporter
+     Loaded: loaded (/etc/systemd/system/mysql-exporter.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2023-09-05 23:41:03 UTC; 6s ago
+   Main PID: 3607 (mysqld_exporter)
+      Tasks: 6 (limit: 9300)
+     Memory: 2.2M
+        CPU: 6ms
+     CGroup: /system.slice/mysql-exporter.service
+             └─3607 /home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter --config.my-cnf=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/my.cnf --web.listen-address=0.0.0.0:9104 --collect.global_status --collect>
+
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmpmem
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.query_response_time
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.clientstats
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.tablestats
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.schemastats
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.innodb_cmp
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=slave_hosts
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.881Z caller=mysqld_exporter.go:233 level=info msg="Scraper enabled" scraper=info_schema.replica_host
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.882Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
+Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.882Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
+```
+
 
 #### 참고 ####
 ```
