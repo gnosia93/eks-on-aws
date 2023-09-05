@@ -76,7 +76,7 @@
 
 ## Revision History ##
 
-* 2023-08-30 First Released
+* 2023-09-11 First Released
   
 ## 레퍼런스 ##
 
