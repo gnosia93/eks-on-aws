@@ -89,7 +89,7 @@ INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysq
 ASSOCIATION_ID=$(aws ec2 describe-iam-instance-profile-associations --query "IamInstanceProfileAssociations[?InstanceId=='${INSTANCE_ID}'].AssociationId" --out text)
 ```
 
-인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
+ec2 인스턴스 프로파일을 만들고 기존 프로파일과 교체한다. 
 ```
 aws iam create-instance-profile --instance-profile-name MySQLPrometheusRole-Instance-Profile
 
