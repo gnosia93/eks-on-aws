@@ -221,6 +221,7 @@ ts=2023-09-05T14:59:09.813Z caller=exporter.go:173 level=error msg="Error from s
 ```
 
 Ctrl + C 를 눌려 exporter 실행을 종료하고 아래와 같이 systemd 에 서비스로 등록한다.
+* https://askubuntu.com/questions/676007/how-do-i-make-my-systemd-service-run-via-specific-user-and-start-on-boot
 ```
 sudo su
 cat <<EOF > /etc/systemd/system/mysql-exporter.service
@@ -231,6 +232,8 @@ After=network.target
 [Service]
 Type=simple
 Restart=always
+User=ec2-user
+Group=e2c-user
 ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
 --config.my-cnf=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/my.cnf \
 --web.listen-address=0.0.0.0:9104 \
