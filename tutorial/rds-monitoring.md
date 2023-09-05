@@ -56,6 +56,10 @@ aws iam attach-role-policy \
 aws iam attach-role-policy \
     --role-name MySQLPrometheusRole \
     --policy-arn arn:aws:iam::aws:policy/AmazonPrometheusFullAccess
+
+aws iam attach-role-policy \
+    --role-name MySQLPrometheusRole \
+    --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
 ```
 
 
