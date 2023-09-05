@@ -212,10 +212,9 @@ ts=2023-09-05T14:58:58.550Z caller=mysqld_exporter.go:233 level=info msg="Scrape
 ts=2023-09-05T14:58:58.550Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9104
 ts=2023-09-05T14:58:58.550Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
 ts=2023-09-05T14:59:09.813Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
-
 ```
 
-아래와 같이 systemd 에 서비스로 등록한다.
+Ctrl + C 를 눌려 exporter 실행을 종료하고 아래와 같이 systemd 에 서비스로 등록한다.
 ```
 sudo cat <<EOF > /etc/systemd/system/mysql-exporter.service
 [Unit]
