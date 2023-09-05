@@ -1,6 +1,6 @@
 ## AMP / AMG 를 활용한 MySQL RDS 성능 모니터링 ##
 
-2023 Amazon Linux 에 MySQL exporter 를 설치해서 RDS MySQL 서비스를 모니터링 하는 방법에 대해서 설명한다. 기본 인프라 빌드시 테라폼의해 EC2 인스턴스에 mariadb 가 자동으로 설치되기 된다.
+2023 Amazon Linux 에 MySQL exporter 를 설치해서 RDS MySQL 서비스를 모니터링 하는 방법에 대해서 설명한다. 기본 인프라 빌드시 테라폼에 의해 EC2 인스턴스에 mariadb 가 자동으로 설치되기 된다.
 ```
 sudo dnf update -y
 sudo dnf install mariadb105-server -y
