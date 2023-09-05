@@ -430,7 +430,7 @@ Home > Dashboards 메뉴로 이동한다.
 #### Import via grafna.com 항목에 13548 입력하고 Load 버튼 클릭 #### 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-2.png)
 
-#### Import 버튼 클릭 ####
+#### Prometheus 항목에 Prometheus 선택한 후 Import 버튼 클릭 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-dashboard-3.png)
 
 #### 대시보드 샘플 ####
