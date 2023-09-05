@@ -217,7 +217,6 @@ ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
 WantedBy=multi-user.target
 ```
 
-systemd 에 mysql-exporter 를 등록한다.
 ```
 sudo systemctl daemon-reload
 sudo systemctl start mysql-exporter
