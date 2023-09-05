@@ -5,7 +5,7 @@ Under development.
 
 ### mysql 모니터링 계정 생성 ###
 
-eks_mysql_exporter 터미널에서 mysql 에서 메트릭을 수집하기 위해서 exporter DB 계정을 만든다.  
+eks_mysql_exporter EC2 터미널에서 stage / productiton DB 의 메트릭을 수집하기 위한 exporter DB 계정을 만든다.  
 ```
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
@@ -26,6 +26,7 @@ mysql 에 로그인해서 exporter.sql 을 실행한다.
 mysql -u root -p -h ${DB_ADDR} < exporter.sql
 ```
 
+생성된 exporter 계정정보를 조회한다.
 ```
 MySQL [mysql]> use mysql;
 MySQL [mysql]> select host, user, account_locked, select_priv from user;
