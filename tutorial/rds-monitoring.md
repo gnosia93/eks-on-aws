@@ -228,8 +228,7 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 AWS_REGION=ap-northeast-2
 ```
 
-
-[prometheus.yaml]
+기존 prometheus.yaml 을 아래의 설정을 대체한다.
 ```
 cat <<EOF > prometheus.yaml
 global:
