@@ -42,19 +42,13 @@ kubectl get all -n amazon-cloudwatch
 ```
 [결과]
 ```
+kubectl get all -n amazon-cloudwatch
 NAME                         READY   STATUS    RESTARTS   AGE
-pod/cloudwatch-agent-7w9kx   1/1     Running   0          68s
-pod/cloudwatch-agent-c2blw   0/1     Pending   0          68s
-pod/cloudwatch-agent-grcwj   0/1     Pending   0          69s
-pod/cloudwatch-agent-gszvh   1/1     Running   0          68s
-pod/fluent-bit-4cvm8         1/1     Running   0          3h17m
-pod/fluent-bit-6jcdx         1/1     Running   0          19h
-pod/fluent-bit-8psrj         1/1     Running   0          19h
-pod/fluent-bit-t2flc         1/1     Running   0          19h
+pod/cloudwatch-agent-hp7rv   1/1     Running   0          24s
+pod/cloudwatch-agent-mdvg4   1/1     Running   0          24s
 
 NAME                              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
-daemonset.apps/cloudwatch-agent   4         4         2       4            2           kubernetes.io/os=linux   69s
-daemonset.apps/fluent-bit         4         4         4       4            4           <none>                   19h
+daemonset.apps/cloudwatch-agent   2         2         2       2            2           kubernetes.io/os=linux   25s
 ```
 
 ### 6. pod 로그 확인 ###
