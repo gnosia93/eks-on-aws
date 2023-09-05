@@ -242,7 +242,7 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 AWS_REGION=ap-northeast-2
 ```
 
-기존 prometheus.yaml 을 아래의 설정을 대체한다.
+기존 prometheus.yaml 을 아래의 설정으로 대체한다.
 ```
 cat <<EOF > prometheus.yml
 global:
@@ -270,6 +270,7 @@ EOF
 ```
 ./prometheus --config.file=prometheus.yml
 ```
+
 [결과]
 ```
 ts=2023-09-05T04:12:08.445Z caller=main.go:541 level=info msg="No time or size retention was set so using the default time retention" duration=15d
