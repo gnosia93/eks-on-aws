@@ -1,5 +1,5 @@
 분산락이란 race condition 상태에서 공유자원에 접근할 때, 데이터 무결성을 지키기 위해 오퍼레이션의 원자성(atomic)을 보장하는 기법이다.   
-ElastiCache For Redis 를 활용해서 수량 제한이 설정된 판매 / 재고량 UPDATE시 이를 활용하여 이슈없이 처리할 수 있다.   
+ElastiCache For Redis 와 Redisson 패키지를 활용하면, 수량 제한이 걸린 판매 또는 재고량 처리 로직을 쉽게 구현 할수 있다.   
 데이터베이스로도 구현할 순 있으나 트랜잭션 관리에 초점을 두고 있는 RDMS 시스템들은 Redis 와 같은 캐시 시스템에 비해서 처리 속도가 상당히 느린편이고, 갭락으로 인한 DeadLock이 발생할 가능성이 있다. (select ~ for update)
 
 ### 로컬 PC 에 Redis 설치 ###
