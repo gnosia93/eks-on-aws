@@ -20,7 +20,7 @@ FLUSH PRIVILEGES;
 EOF
 ```
 
-mysql 에 로그인해서 coll.sql 을 실행한다. 
+mysql 에 로그인해서 exporter.sql 을 실행한다. 
 ```
 mysql -u root -p -h ${DB_ADDR} 
 ```
