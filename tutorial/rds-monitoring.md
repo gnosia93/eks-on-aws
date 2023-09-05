@@ -159,7 +159,6 @@ mysql exporter 를 실행한다. (9104 Listen)
 --collect.perf_schema.eventsstatements.digest_text_limit=120 \
 --collect.perf_schema.eventsstatements.limit=250 \
 --collect.perf_schema.eventsstatements.timelimit=86400 \
---collect.perf_schema.eventsstatementssum \
 --collect.perf_schema.eventswaits \
 --collect.perf_schema.file_events \
 --collect.perf_schema.file_instances \
@@ -231,7 +230,6 @@ ExecStart=/home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter \
 --collect.perf_schema.eventsstatements.digest_text_limit=120 \
 --collect.perf_schema.eventsstatements.limit=250 \
 --collect.perf_schema.eventsstatements.timelimit=86400 \
---collect.perf_schema.eventsstatementssum \
 --collect.perf_schema.eventswaits \
 --collect.perf_schema.file_events \
 --collect.perf_schema.file_instances \
