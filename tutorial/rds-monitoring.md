@@ -411,7 +411,15 @@ Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-
 Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-exporter.service: Failed with result 'exit-code'.
 Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: Failed to start mysql-exporter.service - Prometheus MySQL Exporter.
 lines 1-13/13 (END)
-```  
+```
+
+```
+$ journalctl  | grep mysql
+
+...
+Sep 05 23:19:45 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[2762]: mysql-exporter.service: Failed to determine group credentials: No such process
+Sep 05 23:19:45 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[2762]: mysql-exporter.service: Failed at step GROUP spawning /home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter: No such process
+```
 
 ## 레퍼런스 ##
 
