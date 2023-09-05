@@ -281,7 +281,6 @@ sudo systemctl enable mysql-exporter
 sudo systemctl status mysql-exporter
 ```
 ***********
-systemd 로 등록하면 동작하지 않는다. 왜 일까?
 root 유저로 실행되는데 ec2-user로 바꿀수 있는 방법은 ??????
 ***********
 
