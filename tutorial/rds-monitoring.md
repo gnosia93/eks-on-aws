@@ -135,12 +135,27 @@ curl http://localhost:9104/metrics
 ```
 
 [결과]
+* mysqld.sock 오류 이유는 확인이 필요.
+```
+ts=2023-09-05T03:47:30.042Z caller=exporter.go:152 level=error msg="Error pinging mysqld" err="dial unix /var/run/mysqld/mysqld.sock: connect: no such file or directory"
+# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
+# TYPE go_gc_duration_seconds summary
+go_gc_duration_seconds{quantile="0"} 0
+go_gc_duration_seconds{quantile="0.25"} 0
+go_gc_duration_seconds{quantile="0.5"} 0
+go_gc_duration_seconds{quantile="0.75"} 0
+go_gc_duration_seconds{quantile="1"} 0
+go_gc_duration_seconds_sum 0
+go_gc_duration_seconds_count 0
+# HELP go_goroutines Number of goroutines that currently exist.
+# TYPE go_goroutines gauge
+go_goroutines 7
+# HELP go_info Information about the Go environment.
+# TYPE go_info gauge
+go_info{version="go1.20.5"} 1
 ```
 
-```
-
-
-아래 명령어를 이용하여 linux 서비스로 등록한다. 
+아래 명령어를 이용하여 systemd 서비스로 등록한다. 
 ```
 [Unit]
 Description=Prometheus MySQL Exporter
