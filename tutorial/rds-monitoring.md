@@ -86,12 +86,15 @@ FLUSH PRIVILEGES;
 EOF
 ```
 
-mysql 에 로그인해서 exporter.sql 을 실행한다.
+mysql 에 로그인해서 exporter.sql 을 실행한다. root 패스워드는 admin22admin 이다.
 ```
 mysql -u root -p -h ${DB_ADDR} < exporter.sql
 ```
 
 생성된 exporter 계정정보를 조회한다.
+```
+mysql -u root -p -h ${DB_ADDR}
+```
 ```
 MySQL [mysql]> use mysql;
 MySQL [mysql]> select host, user, account_locked, select_priv from user;
