@@ -95,7 +95,6 @@ aws iam add-role-to-instance-profile --role-name MySQLPrometheusRole \
 
 aws ec2 replace-iam-instance-profile-association \
      --iam-instance-profile Name=MySQLPrometheusRole-Instance-Profile \
-     --instance-id ${INSTANCE_ID} \
      --association-id ${ASSOCIATION_ID}
 ```
 
