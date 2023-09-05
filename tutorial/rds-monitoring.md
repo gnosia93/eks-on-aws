@@ -25,7 +25,9 @@ mysql 에 로그인해서 exporter.sql 을 실행한다.
 mysql -u root -p -h ${DB_ADDR} 
 ```
 
+
 ### IAM Role 생성 및 EC2 Role 변경 ###
+로컬 PC 에서 아래 명령어를 실행한다.
 ```
 cat <<EOF > assumeRole.json
 {
@@ -75,6 +77,7 @@ AMP_REMOTE_WRITE_URL=${AMP_ENDPOINT_URL}api/v1/remote_write
 ```
 
 ### MySQL Exporter 설치 ###
+exporter ec2 인스턴스에 설치한다.
 ```
 MYSQL_EXPORTER_VERSION=0.15.0
 wget https://github.com/prometheus/mysqld_exporter/releases/download/v${MYSQL_EXPORTER_VERSION}/mysqld_exporter-${MYSQL_EXPORTER_VERSION}.linux-amd64.tar.gz
@@ -85,9 +88,7 @@ cd mysqld_exporter-*.*-amd64
 
 
 ### 프로메테우스 설치 ###
-
-AWS EC2 콘솔에서 eks_ec2_mysql_collector 서버를 확인 후 ssh 로 로그인 한다.
-
+exporter ec2 인스턴스에 설치한다.
 ```
 PROMETHEUS_VERSION=2.46.0
 curl -LO https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
