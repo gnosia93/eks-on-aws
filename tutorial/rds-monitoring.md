@@ -11,47 +11,6 @@ prometheus 는 AMP(Amazon Managed Service for Prometheus) 와 Sigv4 인증을 �
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/rds-monitoring-archi-2.png) 
 
-### mysql 모니터링 계정 생성 ###
-
-eks_mysql_exporter EC2 터미널에서 stage / productiton DB 의 메트릭을 수집하기 위한 exporter DB 계정을 만든다.  
-```
-STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
-PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
-
-DB_ADDR=${STAGE_DB}
-echo ${DB_ADDR}
-```
-```
-cat <<EOF > exporter.sql
-CREATE USER 'exporter'@'%' IDENTIFIED BY 'exporter';
-GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
-GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
-FLUSH PRIVILEGES;
-EOF
-```
-
-mysql 에 로그인해서 exporter.sql 을 실행한다.
-```
-mysql -u root -p -h ${DB_ADDR} < exporter.sql
-```
-
-생성된 exporter 계정정보를 조회한다.
-```
-MySQL [mysql]> use mysql;
-MySQL [mysql]> select host, user, account_locked, select_priv from user;
-+---------------------------------------------------------------+------------------+----------------+-------------+
-| host                                                          | user             | account_locked | select_priv |
-+---------------------------------------------------------------+------------------+----------------+-------------+
-| %                                                             | exporter         | N              | Y           |
-| %                                                             | root             | N              | Y           |
-| localhost                                                     | mysql.infoschema | Y              | Y           |
-| localhost                                                     | mysql.session    | Y              | N           |
-| localhost                                                     | mysql.sys        | Y              | N           |
-| localhost                                                     | rdsadmin         | N              | Y           |
-+---------------------------------------------------------------+------------------+----------------+-------------+
-8 rows in set (0.000 sec)
-```
-
 
 ### EC2 IAM Role 변경 ###
 로컬 PC 에서 아래 명령어를 실행한다 (어드민 권한 필요)
@@ -105,6 +64,50 @@ aws ec2 replace-iam-instance-profile-association \
      --iam-instance-profile Name=MySQLPrometheusRole-Instance-Profile \
      --association-id ${ASSOCIATION_ID}
 ```
+
+### mysql 모니터링 계정 생성 ###
+
+eks_mysql_exporter EC2 터미널에서 stage / productiton DB 의 메트릭을 수집하기 위한 exporter DB 계정을 만든다.  
+```
+STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
+PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
+
+DB_ADDR=${STAGE_DB}
+echo ${DB_ADDR}
+```
+```
+cat <<EOF > exporter.sql
+CREATE USER 'exporter'@'%' IDENTIFIED BY 'exporter';
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
+GRANT SELECT ON performance_schema.* TO 'exporter'@'%';
+FLUSH PRIVILEGES;
+EOF
+```
+
+mysql 에 로그인해서 exporter.sql 을 실행한다.
+```
+mysql -u root -p -h ${DB_ADDR} < exporter.sql
+```
+
+생성된 exporter 계정정보를 조회한다.
+```
+MySQL [mysql]> use mysql;
+MySQL [mysql]> select host, user, account_locked, select_priv from user;
++---------------------------------------------------------------+------------------+----------------+-------------+
+| host                                                          | user             | account_locked | select_priv |
++---------------------------------------------------------------+------------------+----------------+-------------+
+| %                                                             | exporter         | N              | Y           |
+| %                                                             | root             | N              | Y           |
+| localhost                                                     | mysql.infoschema | Y              | Y           |
+| localhost                                                     | mysql.session    | Y              | N           |
+| localhost                                                     | mysql.sys        | Y              | N           |
+| localhost                                                     | rdsadmin         | N              | Y           |
++---------------------------------------------------------------+------------------+----------------+-------------+
+8 rows in set (0.000 sec)
+```
+
+
+
 
 ### MySQL Exporter 설치 ###
 exporter ec2 인스턴스에 설치한다. 
