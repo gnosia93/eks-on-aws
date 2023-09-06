@@ -73,7 +73,7 @@
 
 * Appendix. [k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
-* source git repo - https://github.com/gnosia93/eks-on-aws-springboot
+* source repo - https://github.com/gnosia93/eks-on-aws-springboot
 
 ## Revision History ##
 
