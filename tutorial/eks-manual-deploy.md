@@ -14,7 +14,7 @@ DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info --query 'CacheClusters[].CacheNodes[].Endpoint[].Address' --out text)
 
 
-REDIS_ENDPOINT=clustercfg.redis.bchkjx.apn2.cache.amazonaws.com
+REDIS_ENDPOINT=redis-1.bchkjx.clustercfg.apn2.cache.amazonaws.com
 echo ${DB_ENDPOINT}
 echo ${REDIS_ENDPOINT}
 echo ${IMAGE_REPO_ADDR}
