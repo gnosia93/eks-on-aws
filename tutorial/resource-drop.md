@@ -35,7 +35,7 @@ aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamservic
 ```
 ```
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
--- 노드 인스턴스 롤을 먼저지워야함 secret manager.
+-- 노드 인스턴스 그룹 롤을 먼저지워야함 secret manager. read/write.
 ```
 #### eksctl ###
 ```
