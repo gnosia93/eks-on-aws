@@ -44,23 +44,25 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 ### 4. shop 서비스 재배포 ###
 
 ELB(Ingress) 퍼블릭 엔드포인트에서 prometheus 메트릭이 출력되는지를 확인한다. 
-* http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus
-값이 출력되는 경우 이번 단계(4. shop 서비스 재배포) 는 건너뛴다.
+* http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus 
+결과 값이 출력되는지 확인한다.
+만약 출력되지 않는다면 4.1 및 4.2 과정을 수행한다. 
   
-#### 4.1 actuator/prometheus 가 적용된 도커 이미지 ECR 등록 ####
+#### 4.1. actuator/prometheus 가 적용된 도커 이미지 ECR 등록 ####
 CI 파이프 라인 실행
 
-#### 4.2 shop 서비스 재배포 ####
+#### 4.2. shop 서비스 재배포 ####
 cloud9 터미널에서 아래 명령어를 실행한다. 
 ```
 kubectl delete -f shop-service.yaml
 kubectl apply -f shop-service.yaml
 ```
 
+### 5. Deployment 설정 확인 ###
 ****
-중요 - 아래 Deployment YAML 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 을 template 밑에 추가해야 한다.
-      prometheus.io/scrape, prometheus.io/path, prometheus.io/port
-      OpenTelemetry 에이전트가 모니터링 대상 POD 을 식별할때 서비스 디스커버리 메커니즘을 활용하는데 이 세가지 annotation 은 필수적으로 기술이 되어야 한다.
+중요 - 아래 Deployment YAML 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 이 POD 에 설정되어 있어야 한다. 
+      prometheus.io/scrape, prometheus.io/path, prometheus.io/port 로 OpenTelemetry 에이전트가 모니터링 대상 POD 를 식별할때 사용된다.
+      대상 식별은 POD 태그에 의한 서비스 디스커버리 메커니즘을 활용하는데 이는 아래 6. open telemetry 컬렉터 설정과도 관련이 된다.
 ****
 ```
 apiVersion: apps/v1
@@ -81,7 +83,7 @@ spec:
         app: shop
       annotations:
         builder: 'SoonBeom Kwon'
-        prometheus.io/scrape: 'true'
+        prometheus.io/scrape: 'true'                    
         prometheus.io/path: '/actuator/prometheus'
         prometheus.io/port: '8080'
     spec:
@@ -94,7 +96,7 @@ spec:
 ```
 
 
-### 5. open telemetry 컬렉터 설정 ###
+### 6. open telemetry 컬렉터 설정 ###
 
 [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 322)  
 해당 yaml 파일은 cloud9 터미널에서 확인할 수 있다.
@@ -162,7 +164,7 @@ $ kubectl logs pod/observability-collector-6f564d8489-hpk8w -n prometheus
 2023-08-29T11:15:01.097Z        info    prometheusreceiver@v0.74.0/metrics_receiver.go:289      Starting scrape manager {"kind": "receiver", "name": "prometheus", "data_type": "metrics"}
 ```
 
-### 6. AMG 대시보드 ###
+### 7. AMG 대시보드 ###
 
 #### 19004(Spring Boot 3.x Statistics) ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/amg-springboot.png)
