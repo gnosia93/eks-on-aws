@@ -80,7 +80,7 @@ eks_mysql_exporter EC2 터미널에서 stage / productiton DB 의 메트릭을 �
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
 
-DB_ADDR=${STAGE_DB}
+export DB_ADDR=${STAGE_DB}
 echo ${DB_ADDR}
 ```
 ```
