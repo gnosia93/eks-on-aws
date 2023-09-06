@@ -76,9 +76,10 @@ EOF
 #### NodeGroup IAM Role 수정  ####
 
 EKS 노드그룹의 ROLE eksctl-eks-workshop-nodegroup-ng-NodeInstanceRole-xxxxxxxx 에 SecretManagerReadWrite 권한을 추가해 준다.
-[11](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md) 의 EKS 노드그룹 권한 설정 부분을 참고하여 권한을 추가한다.
+[스프핑 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md) 의 EKS 노드그룹 권한 설정 부분을 참고하여 권한을 추가한다.
   
-(부연설명) 소스 gradle dependancy 에 SecretManager 관련 의존성이 추가되어서 stage 환경임에도 불구하고 SecretManager 에 접근하는 것으로 보인다. 즉 의존성을 추가하기만 해도 스프이 부트 실행시 SPRING_PROFILES_ACTIVE 값과는 상관없이 무조건 호출하는 듯.. 
+(부연설명) 소스 gradle dependancy 에 SecretManager 관련 의존성이 추가되어서 SPRING_PROFILES_ACTIVE 값이 stage 임에도 불구하고 SecretManager 에 접근하는 것으로 보인다.   
+즉 의존성을 추가하기만 해도 스프링 부트 실행시 뭔가를 무조건 호출하는 듯..ㅜㅜ 
 
 #### 생성 오브젝트 확인 ####
 ```
