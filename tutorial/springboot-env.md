@@ -40,9 +40,9 @@ spec:
 
 ## ConfigMap ##
 Key / Value 쌍을 저장하는 컨피그맵을 이용해서 어플리케이션 데이터(스트링 or 바이너리)를 저장할 수 있다.  
-어플리케이션 코드와 데이터가 분리되기 때문에, 설정 데이터 변경으로 인한 어플리케이션 배포는 불필요하다.
-아래 예제에서는 DB_ENDPOINT, DB_USER, DB_PASSWORD 를 ConfigMap 에 저장하고 있다.   
-(주의) 데이터베이스의 user/password 는 노출되면 안되니, AWS SecretManager 를 사용하도록 한다.
+어플리케이션 코드와 데이터가 분리되기 때문에, 데이터 변경으로 인한 어플리케이션 재배포는 하지 않아도 된다 (단, 재시작은 필요)  
+아래 예제에서는 DB_ENDPOINT, DB_USER, DB_PASSWORD 를 ConfigMap 에 저장하고 있다.     
+(주의) 데이터베이스 user/password 는 보안상 이슈가 생길 수 있으니, AWS SecretManager 와 같은 서비스를 사용하는 것이 좋다.
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -97,9 +97,60 @@ spec:
 ```
 
 ## Secret ##
+평문으로 데이터를 Key / Value 형태로 저장하는 컨피그맵에 반해 Secret 는 Base64 로 인코딩해서 데이터를 저장하게 한다.
+Secret 에 데이터를 저장하기 전에 저장 대상 데이터에 대해서 base64 작업을 수행한 후 저장해야 하고, 읽어 올때는 자동 디코딩되어 진다.
 
-...
-
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: shop-secret
+type: Opaque
+data:
+  DB_ENDPOINT: .........
+  DB_USER: dXNlcm5hbWU=
+  DB_PASSWORD: cGFzc3dvcmQ=
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-deployment
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+    spec:
+      containers:
+        - name: shop
+          image: 00000000000.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: shop-secret
+                  key: DB_ENDPOINT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: shop-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+               valueFrom:
+                secretKeyRef:
+                  name: shop-secret
+                  key: DB_PASSWORD
+          imagePullPolicy: Always
 
 
 ## 레퍼런스 ##
