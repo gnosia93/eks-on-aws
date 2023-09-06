@@ -3,7 +3,7 @@ springboot properties 의 설정값은 런타임의 환경변수로 부터 받�
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-env-db.png)
 
-쿠버네티스의 환경인 경우 아래의 설정을 참고한다. 
+쿠버네티스인 경우 env 부분에서 환경변수로 값들을 설정해서 컨테이너 어플리케이션에 전달할 수 있다. 
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -37,10 +37,9 @@ spec:
               value: shop
           imagePullPolicy: Always
 ```
-env 부분에서 환경변수로 값들을 설정해서 컨테이너 어플리케이션에 전달하고 있다.
-
 
 ## ConfigMap ##
+
 
 ...
 
