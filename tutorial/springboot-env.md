@@ -40,6 +40,16 @@ spec:
 env 부분에서 환경변수로 값들을 설정해서 컨테이너 어플리케이션에 전달하고 있다.
 
 
+## ConfigMap ##
+
+...
+
+## Secret ##
+
+...
+
+
+
 ## 레퍼런스 ##
 
 * https://waspro.tistory.com/681
