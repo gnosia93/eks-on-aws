@@ -30,7 +30,10 @@ kubectl delete ingress shop-ingress
 #### 노드 그룹을 지운다 ####
 
 ```
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamserviceaccount-kube-system-aws-load-balancer-controller
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamserviceaccount-prometheus-amp-irsa-role
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
 ```
 
 
