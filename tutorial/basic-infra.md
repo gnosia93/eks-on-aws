@@ -167,12 +167,9 @@ aws sts get-caller-identity --region ap-northeast-2
 #### 3.4 Shell 환경변수 저장 ####
 
 ```
-# Account, Region 정보를 AWS Cli로 확인한다.
 export ACCOUNT_ID=$(aws sts get-caller-identity --region ap-northeast-2 --output text --query Account)
 export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.region')
-echo $ACCOUNT_ID
-echo $AWS_REGION
-# bash_profile에 Account 정보, Region 정보를 저장한다.
+
 echo "export ACCOUNT_ID=${ACCOUNT_ID}" | tee -a ~/.bash_profile
 echo "export AWS_REGION=${AWS_REGION}" | tee -a ~/.bash_profile
 aws configure set default.region ${AWS_REGION}
