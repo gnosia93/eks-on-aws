@@ -46,6 +46,8 @@ spec:
     metadata:
       labels:
         app: shop
+      annotations:
+          builder: "SoonBeom Kwon"
     spec:
       containers:
         - name: shop
