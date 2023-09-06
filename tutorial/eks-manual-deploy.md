@@ -47,8 +47,8 @@ spec:
       labels:
         app: shop
       annotations:
-          builder: "SoonBeom Kwon"
-          prometheus.io/scrape: "true"
+        builder: 'SoonBeom Kwon'
+        prometheus.io/scrape: 'true'
     spec:
       containers:
         - name: shop
