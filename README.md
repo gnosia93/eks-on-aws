@@ -63,7 +63,7 @@
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)(!)
 
-  - [AMP / AMG 를 활용한 Mysql RDS 성능 모니터링](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/rds-monitoring.md)
+  - [AMP / AMG 를 활용한 MySQL RDS 성능 모니터링](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/rds-monitoring.md)
 
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
