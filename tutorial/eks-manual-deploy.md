@@ -19,12 +19,10 @@ echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
 ```
-Redis 캐시 서버와 연결가능한지 확인한다. 
+Redis 캐시 서버와 연결가능한지 확인한다. Connected 라는 메시지가 나오면 정상적으로 연결된 것이다. 
+
 ```
-curl -v telnet://${REDIS_ENDPOINT}:6379
-```
-Connected 라는 메시지가 나오면 정상적으로 연결된 것이다. 
-```
+$ curl -v telnet://${REDIS_ENDPOINT}:6379
 Trying 172.31.1.242:6379...
 Connected to test.1234id.clustercfg.euw1.cache.amazonaws.com (172.31.1.242) port 6379 (#0)
 ```
