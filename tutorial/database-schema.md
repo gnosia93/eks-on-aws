@@ -142,6 +142,7 @@ STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentif
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
 
 DB_ADDR=${STAGE_DB}
+echo ${DB_ADDR}
 ```
 
 DB_ADDR 를 ${STAGE_DB}, ${PROD_DB} 각각으로 설정하고 아래의 SQL 을 실행한다.
