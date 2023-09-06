@@ -37,9 +37,9 @@ aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
 
 * k8s ELB
 ```
-SGS=$(aws ec2 describe-security-groups --query 'SecurityGroups[?contains(GroupName, `k8s`)].GroupId' --out text | tr " " "\n")
-for 
+aws ec2 describe-security-groups --query 'SecurityGroups[?contains(GroupName, `k8s`)].GroupId' --out text
 
+aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
 ```
 
 
