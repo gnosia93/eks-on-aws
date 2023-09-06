@@ -12,15 +12,6 @@ aws amp delete-workspace \
 ```
 
 ### 2. EKS 삭제 ### 
-
-#### EKS Control Plan 시큐리티 그룹 인바운드 룰을 지운다 (cloud9 용으로 설정한 룰) ####
-```
-aws ec2 describe-security-groups --query 'SecurityGroups[?contains(GroupName, `eks-workshop`)].GroupId' --out text
-
-sg-00e8ead96f504e4bc    sg-0e26fb54474ff7985    sg-04690df9206057f4c    sg-0df8fb4f4f045549e
-
-aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
-```
   
 #### Ingress 및 LoadBalancer 타입의 K8S 오브젝트를 지운다. ####
 ```
@@ -41,6 +32,15 @@ aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2x
 ```
 eksctl delete cluster eks-workshop
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
+```
+
+#### EKS 시큐리티 그룹 삭제 ####
+```
+aws ec2 describe-security-groups --query 'SecurityGroups[?contains(GroupName, `eks-workshop`)].GroupId' --out text
+
+sg-00e8ead96f504e4bc    sg-0e26fb54474ff7985    sg-04690df9206057f4c    sg-0df8fb4f4f045549e
+
+aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
 ```
 
 
