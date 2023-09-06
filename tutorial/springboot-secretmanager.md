@@ -75,12 +75,14 @@ EKS 노드그룹의 인스턴스(파드)가 SecretManager 에 접근하기 위�
 EKS 콘솔에서 ng-2xlarge 노드그룹의 Role(Node IAM role ARN)을 확인한 후, 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-0.png)
 
-해당 Role 에 대해서 아래와 같이
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-1.png)
+해당 Role 에 대해서 [Add Permissions] 버튼을 눌려서 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-1-1.png)
 
-SecretsManagerReadWrite 권한을 추가한다.
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-2.png)
+SecretsManagerReadWrite 을 검색해서 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-2-1.png)
 
+해당 권한을 추가한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/secretmanager-role-3-1.png)
 
 ## 트러블 슈팅 ##
 
