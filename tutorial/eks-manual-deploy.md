@@ -13,6 +13,9 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 echo ${DB_ENDPOINT}
 ```
+```
+aws elasticache describe-cache-clusters --show-cache-node-info
+```
 
 ```
 cat <<EOF > shop-service.yaml
