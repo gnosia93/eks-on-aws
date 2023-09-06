@@ -73,6 +73,11 @@ EOF
 ```
 * 컨테이너화 된 자바 힙 메모리 설정 방법 - https://recordsoflife.tistory.com/267
 
+#### NodeGroup IAM 수정 ####
+
+secret manager 접근 권한 설정.
+
+
 #### 생성 오브젝트 확인 ####
 ```
 kubectl apply -f shop-service.yaml
