@@ -27,7 +27,7 @@ aws ec2 delete-security-group --group-id sg-0df8fb4f4f045549e
 kubectl delete service nginx
 kubectl delete ingress shop-ingress
 ```
-#### 노드 그룹을 지운다 ####
+#### cloudformation 지우기 ####
 
 ```
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamserviceaccount-kube-system-aws-load-balancer-controller
@@ -37,7 +37,6 @@ aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
 ```
 
 
-#### 클러스터를 지운다 ####
 
 #### eks 노드그룹을 지운다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudformation-eks-nodegroup.png)
