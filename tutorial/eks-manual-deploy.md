@@ -12,11 +12,12 @@ STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' 
 PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
 IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
 DB_ENDPOINT=${STAGE_DB}
-REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
+--query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
 
-echo ${DB_ENDPOINT}
-echo ${REDIS_ENDPOINT}
-echo ${IMAGE_REPO_ADDR}
+echo "${DB_ENDPOINT}"
+echo "${REDIS_ENDPOINT}"
+echo "${IMAGE_REPO_ADDR}"
 ```
 Redis 캐시 서버와 연결가능한지 확인한다. 
 ```
