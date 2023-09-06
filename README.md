@@ -60,7 +60,7 @@
  
   - [모던 그라파나 대시보드](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/grafana-eks-chart.md) 
  
-  - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)(!)
+  - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)
 
   - [AMP / AMG 를 활용한 MySQL RDS 성능 모니터링](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/rds-monitoring.md)
 
