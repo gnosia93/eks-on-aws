@@ -282,6 +282,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
+Ctrl + D를 눌러 root 유저에서 일반 유저인 ec2-user로 전환하고 아래 명령어를 실행한다.
 ```
 sudo systemctl daemon-reload
 sudo systemctl start mysql-exporter
@@ -329,10 +330,9 @@ Sep 06 00:08:24 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[49
 Sep 06 00:08:39 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[4908]: ts=2023-09-06T00:08:39.794Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
 ```
 
-#### 참고 ####
+#### [참고 - systemctl 명령어] ####
 ```
 sudo systemctl stop mysql-exporter
-
 sudo systemctl disable mysql-exporter
 ```
 
