@@ -11,12 +11,11 @@ STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' 
 PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
 IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
 DB_ENDPOINT=${STAGE_DB}
-echo ${DB_ENDPOINT}
-```
-```
-aws elasticache describe-cache-clusters --show-cache-node-info
-```
+REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info --query 'CacheClusters[].CacheNodes[].Endpoint[].Address' --out text)
 
+echo ${DB_ENDPOINT}
+echo ${REDIS_ENDPONT}
+echo ${IMAGE_REPO_ADDR}
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
