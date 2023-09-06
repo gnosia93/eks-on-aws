@@ -35,7 +35,7 @@ aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
 ```
 
 ### 2. 기본 인프라 삭제 ###
-
+로컬 PC 에서 실행한다.
 ```
 cd ~/eks-on-aws/tf
 
