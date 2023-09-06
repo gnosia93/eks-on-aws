@@ -3,7 +3,6 @@
 이번 챕터에서는 shop 프로젝트를 서비스로 배포하고 인그레스를 설치하여 웹으로 노출할 예정이다.  
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
-
 #### 배포용 YAML 파일 생성 ####
 
 컨테이너 이미지 주소(image), DB_ENDPOINT, REDIS_ENDPOINT 정보를 받아온다.
@@ -49,6 +48,8 @@ spec:
       annotations:
         builder: 'SoonBeom Kwon'
         prometheus.io/scrape: 'true'
+        prometheus.io/path: '/actuator/prometheus'
+        prometheus.io/port: '8080'
     spec:
       containers:
         - name: shop
