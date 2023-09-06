@@ -14,7 +14,7 @@ DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info --query 'CacheClusters[].CacheNodes[].Endpoint[].Address' --out text)
 
 echo ${DB_ENDPOINT}
-echo ${REDIS_ENDPONT}
+echo ${REDIS_ENDPOINT}
 echo ${IMAGE_REPO_ADDR}
 ```
 ```
