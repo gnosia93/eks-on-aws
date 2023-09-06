@@ -102,6 +102,9 @@ curl -sL https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Li
 # helm
 curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 helm version --short
+
+# telnet
+sudo yum install telnet
 ```
 
 #### 3.2 cloud9 용 IAM 역할 생성 ####
