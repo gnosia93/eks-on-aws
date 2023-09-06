@@ -224,6 +224,13 @@ Ctrl + C 를 눌려 exporter 실행을 종료하고 아래와 같이 systemd 에
 * https://askubuntu.com/questions/676007/how-do-i-make-my-systemd-service-run-via-specific-user-and-start-on-boot
 ```
 sudo su
+
+STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
+PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
+
+export DB_ADDR=${STAGE_DB}
+echo ${DB_ADDR}
+
 sudo rm -rf /etc/systemd/system/mysql-exporter.service
 sudo cat <<EOF > /etc/systemd/system/mysql-exporter.service
 [Unit]
