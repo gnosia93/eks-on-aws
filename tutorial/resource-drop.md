@@ -44,15 +44,6 @@ aws ec2 delete-security-group --group-id sg-00e8ead96f504e4bc
 ```
 
 
-
-#### eks 노드그룹을 지운다 ####
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudformation-eks-nodegroup.png)
-```
-eksctl delete nodegroup --cluster ${CLUSTER_NAME} --region ${AWS_REGION} --name ng-2xlarge
-
-eksctl delete cluster ${CLUSTER_NAME}
-```
-
 3, 4 단계는 로컬 PC 에서 실행한다.
 
 ### 3. cloud9 삭제 ###
