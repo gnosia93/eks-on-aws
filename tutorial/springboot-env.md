@@ -107,9 +107,9 @@ metadata:
   name: shop-secret
 type: Opaque
 data:
-  DB_ENDPOINT: .........
-  DB_USER: dXNlcm5hbWU=
-  DB_PASSWORD: cGFzc3dvcmQ=
+  DB_ENDPOINT: ZWtzLW15c3FsLXN0YWdlLmN6ZWQ3b25zcTVzeS5hcC1ub3J0aGVhc3QtMi5yZHMuYW1hem9uYXdzLmNvbQo=
+  DB_USER: c2hvcAo=
+  DB_PASSWORD: c2hvcAo=
 ---
 apiVersion: apps/v1
 kind: Deployment
