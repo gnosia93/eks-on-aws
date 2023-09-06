@@ -37,6 +37,8 @@ aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamservic
 #### eksctl ###
 ```
 eksctl delete cluster eks-workshop
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
 ```
 
 
