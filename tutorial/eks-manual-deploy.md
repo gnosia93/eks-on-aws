@@ -48,6 +48,7 @@ spec:
         app: shop
       annotations:
           builder: "SoonBeom Kwon"
+          prometheus.io/scrape: "true"
     spec:
       containers:
         - name: shop
