@@ -58,3 +58,5 @@ aws amp delete-workspace \
 ## 레퍼런스 ##
 
 * https://bobbyhadz.com/blog/aws-cli-query-contains
+
+* [linux - 문자 분리(split, awk, cut, awk)](https://linuxism.ustd.ip.or.kr/1260)
