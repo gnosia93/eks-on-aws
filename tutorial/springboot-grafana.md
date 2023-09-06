@@ -105,9 +105,10 @@ spec:
 [otel-collector-config.yaml 에 추가할 설정]
 
 * [https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods](https://stackoverflow.com/questions/53365191/monitor-custom-kubernetes-pod-metrics-using-prometheus)
-  - __meta_kubernetes_pod_annotation_prometheus_io_scrape : prometheus.io/scrape 어노테이션에 해당
-  - __meta_kubernetes_pod_annotation_prometheus_io_path : prometheus.io/path 어노테이션에 해당
-  - __meta_kubernetes_pod_annotation_prometheus_io_port : prometheus.io/port 어노테이션에 해당
+  - kubernetes_sd_config : 쿠버네티스 서비스디스커버리 컨피그
+  	- __meta_kubernetes_pod_annotation_prometheus_io_scrape : prometheus.io/scrape 어노테이션에 해당
+  	- __meta_kubernetes_pod_annotation_prometheus_io_path : prometheus.io/path 어노테이션에 해당
+  	- __meta_kubernetes_pod_annotation_prometheus_io_port : prometheus.io/port 어노테이션에 해당
     
 ```
 - job_name: integrations/springboot
