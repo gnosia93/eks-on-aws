@@ -1,5 +1,5 @@
 
-springboot properties 의 설정값은 런타임의 환경변수로 부터 받아올 수 있다. ${DB_HOST}, ${DB_USERNAME}, ${DB_PASSWORD} 가 설정값이다.
+springboot properties 의 설정값은 런타임의 환경변수로 부터 받아올 수 있다. 이 예제에서는 ${DB_HOST}, ${DB_USERNAME}, ${DB_PASSWORD} 가 바로 환경변수 들이다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-env-db.png)
 
