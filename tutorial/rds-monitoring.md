@@ -223,6 +223,7 @@ ts=2023-09-05T14:59:09.813Z caller=exporter.go:173 level=error msg="Error from s
 Ctrl + C 를 눌려 exporter 실행을 종료하고 아래와 같이 systemd 에 서비스로 등록한다.
 * https://askubuntu.com/questions/676007/how-do-i-make-my-systemd-service-run-via-specific-user-and-start-on-boot
 ```
+sudo su
 sudo rm -rf /etc/systemd/system/mysql-exporter.service
 sudo cat <<EOF > /etc/systemd/system/mysql-exporter.service
 [Unit]
