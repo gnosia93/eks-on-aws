@@ -320,6 +320,19 @@ Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[36
 Sep 05 23:41:03 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[3607]: ts=2023-09-05T23:41:03.882Z caller=tls_config.go:277 level=info msg="TLS is disabled." http2=false address=[::]:9104
 ```
 
+저널로그 확인
+```
+journalctl  | grep mysql
+```
+
+[결과]
+```
+...
+mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
+Sep 06 00:08:09 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[4908]: ts=2023-09-06T00:08:09.794Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
+Sep 06 00:08:24 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[4908]: ts=2023-09-06T00:08:24.795Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
+Sep 06 00:08:39 ip-10-1-2-187.ap-northeast-2.compute.internal mysqld_exporter[4908]: ts=2023-09-06T00:08:39.794Z caller=exporter.go:173 level=error msg="Error from scraper" scraper=slave_hosts target=eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com:3306 err="Error 1227 (42000): Access denied; you need (at least one of) the REPLICATION SLAVE privilege(s) for this operation"
+```
 
 #### 참고 ####
 ```
