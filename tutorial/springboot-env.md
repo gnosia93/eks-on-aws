@@ -43,8 +43,18 @@ Key / Value 쌍을 저장하는 컨피그맵을 이용해서 어플리케이션 
 어플리케이션 코드와 데이터가 분리되기 때문에, 설정 데이터 변경으로 인한 어플리케이션 배포는 불필요하다.
 
 ```
+cat <<EOF > shop-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shop-config
+data:
+  DB_ENDPOINT: eks-mysql-stage.czed7onsq5sy.ap-northeast-2.rds.amazonaws.com
+  DB_USER : shop
+  DB_PASSWORD : shop
+EOF
 
-
+kubectl apply -f shop-config.yaml
 ```
 
 
