@@ -1,6 +1,5 @@
-* source git repo - https://github.com/gnosia93/eks-on-aws-springboot
-
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-on-aws-archi-2.png)
+* source git repo - https://github.com/gnosia93/eks-on-aws-springboot
 
   이 워크샵은 EKS 환경으로 어플리케이션 이동하고자 하는 스프링 개발자들을 위해 만들어 졌습니다.  
 
