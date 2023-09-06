@@ -59,11 +59,8 @@ kubectl apply -f shop-service.yaml
 
 ****
 중요 - 아래 Deployment YAML 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 을 template 밑에 추가해야 한다.
-    prometheus.io/scrape: 'true'
-    prometheus.io/path: '/actuator/prometheus'
-    prometheus.io/port: '8080'
-
-OpenTelemetry 에이전트가 모니터링 대상 POD 을 식별할때 서비스 디스커버리 메커니즘을 활용하는데 이 세가지 annotation 은 필수적으로 기술이 되어야 한다.
+      prometheus.io/scrape, prometheus.io/path, prometheus.io/port
+      OpenTelemetry 에이전트가 모니터링 대상 POD 을 식별할때 서비스 디스커버리 메커니즘을 활용하는데 이 세가지 annotation 은 필수적으로 기술이 되어야 한다.
 ****
 ```
 apiVersion: apps/v1
