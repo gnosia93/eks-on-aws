@@ -50,6 +50,8 @@ spec:
               value: shop
             - name: DB_PASSWORD
               value: shop
+            - name: REDIS_ENDPOINT
+              value: ${REDIS_ENDPOINT}
             - name: JAVA_TOOL_OPTIONS
               value: "-Xms1024M -Xmx1024M"
             - name: PROD_SERVICE_ENDPOINT
