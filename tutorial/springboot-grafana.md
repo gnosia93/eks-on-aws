@@ -41,7 +41,7 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-prometheus.png)
 
 
-### 4. shop 서비스 재배포 (optional) ###
+### 4. shop 서비스 재배포 ###
 
 ELB(Ingress) 퍼블릭 엔드포인트에서 prometheus 메트릭이 출력되는지를 확인한다. 
 * http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus
