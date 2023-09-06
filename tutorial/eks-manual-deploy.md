@@ -75,8 +75,9 @@ EOF
 
 #### NodeGroup IAM 수정 ####
 
-secret manager 접근 권한 설정.
+노드그룹의 ROLE eksctl-eks-workshop-nodegroup-ng-NodeInstanceRole-19V44PLCLT4DL 에 SecretManagerReadWrite 권한을 추가해 준다.
 
+(부연설명) 소스 gradle dependancy 에 SecretManager 관련 의존성이 추가되어서 stage 환경임에도 불구하고 SecretManager 에 접근하는 것으로 보인다. 즉 의존성을 추가하기만 해도 스프이 부트 실행시 SPRING_PROFILES_ACTIVE 값과는 상관없이 무조건 호출하는 듯.. 
 
 #### 생성 오브젝트 확인 ####
 ```
