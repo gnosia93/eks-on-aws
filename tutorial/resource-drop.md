@@ -29,6 +29,11 @@ kubectl delete ingress shop-ingress
 ```
 #### 노드 그룹을 지운다 ####
 
+```
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
+```
+
+
 #### 클러스터를 지운다 ####
 
 #### eks 노드그룹을 지운다 ####
