@@ -80,20 +80,20 @@ kubectl apply -f shop-service.yaml
   
 ```
 - job_name: integrations/springboot
-  metrics_path: '/actuator/prometheus'
   kubernetes_sd_configs:
-    - role: pod
-      namespaces:
-        names:
-          - default
+  - role: pod
   relabel_configs:
   - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
     action: keep
     regex: true
-  - source_labels: [__address__]
+  - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
     action: replace
-    regex: ([^:]+)(?::\d+)?
-    replacement: $1:8080
+    target_label: __metrics_path__
+    regex: (.+)
+  - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+    action: replace
+    regex: ([^:]+)(?::\d+)?;(\d+)
+    replacement: $1:$2
     target_label: __address__
 ```
 
