@@ -43,7 +43,6 @@ Key / Value 쌍을 저장하는 컨피그맵을 이용해서 어플리케이션 
 어플리케이션 코드와 데이터가 분리되기 때문에, 설정 데이터 변경으로 인한 어플리케이션 배포는 불필요하다.
 
 ```
-cat <<EOF > shop-config.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -53,12 +52,48 @@ data:
   DB_USER : shop
   DB_PASSWORD : shop
 EOF
-
-kubectl apply -f shop-config.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-deployment
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+    spec:
+      containers:
+        - name: shop
+          image: 00000000000.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: shop-config
+                  key: DB_ENDPOINT
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: shop-config
+                  key: DB_USER
+            - name: DB_PASSWORD
+               valueFrom:
+                configMapKeyRef:
+                  name: shop-config
+                  key: DB_PASSWORD
+          imagePullPolicy: Always
 ```
-
-
-...
 
 ## Secret ##
 
