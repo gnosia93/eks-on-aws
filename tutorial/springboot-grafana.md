@@ -59,14 +59,14 @@ kubectl apply -f shop-service.yaml
 
 ### 5. open telemetry 컬렉터 설정 ###
 
-[Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 321)  
+[Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 322)  
 해당 yaml 파일은 cloud9 터미널에서 확인할 수 있다.
 
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot-1.png)
 
 [otel-collector-config.yaml 에 추가할 설정]
 * [https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods](https://stackoverflow.com/questions/53365191/monitor-custom-kubernetes-pod-metrics-using-prometheus)
-  
+    
 ```
 - job_name: integrations/springboot
   kubernetes_sd_configs:
