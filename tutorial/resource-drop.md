@@ -33,12 +33,14 @@ kubectl delete ingress shop-ingress
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamserviceaccount-kube-system-aws-load-balancer-controller
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-addon-iamserviceaccount-prometheus-amp-irsa-role
 ```
-
+```
+aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
+-- 노드 인스턴스 롤을 먼저지워야함 secret manager.
+```
 #### eksctl ###
 ```
 eksctl delete cluster eks-workshop
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
-aws cloudformation delete-stack --stack-name eksctl-eks-workshop-nodegroup-ng-2xlarge
 ```
 
 
