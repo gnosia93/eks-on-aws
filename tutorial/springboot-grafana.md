@@ -44,14 +44,14 @@ Intelij 의 shop 프로젝트를 실행하고 http://localhost:8080/actuator/pro
 ### 4. shop 서비스 재배포 ###
 
 ELB(Ingress) 퍼블릭 엔드포인트에서 prometheus 메트릭이 출력되는지를 확인한다. 
-* http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus 
+* http://shop-alb-2023400751.ap-northeast-2.elb.amazonaws.com/actuator/prometheus    
 만약 출력되지 않는다면 4.1 및 4.2 과정을 수행한다. 
   
 #### 4.1. actuator/prometheus 가 적용된 도커 이미지 ECR 등록 ####
 CI 파이프 라인 실행
 
 #### 4.2. shop 서비스 재배포 ####
-cloud9 터미널에서 아래 명령어를 실행한다. 
+cloud9 터미널에서 아래 명령어를 실행한다.  
 ```
 kubectl delete -f shop-service.yaml
 kubectl apply -f shop-service.yaml
