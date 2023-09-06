@@ -151,7 +151,7 @@ spec:
                   name: shop-secret
                   key: DB_PASSWORD
           imagePullPolicy: Always
-
+```
 
 ## 레퍼런스 ##
 
