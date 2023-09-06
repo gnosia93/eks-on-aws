@@ -378,9 +378,13 @@ Events:
   Warning  FailedBuildModel  14s (x13 over 36s)  ingress  Failed build model due to couldn't auto-discover subnets: unable to resolve at least one subnet (0 match VPC and tags)
 ```
 
-[해결방법]
-* ALB 가 생성되는 VPC의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다.  
- 
+[해결방법] ALB 가 생성되는 VPC의 퍼블릭 서브넷에 대해 Key가 kubernetes.io/role/elb Value가 1인 태그를 설정한다.  
+
+
+* User: arn:aws:sts::499514681453:assumed-role/eksctl-eks-workshop-nodegroup-ng-NodeInstanceRole-19V44PLCLT4DL/i-0f5e06f997358fa77 is not authorized to perform: secretsmanager:GetSecretValue on resource: /secret/springboot-shop-stage_stage because no identity-based policy allows the secretsmanager:GetSecretValue action (Service: AWSSecretsManager; Status Code: 400; Error Code: AccessDeniedException; Request ID: f96450fb-7f8d-4ed8-a3a5-ffa50dcf334a; Proxy: null)
+
+[해결방법] eksctl-eks-workshop-nodegroup-ng-NodeInstanceRole-19V44PLCLT4DL 롤에 SecretManagerReadWrite 권한을 추가해 준다...
+  
 
 ## 레퍼런스 ##
 * [AWS EKS에서 ALB Ingress Controller 활용기](https://medium.com/coinone/aws-eks%EC%97%90%EC%84%9C-alb-ingress-controller-%ED%99%9C%EC%9A%A9%EA%B8%B0-6a29aa2a1144)
