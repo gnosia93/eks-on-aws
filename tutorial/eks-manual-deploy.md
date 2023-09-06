@@ -3,6 +3,7 @@
 이번 챕터에서는 shop 프로젝트를 서비스로 배포하고 인그레스를 설치하여 웹으로 노출할 예정이다.  
 cloud9 에서 아래 명령어 실행해서 어플리케이션을 배포한다. 
 
+
 #### 배포용 YAML 파일 생성 ####
 
 컨테이너 이미지 주소(image) 및 stage 용 DB_ENDPOINT 값을 설정한다. ** 레디스 정보를 뽑아내는 부분도 수정 필요 **
@@ -13,14 +14,21 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info --query 'CacheClusters[].CacheNodes[].Endpoint[].Address' --out text)
 
-
-REDIS_ENDPOINT=redis-1.bchkjx.clustercfg.apn2.cache.amazonaws.com
 echo ${DB_ENDPOINT}
 echo ${REDIS_ENDPOINT}
 echo ${IMAGE_REPO_ADDR}
-
-
 ```
+Redis 캐시 서버와 연결가능한지 확인한다. 
+```
+curl -v telnet://${REDIS_ENDPOINT}:6379
+```
+Connected 라는 메시지가 나오면 정상적으로 연결된 것이다. 
+```
+Trying 172.31.1.242:6379...
+Connected to test.1234id.clustercfg.euw1.cache.amazonaws.com (172.31.1.242) port 6379 (#0)
+```
+
+서비스 배포용 YAML 파일을 생성한다. 
 ```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
