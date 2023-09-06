@@ -25,7 +25,8 @@ eksctl delete cluster eks-workshop
 aws cloudformation delete-stack --stack-name eksctl-eks-workshop-cluster
 ```
 
-#### EKS 시큐리티 그룹 삭제 ####
+#### 시큐리티 그룹 삭제 ####
+* eks-workshop
 ```
 aws ec2 describe-security-groups --query 'SecurityGroups[?contains(GroupName, `eks-workshop`)].GroupId' --out text
 
