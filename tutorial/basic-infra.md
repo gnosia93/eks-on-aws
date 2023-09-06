@@ -178,4 +178,13 @@ echo "export AWS_REGION=${AWS_REGION}" | tee -a ~/.bash_profile
 aws configure set default.region ${AWS_REGION}
 aws configure --profile default list
 ```
-
+[결과]
+```
+      Name                    Value             Type    Location
+      ----                    -----             ----    --------
+   profile                  default           manual    --profile
+access_key     ****************ZD5H         iam-role    
+secret_key     ****************IxVN         iam-role    
+    region           ap-northeast-2              env    ['AWS_REGION', 'AWS_DEFAULT_REGION']
+hopigaga:~ $ 
+```
