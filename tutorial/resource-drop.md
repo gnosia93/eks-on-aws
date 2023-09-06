@@ -23,9 +23,9 @@ aws ec2 describe-security-groups
 kubectl delete service nginx
 kubectl delete ingress shop-ingress
 ```
+#### 노드 그룹을 지운다 ####
 
-* 노드 그룹을 지우고 - cardon 에러가 발생하는 경우 AWS EKS 콘솔에서 지운다. (cloudformation 명령어로)
-* 클러스터를 지운다 (cloudformation 명령어로)
+#### 클러스터를 지운다 ####
 
 #### eks 노드그룹을 지운다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/cloudformation-eks-nodegroup.png)
