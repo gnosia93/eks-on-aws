@@ -63,7 +63,7 @@ kubectl apply -f shop-service.yaml
 해당 yaml 파일은 cloud9 터미널에서 확인할 수 있다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot-1.png)
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/opentelemetry-sd-deployment-annotation.png)
 [otel-collector-config.yaml 에 추가할 설정]
 * [https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods](https://stackoverflow.com/questions/53365191/monitor-custom-kubernetes-pod-metrics-using-prometheus)
     
