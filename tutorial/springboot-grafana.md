@@ -1,10 +1,3 @@
-******
- (주의) 첫 테스트에서는 동작했으나, 두번째 테스트에서는 그라파나 그래프가 그려지지 않는다. 디버깅 필요함, plz stay in tuned.
-
-
- * https://stackoverflow.com/questions/53365191/monitor-custom-kubernetes-pod-metrics-using-prometheus
- * https://www.jacobbaek.com/1540
-******
 
 ## OpenTelemetry 스프링 부트 메트릭 수집하기 ##
 
