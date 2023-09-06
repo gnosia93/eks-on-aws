@@ -58,11 +58,11 @@ kubectl delete -f shop-service.yaml
 kubectl apply -f shop-service.yaml
 ```
 
-### 5. Deployment 설정 확인 ###
+### 5. Deployment 설정 확인 (중요) ###
 ****
-중요 - 아래 Deployment YAML 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 이 POD 에 설정되어 있어야 한다. 
-      prometheus.io/scrape, prometheus.io/path, prometheus.io/port 로 OpenTelemetry 에이전트가 모니터링 대상 POD 를 식별할때 사용된다.
-      대상 식별은 POD 태그에 의한 서비스 디스커버리 메커니즘을 활용하는데 이는 아래 6. open telemetry 컬렉터 설정과도 관련이 된다.
+아래 deployment yaml 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 이 pod 에 설정되어 있어야 한다. 
+prometheus.io/scrape, prometheus.io/path, prometheus.io/port 로 OpenTelemetry 에이전트가 모니터링 대상 pod 를 식별할때 사용된다.
+대상 식별은 pod 어노테이션에 의한 서비스 디스커버리 메커니즘을 활용하는데 이는 아래 6. open telemetry 컬렉터 설정과도 관련이 된다.
 ****
 ```
 apiVersion: apps/v1
@@ -83,9 +83,9 @@ spec:
         app: shop
       annotations:
         builder: 'SoonBeom Kwon'
-        prometheus.io/scrape: 'true'                    
-        prometheus.io/path: '/actuator/prometheus'
-        prometheus.io/port: '8080'
+        prometheus.io/scrape: 'true'                    <-------- 중요 / 서비스 디스커버리     
+        prometheus.io/path: '/actuator/prometheus'      <-------- 중요 / 서비스 디스커버리
+        prometheus.io/port: '8080'			<-------- 중요 / 서비스 디스커버리 
     spec:
       containers:
         - name: shop
@@ -95,7 +95,6 @@ spec:
 ...
 ```
 
-
 ### 6. open telemetry 컬렉터 설정 ###
 
 [Amazon Managed Service for Prometheus / Grafana with OpenTelemetry](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md) 포스팅의 [6. Otel collector 설치] 섹션에서 했던 것 처럼 otel-collector-config.yaml 파일에 아래 그림처럼 springboot actuator/prometheus 용 설정파일을 추가하고 collector 를 재시작 한다. (라인넘버 322)  
@@ -104,6 +103,7 @@ spec:
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/otel-collector-config-springboot-1.png)
 
 [otel-collector-config.yaml 에 추가할 설정]
+
 * [https://stackoverflow.com/questions/51731112/unable-to-scrape-metrics-from-pods](https://stackoverflow.com/questions/53365191/monitor-custom-kubernetes-pod-metrics-using-prometheus)
   - __meta_kubernetes_pod_annotation_prometheus_io_scrape : prometheus.io/scrape 어노테이션에 해당
   - __meta_kubernetes_pod_annotation_prometheus_io_path : prometheus.io/path 어노테이션에 해당
