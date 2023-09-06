@@ -57,7 +57,7 @@ kubectl delete -f shop-service.yaml
 kubectl apply -f shop-service.yaml
 ```
 
-### 5. Deployment 설정 확인 (중요) ###
+### 5. POD Annotation 확인 (중요) ###
 ****
 아래 deployment yaml 파일에서 살펴 볼수 있는 것처럼 스프링부트의 메트릭을 수집하기 위해서는 3가지 annotation 이 pod 에 설정되어 있어야 한다. 
 prometheus.io/scrape, prometheus.io/path, prometheus.io/port 로 OpenTelemetry 에이전트가 모니터링 대상 pod 를 식별할때 사용된다.
