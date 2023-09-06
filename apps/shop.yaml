@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: shop
-          image: 499514681453.dkr.ecr.ap-northeast-2.amazonaws.com/eks-on-aws-springboot
+          image: ${DOCKER_IMAGE_URL}
           ports:
             - containerPort: 8080
           env:
