@@ -104,7 +104,7 @@ curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 
 helm version --short
 
 # telnet
-sudo yum install telnet
+sudo yum install telnet -y
 ```
 
 #### 3.2 cloud9 용 IAM 역할 생성 ####
