@@ -54,6 +54,9 @@ observability-collector-69f488d4c7-qm85g   7m           339Mi
   ```
   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
   ```
+* Error from server (ServiceUnavailable): the server is currently unable to handle the request (get pods.metrics.k8s.io)
+
+  생성완료 되기까지 잠시 기다렸다가 다시 조회한다.
 
 ## 레퍼런스 ##
 
