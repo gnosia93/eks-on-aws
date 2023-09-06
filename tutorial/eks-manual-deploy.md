@@ -17,6 +17,7 @@ echo ${DB_ENDPOINT}
 echo ${REDIS_ENDPONT}
 echo ${IMAGE_REPO_ADDR}
 ```
+```
 cat <<EOF > shop-service.yaml
 apiVersion: apps/v1
 kind: Deployment
