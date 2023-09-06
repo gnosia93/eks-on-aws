@@ -380,8 +380,10 @@ remote_write:
 EOF
 ```
 
+no hangup 모드로 실행하고, 그라파나 대시보드에 데이터가 제대로 출력되는지 확인한다. 그리고 mysql-exporter 에서 본 것처럼 systemd 에 등록한다...
+
 ```
-./prometheus --config.file=prometheus.yml
+nohup ./prometheus --config.file=prometheus.yml &
 ```
 
 [결과]
@@ -425,11 +427,6 @@ ts=2023-09-05T04:12:08.458Z caller=manager.go:1009 level=info component="rule ma
 * err="region not configured in sigv4 or in default credentials chain"   
 -> 프로메테우스 prometheus.yml 파일의 sigv4 설정을 확인한다.
 
-* systemd 메시지 출력
-```
-journalctl  | grep mysql
-```
-
 * mysql-export 실행오류
 ```
 $ sudo systemctl status mysql-exporter
@@ -447,15 +444,15 @@ Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-
 Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: mysql-exporter.service: Failed with result 'exit-code'.
 Sep 05 23:22:39 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[1]: Failed to start mysql-exporter.service - Prometheus MySQL Exporter.
 lines 1-13/13 (END)
-```
 
-```
+
 $ journalctl  | grep mysql
 
 ...
 Sep 05 23:19:45 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[2762]: mysql-exporter.service: Failed to determine group credentials: No such process
 Sep 05 23:19:45 ip-10-1-2-187.ap-northeast-2.compute.internal systemd[2762]: mysql-exporter.service: Failed at step GROUP spawning /home/ec2-user/mysqld_exporter-0.15.0.linux-amd64/mysqld_exporter: No such process
 ```
+-> 설정파일의 GROUP 섹션에 오류(오타)가 있는지 확인한다. 
 
 ## 레퍼런스 ##
 
