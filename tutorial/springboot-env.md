@@ -41,7 +41,8 @@ spec:
 ## ConfigMap ##
 Key / Value 쌍을 저장하는 컨피그맵을 이용해서 어플리케이션 데이터(스트링 or 바이너리)를 저장할 수 있다.  
 어플리케이션 코드와 데이터가 분리되기 때문에, 설정 데이터 변경으로 인한 어플리케이션 배포는 불필요하다.
-
+아래 예제에서는 DB_ENDPOINT, DB_USER, DB_PASSWORD 를 ConfigMap 에 저장하고 있다.   
+(주의) 데이터베이스의 user/password 는 노출되면 안되니, AWS SecretManager 를 사용하도록 한다.
 ```
 apiVersion: v1
 kind: ConfigMap
