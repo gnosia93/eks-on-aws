@@ -29,6 +29,18 @@ cd redis_exporter-v1.54.0.linux-amd64/
 curl http://localhost:9121
 ```
 
+[결과]
+```
+<html>
+<head><title>Redis Exporter v1.54.0</title></head>
+<body>
+<h1>Redis Exporter v1.54.0</h1>
+<p><a href='/metrics'>Metrics</a></p>
+</body>
+</html>
+```
+
+
 ## 트러블 슈팅 ##
 
 * An error occurred (AccessDenied) when calling the DescribeCacheClusters operation: User: arn:aws:sts::499514681453:assumed-role/MySQLPrometheusRole/i-07e94667904714f72 is not authorized to perform: elasticache:DescribeCacheClusters on resource: arn:aws:elasticache:ap-northeast-2:499514681453:cluster:* because no identity-based policy allows the elasticache:DescribeCacheClusters action
