@@ -6,7 +6,7 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess
 ```
 
-Redis 주소를 받아오고 exporter 를 설치한다. 
+eks_mysql_exporter 터미널에서 실행한다. Redis 주소를 받아오고 exporter 를 설치한다. 
 ```
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
