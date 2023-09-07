@@ -15,10 +15,16 @@ echo "${REDIS_ENDPOINT}"
 ```
 
 
+```
 ./redis_exporter -redis.addr=${레디스 접속 address}
 
 ```
 
+## 트러블 슈팅 ##
+
+* An error occurred (AccessDenied) when calling the DescribeCacheClusters operation: User: arn:aws:sts::499514681453:assumed-role/MySQLPrometheusRole/i-07e94667904714f72 is not authorized to perform: elasticache:DescribeCacheClusters on resource: arn:aws:elasticache:ap-northeast-2:499514681453:cluster:* because no identity-based policy allows the elasticache:DescribeCacheClusters action
+
+  
 
 
 ## 레퍼런스 ##
