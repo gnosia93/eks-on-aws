@@ -68,5 +68,7 @@ scrape_configs:
 ## 레퍼런스 ##
 
 * https://github.com/oliver006/redis_exporter/releases
+
+* https://grafana.com/grafana/dashboards/11835-redis-dashboard-for-prometheus-redis-exporter-helm-stable-redis-ha/?tab=revisions
   
 * https://velog.io/@dev_leewoooo/Redis%EC%9D%98-metrics%EB%A5%BC-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%95%B4%EB%B3%B4%EC%9E%90
