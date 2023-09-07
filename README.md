@@ -16,6 +16,8 @@
 
   * [스프링 부트 - Redis 분산락 구현 (상품 판매수량 제한)](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distlock.md)
  
+  * [스프링 부트 - Redis 대기열 시스템 구현](p)
+ 
   * [스프링 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md)
  
   * [스프링 부트 - 환경변수로 Properties 값 주입하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-env.md)
