@@ -1,22 +1,19 @@
 ## ArgoCD 로 GitOps 구현하기 ##
 
-ArgoCD 는 git 허브와 같은 소스 레포지토리에 있는 K8S 리소스(YAML) 파일을 모니터링 하고 있다고 변경이 발생하면 이를 적용를 K8S 에 적용하는 방식으로 동작한다.
-자동 및 수동 적용이 모두 가능한데, 이 챕터에서는 수동 방식으로 튜토리얼을 구성하였다.
+ArgoCD 는 git 허브와 같은 소스 레포지토리에 있는 K8S 리소스(YAML) 파일을 모니터링 하고 있다가, 파일에 변경이 발생하면 K8S 클러스터의 현재 배포상태와 비교하여 변경된 부분을 적용하는 방식으로 동작한다. 적용 방식은 자동 및 수동 모두 가능한데, 이 챕터에서는 수동 방식으로 작동하도록 구성하였다.
 https://github.com/gnosia93/eks-on-aws/blob/main/apps/shop-template.yaml 경로에 있는 YAML 파일을 다운 로드 받아서 여러분들의 git repository 의 
-apps 디렉토리에 복사한다. 이때 다음의 환경변수 값들은 여러분들의 환경이 맞게 수정해야 한다.
-
-
-
-
-기존에 수동으로 배포 했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
+apps 디렉토리에 복사한다. 이때 다음의 변수 값들은 여러분들의 환경이 맞게 알맞은 값으로 수정해야 한 다음 파일이름을 shop.yaml 로 변경한다.
+```
+${DOCKER_IMAGE_URL}
+${DB_ENDPOINT}
+${REDIS_ENDPOINT}
+```
+기존에 수동으로 EKS 클러스터에 배포했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
 ```
 kubectl delete service/shop
-
 kubectl delete deployment.apps/shop
-
 kubectl get all
 ```
-
 [결과]
 ```
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
