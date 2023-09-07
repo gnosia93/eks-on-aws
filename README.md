@@ -42,7 +42,7 @@
 
 * #8. 클러스터 오토 스케일링
 
-  - [HPA / VPA](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-hpavpa.md)(p)
+  - [HPA](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-hpavpa.md)(p)
     
   - [Cluster AutoScaler 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-ca.md)
 
