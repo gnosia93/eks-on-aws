@@ -15,6 +15,7 @@ eks_mysql_exporter EC2 인스턴스에 redis exporter 를 설치한다.
 ```
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+
 echo "${REDIS_ENDPOINT}"
 export EXPORTER_VERSION=v1.54.0
 wget https://github.com/oliver006/redis_exporter/releases/download/${EXPORTER_VERSION}/redis_exporter-v1.54.0.linux-amd64.tar.gz
