@@ -82,7 +82,7 @@ Applications 메뉴에서 + NEW APP 버튼을 클릭하고,
 Appliation Name 은 shop, Project Name 은 default 로 입력한다. (다른값을 입력하는 경우 오류가 발생함, 프로젝트명은 별도로 생성해야 하는 듯 ^^) 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app2.png)
-Repository URL 은 https://github.com/gnosia93/eks-on-aws.git 이고 Path 는 apps 이다.
+Repository URL 은 여러분들의 git repository 주소를 입력하고 (예-https://github.com/gnosia93/eks-on-aws.git) Path 는 apps 이다.
 
 Create 버튼을 클릭하여 어플리케이션을 생성한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/argo-cd-app3.png)
