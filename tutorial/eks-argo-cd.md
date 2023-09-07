@@ -21,13 +21,11 @@ service/kubernetes   ClusterIP   172.20.0.1   <none>        443/TCP   45h
 ```
 
 ### 1. ArgoCD 설치 ###
+cloud9 터미널에서 eks-workshop 클러스터에 ArgoCD를 설치한다. 
 ```
 kubectl create namespace argocd
-
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
-
 kubectl describe svc argocd-server -n argocd
 ```
 
