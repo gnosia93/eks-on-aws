@@ -6,9 +6,10 @@ EC2=$(aws ec2 describe-instances --filter Name=tag:Name,Values=eks_mysql_exporte
 ssh -i aws-kp-2.pem ec2-user@${EC2}
 ```
 
-
+keycloak 실행하기
 ```
-docker run -i -t -p 8080:8080 --name keycloak -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak
+docker run -p 8080:8080 --name keycloak -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin\
+  quay.io/keycloak/keycloak start
 ```
 
 
