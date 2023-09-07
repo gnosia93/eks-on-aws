@@ -70,6 +70,13 @@ spec:
             - name: JAVA_TOOL_OPTIONS
               value: "-Xms1024M -Xmx1024M"
           imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "125m"
+              memory: "256Mi"
+            limits:
+              cpu: "250m"
+              memory: "512Mi"
 ---
 apiVersion: v1
 kind: Service
