@@ -1,4 +1,4 @@
-## AMP / AMG 를 활용한 Redis 성능 모니터링 ##
+## AMP / AMG 를 활용한 ElastiCache For Redis 성능 모니터링 ##
 
 
 ### 권한 추가 ###
