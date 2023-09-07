@@ -135,6 +135,11 @@ spec:
 kubectl apply -f shop-hpa.yaml
 ```
 
+### HorizontalPodAutoscaler 테스트 ###
+
+뭘로 부하를 줄까? 
+
+
 ## 레퍼런스 ##
 
 * https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/
