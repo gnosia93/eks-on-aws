@@ -81,9 +81,9 @@
 
 * [#12. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
 
-* appendix. [k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
+* Appendix. [k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
-* source repo - https://github.com/gnosia93/eks-on-aws-springboot
+* Source Repo. https://github.com/gnosia93/eks-on-aws-springboot
 
 ## Revision History ##
 
