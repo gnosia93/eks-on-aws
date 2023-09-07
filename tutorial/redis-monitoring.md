@@ -1,3 +1,4 @@
+### 권한 추가 ###
 
 로컬 PC 에서 아래 명령어를 실행해서 MySQLPrometheusRole Role에 Redis 접근 권한을 추가한다.
 ```
@@ -6,6 +7,7 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess
 ```
 
+### exporter 설치 ###
 eks_mysql_exporter 터미널에서 실행한다. Redis 주소를 받아오고 exporter 를 설치한다. 
 ```
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
@@ -51,6 +53,8 @@ scrape_configs:
  ./prometheus --config.file=prometheus.yml
 ```
 
+### 그라파나(AMG) 대시보드 설정 ###
+//12776
 
 ## 트러블 슈팅 ##
 
