@@ -9,7 +9,7 @@ ssh -i aws-kp-2.pem ec2-user@${EC2}
 keycloak 실행하기
 ```
 docker run -p 8080:8080 --name keycloak -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin\
-  quay.io/keycloak/keycloak "start --optimized"
+  quay.io/keycloak/keycloak "start --optimized --hostname `hostname`"
 ```
 
 
