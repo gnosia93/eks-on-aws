@@ -1,7 +1,9 @@
 eks_mysql_exporter EC2 인스턴스에 접속하여 keycloak 을 설치한다.
 ```
-aws ec2 describe-instances --filter Name=tag:Name,Values=eks_mysql_exporter\
-  --query "Reservations[].Instances[].PublicDnsName" --out text
+EC2=$(aws ec2 describe-instances --filter Name=tag:Name,Values=eks_mysql_exporter\
+  --query "Reservations[].Instances[].PublicDnsName" --out text)
+
+ssh -i aws-kp-2.pem ec2-user@${EC2}
 ```
 
 
