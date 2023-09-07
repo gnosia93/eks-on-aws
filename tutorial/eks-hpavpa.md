@@ -28,23 +28,23 @@ Connected to test.1234id.clustercfg.euw1.cache.amazonaws.com (172.31.1.242) port
 
 서비스 배포용 YAML 파일을 생성한다. 
 ```
-cat <<EOF > shop-service-ha.yaml
+cat <<EOF > shop-service-hpa.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shop-ha
+  name: shop-hpa
   namespace: default
   labels:
-    app: shop-ha
+    app: shop-hpa
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: shop-ha
+      app: shop-hpa
   template:
     metadata:
       labels:
-        app: shop-ha
+        app: shop-hpa
       annotations:
         builder: 'SoonBeom Kwon'
         prometheus.io/scrape: 'true'
@@ -74,12 +74,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: shop-ha
+  name: shop-hpa
   namespace: default
   labels:
-    app: shop-ha
+    app: shop-hpa
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: shop-ha
   ports:
@@ -89,10 +89,52 @@ EOF
 ```
 
 ```
-kubectl apply -f shop-service-ha.yaml
+kubectl apply -f shop-service-hpa.yaml
 kubectl get all
 ```
 
+
+### HorizontalPodAutoscaler 생성 ###
+shop-hpa.yaml 을 생성한다.
+[shop-hpa.yaml]
+```
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: shop-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Deployment
+    name: shop-hpa
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Pods
+        value: 1
+        periodSeconds: 60
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 60
+```
+
+```
+kubectl apply -f shop-hpa.yaml
+```
 
 ## 레퍼런스 ##
 
