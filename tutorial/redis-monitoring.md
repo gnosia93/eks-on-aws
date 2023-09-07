@@ -1,3 +1,6 @@
+## AMP / AMG 를 활용한 Redis 성능 모니터링 ##
+
+
 ### 권한 추가 ###
 
 로컬 PC 에서 아래 명령어를 실행해서 MySQLPrometheusRole Role에 Redis 접근 권한을 추가한다.
