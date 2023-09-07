@@ -6,23 +6,15 @@ aws iam attach-role-policy \
     --policy-arn arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess
 ```
 
-Redis 주소를 받아오고 
+Redis 주소를 받아오고 exporter 를 설치한다. 
 ```
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
 echo "${REDIS_ENDPOINT}"
-```
-
-Redis exporter 를 설치한다. 
-```
 export EXPORTER_VERSION=v1.54.0
 wget https://github.com/oliver006/redis_exporter/releases/download/${EXPORTER_VERSION}/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 tar -zxvf redis_exporter-${EXPORTER_VERSION}.linux-arm.tar.gz
-```
-
-exporter 를 시작한다. 
-```
 cd redis_exporter-v1.54.0.linux-amd64/
 
 ./redis_exporter -redis.addr=${REDIS_ENDPOINT} &
