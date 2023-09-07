@@ -57,6 +57,9 @@ scrape_configs:
 //11835
 //12776
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/grafana-redis-dashboard.png)
+
+
 ## 트러블 슈팅 ##
 
 * An error occurred (AccessDenied) when calling the DescribeCacheClusters operation: User: arn:aws:sts::499514681453:assumed-role/MySQLPrometheusRole/i-07e94667904714f72 is not authorized to perform: elasticache:DescribeCacheClusters on resource: arn:aws:elasticache:ap-northeast-2:499514681453:cluster:* because no identity-based policy allows the elasticache:DescribeCacheClusters action
