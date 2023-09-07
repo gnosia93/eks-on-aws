@@ -3,12 +3,12 @@
 ArgoCD 는 git 허브와 같은 소스 레포지토리에 있는 K8S 리소스(YAML) 파일을 모니터링 하고 있다고 변경이 발생하면 이를 적용를 K8S 에 적용하는 방식으로 동작한다.
 자동 및 수동 적용이 모두 가능한데, 이 챕터에서는 수동 방식으로 튜토리얼을 구성하였다.
 https://github.com/gnosia93/eks-on-aws/blob/main/apps/shop-template.yaml 경로에 있는 YAML 파일을 다운 로드 받아서 여러분들의 git repository 의 
-app 디렉토리에 복사한다. 
+apps 디렉토리에 복사한다. 이때 다음의 환경변수 값들은 여러분들의 환경이 맞게 수정해야 한다.
 
 
 
-깃허브 https://github.com/gnosia93/eks-on-aws.git 레포지토리의 apps 디렉토리 밑에 있는 shop.yaml 어플리케이션을 ArgoCD 를 이용하여 배포 하고자 한다. 기존에 수동으로 배포 했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
 
+기존에 수동으로 배포 했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
 ```
 kubectl delete service/shop
 
