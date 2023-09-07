@@ -95,8 +95,7 @@ kubectl get all
 
 
 ### HorizontalPodAutoscaler 생성 ###
-shop-hpa.yaml 을 생성한다.
-[shop-hpa.yaml]
+아래 내용으로 shop-hpa.yaml 을 생성한다.
 ```
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
