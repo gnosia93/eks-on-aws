@@ -4,7 +4,7 @@
 HPA 가 동작하기 위해서는 지표 서버가 클러스터에 설치되어 있어야 한다. [Kubernetes 지표 서버 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-metrics.md) 를 참고해서 서버를 설치한다. 
 
 
-### deployment 배포 ###
+### 서비스 배포(shop-ha) ###
 
 ```
 STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
@@ -86,6 +86,11 @@ spec:
     - port: 80
       targetPort: 8080
 EOF
+```
+
+```
+kubectl apply -f shop-service-ha.yaml
+kubectl get all
 ```
 
 
