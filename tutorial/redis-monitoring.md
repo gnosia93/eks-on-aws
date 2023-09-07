@@ -4,6 +4,8 @@ export EXPORTER_VERSION=v1.54.0
 wget https://github.com/oliver006/redis_exporter/releases/download/${EXPORTER_VERSION}/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 tar -zxvf redis_exporter-${EXPORTER_VERSION}.linux-arm.tar.gz
+
+cd redis_exporter-v1.54.0.linux-amd64/
 ```
 
 
