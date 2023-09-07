@@ -16,6 +16,8 @@
 
   - https://blog.yevgnenll.me/k8s/deployment-declaration-update-application
 
+* [PDB](https://halfmoon95.tistory.com/entry/PodDisruptionBudget%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Pod-%EC%9E%AC%EB%B0%B0%EC%B9%98)
+
 * 트러블 슈팅
   - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
 
