@@ -1,7 +1,7 @@
 ## ArgoCD 로 GitOps 구현하기 ##
 
 ArgoCD 는 git 허브와 같은 소스 레포지토리에 있는 K8S 리소스(YAML) 파일을 모니터링 하고 있다가, 파일에 변경이 발생하면 K8S 클러스터의 현재 배포상태와 비교하여 변경된 부분을 적용하는 방식으로 동작한다. 적용 방식은 자동 및 수동 모두 가능한데, 이 챕터에서는 수동 방식으로 작동하도록 구성하였다.
-https://github.com/gnosia93/eks-on-aws/blob/main/apps/shop-template.yaml 경로에 있는 YAML 파일을 다운 로드 받아서 여러분들의 git repository 의 
+https://github.com/gnosia93/eks-on-aws/blob/main/apps/shop-template.yaml 경로에 있는 YAML 파일을 다운 로드 받아서 여러분들이 만든 git repository 의 
 apps 디렉토리에 복사한다. 이때 다음의 변수 값들은 여러분들의 환경이 맞게 알맞은 값으로 수정해야 한 다음 파일이름을 shop.yaml 로 변경한다.
 ```
 ${DOCKER_IMAGE_URL}
