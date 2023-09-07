@@ -20,8 +20,6 @@
   - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
 
 ## 개발 ##
-
-* redis grafana - https://velog.io/@dev_leewoooo/Redis%EC%9D%98-metrics%EB%A5%BC-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%95%B4%EB%B3%B4%EC%9E%90
     
 * [Spring Security / JWT - 로그인 구현](https://webfirewood.tistory.com/115)
   * https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-redis-session.md   
