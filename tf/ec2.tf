@@ -118,7 +118,7 @@ resource "aws_iam_instance_profile" "eks_ec2_profile" {
 
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
-resource "aws_instance" "eks_ec2" {
+resource "aws_instance" "eks_ec2_locust" {
     ami = data.aws_ami.amazon-linux-2.id
     associate_public_ip_address = true
     instance_type = "c6i.2xlarge"
@@ -174,8 +174,4 @@ _DATA
 }
 
 
-
-output "locust_public_ip" {
-    value = aws_instance.eks_ec2.public_dns
-}
 
