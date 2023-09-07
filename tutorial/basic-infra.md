@@ -109,7 +109,7 @@ sudo yum install telnet -y
 
 #### 3.2 cloud9 용 IAM 역할 생성 ####
 
-로컬 PC 에서 아래 명령어로 eksworkshop-admin 역할을 만듭니다.(어드민 권한 필요)
+로컬 PC 에서 아래 명령어로 eksworkshop-admin 역할을 만듭니다.(AWS 어드민 권한 필요)
 ```
 cat <<EOF > assumeRole.json
 {
