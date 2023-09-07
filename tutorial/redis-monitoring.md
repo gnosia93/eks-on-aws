@@ -19,14 +19,14 @@ export EXPORTER_VERSION=v1.54.0
 wget https://github.com/oliver006/redis_exporter/releases/download/${EXPORTER_VERSION}/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 tar -zxvf redis_exporter-${EXPORTER_VERSION}.linux-arm.tar.gz
-
-cd redis_exporter-v1.54.0.linux-amd64/
 ```
 
 exporter 를 시작한다. 
 ```
-./redis_exporter -redis.addr=${REDIS_ENDPOINT}
+cd redis_exporter-v1.54.0.linux-amd64/
 
+./redis_exporter -redis.addr=${REDIS_ENDPOINT} &
+curl http://localhost:9121
 ```
 
 ## 트러블 슈팅 ##
