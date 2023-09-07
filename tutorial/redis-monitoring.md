@@ -1,13 +1,16 @@
 
-Redis 주소를 받아오고 MySQLPrometheusRole 롤에 Redis 접근 권한을 추가한다.
+로컬 PC 에서 아래 명령어를 실행해서 MySQLPrometheusRole Role에 Redis 접근 권한을 추가한다.
+```
+aws iam attach-role-policy \
+    --role-name MySQLPrometheusRole \
+    --policy-arn arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess
+```
+
+Redis 주소를 받아오고 
 ```
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
 echo "${REDIS_ENDPOINT}"
-
-aws iam attach-role-policy \
-    --role-name MySQLPrometheusRole \
-    --policy-arn arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess
 ```
 
 Redis exporter 를 설치한다. 
