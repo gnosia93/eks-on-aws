@@ -96,4 +96,5 @@ kubectl get all
 
 ## 레퍼런스 ##
 
+* https://kubernetes.io/ko/docs/tasks/run-application/horizontal-pod-autoscale/
 * https://aws-diary.tistory.com/138
