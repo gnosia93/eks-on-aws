@@ -25,7 +25,7 @@ cd redis_exporter-v1.54.0.linux-amd64/
 
 exporter 를 시작한다. 
 ```
-./redis_exporter -redis.addr=${레디스 접속 address}
+./redis_exporter -redis.addr=${REDIS_ENDPOINT}
 
 ```
 
