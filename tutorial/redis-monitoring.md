@@ -1,3 +1,10 @@
+```
+AmazonElastiCacheReadOnlyAccess
+
+
+```
+
+
 
 ```
 export EXPORTER_VERSION=v1.54.0
