@@ -56,7 +56,7 @@
     
   - [Kubernetes 지표 서버 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-metrics.md)
 
-  - [Keyloak 설치하기](https://league-cat.tistory.com/397)(p)
+  - [Keycloak 설치하기](https://league-cat.tistory.com/397)(p)
 
   - [Amazon Managed Service for Prometheus / Grafana 와 OpenTelemetry 연동하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
  
