@@ -32,6 +32,21 @@ curl http://localhost:9121
 </html>
 ```
 
+### 프로메테우스 설정 ###
+prometheus.yml 파일에 아래 내용을 추가한다.
+```
+cd; cd prometheus-2.46.0.linux-amd64
+vi prometheus.yml
+```
+[prometheus.yml]
+```
+scrape_configs:
+  - job_name: "redis"
+    static_configs:
+      - targets: ["localhost:9121"]
+```
+
+
 
 ## 트러블 슈팅 ##
 
