@@ -56,6 +56,7 @@ scrape_configs:
 
 * An error occurred (AccessDenied) when calling the DescribeCacheClusters operation: User: arn:aws:sts::499514681453:assumed-role/MySQLPrometheusRole/i-07e94667904714f72 is not authorized to perform: elasticache:DescribeCacheClusters on resource: arn:aws:elasticache:ap-northeast-2:499514681453:cluster:* because no identity-based policy allows the elasticache:DescribeCacheClusters action
 
+-> AmazonElastiCacheReadOnlyAccess 권한을 EC2 인스턴스의 Role 에 추가한다. 
   
 
 
