@@ -6,6 +6,14 @@ wget https://github.com/oliver006/redis_exporter/releases/download/${EXPORTER_VE
 tar -zxvf redis_exporter-${EXPORTER_VERSION}.linux-arm.tar.gz
 
 cd redis_exporter-v1.54.0.linux-amd64/
+```
+
+```
+REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
+--query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+echo "${REDIS_ENDPOINT}"
+```
+
 
 ./redis_exporter -redis.addr=${레디스 접속 address}
 
