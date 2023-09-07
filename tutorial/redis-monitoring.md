@@ -1,6 +1,6 @@
 
 ```
-wget https://github.com/oliver006/redis_exporter/releases/download/v1.45.0/redis_exporter-v1.45.0.linux-arm.tar.gz
+wget https://github.com/oliver006/redis_exporter/releases/download/v1.54.0/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 tar -zxvf redis_exporter-v1.45.0.linux-arm.tar.gz
 ```
