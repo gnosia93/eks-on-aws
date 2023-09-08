@@ -50,13 +50,13 @@ scrape_configs:
   - job_name: "redis"
     static_configs:
       - targets: ['localhost:9104', 'localhost:9121']
-
 ```
 
 프로메테우스를 재실행한다. 
 ```
  ./prometheus --config.file=prometheus.yml
 ```
+mysql 사례를 참고하여 systemd 에 등록한다. 
 
 ### 그라파나(AMG) 대시보드 설정 ###
 //11835
