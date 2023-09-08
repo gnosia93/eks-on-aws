@@ -12,12 +12,6 @@ ssh -i aws-kp-2.pem ec2-user@${EC2}
 docker rm $(docker ps -a -f name=keycloak | awk '{ if (NR != 1) {print $1}}')
 ```
 
-#### https 설정하기 #### 
-* https://velog.io/@jungsangu/Keycloak-HTTPS-required-%EC%97%90%EB%9F%AC
-```
-..
-```
-
 #### keycloak 실행하기 ####
 ```
 nohup docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin\
@@ -25,6 +19,24 @@ nohup docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOA
 
 tail -f nohup.out
 ```
+
+#### SSL disable #### 
+* https://velog.io/@jungsangu/Keycloak-HTTPS-required-%EC%97%90%EB%9F%AC
+```
+# 도커 컨테이너 bash 진입
+docker exec -it <컨테이너이름> bash
+
+# keycloak bin 폴더로 이동
+cd /opt/keycloak/bin
+
+# 비밀번호는 admin
+./kcadm.sh config credentials --server http://localhost:8080 --realm master --user admin
+
+# master realm에서 sslRequired를 NONE으로 바꾸기
+./kcadm.sh update realms/master -s sslRequired=NONE
+```
+
+
 
 
 ## 레퍼런스 ##
