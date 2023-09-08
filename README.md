@@ -66,7 +66,7 @@
 
   - [Amazon Managed Service for Prometheus / Grafana 와 OpenTelemetry 연동하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
  
-  - [모던 그라파나 대시보드](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/grafana-eks-chart.md) 
+  - [모던 그라파나 대시보드 for K8S](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/grafana-eks-chart.md) 
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)
 
