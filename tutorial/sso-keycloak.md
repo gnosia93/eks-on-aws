@@ -6,6 +6,10 @@ EC2=$(aws ec2 describe-instances --filter Name=tag:Name,Values=eks_mysql_exporte
 ssh -i aws-kp-2.pem ec2-user@${EC2}
 ```
 
+```
+docker ps -a -f name=keycloak | awk '{ if (NR != 1) {print $1}}'
+```
+
 keycloak 실행하기
 ```
 nohup docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin\
