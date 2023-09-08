@@ -40,7 +40,10 @@ cd /opt/keycloak/bin
 ```
 
 #### 어드민페이지 접속 ####
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-1.png)
+
+로그인 ID/Password 는 admin/admin 이다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-2.png)
 
 
