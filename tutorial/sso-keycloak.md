@@ -36,6 +36,10 @@ cd /opt/keycloak/bin
 ./kcadm.sh update realms/master -s sslRequired=NONE
 ```
 
+#### 어드민페이지 접속 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-2.png)
+
 
 
 
