@@ -39,7 +39,7 @@ curl http://localhost:9121
 ```
 
 ### 프로메테우스 설정 ###
-prometheus.yml 파일에 아래 내용을 추가한다. targets 부분에 "localhost:9121" 를 추가하면 된다.
+prometheus.yml 파일에 아래 내용을 추가한다. targets 부분에 'localhost:9121' 를 추가하면 된다.
 ```
 cd; cd prometheus-2.46.0.linux-amd64
 vi prometheus.yml
@@ -49,7 +49,8 @@ vi prometheus.yml
 scrape_configs:
   - job_name: "redis"
     static_configs:
-      - targets: ["localhost:9121"]
+      - targets: ['localhost:9104', 'localhost:9121']
+
 ```
 
 프로메테우스를 재실행한다. 
