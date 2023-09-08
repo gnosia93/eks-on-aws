@@ -1,4 +1,5 @@
-eks_mysql_exporter EC2 인스턴스에 접속하여 keycloak 을 설치한다.
+#### keycloak 설치 ####
+eks_mysql_exporter EC2 에 설치한다. 
 ```
 EC2=$(aws ec2 describe-instances --filter Name=tag:Name,Values=eks_mysql_exporter\
   --query "Reservations[].Instances[].PublicDnsName" --out text)
@@ -11,7 +12,12 @@ ssh -i aws-kp-2.pem ec2-user@${EC2}
 docker rm $(docker ps -a -f name=keycloak | awk '{ if (NR != 1) {print $1}}')
 ```
 
-keycloak 실행하기
+#### https 설정하기 #### 
+* https://velog.io/@jungsangu/Keycloak-HTTPS-required-%EC%97%90%EB%9F%AC
+```
+```
+
+#### keycloak 실행하기 ####
 ```
 nohup docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin\
   quay.io/keycloak/keycloak "start-dev" &
