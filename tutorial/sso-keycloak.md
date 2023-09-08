@@ -7,7 +7,7 @@ ssh -i aws-kp-2.pem ec2-user@${EC2}
 ```
 
 ```
-docker ps -a -f name=keycloak | awk '{ if (NR != 1) {print $1}}'
+docker rm $(docker ps -a -f name=keycloak | awk '{ if (NR != 1) {print $1}}')
 ```
 
 keycloak 실행하기
