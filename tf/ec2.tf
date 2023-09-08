@@ -42,6 +42,17 @@ resource "aws_security_group" "eks_ec2_sg" {
             prefix_list_ids = [ "pl-e1a54088" ]
             security_groups = [ ]
             self = false
+        },
+        {        
+            cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
+            description = "ec2 ingress"
+            from_port = 443
+            to_port = 443
+            protocol = "tcp"
+            ipv6_cidr_blocks = [ ]
+            prefix_list_ids = [ "pl-e1a54088" ]
+            security_groups = [ ]
+            self = false
         }
 
     ]
