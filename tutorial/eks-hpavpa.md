@@ -183,14 +183,16 @@ shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          
 
 ### HorizontalPodAutoscaler 테스트 ###
 eks-locust EC2 인스턴스로 로그인 한 후, https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
+
 ```
 git clone https://github.com/gnosia93/eks-on-aws-locust
 cd eks-on-aws-locust
-python test.py
+locust -f ./scenario.py -u 300 -P 8080 -H http://shop-hpa-alb-124751562.ap-northeast-2.elb.amazonaws.com
 ```
+
 [결과]
 ```
-ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting web interface at http://0.0.0.0:8081 (accepting connections from all network interfaces)
+ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting web interface at http://0.0.0.0:8080 (accepting connections from all network interfaces)
 ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting Locust 2.16.1
 ```
 웹브라우저로 eks-locust EC2 인스턴스의 8081 포트로 접속한다.
