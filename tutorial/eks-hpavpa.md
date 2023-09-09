@@ -102,7 +102,7 @@ kubectl apply -f shop-service-hpa.yaml
 kubectl get all
 ```
 
-### Ingress ###
+### Ingress 생성 ###
 인그레이스를 IP 타입으로 생성한다.
 ```
 cat <<EOF > shop-hpa-ingress.yaml
@@ -139,7 +139,6 @@ kubectl apply -f shop-hpa-ingress.yaml
 ```
 
 ### HorizontalPodAutoscaler 생성 ###
-
 shop-hpa 디플로이먼트에 대해서 HPA 를 생성한다. 
 ```
 kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
@@ -160,12 +159,15 @@ shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          
 ```
 
 ### HorizontalPodAutoscaler 테스트 ###
-eks-locust EC2 인스턴스로 로그인 한후, https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
+eks-locust EC2 인스턴스로 로그인 한 후, https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
 ```
 git clone https://github.com/gnosia93/eks-on-aws-locust
 cd eks-on-aws-locust
 python main.py
 ```
+
+#### k9s 실행화면 ####
+
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-hpa.png)
 
 ## 레퍼런스 ##
