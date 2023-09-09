@@ -12,21 +12,8 @@ $ ssh -i aws-kp-2.pem ec2-user@<server ip>
 ```
 
 ### 2. 테스트 코드작성 ###
-```
-pip install --upgrade pip
-pip install locust==2.12.2
-pip install urllib3==1.26.6
-pip install greenlet==1.1.3 gevent==22.8.0
-```
 
--- mac
-```
-brew install python@3.10
-brew install locust
-```
-
-
-[test.py]
+[main.py]
 ```
 import json
 from locust import HttpUser,  task , between
@@ -62,7 +49,7 @@ class sample(HttpUser):
 * -H 테스트 대상 서버 URL 
 
 ```
-locust -f ./test.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com
+locust -f ./main.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.amazonaws.com
 ```
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/%20locust.png)
 
