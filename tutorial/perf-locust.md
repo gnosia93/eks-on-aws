@@ -19,6 +19,12 @@ pip install urllib3==1.26.6
 pip install greenlet==1.1.3 gevent==21.8.0
 ```
 
+-- mac
+```
+brew install locust
+```
+
+
 [test.py]
 ```
 import json
