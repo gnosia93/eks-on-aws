@@ -195,7 +195,7 @@ locust -f ./scenario.py -u 300 -P 8080 -H http://shop-hpa-alb-124751562.ap-north
 ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting web interface at http://0.0.0.0:8080 (accepting connections from all network interfaces)
 ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting Locust 2.16.1
 ```
-웹브라우저로 eks-locust EC2 인스턴스의 8080 포트로 접속한다.
+웹브라우저로 eks-locust EC2 인스턴스의 8080 포트로 접속해서 Start swarming 버튼을 누른다. 
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-hpa-1.png)
 
