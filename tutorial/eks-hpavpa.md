@@ -140,46 +140,9 @@ kubectl apply -f shop-hpa-ingress.yaml
 
 
 ### HorizontalPodAutoscaler 생성 ###
-아래 내용으로 shop-hpa.yaml 을 생성한다.
-```
-cat <<EOF > shop-hpa.yaml
-apiVersion: autoscaling/v2beta2
-kind: HorizontalPodAutoscaler
-metadata:
-  name: shop-hpa
-  namespace: default
-spec:
-  scaleTargetRef:
-    apiVersion: argoproj.io/v1alpha1
-    kind: Deployment
-    name: shop-hpa
-  minReplicas: 1
-  maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 50
-  behavior:
-    scaleDown:
-      stabilizationWindowSeconds: 300
-      policies:
-      - type: Pods
-        value: 1
-        periodSeconds: 60
-    scaleUp:
-      stabilizationWindowSeconds: 0
-      policies:
-      - type: Percent
-        value: 100
-        periodSeconds: 60
-EOF
-```
 
 ```
-kubectl apply -f shop-hpa.yaml
+kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
 ```
 
 ### HorizontalPodAutoscaler 테스트 ###
