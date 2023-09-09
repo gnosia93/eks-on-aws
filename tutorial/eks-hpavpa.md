@@ -145,6 +145,16 @@ kubectl apply -f shop-hpa-ingress.yaml
 kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
 ```
 
+```
+horizontalpodautoscaler.autoscaling/shop-hpa autoscaled
+```
+
+```
+kubectl get hpa
+```
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          8s
+
 ### HorizontalPodAutoscaler 테스트 ###
 
 https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
