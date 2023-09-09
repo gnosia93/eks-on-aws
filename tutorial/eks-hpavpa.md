@@ -141,16 +141,20 @@ kubectl apply -f shop-hpa-ingress.yaml
 
 ### HorizontalPodAutoscaler 생성 ###
 
+shop-hpa 디플로이먼트에 대해서 HPA 를 생성한다. 
 ```
 kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
 ```
+[결과]
 ```
 horizontalpodautoscaler.autoscaling/shop-hpa autoscaled
 ```
 
+생성된 HPA 리스트를 조회한다. 
 ```
 kubectl get hpa
 ```
+[결과]
 ```
 NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
 shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          8s
