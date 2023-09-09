@@ -145,7 +145,9 @@ resource "aws_instance" "eks_ec2_locust" {
 #! /bin/bash
 sudo yum install -y python
 sudo yum install -y python3-pip
+sudo yum install -y git
 pip install locust
+pip install faker
 locust -V
 _DATA
 
