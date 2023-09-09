@@ -144,7 +144,6 @@ kubectl apply -f shop-hpa-ingress.yaml
 ```
 kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
 ```
-
 ```
 horizontalpodautoscaler.autoscaling/shop-hpa autoscaled
 ```
@@ -152,8 +151,10 @@ horizontalpodautoscaler.autoscaling/shop-hpa autoscaled
 ```
 kubectl get hpa
 ```
+```
 NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
 shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          8s
+```
 
 ### HorizontalPodAutoscaler 테스트 ###
 
