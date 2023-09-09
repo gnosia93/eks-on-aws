@@ -186,8 +186,15 @@ eks-locust EC2 인스턴스로 로그인 한 후, https://github.com/gnosia93/ek
 ```
 git clone https://github.com/gnosia93/eks-on-aws-locust
 cd eks-on-aws-locust
-python main.py
+python test.py
 ```
+[결과]
+```
+[2023-09-09 22:36:37,717] ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting web interface at http://0.0.0.0:8081 (accepting connections from all network interfaces)
+[2023-09-09 22:36:37,724] ip-10-1-1-67.ap-northeast-2.compute.internal/INFO/locust.main: Starting Locust 2.16.1
+```
+웹브라우저로 eks-locust EC2 인스턴스의 8081 포트로 접속한다.
+
 
 #### k9s 실행화면 ####
 
