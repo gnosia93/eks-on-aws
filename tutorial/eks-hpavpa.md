@@ -189,6 +189,7 @@ git clone https://github.com/gnosia93/eks-on-aws-locust
 cd eks-on-aws-locust
 locust -f ./scenario.py -u 300 -P 8080 -H http://shop-hpa-alb-124751562.ap-northeast-2.elb.amazonaws.com
 ```
+* -H 의 http 주소는 Ingress 의 주소 여러분들의 주소로 수정해야 한다. 
 
 [결과]
 ```
