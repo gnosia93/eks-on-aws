@@ -29,7 +29,7 @@ Trying 172.31.1.242:6379...
 Connected to test.1234id.clustercfg.euw1.cache.amazonaws.com (172.31.1.242) port 6379 (#0)
 ```
 
-Ctrl + C 를 눌러 빠져나온 다음, 아래의 서비스 배포용 YAML 파일을 생성한다. 
+Ctrl + C 를 눌러 빠져나온 다음, 아래의 서비스 배포용 YAML 파일을 생성하고 서비스를 생성한다. 
 ```
 cat <<EOF > shop-service-hpa.yaml
 apiVersion: apps/v1
@@ -103,6 +103,7 @@ kubectl get all
 ```
 
 ### Ingress ###
+인그레이스를 IP 타입으로 생성한다.
 ```
 cat <<EOF > shop-hpa-ingress.yaml
 apiVersion: networking.k8s.io/v1
@@ -137,8 +138,6 @@ EOF
 kubectl apply -f shop-hpa-ingress.yaml
 ```
 
-
-
 ### HorizontalPodAutoscaler 생성 ###
 
 shop-hpa 디플로이먼트에 대해서 HPA 를 생성한다. 
@@ -165,9 +164,10 @@ shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          
 https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
 ```
 git clone https://github.com/gnosia93/eks-on-aws-locust
+cd eks-on-aws-locust
 python main.py
 ```
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/eks-hpa.png)
 
 ## 레퍼런스 ##
 
