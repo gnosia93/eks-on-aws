@@ -13,6 +13,7 @@ $ ssh -i aws-kp-2.pem ec2-user@<server ip>
 
 ### 2. 테스트 코드작성 ###
 ```
+pip install --upgrade pip
 pip install locust
 pip install urllib3==1.26.6
 ```
