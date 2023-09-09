@@ -165,7 +165,7 @@ Events:       <none>
 ### HorizontalPodAutoscaler 생성 ###
 shop-hpa 디플로이먼트에 대해서 HPA 를 생성한다. 
 ```
-kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=10
+kubectl autoscale deployment shop-hpa --cpu-percent=30 --min=1 --max=30
 ```
 [결과]
 ```
