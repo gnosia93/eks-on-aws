@@ -144,6 +144,41 @@ spec:
 ```
 kubectl apply -f shop-hpa.yaml
 ```
+### Ingress ###
+```
+cat <<EOF > shop-hpa-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shop-hpa-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/load-balancer-name: shop-hpa-alb
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '5'
+    alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '3'
+    alb.ingress.kubernetes.io/healthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
+spec:
+  rules:
+   - http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: shop-hpa
+              port:
+                number: 80
+EOF
+```
+```
+kubectl apply -f shop-hpa-ingress.yaml
+```
+
 
 ### HorizontalPodAutoscaler 테스트 ###
 
