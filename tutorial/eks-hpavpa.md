@@ -29,7 +29,7 @@ Trying 172.31.1.242:6379...
 Connected to test.1234id.clustercfg.euw1.cache.amazonaws.com (172.31.1.242) port 6379 (#0)
 ```
 
-서비스 배포용 YAML 파일을 생성한다. 
+Ctrl + C 를 눌러 빠져나온 다음, 아래의 서비스 배포용 YAML 파일을 생성한다. 
 ```
 cat <<EOF > shop-service-hpa.yaml
 apiVersion: apps/v1
