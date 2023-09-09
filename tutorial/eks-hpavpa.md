@@ -142,6 +142,7 @@ kubectl apply -f shop-hpa-ingress.yaml
 ### HorizontalPodAutoscaler 생성 ###
 아래 내용으로 shop-hpa.yaml 을 생성한다.
 ```
+cat <<EOF > shop-hpa.yaml
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -174,6 +175,7 @@ spec:
       - type: Percent
         value: 100
         periodSeconds: 60
+EOF
 ```
 
 ```
