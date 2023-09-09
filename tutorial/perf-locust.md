@@ -70,3 +70,5 @@ locust -f ./test.py -P 8080 -H http://shop-alb-1152585058.ap-northeast-2.elb.ama
 ## 레퍼런스 ##
 
 * https://ellune.tistory.com/68
+
+* [locust on mac M1](https://stackoverflow.com/questions/73998016/unable-to-pip-install-locust-on-m1-macbook-pro-on-monterey-12-3)
