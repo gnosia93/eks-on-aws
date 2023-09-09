@@ -136,6 +136,29 @@ EOF
 ```
 ```
 kubectl apply -f shop-hpa-ingress.yaml
+kubectl describe ingress shop-hpa-ingress
+```
+#### shop-hpa-ingress 조회결과 ####
+```
+Name:             shop-hpa-ingress
+Namespace:        default
+Address:          shop-hpa-alb-124751562.ap-northeast-2.elb.amazonaws.com
+Default backend:  default-http-backend:80 (<error: endpoints "default-http-backend" not found>)
+Rules:
+  Host        Path  Backends
+  ----        ----  --------
+  *           
+              /   shop-hpa:80 (10.1.101.239:8080,10.1.101.68:8080,10.1.101.89:8080 + 2 more...)
+Annotations:  alb.ingress.kubernetes.io/healthcheck-interval-seconds: 5
+              alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
+              alb.ingress.kubernetes.io/healthcheck-timeout-seconds: 3
+              alb.ingress.kubernetes.io/healthy-threshold-count: 2
+              alb.ingress.kubernetes.io/load-balancer-name: shop-hpa-alb
+              alb.ingress.kubernetes.io/scheme: internet-facing
+              alb.ingress.kubernetes.io/target-type: ip
+              alb.ingress.kubernetes.io/unhealthy-threshold-count: 2
+              kubernetes.io/ingress.class: alb
+Events:       <none>
 ```
 
 ### HorizontalPodAutoscaler 생성 ###
