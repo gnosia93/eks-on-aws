@@ -5,7 +5,7 @@ HPA 가 동작하기 위해서는 지표 서버가 클러스터에 설치되어 
 
 
 ### 서비스 배포(shop-ha) ###
-
+cloud9 터미널에서 아래 명령어를 실행한다.
 ```
 STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
 PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
@@ -160,8 +160,7 @@ shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          
 ```
 
 ### HorizontalPodAutoscaler 테스트 ###
-
-https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
+eks-locust EC2 인스턴스로 로그인 한후, https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
 ```
 git clone https://github.com/gnosia93/eks-on-aws-locust
 cd eks-on-aws-locust
