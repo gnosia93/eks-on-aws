@@ -12,6 +12,10 @@ $ ssh -i aws-kp-2.pem ec2-user@<server ip>
 ```
 
 ### 2. 테스트 코드작성 ###
+```
+pip install locust
+```
+
 [test.py]
 ```
 import json
