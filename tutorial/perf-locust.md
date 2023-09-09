@@ -16,6 +16,7 @@ $ ssh -i aws-kp-2.pem ec2-user@<server ip>
 pip install --upgrade pip
 pip install locust
 pip install urllib3==1.26.6
+pip install greenlet==1.1.3 gevent==21.8.0
 ```
 
 [test.py]
