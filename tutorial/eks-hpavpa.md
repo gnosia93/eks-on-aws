@@ -144,7 +144,11 @@ kubectl apply -f shop-hpa.yaml
 
 ### HorizontalPodAutoscaler 테스트 ###
 
-뭘로 부하를 줄까? 
+https://github.com/gnosia93/eks-on-aws-locust 를 클론하여 아래 명령어를 실행한다.
+```
+git clone https://github.com/gnosia93/eks-on-aws-locust
+python main.py
+```
 
 
 ## 레퍼런스 ##
