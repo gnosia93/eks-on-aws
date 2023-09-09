@@ -26,7 +26,7 @@ kind: ClusterConfig
 metadata:
   name: ${CLUSTER_NAME}
   region: ${AWS_REGION}
-  version: "1.26"
+  version: "1.25"
 
 vpc:
   id: "${VPC_ID}"
