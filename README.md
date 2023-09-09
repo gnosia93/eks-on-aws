@@ -79,7 +79,9 @@
 
 * [#11. Istio 적용하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-istio.md)(p)
 
-* [#12. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
+* [#12. 클러스터 업그레이드]()(p)
+
+* [#13. 리소스 삭제](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/resource-drop.md)
 
 * Appendix. [k8s 운영](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/k8s-op.md)
 
