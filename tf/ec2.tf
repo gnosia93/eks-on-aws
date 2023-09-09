@@ -36,7 +36,7 @@ resource "aws_security_group" "eks_ec2_sg" {
             cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
             description = "ec2 ingress"
             from_port = 8080
-            to_port = 8080
+            to_port = 8090
             protocol = "tcp"
             ipv6_cidr_blocks = [ ]
             prefix_list_ids = [ "pl-e1a54088" ]
