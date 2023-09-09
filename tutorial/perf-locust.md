@@ -17,6 +17,7 @@ $ ssh -i aws-kp-2.pem ec2-user@<server ip>
 ```
 import json
 from locust import HttpUser,  task , between
+
 class sample(HttpUser):
 	wait_time = between(1, 3)
 	access_token = ""
