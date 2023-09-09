@@ -21,6 +21,7 @@ pip install greenlet==1.1.3 gevent==22.8.0
 
 -- mac
 ```
+brew install python@3.10
 brew install locust
 ```
 
