@@ -89,7 +89,6 @@ metadata:
   labels:
     app: shop-hpa
 spec:
-  type: LoadBalancer
   selector:
     app: shop-ha
   ports:
@@ -154,7 +153,7 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/load-balancer-name: shop-hpa-alb
     alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
