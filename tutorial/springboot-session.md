@@ -13,6 +13,7 @@ mysql -u shop -p -h ${DB_ADDR}
 use shop;
 insert into member(password, name, phone_no, email_addr) values('admin', 'admin', '000-000-0000', 'admin@shop.com');
 commit;
+select member_id from shop where email_addr = 'admin@shop.com';
 ```
 
 
