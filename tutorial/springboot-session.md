@@ -15,7 +15,7 @@ mysql -u shop -p -h ${DB_ADDR}
 mysql> use shop;
 mysql> insert into member(password, name, phone_no, email_addr) values('admin', 'admin', '000-000-0000', 'admin@shop.com');
 mysql> commit;
-mysql> select member_id, password, email_addr from shop where email_addr = 'admin@shop.com';
+mysql> select member_id, password, email_addr from member where email_addr = 'admin@shop.com';
 ```
 
 ### redis cli 설치 ###
