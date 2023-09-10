@@ -19,7 +19,7 @@
   * [스프링 부트 - Redis 대기열 시스템 구현]()(p)
  
   * 스프링 부트 - 로그인 구현
-    * [세션 쿠키 방식](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-session.md)
+    * [Redis 세션 저장 방식](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-session.md)
     * JWT 토큰 방식   
  
   * [스프링 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md)
