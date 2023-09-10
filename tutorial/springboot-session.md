@@ -120,6 +120,7 @@ public class RedissonConfiguration {
 
 
 ## 레퍼런스 ##
+* https://stackoverflow.com/questions/70129192/java-redisson-client-error-bad-argument-2-to-unpack-data-string-too-short
 * https://stackoverflow.com/questions/68544253/retrieve-existing-key-value-pair-present-in-redis-using-redisson
 * https://www.baeldung.com/redis-redisson
 * https://chb2005.tistory.com/173
