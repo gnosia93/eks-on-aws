@@ -18,6 +18,12 @@ commit;
 select member_id, password, email_addr from shop where email_addr = 'admin@shop.com';
 ```
 
+### build.gradle ###
+
+```
+
+```
+
 
 ## 레퍼런스 ##
 
