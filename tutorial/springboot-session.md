@@ -67,8 +67,10 @@ type <key>
 ### build.gradle ###
 * https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/
 ```
-compile 'org.springframework.session:spring-session-core:3.0.1'
-compile 'org.redisson:redisson-spring-data-30:3.21.0'
+implementation 'org.springframework.session:spring-session-data-redis'
+implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+implementation 'org.springframework.session:spring-session-core:3.0.1'
+implementation 'org.redisson:redisson-spring-data-30:3.21.0'
 ```
 
 ### application.yaml ###
@@ -81,7 +83,8 @@ compile 'org.redisson:redisson-spring-data-30:3.21.0'
 ```
 
 ### RedissonCongiruation ###
-@EnableRedisRepositories 어노테이션 추가 
+@EnableRedisRepositories 어노테이션 추가하고, AbstractHttpSessionApplicationInitializer 을 상속받는다.  
+redissonConnectionFactory 빈을 추가한다. 
 ```
 package com.example.shop.configuration;
 
@@ -89,23 +92,30 @@ import lombok.Getter;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
+import org.redisson.spring.data.connection.RedissonConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 
 @Getter
 @Configuration
-@EnableRedisRepositories
+@EnableRedisHttpSession
 @Profile({"!test"})
-public class RedissonConfiguration {
+public class RedissonConfiguration extends AbstractHttpSessionApplicationInitializer {
 
     @Value( "${spring.redis.host}" )
     private String host;
 
     @Value( "${spring.redis.port}" )
     private int port;
+
+    @Bean
+    public RedissonConnectionFactory redissonConnectionFactory(RedissonClient redisson) {
+        return new RedissonConnectionFactory(redisson);
+    }
 
     @Bean
     public RedissonClient redissonClient(){
@@ -117,7 +127,6 @@ public class RedissonConfiguration {
     }
 }
 ```
-
 
 ## 레퍼런스 ##
 * https://stackoverflow.com/questions/70129192/java-redisson-client-error-bad-argument-2-to-unpack-data-string-too-short
