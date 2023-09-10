@@ -13,7 +13,9 @@ mysql -u shop -p -h ${DB_ADDR}
 
 ```
 mysql> use shop;
-mysql> insert into member(password, name, phone_no, email_addr) values('admin', 'admin', '000-000-0000', 'admin@shop.com');
+mysql> insert into member(password, name, phone_no, email_addr) values('admin1', 'admin1', '111-000-0000', 'admin1@shop.com');
+mysql> insert into member(password, name, phone_no, email_addr) values('admin2', 'admin2', '222-000-0000', 'admin2@shop.com');
+mysql> insert into member(password, name, phone_no, email_addr) values('admin3', 'admin3', '333-000-0000', 'admin3@shop.com');
 mysql> commit;
 mysql> select member_id, password, email_addr from member where email_addr = 'admin@shop.com';
 ```
