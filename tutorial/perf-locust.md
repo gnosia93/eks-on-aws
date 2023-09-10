@@ -1,7 +1,3 @@
-******
-[TO-DO] python faker (https://www.daleseo.com/python-faker/) 를 이용한 테스트 코드 작성.
-******
-
 ## 성능 테스트 ##
 
 ### 1. locust ec2 로그인 ###
