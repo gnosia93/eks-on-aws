@@ -25,6 +25,15 @@ implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 implementation 'org.springframework.session:spring-session-data-redis'
 ```
 
+### application.yaml ###
+```
+  redis:
+      host: localhost
+      port: 6379
+  session:
+      store-type:redis
+```
+
 
 ## 레퍼런스 ##
 
