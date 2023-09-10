@@ -120,7 +120,7 @@ public class RedissonConfiguration {
 
 
 ## 레퍼런스 ##
-
+* https://www.baeldung.com/redis-redisson
 * https://chb2005.tistory.com/173
 * https://stir.tistory.com/256
 * https://moonsiri.tistory.com/27
