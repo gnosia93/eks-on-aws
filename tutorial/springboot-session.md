@@ -21,7 +21,8 @@ select member_id, password, email_addr from shop where email_addr = 'admin@shop.
 ### build.gradle ###
 
 ```
-
+implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+implementation 'org.springframework.session:spring-session-data-redis'
 ```
 
 
