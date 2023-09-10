@@ -34,6 +34,20 @@ mysql> select member_id, password, email_addr from member where email_addr = 'ad
 ```
 brew install redis
 ```
+```
+127.0.0.1:6379> keys *
+1) "spring:session:sessions:f34bc2bb-d3f9-4bcb-bbc8-3da51955885a"
+
+127.0.0.1:6379> hgetall "spring:session:sessions:f34bc2bb-d3f9-4bcb-bbc8-3da51955885a"
+1) "creationTime"
+2) "\xac\xed\x00\x05sr\x00\x0ejava.lang.Long;\x8b\xe4\x90\xcc\x8f#\xdf\x02\x00\x01J\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\x01\x8a\x7f\x01\xd3\x9f"
+3) "lastAccessedTime"
+4) "\xac\xed\x00\x05sr\x00\x0ejava.lang.Long;\x8b\xe4\x90\xcc\x8f#\xdf\x02\x00\x01J\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\x01\x8a\x7f\x01\xe8\x9b"
+5) "maxInactiveInterval"
+6) "\xac\xed\x00\x05sr\x00\x11java.lang.Integer\x12\xe2\xa0\xa4\xf7\x81\x878\x02\x00\x01I\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\a\b"
+7) "sessionAttr:emailAddress"
+8) "\xac\xed\x00\x05t\x00\x0eadmin@shop.com"
+```
 
 ### build.gradle ###
 * https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/
