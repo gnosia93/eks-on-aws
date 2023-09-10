@@ -22,5 +22,4 @@ select member_id, password, email_addr from shop where email_addr = 'admin@shop.
 ## 레퍼런스 ##
 
 * https://chb2005.tistory.com/173
-
-* https://velog.io/@jungh00ns/Spring-Boot-Redis-Spring-Session-%EC%97%B0%EB%8F%99-Redis-%EB%A3%AC%EB%AC%B8%EC%9E%90-%ED%95%B4%EC%84%9D
+* https://stir.tistory.com/256
