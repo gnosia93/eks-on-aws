@@ -17,7 +17,7 @@ mysql> insert into member(password, name, phone_no, email_addr) values('admin1',
 mysql> insert into member(password, name, phone_no, email_addr) values('admin2', 'admin2', '222-000-0000', 'admin2@shop.com');
 mysql> insert into member(password, name, phone_no, email_addr) values('admin3', 'admin3', '333-000-0000', 'admin3@shop.com');
 mysql> commit;
-mysql> select member_id, password, email_addr from member where email_addr = 'admin@shop.com';
+mysql> select member_id, password, email_addr from member where email_addr = 'admin1@shop.com';
 ```
 [결과]
 ```
