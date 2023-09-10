@@ -84,3 +84,4 @@ public class RedissonConfiguration {
 * https://chb2005.tistory.com/173
 * https://stir.tistory.com/256
 * https://moonsiri.tistory.com/27
+* [레디스 명령어](https://devhj.tistory.com/26)
