@@ -17,6 +17,15 @@ mysql> insert into member(password, name, phone_no, email_addr) values('admin', 
 mysql> commit;
 mysql> select member_id, password, email_addr from member where email_addr = 'admin@shop.com';
 ```
+[결과]
+```
++-----------+----------+----------------+
+| member_id | password | email_addr     |
++-----------+----------+----------------+
+|     58616 | admin    | admin@shop.com |
++-----------+----------+----------------+
+1 row in set (0.02 sec)
+```
 
 ### redis cli 설치 ###
 로컬 PC 에 redis cli 를 설치한다.
