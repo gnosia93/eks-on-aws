@@ -18,6 +18,12 @@ commit;
 select member_id, password, email_addr from shop where email_addr = 'admin@shop.com';
 ```
 
+### redis cli 설치 ###
+로컬 PC 에 redis cli 를 설치한다.
+```
+brew install redis
+```
+
 ### build.gradle ###
 
 ```
