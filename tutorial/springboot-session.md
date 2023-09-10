@@ -49,6 +49,21 @@ brew install redis
 8) "\xac\xed\x00\x05t\x00\x0eadmin@shop.com"
 ```
 
+```
+Redis support 5 types of data types. You need to know what type of value that key maps to, as for each data type, the command to retrieve it is different.
+
+Here are the commands to retrieve key value:
+
+if value is of type string -> GET <key>
+if value is of type hash -> HGETALL <key>
+if value is of type lists -> lrange <key> <start> <end>
+if value is of type sets -> smembers <key>
+if value is of type sorted sets -> ZRANGEBYSCORE <key> <min> <max>
+command to check the type of value a key mapping to:
+
+type <key>
+```
+
 ### build.gradle ###
 * https://github.com/redisson/redisson/wiki/14.-Integration-with-frameworks/
 ```
