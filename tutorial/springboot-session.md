@@ -250,6 +250,14 @@ public class LoginController {
 }
 ```
 
+#### 로그인 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-session-1.png)
+
+#### 로그인 정보 조회 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-session-2.png)
+
+#### 로그 아웃 ####
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-session-3.png)
 
 ## 레퍼런스 ##
 * https://stackoverflow.com/questions/70129192/java-redisson-client-error-bad-argument-2-to-unpack-data-string-too-short
