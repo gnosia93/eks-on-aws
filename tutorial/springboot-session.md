@@ -221,16 +221,6 @@ public class LoginController {
         if(session == null)
             return ResponseEntity.status(HttpStatus.OK).body("Session is null...");
 
-        /*
-        RKeys keys = redissonClient.getKeys();
-        Iterable<String> allKeys = keys.getKeys();
-        for (String key: allKeys)
-            log.info("... " + key);
-        RMapCache<String, String> rMapCache = redissonClient.getMapCache(cacheName + sessionId);
-        System.out.println("phone " + rMapCache.get("maxInactiveInterval"));
-        System.out.println(rMapCache.getName());
-        */
-
         Map<Object, Object> returnMap = new HashMap<>();
         returnMap.put("sessionId", session.getId());
 
