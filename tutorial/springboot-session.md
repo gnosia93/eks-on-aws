@@ -22,9 +22,9 @@ mysql> select member_id, password, email_addr from member where email_addr = 'ad
 +-----------+----------+----------------+
 | member_id | password | email_addr     |
 +-----------+----------+----------------+
-|     58616 | admin    | admin@shop.com |
+|    485413 | admin    | admin@shop.com |
 +-----------+----------+----------------+
-1 row in set (0.02 sec)
+1 row in set (0.10 sec)
 ```
 
 ### redis cli 설치 ###
