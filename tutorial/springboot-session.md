@@ -1,5 +1,6 @@
 
 ### admin 유저 생성 ###
+cloud9 터미널에서 아래 명령어를 수행한다. 
 ```
 STAGE_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-stage`].Endpoint.Address' --output text)
 PROD_DB=$(aws rds describe-db-instances --query 'DBInstances[?DBInstanceIdentifier == `eks-mysql-prod`].Endpoint.Address' --output text)
