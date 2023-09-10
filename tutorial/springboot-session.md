@@ -49,9 +49,10 @@ brew install redis
 8) "\xac\xed\x00\x05t\x00\x0eadmin@shop.com"
 ```
 
-```
+#### [참고] ####
 Redis support 5 types of data types. You need to know what type of value that key maps to, as for each data type, the command to retrieve it is different.
 
+```
 Here are the commands to retrieve key value:
 
 if value is of type string -> GET <key>
