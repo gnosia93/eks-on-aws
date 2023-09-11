@@ -1,3 +1,4 @@
+## JWT 토큰 기반 인증 ##
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/jwt-authentification-archi-2.png)
 * https://www.freecodecamp.org/news/how-to-setup-jwt-authorization-and-authentication-in-spring/
