@@ -17,8 +17,8 @@
   * [스프링 부트 - Redis 분산락 구현 (상품 판매수량 제한)](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distlock.md)
   
   * 스프링 부트 - 로그인 구현
-    * [Redis 세션 저장 방식](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-session.md)
-    * [JWT 토큰 방식](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-jwt.md)(p)
+    * [Redis 세션 기반 인증](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-session.md)
+    * [JWT 토큰 기반 인증](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-jwt.md)(p)
  
   * [스프링 부트 - Secret Manager 데이터베이스 설정 분리 / 암호화](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-secretmanager.md)
  
