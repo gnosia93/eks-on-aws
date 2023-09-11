@@ -86,7 +86,7 @@ implementation 'org.redisson:redisson-spring-data-30:3.21.0'
 ```
 
 ### RedissonCongiruation ###
-@EnableRedisRepositories 어노테이션 추가하고, AbstractHttpSessionApplicationInitializer 을 상속받는다.  
+@EnableRedisHttpSession 어노테이션 추가하고, AbstractHttpSessionApplicationInitializer 을 상속받는다.  
 redissonConnectionFactory 빈을 추가한다. 
 ```
 package com.example.shop.configuration;
