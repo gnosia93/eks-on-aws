@@ -1,4 +1,4 @@
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/jwt-authentification-archi.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/jwt-authentification-archi-2.png)
 
 ### build.gradle ###
 
