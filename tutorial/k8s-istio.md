@@ -39,6 +39,8 @@ later..
 
 ## 레퍼런스 ##
 
+* https://istio.io/latest/docs/concepts/traffic-management/
+  
 * [ISTIO ALB 적용하기](https://devocean.sk.com/experts/techBoardDetail.do?ID=163656&boardType=experts&page=&searchData=&subIndex=&idList=)
 
 * https://bcho.tistory.com/1266
