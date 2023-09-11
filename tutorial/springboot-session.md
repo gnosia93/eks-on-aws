@@ -39,14 +39,16 @@ brew install redis
 1) "spring:session:sessions:f34bc2bb-d3f9-4bcb-bbc8-3da51955885a"
 
 127.0.0.1:6379> hgetall "spring:session:sessions:f34bc2bb-d3f9-4bcb-bbc8-3da51955885a"
-1) "creationTime"
-2) "\xac\xed\x00\x05sr\x00\x0ejava.lang.Long;\x8b\xe4\x90\xcc\x8f#\xdf\x02\x00\x01J\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\x01\x8a\x7f\x01\xd3\x9f"
-3) "lastAccessedTime"
-4) "\xac\xed\x00\x05sr\x00\x0ejava.lang.Long;\x8b\xe4\x90\xcc\x8f#\xdf\x02\x00\x01J\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\x01\x8a\x7f\x01\xe8\x9b"
-5) "maxInactiveInterval"
-6) "\xac\xed\x00\x05sr\x00\x11java.lang.Integer\x12\xe2\xa0\xa4\xf7\x81\x878\x02\x00\x01I\x00\x05valuexr\x00\x10java.lang.Number\x86\xac\x95\x1d\x0b\x94\xe0\x8b\x02\x00\x00xp\x00\x00\a\b"
-7) "sessionAttr:emailAddress"
-8) "\xac\xed\x00\x05t\x00\x0eadmin@shop.com"
+ 1) "lastAccessedTime"
+ 2) "1694392763754"
+ 3) "sessionAttr:emailAddress"
+ 4) "\"admin@shop.com\""
+ 5) "sessionAttr:phoneNumber"
+ 6) "\"000-000-0000\""
+ 7) "maxInactiveInterval"
+ 8) "1800"
+ 9) "creationTime"
+10) "1694392763754"
 ```
 
 #### [참고] ####
@@ -125,6 +127,12 @@ public class RedissonConfiguration extends AbstractHttpSessionApplicationInitial
                 .setAddress("redis://"+ this.host+":"+ this.port);
 
         return Redisson.create(config);
+    }
+
+    # 문자깨임 방지용(\xac\xed\x00\x05sr\x00\x0ejava.lang.Long;)
+    @Bean
+    public RedisSerializer<Object> springSessionDefaultRedisSerializer() {
+        return new GenericJackson2JsonRedisSerializer();
     }
 }
 ```
