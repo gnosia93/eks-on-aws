@@ -7,6 +7,7 @@ implementation 'io.jsonwebtoken:jjwt:0.9.1'
 ```
 
 ## 레퍼런스 ##
+* [How to Set Up Java Spring Boot JWT Authorization and Authentication](https://www.freecodecamp.org/news/how-to-setup-jwt-authorization-and-authentication-in-spring/)
 * https://devvkkid.tistory.com/265
 * https://www.baeldung.com/spring-response-header
 * https://www.baeldung.com/spring-rest-http-headers
