@@ -251,6 +251,7 @@ public class LoginController {
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-session-3.png)
 
 ## 레퍼런스 ##
+* https://velog.io/@jungh00ns/Spring-Boot-Redis-Spring-Session-%EC%97%B0%EB%8F%99-Redis-%EB%A3%AC%EB%AC%B8%EC%9E%90-%ED%95%B4%EC%84%9D
 * https://stackoverflow.com/questions/70129192/java-redisson-client-error-bad-argument-2-to-unpack-data-string-too-short
 * https://stackoverflow.com/questions/68544253/retrieve-existing-key-value-pair-present-in-redis-using-redisson
 * https://www.baeldung.com/redis-redisson
