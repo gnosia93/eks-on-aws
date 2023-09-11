@@ -11,7 +11,8 @@ implementation 'io.jsonwebtoken:jjwt:0.9.1'
 
 ## 레퍼런스 ##
 * https://www.linkedin.com/pulse/spring-boot-using-jwt-without-tung-vo/
-* [Springboot JWT without SpringSecurity](https://velog.io/@max9106/OAuth4)
+* https://github.com/murraco/spring-boot-jwt
+* [Springboot JWT](https://velog.io/@max9106/OAuth4)
 * [How to Set Up Java Spring Boot JWT Authorization and Authentication](https://www.freecodecamp.org/news/how-to-setup-jwt-authorization-and-authentication-in-spring/)
 * https://devvkkid.tistory.com/265
 * https://www.baeldung.com/spring-response-header
