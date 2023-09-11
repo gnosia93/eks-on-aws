@@ -10,6 +10,7 @@ implementation 'io.jsonwebtoken:jjwt:0.9.1'
 ```
 
 ## 레퍼런스 ##
+* [Spring Security 없이 Spring JWT 인증 인가 구현해보기](https://velog.io/@kjy0302014/Spring-Security-%EC%97%86%EC%9D%B4-Spring-JWT-%EC%9D%B8%EC%A6%9D-%EC%9D%B8%EA%B0%80-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EA%B8%B0)
 * https://www.linkedin.com/pulse/spring-boot-using-jwt-without-tung-vo/
 * https://github.com/murraco/spring-boot-jwt
 * [Springboot JWT](https://velog.io/@max9106/OAuth4)
