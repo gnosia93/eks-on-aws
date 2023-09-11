@@ -7,6 +7,7 @@ implementation 'io.jsonwebtoken:jjwt:0.9.1'
 ```
 
 ## 레퍼런스 ##
+* https://devvkkid.tistory.com/265
 * https://www.baeldung.com/spring-response-header
 * https://www.baeldung.com/spring-rest-http-headers
 * https://chb2005.tistory.com/178
