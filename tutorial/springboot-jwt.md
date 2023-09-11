@@ -1,4 +1,10 @@
+### build.gradle ###
 
+```
+implementation 'org.springframework.boot:spring-boot-starter-security'
+testImplementation 'org.springframework.security:spring-security-test'
+implementation 'io.jsonwebtoken:jjwt:0.9.1'
+```
 
 ## 레퍼런스 ##
 * https://chb2005.tistory.com/178
