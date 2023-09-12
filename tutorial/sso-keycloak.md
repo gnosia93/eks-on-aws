@@ -98,6 +98,9 @@ eks-on-aws realm 에 grafana 유저를 생성한다.
 #### 2.3 grafana 유저로 로그인 ####
 http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유저로 로그인한다.
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-3.png)
 
 
 ## 레퍼런스 ##
