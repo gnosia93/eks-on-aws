@@ -193,7 +193,7 @@ EOF
 ```
 
 
-<service-name>.<namespace>.svc.cluster.local
+benefit.default.svc.cluster.local
 
 ### 6. Jaeger 조회 ###
 
