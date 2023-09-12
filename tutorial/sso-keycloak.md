@@ -109,8 +109,8 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-saml.png)
 
-* role 의 admin, editor, view 가 있다.
-* 주소는 Keyloack realm 의 SAML 주소를 입력한다. http://15.165.231.43:8080/realms/eks-on-aws/protocol/saml/descriptor 
+* role 의 admin, editor, view 가 있다. (이건 그파라나가 제공하는 역할로 SAML 연동시 태그값으로 구분하고 있는데, KeyCloack 에서 꼭 그라파나로 넘겨줘야 한다.)
+* 주소는 Keyloack realm 의 SAML 주소를 입력한다. http://15.165.231.43:8080/realms/eks-on-aws/protocol/saml/descriptor (아래 그림 참조)
 
 #### 3.2 KeyCloak Realm 설정 ####
 
