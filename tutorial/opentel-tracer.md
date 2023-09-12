@@ -119,6 +119,7 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+INSTANCE_ID=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].InstanceId' --out text)
 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
