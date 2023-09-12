@@ -13,7 +13,7 @@ nohup docker run --name my-jaeger -p 4318:4318 -p 16686:16686 -e COLLECTOR_OTLP_
 
 ### 2. build.gradle ###
 ```
-implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.0.0-M8'
+implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.1.5'
 implementation 'io.opentelemetry:opentelemetry-exporter-otlp:1.30.0'
 ```
 
