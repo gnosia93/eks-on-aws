@@ -91,3 +91,4 @@
 
 * [https://www.eksworkshop.com/](https://archive.eksworkshop.com/010_introduction/)
 * [https://ecsworkshop.com/](https://ecsworkshop.com/)
+* https://catalog.workshops.aws/observability/ko-KR
