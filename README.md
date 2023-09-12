@@ -60,9 +60,9 @@
     
   - [Kubernetes 지표 서버 설치](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-metrics.md)
 
-  - [SSO 을 위한 Keycloak 서버 구축](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/sso-keycloak.md)
-
   - [Amazon Managed Service for Prometheus / Grafana 와 OpenTelemetry 연동하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/eks-amp.md)
+ 
+  - [SSO 을 위한 Keycloak 서버 구축](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/sso-keycloak.md)
  
   - [모던 그라파나 대시보드 for K8S](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/grafana-eks-chart.md) 
  
