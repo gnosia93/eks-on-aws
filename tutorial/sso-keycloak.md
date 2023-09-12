@@ -108,6 +108,8 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ## 레퍼런스 ##
 
+* https://stackoverflow.com/questions/69304162/using-googles-sso-with-aws-managed-grafana-and-getting-failed-to-save-the-saml
+  
 * https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG-SAML.html
 
 * https://www.youtube.com/watch?v=t0NtkHtYeZ4
