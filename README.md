@@ -67,12 +67,14 @@
   - [SSO 을 위한 Keycloak 서버 구축 - AMG 연동](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/sso-keycloak.md)
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)
+ 
+  - [OpenTelemetry 스프링 부트 분산 트레이싱](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/opentel-tracer.md)(p)
+
 
   - AMP / AMG 모니터링 확장하기 
     - [RDS MySQL](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/rds-monitoring.md)
     - [ElastiCache For Redis](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/redis-monitoring.md)
 
-  - [OpenTelemetry SpringBoot Distributed Tracing](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/opentel-tracer.md)(p)
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
