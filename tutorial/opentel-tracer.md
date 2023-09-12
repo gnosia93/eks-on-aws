@@ -123,6 +123,8 @@ REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
+
+spring.application.name=benefit
 ```
 
 ```
@@ -169,6 +171,8 @@ spec:
               value: "-Xms1024M -Xmx1024M"
             - name: EKS-MYSQL_EXPORTER_EC2
               value: ${EKS-MYSQL_EXPORTER_EC2}
+            - name: spring.application.name
+              value: ${spring.application.name}
           imagePullPolicy: Always
 ---
 apiVersion: v1
