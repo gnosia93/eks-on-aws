@@ -179,7 +179,7 @@ kubectl get hpa
 [결과]
 ```
 NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
-shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         10        0          8s
+shop-hpa   Deployment/shop-hpa   <unknown>/30%   1         30        0          8s
 ```
 
 ### HorizontalPodAutoscaler 테스트 ###
