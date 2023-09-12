@@ -46,6 +46,10 @@ aws iam attach-role-policy \
 aws iam attach-role-policy \
     --role-name MySQLPrometheusRole \
     --policy-arn arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
+
+aws iam attach-role-policy \
+    --role-name MySQLPrometheusRole \
+    --policy-arn arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
 ```
 
 eks_mysql_exporter 인스턴스 ID 와 인스턴스 프로파일 정보를 받아온다. 
