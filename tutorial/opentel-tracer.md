@@ -191,11 +191,12 @@ spec:
       targetPort: 8080
 EOF
 ```
+benefit k8s 서비스의 FQDN 명은 benefit.default.svc.cluster.local 이다. 
 
 
-benefit.default.svc.cluster.local
+### 6. benefit 서비스 호출 ###
 
-### 6. Jaeger 조회 ###
+### 7. Jaeger 조회 ###
 
 
 ## 레퍼런스 ##
