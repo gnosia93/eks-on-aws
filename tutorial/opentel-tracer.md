@@ -119,12 +119,12 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
-EXPORTER_EC2_ADDR=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].PublicDnsName' --out text)
+EKS_MYSQL_EXPORTER=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].PublicDnsName' --out text)
 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
-echo "${EXPORTER_EC2_ADDR}"
+echo "${EKS_MYSQL_EXPORTER}"
 spring.application.name=benefit
 ```
 
@@ -170,8 +170,8 @@ spec:
               value: ${REDIS_ENDPOINT}
             - name: JAVA_TOOL_OPTIONS
               value: "-Xms1024M -Xmx1024M"
-            - name: EKS-MYSQL_EXPORTER_EC2
-              value: ${EKS-MYSQL_EXPORTER_EC2}
+            - name: EKS_MYSQL_EXPORTER
+              value: ${EKS_MYSQL_EXPORTER}
             - name: spring.application.name
               value: ${spring.application.name}
           imagePullPolicy: Always
