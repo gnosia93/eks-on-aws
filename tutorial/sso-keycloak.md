@@ -79,6 +79,9 @@ Administration Console 을 클릭한다.
 
 ### 2. SAML 연동하기 ###
 
+#### 2.1 eks-on-aws realm 생성 ###
+
+
 
 
 ## 레퍼런스 ##
