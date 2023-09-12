@@ -125,7 +125,7 @@ echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
 echo "${EKS_MYSQL_EXPORTER}"
-spring.application.name=benefit
+spring_application_name=benefit
 ```
 
 ```
@@ -173,7 +173,7 @@ spec:
             - name: EKS_MYSQL_EXPORTER
               value: ${EKS_MYSQL_EXPORTER}
             - name: spring.application.name
-              value: ${spring.application.name}
+              value: ${spring_application_name}
           imagePullPolicy: Always
 ---
 apiVersion: v1
