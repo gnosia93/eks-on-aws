@@ -43,6 +43,22 @@ logging:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
 ```
 
+### Jaeger ###
+
+eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
+```
+version: '3.9'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - 4318:4318
+      - 16686:16686
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+```
+
+
 
 ## 레퍼런스 ##
 
