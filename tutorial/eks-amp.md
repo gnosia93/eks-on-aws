@@ -349,7 +349,11 @@ awscurl --service "aps" --region=${AWS_REGION} \
 #### 메일함에서 SSO용 메일 주소 자체에 대해 인증한다 ####
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/sso-login-8-1.png)
 
+****
+그라파나에 로그인 하기 위해서는 SSO 이 설정되어 있어야 한다. 사용하고 있는 계정의 SSO 설정이 불가능 한 경우 SAML 방식의 외부 IDP 인 Keycloak 으로 대체한다.
 
+[SSO 을 위한 Keycloak 서버 구축 - AMG 연동](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/sso-keycloak.md)  
+****
 
 ## AMG(매니지드 그라파나) ##
 
