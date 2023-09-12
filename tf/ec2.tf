@@ -53,8 +53,29 @@ resource "aws_security_group" "eks_ec2_sg" {
             prefix_list_ids = [ "pl-e1a54088" ]
             security_groups = [ ]
             self = false
+        },
+        {        
+            cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
+            description = "ec2 ingress - jaeger"
+            from_port = 4318
+            to_port = 4318
+            protocol = "tcp"
+            ipv6_cidr_blocks = [ ]
+            prefix_list_ids = [ "pl-e1a54088" ]
+            security_groups = [ ]
+            self = false
+        },
+        {        
+            cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
+            description = "ec2 ingress - jaeger"
+            from_port = 16686
+            to_port = 16686
+            protocol = "tcp"
+            ipv6_cidr_blocks = [ ]
+            prefix_list_ids = [ "pl-e1a54088" ]
+            security_groups = [ ]
+            self = false
         }
-
     ]
 
     egress = [ 
