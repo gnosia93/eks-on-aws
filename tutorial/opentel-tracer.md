@@ -27,7 +27,8 @@ implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.0.0-M8'
 implementation 'io.opentelemetry:opentelemetry-exporter-otlp:1.30.0'
 ```
 
-### application.yaml ###
+### application properties ###
+#### application.yaml ####
 management 와 logging 설정을 추가한다.
 ```
 management:
@@ -41,12 +42,13 @@ logging:
 ```
 
 
-### application-dev.yaml ###
+#### application-dev.yaml ####
 ```
 tracing:
   url: http://localhost:4318/v1/traces
 ```
-### application-stage.yaml ###
+
+#### application-stage.yaml ####
 production yaml 도 stage 와 동일하게 아래 내용을 추가한다. 
 ```
 tracing:
