@@ -105,9 +105,15 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ### 3. AWS SAML 연동하기 ###
 
-* https://keycloak.discourse.group/t/keycloak-saml-login-to-aws-managed-grafana/22635
+#### 3.1 AMG SAML 설정 ####
+
+
+#### 3.2 KeyCloak 설정 ####
   
 ## 레퍼런스 ##
+
+* https://keycloak.discourse.group/t/keycloak-saml-login-to-aws-managed-grafana/22635
+
 
 * https://aws.amazon.com/blogs/mt/amazon-managed-grafana-supports-direct-saml-integration-with-identity-providers/
 
