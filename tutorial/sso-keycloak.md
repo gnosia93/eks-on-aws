@@ -82,7 +82,7 @@ Administration Console 을 클릭한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-2.png)
-SSL disable 
+Require SSL 을 None 으로 선택한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-3.png)
 
 #### 2.2 grafana 유저 생성 ####
