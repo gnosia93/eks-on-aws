@@ -1,6 +1,6 @@
 ## OpenTelemetry 스프링 부트 분산 트레이싱 ##
 
-
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-distributed-tracing.png)
 
 ### build.gradle ###
 
