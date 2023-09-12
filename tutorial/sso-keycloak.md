@@ -142,7 +142,7 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-user-04.png)
 
 
-#### Client 설정 확인 ####
+#### 참고 - Client 설정 확인 ####
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-config-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-config-2.png)
