@@ -108,6 +108,8 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ## 레퍼런스 ##
 
+* https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG-SAML.html
+
 * https://www.youtube.com/watch?v=t0NtkHtYeZ4
 
 * https://aws.amazon.com/blogs/opensource/authenticating-with-amazon-managed-grafana-using-open-source-keycloak-on-amazon-eks/
