@@ -7,6 +7,11 @@
 
 #### 로컬 PC ####
 
+```
+docker pull jaegertracing/all-in-one:latest
+
+```
+
 #### eks_mysql_exporter EC2 ####
 eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
 ```
