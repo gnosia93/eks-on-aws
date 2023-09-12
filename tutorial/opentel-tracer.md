@@ -29,6 +29,7 @@ tracing:
   url: http://localhost:4318/v1/traces
 ```
 ### application-stage.yaml ###
+production yaml 도 stage 와 동일하게 아래 내용을 추가한다. 
 ```
 tracing:
   url: http://${EKS-MYSQL_EXPORTER_EC2}>:4318/v1/traces
