@@ -11,11 +11,6 @@ docker pull jaegertracing/all-in-one:latest
 docker run --name my-jaeger -p 4318:4318 -p 16686:16686 -e COLLECTOR_OTLP_ENABLED=true -d jaegertracing/all-in-one
 ```
 
-#### eks_mysql_exporter EC2 ####
-```
-
-```
-
 ### 2. build.gradle ###
 ```
 implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.0.0-M8'
