@@ -107,6 +107,7 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 #### 3.1 AMG SAML 설정 ####
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-saml.png)
 
 #### 3.2 KeyCloak 설정 ####
   
