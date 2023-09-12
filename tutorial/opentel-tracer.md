@@ -3,7 +3,7 @@
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-distributed-tracing.png)
 
 
-### Jaeger 설치 ###
+### 1. Jaeger 설치 ###
 
 #### 로컬 PC ####
 
@@ -21,13 +21,13 @@ services:
       - COLLECTOR_OTLP_ENABLED=true
 ```
 
-### build.gradle ###
+### 2. build.gradle ###
 ```
 implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.0.0-M8'
 implementation 'io.opentelemetry:opentelemetry-exporter-otlp:1.30.0'
 ```
 
-### application properties ###
+### 3. application properties ###
 #### application.yaml ####
 management 와 logging 설정을 추가한다.
 ```
@@ -55,7 +55,7 @@ tracing:
   url: http://${EKS-MYSQL_EXPORTER_EC2}>:4318/v1/traces
 ```
 
-### 스프링 부트 Controller 수정 ###
+### 4. 스프링 부트 Controller 수정 ###
 
 #### MemberController ####
 getMemberBenefit 메소드를 최하단에 추가한다.
