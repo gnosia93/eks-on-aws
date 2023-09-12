@@ -35,8 +35,11 @@ tracing:
   url: http://${EKS-MYSQL_EXPORTER_EC2}>:4318/v1/traces
 ```
 
-### Jaeger ###
+### Jaeger 설치 ###
 
+#### 로컬 PC ####
+
+#### eks_mysql_exporter EC2 ####
 eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
 ```
 version: '3.9'
