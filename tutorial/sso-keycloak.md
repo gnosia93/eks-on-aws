@@ -213,7 +213,7 @@ client 메뉴에서 grafana workspace 클라이언트에 대한 설정을 아래
 ```
 
 ### 4. AMG(그라파나) 로그인하기 ###
-
+[Sign in with SAML] 버튼을 눌러서 Keycloak 을 통해 로그인 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-01.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-02.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-03.png)
