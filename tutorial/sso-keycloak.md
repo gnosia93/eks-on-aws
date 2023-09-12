@@ -84,6 +84,15 @@ Administration Console 을 클릭한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-2.png)
 
+#### 2.2 grafana 유저 생성 ####
+eks-on-aws realm 에 grafana 유저를 생성한다.
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-2.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-3.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-4.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-5.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-adduser-6.png)
+
 
 
 ## 레퍼런스 ##
