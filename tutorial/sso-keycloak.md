@@ -76,7 +76,7 @@ Administration Console 을 클릭한다.
 로그인 Username/Password 는 admin/admin 이다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-2.png)
 
-### 2. SAML 연동하기 ###
+### 2. realm 및 유저 생성하기 ###
 
 #### 2.1 eks-on-aws realm 생성 ###
 
@@ -101,6 +101,9 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-2.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-login-3.png)
+
+
+### 3. AWS SAML 연동하기 ###
 
 
 ## 레퍼런스 ##
