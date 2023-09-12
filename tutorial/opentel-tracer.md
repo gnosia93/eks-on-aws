@@ -2,8 +2,26 @@
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-distributed-tracing.png)
 
-### build.gradle ###
 
+### Jaeger 설치 ###
+
+#### 로컬 PC ####
+
+#### eks_mysql_exporter EC2 ####
+eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
+```
+version: '3.9'
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - 4318:4318
+      - 16686:16686
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+```
+
+### build.gradle ###
 ```
 implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.0.0-M8'
 implementation 'io.opentelemetry:opentelemetry-exporter-otlp:1.30.0'
@@ -35,23 +53,7 @@ tracing:
   url: http://${EKS-MYSQL_EXPORTER_EC2}>:4318/v1/traces
 ```
 
-### Jaeger 설치 ###
 
-#### 로컬 PC ####
-
-#### eks_mysql_exporter EC2 ####
-eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
-```
-version: '3.9'
-services:
-  jaeger:
-    image: jaegertracing/all-in-one:latest
-    ports:
-      - 4318:4318
-      - 16686:16686
-    environment:
-      - COLLECTOR_OTLP_ENABLED=true
-```
 
 ### MemberController ###
 getMemberBenefit 메소드를 최하단에 추가한다.
