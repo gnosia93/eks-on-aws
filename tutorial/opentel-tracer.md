@@ -111,6 +111,20 @@ public class BenefitController {
 
 ### 5. Benefit 서비스 배포 ###
 cloud9 터미널에서 benefit 서비스를 배포한다. 
+
+```
+STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
+PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
+IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
+DB_ENDPOINT=${STAGE_DB}
+REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
+--query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+
+echo "${DB_ENDPOINT}"
+echo "${REDIS_ENDPOINT}"
+echo "${IMAGE_REPO_ADDR}"
+```
+
 ```
 cat <<EOF > benefit-service.yaml
 apiVersion: apps/v1
