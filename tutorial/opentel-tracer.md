@@ -59,11 +59,29 @@ services:
 ```
 
 ### MemberController ###
+getMemberBenefit 메소드를 최하단에 추가한다.
 ```
+    ...
 
+    @ResponseBody
+    @RequestMapping(value="/benefit/{memberId}", method=RequestMethod.GET)
+    public ResponseEntity<?> getMemberBenefit(@PathVariable Integer memberId) {
+
+        String benefitUrl = msaServiceConfiguration.getBenefit() + "/" + memberId;
+        String benefitResponse = restTemplate.getForObject(benefitUrl, String.class);
+
+        Map<String, Object> responseMap = new HashMap<>();
+        responseMap.put("memberId", memberId);
+        responseMap.put("benefit", benefitResponse);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMap);
+    }
+
+}
 ```
 
 ### BenefitController ###
+BenefitController 자바 파일을 추가한다. 
 ```
 package com.example.shop.controller;
 
