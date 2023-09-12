@@ -5,26 +5,15 @@
 
 ### 1. Jaeger 설치 ###
 
-#### 로컬 PC ####
-
+로컬 PC 및 eks_mysql_exporter EC2 인스턴스에 아래 명령어를 이용해서 jaeger 를 설치한다. 
 ```
 docker pull jaegertracing/all-in-one:latest
-
 docker run --name my-jaeger -p 4318:4318 -p 16686:16686 -e COLLECTOR_OTLP_ENABLED=true -d jaegertracing/all-in-one
 ```
 
 #### eks_mysql_exporter EC2 ####
-eks_mysql_exporter EC2 인스턴스에서 도커로 실행한다. 
 ```
-version: '3.9'
-services:
-  jaeger:
-    image: jaegertracing/all-in-one:latest
-    ports:
-      - 4318:4318
-      - 16686:16686
-    environment:
-      - COLLECTOR_OTLP_ENABLED=true
+
 ```
 
 ### 2. build.gradle ###
