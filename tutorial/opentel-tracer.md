@@ -110,7 +110,69 @@ public class BenefitController {
 
 
 ### 5. Benefit 서비스 배포 ###
-
+cloud9 터미널에서 benefit 서비스를 배포한다. 
+```
+cat <<EOF > benefit-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benefit
+  namespace: default
+  labels:
+    app: benefit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: benefit
+  template:
+    metadata:
+      labels:
+        app: benefit
+      annotations:
+        builder: 'SoonBeom Kwon'
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/actuator/prometheus'
+        prometheus.io/port: '8080'
+    spec:
+      containers:
+        - name: benefit
+          image: ${IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              value: ${DB_ENDPOINT}
+            - name: DB_USERNAME
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
+            - name: REDIS_ENDPOINT
+              value: ${REDIS_ENDPOINT}
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms1024M -Xmx1024M"
+            - name: EKS-MYSQL_EXPORTER_EC2
+              value: ${EKS-MYSQL_EXPORTER_EC2}
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: benefit
+  namespace: default
+  labels:
+    app: benefit
+spec:
+  type: LoadBalancer
+  selector:
+    app: benefit
+  ports:
+    - port: 80
+      targetPort: 8080
+EOF
+```
 
 
 ### 6. Jaeger 조회 ###
