@@ -205,6 +205,10 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ### 4. AMG(그라파나) 로그인하기 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-01.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-02.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-login-03.png)
+
 
   
 ## 레퍼런스 ##
