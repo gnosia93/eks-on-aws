@@ -72,6 +72,7 @@
     - [RDS MySQL](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/rds-monitoring.md)
     - [ElastiCache For Redis](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/redis-monitoring.md)
 
+  - [OpenTelemetry SpringBoot Tracer]()(p)
 
 * [#10. 웹어플리케이션 성능 테스트](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/perf-locust.md)
 
