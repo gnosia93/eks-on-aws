@@ -109,47 +109,53 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-saml.png)
 
-* role 의 admin, editor, view 가 있다. (이건 그파라나가 제공하는 역할로 SAML 연동시 태그값으로 구분하고 있는데, KeyCloack 에서 꼭 그라파나로 넘겨줘야 한다.)
-* 주소는 Keyloack realm 의 SAML 주소를 입력한다. http://15.165.231.43:8080/realms/eks-on-aws/protocol/saml/descriptor (아래 그림 참조)
+* Admin role values 텍스트 박스에 "admin, editor, viewer" 를 입력한다. 그라파나는 이와 같이 3가지 형태의 Role을 제공하고 있는데, SAML 연동시 IDP 인 Keycloak 에서 이 값을 그라파나에게 넘겨줘야 로그인이 가능하다. 
+* Metadata URL은 Keyloack realm 의 SAML Metadata 주소 아래 그림과 같이 Realm 메뉴에서 확인할 수 있다.
 
 #### 3.2 KeyCloak Realm 설정 ####
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-2.png)
 
-#### 3.3 KeyCloak Client 설정 ####
+* Required SSL 의 값은 None 이다. (http 사용)
 
+#### 3.3 KeyCloak Client 설정 ####
+아래 그림과 같이 client 설정을 확인한다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-01.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-02.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-03.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-04.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-05.png)
+[Add mapper] 버튼을 눌려 email, role list, name 매퍼를 생성해야 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-06.png)
+아래 그림에서 세가지 매퍼에 대한 세부 설정값을 확인 할 수 있다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-07.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-08.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-09.png)
 
 
 #### 3.4 KeyCloak Role 설정 ###
-
+Realm roles 메뉴에서 admin, editor, viwer 역할을 생성한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-01.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-02.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-03.png)
 
 
 #### 3.5 KeyCloak 유저 설정 ####
-
+아래와 같이 유저의 설정값을 확인한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-user-01.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-user-02.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-user-03.png)
+grafana 유저의 역할을 editor 로 설정하고 있다. (가능한 값은 admin, editor, viewer 이렇게 세가지 이다)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-user-04.png)
 
 
 #### 참고 - Client 설정 확인 ####
-
+client 메뉴에서 grafana workspace 클라이언트에 대한 설정을 아래와 같이 확인할 수 있다. 우측 상단의 팝업 메뉴에서 Export 를 누른 다음, 로컬PC 로 설정을 다운로드 받아서 확인한다. 아래 #### 필수설정 #### 과 비교해서 틀린 부분이 있는 경우 수정하도록 한다. 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-config-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-config-2.png)
 
+#### 필수설정 ####
 ```
   "clients": [
           {
