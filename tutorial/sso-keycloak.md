@@ -126,6 +126,13 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-08.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-09.png)
 
+
+#### 3.4 KeyCloak Role 설정 ###
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-01.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-02.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-role-03.png)
+
   
 ## 레퍼런스 ##
 
