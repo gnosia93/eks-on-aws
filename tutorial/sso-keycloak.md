@@ -81,6 +81,8 @@ Administration Console 을 클릭한다.
 
 #### 2.1 eks-on-aws realm 생성 ###
 
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-2.png)
 
 
 
