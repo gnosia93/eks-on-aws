@@ -109,10 +109,23 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-saml.png)
 
-#### 3.2 KeyCloak 설정 ####
+#### 3.2 KeyCloak Realm 설정 ####
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-2.png)
+
+#### 3.3 KeyCloak Client 설정 ####
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-01.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-02.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-03.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-04.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-05.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-06.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-07.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-08.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-09.png)
+
   
 ## 레퍼런스 ##
 
