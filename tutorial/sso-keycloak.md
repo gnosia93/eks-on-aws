@@ -203,6 +203,9 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
             ]
 ```
 
+### 4. AMG(그라파나) 로그인하기 ###
+
+
   
 ## 레퍼런스 ##
 
