@@ -73,6 +73,8 @@ spec:
               value: ${PROD_SERVICE_ENDPOINT}
             - name: POINT_SERVICE_ENDPOINT
               value: ${POINT_SERVICE_ENDPOINT}
+            - name: EKS_MYSQL_EXPORTER
+              value: ${EKS_MYSQL_EXPORTER}
           imagePullPolicy: Always
 ---
 apiVersion: v1
