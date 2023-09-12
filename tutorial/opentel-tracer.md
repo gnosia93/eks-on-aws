@@ -58,32 +58,48 @@ services:
       - COLLECTOR_OTLP_ENABLED=true
 ```
 
-### Controller ###
+### MemberController ###
+```
 
 ```
- private RestTemplate restTemplate;
 
-    @Value("${spring.application.name}")
-    private String applicationName;
+### BenefitController ###
+```
+package com.example.shop.controller;
 
-    public Controller(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Slf4j
+@RequiredArgsConstructor
+@RequestMapping(value="/benefit")
+@RestController
+public class BenefitController {
+
+    private final RestTemplate restTemplate;
+
+    @ResponseBody
+    @RequestMapping(value="/{memberId}", method= RequestMethod.GET)
+    public ResponseEntity<?> getPoint(@PathVariable Integer memberId) {
+
+        Map<String, Integer> responseMap = new HashMap<>();
+        responseMap.put("point", getRandomPoint(1, 1000));
+        responseMap.put("accumulate", getRandomPoint(1, 30000));
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMap);
     }
 
-    @GetMapping("/path1")
-    public ResponseEntity path1() {
-
-        logger.info("Incoming request at {} for request /path1 ", applicationName);
-        String response = restTemplate.getForObject("http://localhost:8090/service/path2", String.class);
-        return ResponseEntity.ok("response from /path1 + " + response);
+    private int getRandomPoint(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
-
-    @GetMapping("/path2")
-    public ResponseEntity path2() {
-        logger.info("Incoming request at {} at /path2", applicationName);
-        return ResponseEntity.ok("response from /path2 ");
-    }
-
+}
 ```
 
 
