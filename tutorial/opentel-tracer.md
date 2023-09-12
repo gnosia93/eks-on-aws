@@ -184,7 +184,6 @@ metadata:
   labels:
     app: benefit
 spec:
-  type: LoadBalancer
   selector:
     app: benefit
   ports:
