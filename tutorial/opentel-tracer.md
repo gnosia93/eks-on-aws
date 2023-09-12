@@ -193,6 +193,8 @@ EOF
 ```
 
 
+<service-name>.<namespace>.svc.cluster.local
+
 ### 6. Jaeger 조회 ###
 
 
