@@ -55,9 +55,9 @@ tracing:
   url: http://${EKS-MYSQL_EXPORTER_EC2}>:4318/v1/traces
 ```
 
-### 4. 스프링 부트 Controller 수정 ###
+### 4. 스프링 부트 Controller ###
 
-#### MemberController ####
+#### MemberController 수정 ####
 getMemberBenefit 메소드를 최하단에 추가한다.
 ```
     ...
@@ -79,8 +79,7 @@ getMemberBenefit 메소드를 최하단에 추가한다.
 }
 ```
 
-#### BenefitController ####
-BenefitController 를 생성한다. 
+#### BenefitController 생성 ####
 ```
 package com.example.shop.controller;
 
