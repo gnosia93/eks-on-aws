@@ -5,7 +5,7 @@
 
 ### Architecture ###
 https://grafana.com/docs/loki/latest/get-started/overview/
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-2.png)
 
 ### Loki 설치 ###
 eks_mysql_exporter EC2 인스턴스에 grafana loki를 설치한다.(https://grafana.com/docs/loki/latest/setup/install/local/)
