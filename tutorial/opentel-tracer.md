@@ -3,6 +3,8 @@
 spring cloud 라이브러리와 충돌하는듯.. 나중에 해결.. 
 ****
 
+* https://spring.io/blog/2022/10/12/observability-with-spring-boot-3
+
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/springboot-distributed-tracing.png)
 
