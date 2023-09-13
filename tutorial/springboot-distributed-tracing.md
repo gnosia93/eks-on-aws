@@ -1,14 +1,20 @@
 
 
+
+## Grafana Loki ##
+
+### Architecture ###
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-1.png)
+* https://grafana.com/docs/loki/latest/get-started/overview/
 springboot -> logback(loki) -> loki web server <------- grafana. 
 
 
-### grafana loki 설치 ###
+### Loki 설치 ###
 eks_mysql_exporter EC2 인스턴스에 grafana loki를 설치한다.
+* https://grafana.com/docs/loki/latest/setup/install/local/
 ```
-wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
-nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml &
+dnf update
+dnf install loki
 ```
 
 ### build.gradle ###
