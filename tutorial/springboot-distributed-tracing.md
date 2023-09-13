@@ -18,6 +18,8 @@ dnf update
 dnf install loki
 ```
 
+## SpringBoot ##
+
 ### build.gradle ###
 ```
 implementation 'org.springframework.boot:spring-boot-starter-web'
