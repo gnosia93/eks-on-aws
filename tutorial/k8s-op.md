@@ -11,6 +11,8 @@
 * [resource request / limit](https://kubernetes.io/ko/docs/concepts/configuration/manage-resources-containers/) 
 
 * Volume
+
+* deployment - https://arisu1000.tistory.com/27833
   
 * [Cluster upgrade](https://jerryljh.tistory.com/86)  
 
