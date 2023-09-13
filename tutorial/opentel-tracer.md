@@ -2,6 +2,7 @@
 ****
 spring cloud 라이브러리와 충돌하는듯.. 나중에 해결.. 
 ****
+* https://awstip.com/grafana-loki-and-promtail-for-visualization-on-aws-ec2-instance-2799f9fc6450
 * https://devocean.sk.com/blog/techBoardDetail.do?ID=163964
 * https://spring.io/blog/2022/10/12/observability-with-spring-boot-3
 * https://docs.aws.amazon.com/grafana/latest/userguide/v9-explore-tracing.html
