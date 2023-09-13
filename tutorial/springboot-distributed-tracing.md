@@ -1,4 +1,6 @@
 
+
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-1.png)
 springboot -> logback(loki) -> loki web server <------- grafana. 
 
 
