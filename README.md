@@ -69,7 +69,7 @@
  
   - [OpenTelemetry 스프링 부트 메트릭 수집하기](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-grafana.md)
  
-  - [Grafana Loki / AMG 를 활용한 스프링 부트 분산 추적](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distributed-tracing.md)(p)
+  - [LogBack / Grafana Loki 를 활용한 스프링 부트 분산 추적](https://github.com/gnosia93/eks-on-aws/blob/main/tutorial/springboot-distributed-tracing.md)(p)
 
 
   - AMP / AMG 모니터링 확장하기 
