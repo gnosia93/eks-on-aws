@@ -3,6 +3,7 @@ springboot -> logback(loki) -> loki web server <------- grafana.
 
 
 ### grafana loki 설치 ###
+eks_mysql_exporter EC2 인스턴스에 grafana loki를 설치한다.
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
 docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml
