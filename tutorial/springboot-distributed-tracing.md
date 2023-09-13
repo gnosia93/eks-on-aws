@@ -1,3 +1,7 @@
+
+springboot -> logback(loki) -> loki web server <------- grafana. 
+
+
 ### grafana loki 설치 ###
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
