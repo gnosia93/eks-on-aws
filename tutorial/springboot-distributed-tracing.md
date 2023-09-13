@@ -20,3 +20,7 @@ implementation 'com.github.loki4j:loki-logback-appender'
 ```
 
 
+## 레퍼런스 ##
+
+* https://spring.io/blog/2022/10/12/observability-with-spring-boot-3
+
