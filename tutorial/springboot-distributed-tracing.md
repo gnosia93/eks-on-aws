@@ -6,11 +6,7 @@ springboot -> logback(loki) -> loki web server <------- grafana.
 eks_mysql_exporter EC2 인스턴스에 grafana loki를 설치한다.
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
-docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml
-
-wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/clients/cmd/promtail/promtail-docker-config.yaml -O promtail-config.yaml
-docker run --name promtail -d -v $(pwd):/mnt/config -v /var/log:/var/log --link loki grafana/promtail:2.9.0 -config.file=/mnt/config/promtail-config.yaml
-
+nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml &
 ```
 
 ### build.gradle ###
