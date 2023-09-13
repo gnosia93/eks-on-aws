@@ -4,8 +4,9 @@
 ## Grafana Loki ##
 
 ### Architecture ###
-![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-1.png)
 * https://grafana.com/docs/loki/latest/get-started/overview/
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/loki-architecture-1.png)
+
 springboot -> logback(loki) -> loki web server <------- grafana. 
 
 
