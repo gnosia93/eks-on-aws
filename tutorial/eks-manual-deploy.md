@@ -73,6 +73,8 @@ spec:
               value: ${PROD_SERVICE_ENDPOINT}
             - name: POINT_SERVICE_ENDPOINT
               value: ${POINT_SERVICE_ENDPOINT}
+            - name: LOKI_URL
+              value: ${LOKI_URL}
           imagePullPolicy: Always
 ---
 apiVersion: v1
