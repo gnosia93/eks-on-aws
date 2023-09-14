@@ -37,6 +37,7 @@ implementation 'com.github.loki4j:loki-logback-appender'
 
 
 ## 레퍼런스 ##
+* https://velog.io/@shawnhansh/SpringBoot-logback-%EB%8D%94-%EC%89%BD%EA%B2%8C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0application.properties%EC%99%80-logback-spring.xml
 * https://0soo.tistory.com/245
 * https://stackoverflow.com/questions/35651241/configure-logback-using-several-profiles
 * https://supawer0728.github.io/2018/04/07/spring-boot-logging/
