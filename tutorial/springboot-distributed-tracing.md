@@ -44,14 +44,6 @@ log.endpoint.lokiUrl: "http://localhost:3100/loki/api/v1/push"
 <configuration scan="true" scanPeriod="30 seconds">
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <springProperty scope="context" name="appName" source="spring.application.name"/>
-
-    <!-- springProperty 는 동작하지 않는다. 왜 일까? -->
-    <!--
-        logback-spring.xml 에 넣은 경우 스프링 프로파일이 제대로 먹지않음.
-        logback 설정파일을 프로파일로 별도로 분리하면 properties 를 제대로 읽어온다.
-    -->
-    <!-- logback property 은 동작한다. -->
-    <!-- property name="LOKI_URL" value="http://localhost:3100/loki/api/v1/push" /-->
     <springProperty scope="context" name="LOKI_URL" source="log.endpoint.lokiUrl" />
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
