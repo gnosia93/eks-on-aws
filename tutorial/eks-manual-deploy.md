@@ -13,10 +13,13 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+LOKI_EC2=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].PublicIpAddress' --out text)
+LOKI_URL="http://${LOKI_EC2}:3100/loki/api/v1/push"
 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
+echo "${LOKI_URL}"
 ```
 Redis 캐시 서버와 연결가능한지 확인한다. Connected 라는 메시지가 나오면 정상적으로 연결된 것이다. 
 
