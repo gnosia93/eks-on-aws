@@ -56,9 +56,9 @@ resource "aws_security_group" "eks_ec2_sg" {
         },
         {        
             cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
-            description = "ec2 ingress - jaeger"
-            from_port = 4318
-            to_port = 4318
+            description = "ec2 ingress - loki"
+            from_port = 9096
+            to_port = 9096
             protocol = "tcp"
             ipv6_cidr_blocks = [ ]
             prefix_list_ids = [ "pl-e1a54088" ]
@@ -67,9 +67,9 @@ resource "aws_security_group" "eks_ec2_sg" {
         },
         {        
             cidr_blocks = [ "0.0.0.0/0", var.vpc_cidr_block ] 
-            description = "ec2 ingress - jaeger"
-            from_port = 16686
-            to_port = 16686
+            description = "ec2 ingress - loki"
+            from_port = 3100
+            to_port = 3100
             protocol = "tcp"
             ipv6_cidr_blocks = [ ]
             prefix_list_ids = [ "pl-e1a54088" ]
