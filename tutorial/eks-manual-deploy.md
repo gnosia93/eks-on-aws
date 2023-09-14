@@ -216,6 +216,8 @@ Picked up JAVA_TOOL_OPTIONS: -Xms1024M -Xmx1024M -Djava.security.properties=/lay
 2023-09-06T22:28:47.950Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-09-06T22:28:47.962Z  INFO 1 --- [           main] com.example.shop.ShopApplication         : Started ShopApplication in 4.591 seconds (process running for 4.906)
 ```
+loki 서버 connection 오류가 발생하는 경우 무시한다. 어플리케이션이 동작하는데는 아무런 지장을 주지 않는다.   
+분산 트레이싱을 위한 loki 서버는 observability 챕터에서 생성할 예정이다.
 
 ## Ingress 생성 ##
 
