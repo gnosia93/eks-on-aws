@@ -15,8 +15,7 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-c
 docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0\
  -config.file=./loki-config.yaml
 
-nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0\
- -config.file=/mnt/config/loki-config.yaml &
+nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml &
 
 ```
 
