@@ -29,6 +29,7 @@ implementation 'com.github.loki4j:loki-logback-appender'
 
 
 ## 레퍼런스 ##
+* https://0soo.tistory.com/245
 * https://stackoverflow.com/questions/35651241/configure-logback-using-several-profiles
 * https://supawer0728.github.io/2018/04/07/spring-boot-logging/
 * https://grafana.com/docs/loki/latest/
