@@ -1,4 +1,4 @@
-
+springboot (micrometer/zipkin library) ---> logback ---> loki <-------- grafana.
 
 
 ## Grafana Loki ##
