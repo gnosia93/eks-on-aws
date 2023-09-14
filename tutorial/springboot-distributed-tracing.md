@@ -20,13 +20,17 @@ nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:
 
 ### build.gradle ###
 ```
+implementation 'com.github.loki4j:loki-logback-appender:1.4.1'
+```
+
+** 아래 내용은 나중에 확인.
+```
 implementation 'org.springframework.boot:spring-boot-starter-web'
 implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
 implementation 'org.springframework.boot:spring-boot-starter-aop'
 implementation 'io.micrometer:micrometer-tracing-bridge-brave'
 implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
-implementation 'com.github.loki4j:loki-logback-appender'
 ```
 
 ### properties 파일 (application-dev.xml) ###
