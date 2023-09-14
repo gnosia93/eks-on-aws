@@ -109,7 +109,7 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-grafana-saml.png)
 
-* Admin role values 텍스트 박스에 "admin, editor, viewer" 를 입력한다. 그라파나는 이와 같이 3가지 형태의 Role을 제공하고 있는데, SAML 연동시 IDP 인 Keycloak 에서 이 값을 그라파나에게 넘겨줘야 로그인이 가능하다. 
+* Admin role values 텍스트 박스에 "admin, editor, viewer" 를 입력한다. 그라파나는 이와 같이 3가지 형태의 Role을 제공하고 있는데, SAML 연동시 IDP 인 Keycloak 에서 이 값을 그라파나에게 넘겨줘야 로그인이 가능하다. (주의 - Role 이 제대로 설정되지 않으면, Keycloak 과 AMG 간의 세션은 생성되나 로그인 화면에서 failed to save the SAML received information 오류가 발생하게 되고 그라파나 화면은 나오지 않는다.) 
 * Metadata URL은 Keyloack realm 의 SAML Metadata 주소로 아래 그림과 같이 Realm 메뉴에서 확인할 수 있다.
 
 #### 3.2 KeyCloak Realm 설정 ####
