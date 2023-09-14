@@ -215,7 +215,8 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
-LOKI_URL="http://15.165.231.43:3100/loki/api/v1/push"
+LOKI_EC2=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].PublicIpAddress' --out text)
+LOKI_URL="http://${LOKI_EC2}:3100/loki/api/v1/push"
 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
