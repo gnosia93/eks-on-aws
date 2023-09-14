@@ -204,6 +204,90 @@ public class BenefitController {
 }
 ```
 
+## 어플리케이션 배포 ##
+
+```
+STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
+PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
+IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
+DB_ENDPOINT=${STAGE_DB}
+REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
+--query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
+LOKI_URL=
+
+echo "${DB_ENDPOINT}"
+echo "${REDIS_ENDPOINT}"
+echo "${IMAGE_REPO_ADDR}"
+```
+
+서비스 배포용 YAML 파일을 생성한다. 
+```
+cat <<EOF > shop-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shop
+  template:
+    metadata:
+      labels:
+        app: shop
+      annotations:
+        builder: 'SoonBeom Kwon'
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/actuator/prometheus'
+        prometheus.io/port: '8080'
+    spec:
+      containers:
+        - name: shop
+          image: ${IMAGE_REPO_ADDR}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stage
+            - name: DB_ENDPOINT
+              value: ${DB_ENDPOINT}
+            - name: DB_USERNAME
+              value: shop
+            - name: DB_PASSWORD
+              value: shop
+            - name: REDIS_ENDPOINT
+              value: ${REDIS_ENDPOINT}
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms1024M -Xmx1024M"
+            - name: PROD_SERVICE_ENDPOINT
+              value: ${PROD_SERVICE_ENDPOINT}
+            - name: POINT_SERVICE_ENDPOINT
+              value: ${POINT_SERVICE_ENDPOINT}
+            - name: LOKI_URL
+              value: ${LOKI_URL}
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shop
+  namespace: default
+  labels:
+    app: shop
+spec:
+  type: NodePort
+  selector:
+    app: shop
+  ports:
+    - port: 80
+      targetPort: 8080
+EOF
+```
+
 ## 레퍼런스 ##
 * https://velog.io/@gillog/Spring-Boot-application.properties-%EC%BB%A4%EC%8A%A4%ED%85%80-property-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0ConfigurationProperties
 * https://velog.io/@shawnhansh/SpringBoot-logback-%EB%8D%94-%EC%89%BD%EA%B2%8C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0application.properties%EC%99%80-logback-spring.xml
