@@ -213,11 +213,12 @@ IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repository
 DB_ENDPOINT=${STAGE_DB}
 REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
 --query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
-LOKI_URL=
+LOKI_URL="http://15.165.231.43:3100/loki/api/v1/push"
 
 echo "${DB_ENDPOINT}"
 echo "${REDIS_ENDPOINT}"
 echo "${IMAGE_REPO_ADDR}"
+echo "${LOKI_URL}"
 ```
 
 서비스 배포용 YAML 파일을 생성한다. 
