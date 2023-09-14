@@ -29,11 +29,54 @@ implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
 implementation 'com.github.loki4j:loki-logback-appender'
 ```
 
-### properties 파일 ###
+### properties 파일 (application-dev.xml) ###
 ```
 log.endpoint.lokiUrl: "http://localhost:3100/loki/api/v1/push"
 ```
 
+### logback 설정 파일 (logback-dev.xml) ###
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <springProperty scope="context" name="appName" source="spring.application.name"/>
+
+    <!-- springProperty 는 동작하지 않는다. 왜 일까? -->
+    <!--
+        logback-spring.xml 에 넣은 경우 스프링 프로파일이 제대로 먹지않음.
+        logback 설정파일을 프로파일로 별도로 분리하면 properties 를 제대로 읽어온다.
+    -->
+    <!-- logback property 은 동작한다. -->
+    <!-- property name="LOKI_URL" value="http://localhost:3100/loki/api/v1/push" /-->
+    <springProperty scope="context" name="LOKI_URL" source="log.endpoint.lokiUrl" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} %-5level %logger{36} %X{X-Request-ID} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <appender name="LOKI" class="com.github.loki4j.logback.Loki4jAppender">
+        <http>
+            <url>${LOKI_URL}</url>
+        </http>
+        <format>
+            <label>
+                <pattern>app=${appName},host=${HOSTNAME},traceID=%X{traceId:-NONE},level=%level</pattern>
+            </label>
+            <message>
+                <pattern>${FILE_LOG_PATTERN}</pattern>
+            </message>
+            <sortByTime>true</sortByTime>
+        </format>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="LOKI"/>
+    </root>
+</configuration>
+```
 
 
 ## 레퍼런스 ##
