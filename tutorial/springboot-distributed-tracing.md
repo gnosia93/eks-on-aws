@@ -82,6 +82,26 @@ log.endpoint.lokiUrl: "http://localhost:3100/loki/api/v1/push"
 </configuration>
 ```
 
+### ObervationConfiguration ###
+```
+package com.example.shop.configuration;
+
+import io.micrometer.observation.ObservationRegistry;
+import io.micrometer.observation.aop.ObservedAspect;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration(proxyBeanMethods = false)
+public class ObservationConfiguration {
+
+    // To have the @Observed support we need to register this aspect
+    @Bean
+    ObservedAspect observedAspect(ObservationRegistry observationRegistry) {
+        return new ObservedAspect(observationRegistry);
+    }
+}
+```
+
 
 ## 레퍼런스 ##
 * https://velog.io/@gillog/Spring-Boot-application.properties-%EC%BB%A4%EC%8A%A4%ED%85%80-property-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0ConfigurationProperties
