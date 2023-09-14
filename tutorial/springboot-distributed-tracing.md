@@ -40,12 +40,12 @@ log.endpoint.lokiUrl: "http://localhost:3100/loki/api/v1/push"
 ```
 
 ### logback 설정 파일 (logback-dev.xml) ###
+${LOKI_URL} 는 환경변수로 부터 받아온다. 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="30 seconds">
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <springProperty scope="context" name="appName" source="spring.application.name"/>
-    <springProperty scope="context" name="LOKI_URL" source="log.endpoint.lokiUrl" />
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
