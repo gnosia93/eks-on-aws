@@ -13,7 +13,7 @@ https://grafana.com/docs/loki/latest/get-started/overview/
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
 nohup docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0\
- -config.file=/mnt/config/loki-config.yaml &
+ -config.file=./loki-config.yaml &
 ```
 
 ## SpringBoot ##
