@@ -104,6 +104,7 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 
 
 ### 3. AWS SAML 연동하기 ###
+AMG 와 연동하기 위해 Keycloak 어드민 계정으로 로그인 한다.
 
 #### 3.1 AMG SAML 설정 ####
 
