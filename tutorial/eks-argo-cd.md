@@ -7,6 +7,7 @@ apps 디렉토리에 복사한다. 이때 다음의 변수 값들은 여러분�
 ${DOCKER_IMAGE_URL}
 ${DB_ENDPOINT}
 ${REDIS_ENDPOINT}
+${LOKI_URL}
 ```
 기존에 수동으로 EKS 클러스터에 배포했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
 ```
