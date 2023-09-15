@@ -1,4 +1,3 @@
-*** logback 이 제대로 동작하지 않음(spring property 먹지 않음) ****
 
 springboot (micrometer/zipkin library) ---> logback ---> loki <-------- grafana.
 
