@@ -15,7 +15,7 @@ https://grafana.com/docs/loki/latest/get-started/overview/
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
 mkdir -p $(pwd)/mnt/config; cp loki-config.yaml $(pwd)/mnt/config
-nohup docker run --name loki -d grafana/loki:2.9.0 &
+nohup docker run --name loki-$(date +%s) -d grafana/loki:2.9.0 &
 ```
 *  docker -v mount path 수정필요.
 
