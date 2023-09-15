@@ -9,6 +9,8 @@ ${DB_ENDPOINT}
 ${REDIS_ENDPOINT}
 ${LOKI_URL}
 ```
+여기서 LOCK_URL 의 경우 http://<eks_mysql_exporter EC2 Public IP>:3100/loki/api/v1/push 로 수정한다.
+
 기존에 수동으로 EKS 클러스터에 배포했던 shop 어플리케이션은 아래 명령어로 삭제한다 (단 shop-ingress 는 유지함)
 ```
 kubectl delete service/shop
