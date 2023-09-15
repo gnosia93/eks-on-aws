@@ -19,6 +19,10 @@ docker run --name loki -d -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:2.9.0 
 ```
 *  docker -v mount path 수정필요.
 
+
+## 분산 추적 테스트 ##
+
+
 ## SpringBoot ##
 
 ### build.gradle ###
@@ -208,91 +212,8 @@ public class BenefitController {
 }
 ```
 
-## 어플리케이션 배포 ##
 
-```
-STAGE_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-stage')
-PROD_DB=$(aws rds describe-db-instances | jq '.DBInstances[].Endpoint.Address' | sed 's/"//g' | grep 'eks-mysql-prod')
-IMAGE_REPO_ADDR=$(aws ecr describe-repositories | jq '.repositories[].repositoryUri' | sed 's/"//g' | grep 'springboot')
-DB_ENDPOINT=${STAGE_DB}
-REDIS_ENDPOINT=$(aws elasticache describe-cache-clusters --show-cache-node-info \
---query 'CacheClusters[?starts_with(CacheClusterId, `eks-redis`)].CacheNodes[].Endpoint[].Address' --out text)
-LOKI_EC2=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=eks_mysql_exporter" --query 'Reservations[].Instances[].PublicIpAddress' --out text)
-LOKI_URL="http://${LOKI_EC2}:3100/loki/api/v1/push"
 
-echo "${DB_ENDPOINT}"
-echo "${REDIS_ENDPOINT}"
-echo "${IMAGE_REPO_ADDR}"
-echo "${LOKI_URL}"
-```
-
-서비스 배포용 YAML 파일을 생성한다. 
-```
-cat <<EOF > shop-service.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: shop
-  namespace: default
-  labels:
-    app: shop
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: shop
-  template:
-    metadata:
-      labels:
-        app: shop
-      annotations:
-        builder: 'SoonBeom Kwon'
-        prometheus.io/scrape: 'true'
-        prometheus.io/path: '/actuator/prometheus'
-        prometheus.io/port: '8080'
-    spec:
-      containers:
-        - name: shop
-          image: ${IMAGE_REPO_ADDR}
-          ports:
-            - containerPort: 8080
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: stage
-            - name: DB_ENDPOINT
-              value: ${DB_ENDPOINT}
-            - name: DB_USERNAME
-              value: shop
-            - name: DB_PASSWORD
-              value: shop
-            - name: REDIS_ENDPOINT
-              value: ${REDIS_ENDPOINT}
-            - name: JAVA_TOOL_OPTIONS
-              value: "-Xms1024M -Xmx1024M"
-            - name: PROD_SERVICE_ENDPOINT
-              value: ${PROD_SERVICE_ENDPOINT}
-            - name: POINT_SERVICE_ENDPOINT
-              value: ${POINT_SERVICE_ENDPOINT}
-            - name: LOKI_URL
-              value: ${LOKI_URL}
-          imagePullPolicy: Always
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: shop
-  namespace: default
-  labels:
-    app: shop
-spec:
-  type: NodePort
-  selector:
-    app: shop
-  ports:
-    - port: 80
-      targetPort: 8080
-EOF
-```
 
 ## 레퍼런스 ##
 * https://inma.tistory.com/164
