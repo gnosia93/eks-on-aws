@@ -14,6 +14,7 @@ https://grafana.com/docs/loki/latest/get-started/overview/
 아래 명령어로 로컬 PC 및 eks_mysql_exporter EC2 인스턴스에 grafana loki를 설치한다
 ```
 wget https://raw.githubusercontent.com/grafana/loki/v2.9.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
+mkdir -p $(pwd)/mnt/config; cp loki-config.yaml $(pwd)/mnt/config
 nohup docker run --name loki -d -v $(pwd)/mnt/config -p 3100:3100 grafana/loki:2.9.0 -config.file=/mnt/config/loki-config.yaml &
 ```
 *  docker -v mount path 수정필요.
