@@ -38,6 +38,8 @@ spec:
               value: ${REDIS_ENDPOINT}
             - name: JAVA_TOOL_OPTIONS
               value: "-Xms1024M -Xmx1024M"
+            - name: LOKI_URL
+              value: ${LOKI_URL}
           imagePullPolicy: Always
 ---
 apiVersion: v1
