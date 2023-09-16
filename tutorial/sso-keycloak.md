@@ -223,8 +223,6 @@ client 메뉴에서 grafana workspace 클라이언트에 대한 설정을 아래
   
 ## 레퍼런스 ##
 
-* https://keycloak.discourse.group/t/keycloak-saml-login-to-aws-managed-grafana/22635
-
 
 * https://aws.amazon.com/blogs/mt/amazon-managed-grafana-supports-direct-saml-integration-with-identity-providers/
 
@@ -232,14 +230,6 @@ client 메뉴에서 grafana workspace 클라이언트에 대한 설정을 아래
   
 * https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG-SAML.html
 
-* https://www.youtube.com/watch?v=t0NtkHtYeZ4
-
 * https://aws.amazon.com/blogs/opensource/authenticating-with-amazon-managed-grafana-using-open-source-keycloak-on-amazon-eks/
  
-* https://mr-zero.tistory.com/568
-  
-* https://league-cat.tistory.com/397
-
-* https://github.com/keycloak/keycloak
-
 * [[aws cli] EC2 - TAG 필터링](https://passwd.tistory.com/entry/aws-cli-EC2-TAG-%ED%95%84%ED%84%B0%EB%A7%81)
