@@ -93,6 +93,7 @@
   
 ## 레퍼런스 ##
 
-* [https://www.eksworkshop.com/](https://archive.eksworkshop.com/010_introduction/)
+* [Archived eksworkshop](https://archive.eksworkshop.com/010_introduction/)
+* https://www.eksworkshop.com/
 * https://catalog.workshops.aws/observability/ko-KR
 * https://opentelemetry.io/docs/
