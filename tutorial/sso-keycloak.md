@@ -113,7 +113,7 @@ http://<User EC2>:8080/realms/eks-on-aws/account/#/ 로 이동하여 grafana 유
 * Metadata URL은 Keyloack realm 의 SAML Metadata 주소로 아래 그림과 같이 Realm 메뉴에서 확인할 수 있다.
 
 #### 3.2 KeyCloak Realm 설정 ####
-AMG 와 연동하기 위해 Keycloak 어드민 계정으로 로그인 한다.
+AMG 와 연동하기 위해 Keycloak 어드민 계정으로 로그인하여 아래와 같이 Realm 설정을 확인한다.
 
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-1.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-realm-saml-meta-2.png)
