@@ -121,7 +121,7 @@ AMG 와 연동하기 위해 Keycloak 어드민 계정으로 로그인하여 아�
 * Required SSL 의 값은 None 이다. (http 사용)
 
 #### 3.3 KeyCloak Client 설정 ####
-아래 그림과 같이 client 설정을 확인한다.
+아래 그림과 같이 client 를 생성하고 설정을 확인한다. KeyCloak 입장에서 Client 는 AMG 이다.
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-01.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-02.png)
 ![](https://github.com/gnosia93/eks-on-aws/blob/main/images/keycloak-client-03.png)
