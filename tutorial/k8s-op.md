@@ -104,4 +104,6 @@ kubectl logs ssm-installer-2r7qj -n kube-system
 I keep things running!
 
 #### 3. Patch Manager 에서 Patch Policy 를 생성한다. ####
-AWS System Manager 콘솔에서 Patch Manager 서브 메뉴로 이동하여 Patch Policy 를 생성한다. 
+AWS System Manager 콘솔에서 Patch Manager 서브 메뉴로 이동하여 Patch Policy 를 생성한다.  
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/patchmanager-1.png)
+![](https://github.com/gnosia93/eks-on-aws/blob/main/images/patchmanager-2.png)
