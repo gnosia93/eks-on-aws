@@ -33,3 +33,8 @@
 * [Redis - 대기열 시스템 구현](https://dev-jj.tistory.com/entry/%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98%EC%9D%84-%EB%8C%80%EB%B9%84%ED%95%9C-%EB%8C%80%EA%B8%B0%EC%97%B4-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0-Redis-WebSocket-Spring)  
   * https://kdg-is.tistory.com/entry/Spring-Boot-Redis-Sorted-Set%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8C%80%EA%B8%B0%EC%97%B4-%EA%B5%AC%ED%98%84
   * https://duddal.tistory.com/64
+
+
+## PVRE ##
+
+* https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html
