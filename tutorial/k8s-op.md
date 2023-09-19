@@ -37,11 +37,10 @@
 
 ## PVRE ##
 
-* EKS NodeGroup Role 에 아래 정책을 추가한다.
+1. EKS NodeGroup Role 에 아래 정책을 추가한다.
 ```
 AmazonSSMManagedInstanceCore
 AmazonSSMPatchAssociation
 ```
-
-* SSM Agent 를 K8S 데몬셋으로 설정한다. 
+2. SSM Agent 를 K8S 데몬셋으로 설정한다. 
 https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html
