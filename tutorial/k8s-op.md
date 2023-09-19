@@ -37,12 +37,13 @@
 
 ## PVRE ##
 
-1. EKS NodeGroup Role 에 아래 정책을 추가한다.
+#### 1. EKS NodeGroup Role 에 아래 정책을 추가한다. ####
 ```
 AmazonSSMManagedInstanceCore
 AmazonSSMPatchAssociation
 ```
-2. SSM Agent 를 K8S 데몬셋으로 설정한다. 
+
+#### 2. SSM Agent 를 K8S 데몬셋으로 설정한다. ####
 * https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html    
 cloud9 터미널에서 아래 명령어를 실행한다.
 ```
@@ -102,3 +103,5 @@ kubectl logs ssm-installer-2r7qj -n kube-system
 ```
 I keep things running!
 
+#### 3. Patch Manager 에서 Patch Policy 를 생성한다. ####
+AWS System Manager 콘솔에서 Patch Manager 서브 메뉴로 이동하여 Patch Policy 를 생성한다. 
