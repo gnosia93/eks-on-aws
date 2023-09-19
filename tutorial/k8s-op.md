@@ -44,3 +44,53 @@ AmazonSSMPatchAssociation
 ```
 2. SSM Agent 를 K8S 데몬셋으로 설정한다. 
 * https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html
+cloud9 터미널에서 아래 명령어를 실행한다.
+```
+cat << EOF > ssm_daemonset.yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    k8s-app: ssm-installer
+  name: ssm-installer
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      k8s-app: ssm-installer
+  template:
+    metadata:
+      labels:
+        k8s-app: ssm-installer
+    spec:
+      containers:
+      - name: sleeper
+        image: busybox
+        command: ['sh', '-c', 'echo I keep things running! && sleep 3600']
+      initContainers:
+      - image: amazonlinux
+        imagePullPolicy: Always
+        name: ssm
+        command: ["/bin/bash"]
+        args: ["-c","echo '* * * * * root yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm & rm -rf /etc/cron.d/ssmstart' > /etc/cron.d/ssmstart"]
+        securityContext:
+          allowPrivilegeEscalation: true
+        volumeMounts:
+        - mountPath: /etc/cron.d
+          name: cronfile
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      volumes:
+      - name: cronfile
+        hostPath:
+          path: /etc/cron.d
+          type: Directory
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
+EOF
+```
+```
+kubectl apply -f ssm_daemonset.yaml
+```
