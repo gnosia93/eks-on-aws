@@ -91,6 +91,14 @@ spec:
       terminationGracePeriodSeconds: 30
 EOF
 ```
+데몬셋을 생성한다. 
 ```
 kubectl apply -f ssm_daemonset.yaml
 ```
+
+데몬셋 실행로그를 확인한다. 
+```
+kubectl logs ssm-installer-2r7qj -n kube-system
+```
+I keep things running!
+
