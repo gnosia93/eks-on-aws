@@ -35,7 +35,7 @@
   * https://duddal.tistory.com/64
 
 
-## PVRE ##
+## EC2 Patch Mgmt ##
 
 #### 1. EKS NodeGroup Role 에 아래 정책을 추가한다. ####
 ```
