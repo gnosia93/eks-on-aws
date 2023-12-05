@@ -1,4 +1,4 @@
-
+* https://aws-otel.github.io/docs/migrating-to-collector-v0.35.0
 ## OpenTelemetry 스프링 부트 메트릭 수집하기 ##
 
 이번 챕터에서는 OpenTelemetry 로 springboot 의 메트릭을 수집하여 AMP 로 보내고자 한다. 
