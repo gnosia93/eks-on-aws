@@ -4,4 +4,4 @@
 * [Kustomize: The Best Way to Manage Your Kubernetes Configs](https://www.youtube.com/watch?v=spCdNeNCuFU)
 * [How to Create Helm Charts - The Ultimate Guide](https://www.youtube.com/watch?v=jUYNS90nq8U)
   * [[따배쿠] 21. Helm 사용하기(1)](https://www.youtube.com/watch?v=jUYNS90nq8U)
-
+* [karpenter best practice](https://aws.amazon.com/ko/blogs/tech/amazon-eks-cluster-auto-scaling-karpenter-bp/)
