@@ -9,3 +9,4 @@
 * [aws-node-termination-handler를 활용해서 EKS 워커 노드에 스팟](https://alden-kang.tistory.com/31)
 * [노드 오토스케일링 – Karpenter](https://jennifersoft.com/ko/blog/kubernetes/2023-10-18-kubernetes-8/)
 * [Amazon EKS 비용 최적화 워크샵](https://catalog.workshops.aws/eks-cost-optimization/ko-KR)
+   * https://www.youtube.com/watch?v=2WnrmT3LRk4 
