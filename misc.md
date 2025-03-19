@@ -6,3 +6,4 @@
   * [[따배쿠] 21. Helm 사용하기(1)](https://www.youtube.com/watch?v=jUYNS90nq8U)
 * [karpenter best practice](https://aws.amazon.com/ko/blogs/tech/amazon-eks-cluster-auto-scaling-karpenter-bp/)
 * [Spot by NetApp을 활용한 AWS EKS 운영 비용 절감 사례](https://techtopic.skplanet.com/spotbynetapp/)
+* [aws-node-termination-handler를 활용해서 EKS 워커 노드에 스팟](https://alden-kang.tistory.com/31)
