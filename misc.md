@@ -16,5 +16,5 @@
 * Kubernetes Security, Part 1: Kubernetes Security Overview and Role Based Access Control (RBAC)
    * https://www.youtube.com/watch?v=Qwkix9z8ywU
 * Istio 
- * [Service Mesh with Istio and Envoy Explained With Demo | Part 1 Out 6](https://www.youtube.com/watch?v=s8ifrn1XsJE&list=PLTCuRW0ikUdOhG1B-60Sh5L8VFLbu_rkO)
+   * [Service Mesh with Istio and Envoy Explained With Demo | Part 1 Out 6](https://www.youtube.com/watch?v=s8ifrn1XsJE&list=PLTCuRW0ikUdOhG1B-60Sh5L8VFLbu_rkO)
  
