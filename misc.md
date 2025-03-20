@@ -13,3 +13,5 @@
    * https://www.youtube.com/watch?v=2WnrmT3LRk4 
 * Pod Life Cycle
    * [Kubernetes에서 Pod 및 Pod 수명 주기가 작동하는 방식](https://www.youtube.com/watch?v=wlYESb124xM)
+* Kubernetes Security, Part 1: Kubernetes Security Overview and Role Based Access Control (RBAC)
+   * https://www.youtube.com/watch?v=Qwkix9z8ywU
