@@ -1,3 +1,6 @@
+* introduction --> builder exp --> productionize.
+
+
 * [[따배쿠] 0. 따라하면서 배우는 쿠버네티스 입문편](https://www.youtube.com/watch?v=6n5obRKsCRQ&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c)
   * [17-1. 로그관리-kubectl logs로 컨테이너 애플리케이션 로그보기](https://www.youtube.com/watch?v=HyWZSuxwOas)
 * [azure multi architecture image](https://learn.microsoft.com/ko-kr/azure/container-registry/push-multi-architecture-images)
@@ -19,3 +22,5 @@
 * Istio 
    * [Service Mesh with Istio and Envoy Explained With Demo | Part 1 Out 6](https://www.youtube.com/watch?v=s8ifrn1XsJE&list=PLTCuRW0ikUdOhG1B-60Sh5L8VFLbu_rkO)
  
+
+
