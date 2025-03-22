@@ -20,6 +20,6 @@
 * Istio
    * https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wPkw9g-5NQPP_rHVzApGpKP 
    * [Istio Traffic management](https://bcho.tistory.com/1367)
- 
+   * [Istio - (3) Gateway와 VirtualService](https://cwal.tistory.com/42)
 
 
