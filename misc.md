@@ -1,6 +1,4 @@
 * concepts & intro --> builder exp --> productionize.
-
-
 * [[따배쿠] 0. 따라하면서 배우는 쿠버네티스 입문편](https://www.youtube.com/watch?v=6n5obRKsCRQ&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c)
   * [17-1. 로그관리-kubectl logs로 컨테이너 애플리케이션 로그보기](https://www.youtube.com/watch?v=HyWZSuxwOas)
 * [azure multi architecture image](https://learn.microsoft.com/ko-kr/azure/container-registry/push-multi-architecture-images)
@@ -21,7 +19,7 @@
    * https://www.youtube.com/watch?v=Qwkix9z8ywU
 * Istio
    * https://www.youtube.com/watch?v=WFu8OLXUETY&list=PL34sAs7_26wPkw9g-5NQPP_rHVzApGpKP 
-
+   * [Istio Traffic management](https://bcho.tistory.com/1367)
  
 
 
