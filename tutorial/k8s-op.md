@@ -27,6 +27,8 @@
 * 트러블 슈팅
   - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
 
+* [클러스터 업그레이드](https://blog.blux.ai/%EB%AC%B4%EC%A4%91%EB%8B%A8%EC%9C%BC%EB%A1%9C-eks-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EB%B2%84%EC%A0%84-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%ED%95%98%EA%B8%B0-25859)
+
 ## 개발 ##
     
 * [Spring Security / JWT - 로그인 구현](https://webfirewood.tistory.com/115)
