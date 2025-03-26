@@ -23,7 +23,7 @@
 * [Pod 배치전략 - Taint & Toleration](https://velog.io/@pinion7/Kubernetes-Pod-%EB%B0%B0%EC%B9%98%EC%A0%84%EB%9E%B5-Taint%EC%99%80-Toleration%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B3%A0-%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0)
 
 * [PDB](https://halfmoon95.tistory.com/entry/PodDisruptionBudget%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Pod-%EC%9E%AC%EB%B0%B0%EC%B9%98)
-
+* [PDB - 베지터 부하테스트](https://tommypagy.tistory.com/607)
 * 트러블 슈팅
   - [Kubernetes CrashLoopBackOff — How to Troubleshoot](https://foxutech.medium.com/kubernetes-crashloopbackoff-how-to-troubleshoot-940dbb16bc84)
 
